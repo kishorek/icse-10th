@@ -63,3 +63,30 @@ test('combustion lab switches between complete and incomplete products', async (
   await lab.locator('#combustion-mode').selectOption('limited')
   await expect(lab).toContainText('soot')
 })
+
+test('12B memory and revision sections work', async ({ page }) => {
+  await expect(page.locator('#memory')).toContainText('reaction map')
+  await expect(page.locator('#revision')).toContainText('Common mistakes')
+  const flashcards = page.locator('#flashcards')
+  await flashcards.locator('.flashcard').click()
+  await expect(flashcards).toContainText('CₙH₂ₙ₊₂')
+})
+
+test('12B assessment submits, self-marks, persists and resets', async ({ page }) => {
+  page.on('dialog', (dialog) => dialog.accept())
+
+  await page.locator('#BQ18').fill('Methane is prepared by heating sodium ethanoate with soda lime.')
+  await page.getByRole('button', { name: 'Submit assessment' }).click()
+  await expect(page.locator('#assessment-summary')).toBeVisible()
+  await expect(page.locator('.score-big')).toContainText('/ 34')
+
+  await page.locator('#BQ18-self').selectOption('3')
+  await expect(page.locator('.score-big')).toContainText('3 / 34')
+
+  await page.reload()
+  await expect(page.locator('.score-big')).toContainText('3 / 34')
+
+  await page.getByRole('button', { name: 'Reset answers' }).click()
+  await expect(page.locator('.assessment-status')).toContainText('0 of 20 answered')
+  await expect(page.locator('#assessment-summary')).toHaveCount(0)
+})

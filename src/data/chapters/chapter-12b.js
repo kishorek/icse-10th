@@ -1,3 +1,6 @@
+import questions from '../questions/chapter-12b.json'
+import { flashcards } from '../chapter-12b/flashcards'
+
 export const chapter = {
   id: 'chapter-12b',
   href: './chapter-12b.html',
@@ -35,8 +38,9 @@ export const chapter = {
     B2: 'Methane and ethane: occurrence, structure, preparation and physical properties',
     B3: 'Reactions and uses of methane and ethane'
   },
-  features: { memory: false, revision: false, assessment: false },
-  questions: [],
+  features: { memory: true, revision: true, assessment: true },
+  questions,
+  flashcards,
   hero: {
     eyebrow: 'ICSE Class 10 · Chemistry · Unit 9(v)',
     title: 'Hydrocarbons: Alkanes',

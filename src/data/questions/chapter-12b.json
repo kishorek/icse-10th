@@ -1,0 +1,342 @@
+[
+  {
+    "id": "BQ1",
+    "outcome": "B1",
+    "topic": "General formula of the alkanes",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which general formula represents the alkanes?",
+    "options": [
+      { "value": "A", "text": "CₙH₂ₙ₊₂" },
+      { "value": "B", "text": "CₙH₂ₙ" },
+      { "value": "C", "text": "CₙH₂ₙ₋₂" },
+      { "value": "D", "text": "CₙH₂ₙ₊₁" }
+    ],
+    "answer": "A",
+    "explanation": "Alkanes contain only single carbon–carbon bonds, so every carbon atom carries the maximum number of hydrogen atoms. Their general formula is CₙH₂ₙ₊₂: methane is CH₄ and ethane is C₂H₆.",
+    "misconception": "Using the alkene formula CₙH₂ₙ or the alkyne formula CₙH₂ₙ₋₂ for a saturated alkane.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ2",
+    "outcome": "B1",
+    "topic": "Meaning of saturation",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What does it mean to say that an alkane is saturated?",
+    "options": [
+      { "value": "A", "text": "It contains only single carbon–carbon bonds, so each carbon is bonded to as many atoms as its valency allows." },
+      { "value": "B", "text": "It contains at least one carbon–carbon double bond." },
+      { "value": "C", "text": "It has dissolved as much gas as possible." },
+      { "value": "D", "text": "It contains only carbon and oxygen." }
+    ],
+    "answer": "A",
+    "explanation": "Saturation describes bonding, not a solution. In an alkane every carbon–carbon bond is a single bond, and each carbon forms four single bonds in total, so no hydrogen can be added without breaking the molecule apart.",
+    "misconception": "Thinking that saturated means a concentrated solution or confusing saturation with the presence of a double bond.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ3",
+    "outcome": "B1",
+    "topic": "Chain isomers of butane",
+    "type": "single",
+    "marks": 1,
+    "prompt": "How many chain isomers does butane, C₄H₁₀, have?",
+    "options": [
+      { "value": "A", "text": "1" },
+      { "value": "B", "text": "2" },
+      { "value": "C", "text": "3" },
+      { "value": "D", "text": "4" }
+    ],
+    "answer": "B",
+    "explanation": "Butane has two chain isomers: the straight-chain butane, CH₃–CH₂–CH₂–CH₃, and the branched 2-methylpropane, CH₃–CH(CH₃)–CH₃. Both have the molecular formula C₄H₁₀.",
+    "misconception": "Counting branches as extra molecules, or forgetting that a branched arrangement of the same four carbon atoms is a separate isomer.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ4",
+    "outcome": "B1",
+    "topic": "Sources of alkanes",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which statement about natural gas is correct?",
+    "options": [
+      { "value": "A", "text": "Natural gas is mainly methane, with smaller amounts of ethane and other hydrocarbons." },
+      { "value": "B", "text": "Natural gas is mainly ethane, with no methane present." },
+      { "value": "C", "text": "Natural gas contains only carbon dioxide and nitrogen." },
+      { "value": "D", "text": "Natural gas is produced only by fermenting sugar." }
+    ],
+    "answer": "A",
+    "explanation": "Natural gas is an important source of alkanes. Methane is its main component, and ethane makes up roughly 10–20% of natural gas. Petroleum is the other major source.",
+    "misconception": "Believing that natural gas is pure methane or that it is made mainly of ethane.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ5",
+    "outcome": "B2",
+    "topic": "Laboratory preparation of methane",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which mixture is heated to prepare methane in the laboratory?",
+    "options": [
+      { "value": "A", "text": "Sodium propanoate and soda lime" },
+      { "value": "B", "text": "Sodium ethanoate and soda lime" },
+      { "value": "C", "text": "Iodomethane and water" },
+      { "value": "D", "text": "Sodium chloride and concentrated sulfuric acid" }
+    ],
+    "answer": "B",
+    "explanation": "Heating sodium ethanoate (sodium acetate) with soda lime gives methane: CH₃COONa + NaOH → Na₂CO₃ + CH₄. Soda lime supplies sodium hydroxide and calcium oxide; the CaO keeps the mixture dry.",
+    "misconception": "Choosing sodium propanoate, which gives ethane, or expecting a chloride salt to release methane.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ6",
+    "outcome": "B2",
+    "topic": "Fire-damp",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What is fire-damp?",
+    "options": [
+      { "value": "A", "text": "Methane that has collected in coal-mine workings and can form an explosive mixture with air" },
+      { "value": "B", "text": "Carbon monoxide produced by incomplete combustion" },
+      { "value": "C", "text": "Hydrogen sulfide released from decaying matter" },
+      { "value": "D", "text": "Carbon dioxide trapped in underground caverns" }
+    ],
+    "answer": "A",
+    "explanation": "Fire-damp is the miners' name for methane found in coal mines. Mixed with air it can ignite and cause an explosion, so mines need ventilation and careful testing of the air.",
+    "misconception": "Confusing fire-damp, which is methane, with black damp or with carbon monoxide poisoning.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ7",
+    "outcome": "B2",
+    "topic": "Structure of methane",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What is the shape of the methane molecule around its carbon atom?",
+    "options": [
+      { "value": "A", "text": "Tetrahedral" },
+      { "value": "B", "text": "Flat and square" },
+      { "value": "C", "text": "Linear" },
+      { "value": "D", "text": "Trigonal planar" }
+    ],
+    "answer": "A",
+    "explanation": "Methane has four C–H single bonds arranged as far apart as possible, giving a tetrahedral shape. The bond angle is about 109.5°, which is enrichment beyond the core requirement.",
+    "misconception": "Drawing methane as a flat cross, which suggests a square-planar rather than a tetrahedral arrangement.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ8",
+    "outcome": "B3",
+    "topic": "Complete combustion of methane",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which products form when methane burns completely in a sufficient supply of oxygen?",
+    "options": [
+      { "value": "A", "text": "Carbon dioxide and water" },
+      { "value": "B", "text": "Carbon monoxide and water" },
+      { "value": "C", "text": "Soot and water" },
+      { "value": "D", "text": "Carbon dioxide and hydrogen" }
+    ],
+    "answer": "A",
+    "explanation": "Complete combustion oxidises carbon fully to carbon dioxide and hydrogen to water: CH₄ + 2O₂ → CO₂ + 2H₂O. The flame is non-sooty and a large amount of heat is released.",
+    "misconception": "Naming carbon monoxide or soot as products of complete combustion; those form only when the oxygen supply is insufficient.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ9",
+    "outcome": "B1",
+    "topic": "General formula of the alkanes",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "The general formula of the alkanes is ______.",
+    "answer": ["CₙH₂ₙ₊₂", "CnH2n+2", "CₙH₂ₙ+2", "CnH₂ₙ₊₂", "CnH2n+2"],
+    "explanation": "Alkanes are saturated hydrocarbons with the general formula CₙH₂ₙ₊₂. Successive members differ by CH₂, so methane is CH₄ and ethane is C₂H₆.",
+    "misconception": "Writing CₙH₂ₙ or CₙH₂ₙ₋₂, which are the general formulae of the alkenes and alkynes.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ10",
+    "outcome": "B2",
+    "topic": "Preparation of ethane",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "Sodium propanoate heated with soda lime gives the gas ______.",
+    "answer": ["ethane", "C₂H₆", "C2H6"],
+    "explanation": "The carboxylate salt loses one carbon as sodium carbonate, so sodium propanoate gives the two-carbon alkane ethane: C₂H₅COONa + NaOH → Na₂CO₃ + C₂H₆.",
+    "misconception": "Writing methane because the soda-lime method is first met with sodium ethanoate; the salt must match the gas.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ11",
+    "outcome": "B2",
+    "topic": "Wurtz reaction",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "The Wurtz reaction is carried out in the solvent ______.",
+    "answer": ["dry ether", "ether", "diethyl ether", "dry diethyl ether"],
+    "explanation": "Iodomethane and sodium are heated in dry ether for the Wurtz reaction: 2CH₃I + 2Na → C₂H₆ + 2NaI. The ether must be dry because water would react with the sodium.",
+    "misconception": "Naming water or aqueous sodium hydroxide as the solvent; sodium metal requires a dry, unreactive solvent.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ12",
+    "outcome": "B3",
+    "topic": "Chlorination conditions",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "Methane reacts with chlorine in the presence of ______.",
+    "answer": ["diffused sunlight", "ultraviolet light", "UV light", "sunlight", "diffused sunlight or ultraviolet light", "ultraviolet radiation"],
+    "explanation": "Diffused sunlight or ultraviolet light supplies the energy that starts the substitution. Direct sunlight can be too energetic and may cause an explosion, so diffused light is used.",
+    "misconception": "Writing 'darkness' or 'water'; chlorine substitution in alkanes needs light energy to begin.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ13",
+    "outcome": "B2",
+    "topic": "Valid routes to methane",
+    "type": "multiple",
+    "marks": 2,
+    "prompt": "Which methods can prepare methane? Select all that apply.",
+    "options": [
+      { "value": "A", "text": "Heating sodium ethanoate with soda lime" },
+      { "value": "B", "text": "Adding water to aluminium carbide" },
+      { "value": "C", "text": "Reducing iodomethane with zinc and dilute hydrochloric acid" },
+      { "value": "D", "text": "Heating sodium propanoate with soda lime" },
+      { "value": "E", "text": "The Wurtz reaction between iodomethane and sodium in dry ether" }
+    ],
+    "answer": ["A", "B", "C"],
+    "explanation": "Sodium ethanoate with soda lime, aluminium carbide with water, and reduction of iodomethane all produce methane. Sodium propanoate with soda lime gives ethane, and the Wurtz reaction joins two one-carbon groups to give ethane.",
+    "misconception": "Assuming every preparation method that involves a one-carbon starting material gives methane, even when two carbon groups are joined.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ14",
+    "outcome": "B3",
+    "topic": "Incomplete combustion of methane",
+    "type": "multiple",
+    "marks": 2,
+    "prompt": "Which statements about the incomplete combustion of methane are correct? Select all that apply.",
+    "options": [
+      { "value": "A", "text": "Carbon monoxide can form when oxygen is insufficient." },
+      { "value": "B", "text": "Soot, or carbon, can form when oxygen is very limited." },
+      { "value": "C", "text": "The only products are carbon dioxide and water." },
+      { "value": "D", "text": "Carbon monoxide is poisonous." },
+      { "value": "E", "text": "Incomplete combustion releases more heat than complete combustion." }
+    ],
+    "answer": ["A", "B", "D"],
+    "explanation": "With insufficient oxygen, methane can burn to carbon monoxide and water, or with very limited oxygen to soot and water. Carbon monoxide binds strongly to haemoglobin and is poisonous. Complete combustion gives carbon dioxide and water and releases more heat per mole of methane.",
+    "misconception": "Treating incomplete combustion as harmless, or forgetting that soot forms only when the oxygen supply is very limited.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ15",
+    "outcome": "B1",
+    "topic": "Saturation of alkanes",
+    "type": "truefalse",
+    "marks": 2,
+    "autoMarks": 1,
+    "justify": true,
+    "prompt": "All alkanes are saturated hydrocarbons.",
+    "answer": "True",
+    "modelAnswer": "True. An alkane is a hydrocarbon that contains only single carbon–carbon bonds. Each carbon atom forms four single bonds in total, so the carbon skeleton is saturated with hydrogen and cannot take part in addition reactions. Alkanes follow the general formula CₙH₂ₙ₊₂.",
+    "markingPoints": [
+      "States that the statement is true.",
+      "Explains that alkanes contain only single carbon–carbon bonds and follow CₙH₂ₙ₊₂.",
+      "Links saturation to the absence of addition reactions, so alkanes react by substitution instead."
+    ],
+    "explanation": "An alkane has no C=C or C≡C bond. Its carbon atoms are already bonded to as many atoms as their valency allows, so the molecule is saturated.",
+    "misconception": "Believing that an alkane is unsaturated if it contains hydrogen, or that branches make it unsaturated.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ16",
+    "outcome": "B3",
+    "topic": "Chlorination of methane",
+    "type": "truefalse",
+    "marks": 2,
+    "autoMarks": 1,
+    "justify": true,
+    "prompt": "The reaction of methane with chlorine in diffused sunlight is an addition reaction.",
+    "answer": "False",
+    "modelAnswer": "False. Methane is saturated, so chlorine does not add across a multiple bond. Instead, chlorine replaces hydrogen atoms one at a time in a substitution reaction, and hydrogen chloride is released at each step: CH₄ + Cl₂ → CH₃Cl + HCl. Further substitution can give CH₂Cl₂, CHCl₃ and CCl₄.",
+    "markingPoints": [
+      "States that the statement is false.",
+      "Identifies the reaction as substitution because methane is saturated.",
+      "Gives a correct equation showing a chlorine atom replacing hydrogen and hydrogen chloride as the other product."
+    ],
+    "explanation": "Alkanes undergo substitution with halogens. Addition is characteristic of unsaturated compounds such as alkenes, where a multiple bond opens to accept atoms.",
+    "misconception": "Calling every reaction with chlorine an addition, or omitting HCl from the substitution equation.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ17",
+    "outcome": "B2",
+    "topic": "Matching preparations to gases",
+    "type": "match",
+    "marks": 4,
+    "prompt": "Match each preparation route to the alkane gas it produces.",
+    "pairs": [
+      { "left": "Sodium ethanoate + soda lime", "answer": "Methane" },
+      { "left": "Sodium propanoate + soda lime", "answer": "Ethane" },
+      { "left": "Aluminium carbide + water", "answer": "Methane" },
+      { "left": "Iodomethane + sodium in dry ether", "answer": "Ethane" }
+    ],
+    "options": ["Methane", "Ethane", "Propane", "Hydrogen"],
+    "explanation": "Sodium ethanoate and aluminium carbide both give methane; sodium propanoate and the Wurtz reaction with iodomethane both give ethane. Propane has three carbon atoms and is not the product of any of these preparations.",
+    "misconception": "Assuming that every one-carbon starting material gives methane, including the Wurtz reaction, which joins two methyl groups.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ18",
+    "outcome": "B2",
+    "topic": "Describing methane preparation",
+    "type": "short",
+    "marks": 3,
+    "prompt": "Describe the laboratory preparation of methane from sodium ethanoate. Include the reagent, the condition and the balanced equation.",
+    "modelAnswer": "Sodium ethanoate (sodium acetate) is heated with soda lime, a mixture of sodium hydroxide and calcium oxide, to about 300°C. The sodium hydroxide reacts with the salt and the calcium oxide keeps the mixture dry. The balanced equation is CH₃COONa + NaOH → Na₂CO₃ + CH₄↑. Methane is collected over water because it is almost insoluble in water.",
+    "markingPoints": [
+      "Names sodium ethanoate and soda lime (sodium hydroxide with calcium oxide) as the reactants.",
+      "States the condition: heating to about 300°C, with CaO present.",
+      "Writes the balanced equation CH₃COONa + NaOH → Na₂CO₃ + CH₄."
+    ],
+    "explanation": "The reaction removes the carboxyl group as sodium carbonate and leaves the one-carbon alkane. The CaO in soda lime keeps the mixture dry and absorbs carbon dioxide.",
+    "misconception": "Writing sodium hydroxide alone as soda lime, using sodium propanoate, or giving an unbalanced equation that omits Na₂CO₃.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ19",
+    "outcome": "B3",
+    "topic": "Complete and incomplete combustion",
+    "type": "short",
+    "marks": 3,
+    "prompt": "Explain the difference between complete and incomplete combustion of methane. Give the products of each and state one observation or hazard.",
+    "modelAnswer": "Complete combustion occurs when methane burns in a sufficient supply of oxygen. Carbon is oxidised to carbon dioxide and hydrogen to water: CH₄ + 2O₂ → CO₂ + 2H₂O. It gives a non-sooty flame and releases a large amount of heat. Incomplete combustion occurs when oxygen is insufficient. It can produce poisonous carbon monoxide and water: 2CH₄ + 3O₂ → 2CO + 4H₂O. With very limited oxygen, soot (carbon) and water form: CH₄ + O₂ → C + 2H₂O, giving a sooty flame. Carbon monoxide is dangerous because it is poisonous, and soot causes pollution.",
+    "markingPoints": [
+      "Contrasts a sufficient oxygen supply in complete combustion with an insufficient supply in incomplete combustion.",
+      "Gives carbon dioxide and water as the products of complete combustion, with the equation CH₄ + 2O₂ → CO₂ + 2H₂O.",
+      "Gives carbon monoxide or soot as products of incomplete combustion, with a correct equation or a named hazard such as carbon monoxide poisoning."
+    ],
+    "explanation": "Complete combustion fully oxidises both carbon and hydrogen. When oxygen is limited, some carbon is only partly oxidised to carbon monoxide or is not oxidised at all and appears as soot.",
+    "misconception": "Writing carbon monoxide as a product of complete combustion, or claiming that incomplete combustion releases more heat.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "BQ20",
+    "outcome": "B3",
+    "topic": "Preparation, combustion and substitution of methane",
+    "type": "long",
+    "marks": 4,
+    "prompt": "Describe the laboratory preparation of methane from sodium ethanoate, its complete combustion, and its reaction with chlorine in diffused sunlight. Include one balanced equation for each reaction and name the type of reaction with chlorine.",
+    "modelAnswer": "Methane is prepared by heating sodium ethanoate with soda lime to about 300°C: CH₃COONa + NaOH → Na₂CO₃ + CH₄. The calcium oxide in soda lime keeps the mixture dry. Methane burns completely in sufficient oxygen to give carbon dioxide and water: CH₄ + 2O₂ → CO₂ + 2H₂O. The flame is non-sooty and much heat is released. In diffused sunlight or ultraviolet light, methane undergoes substitution with chlorine. A chlorine atom replaces one hydrogen atom and hydrogen chloride is released: CH₄ + Cl₂ → CH₃Cl + HCl. Further substitution can give CH₂Cl₂, CHCl₃ and CCl₄. The reaction is substitution, not addition, because methane is saturated.",
+    "markingPoints": [
+      "Describes heating sodium ethanoate with soda lime and gives the balanced preparation equation CH₃COONa + NaOH → Na₂CO₃ + CH₄.",
+      "Describes complete combustion and gives CH₄ + 2O₂ → CO₂ + 2H₂O, including a correct observation such as a non-sooty flame.",
+      "Identifies the chlorination as substitution in diffused sunlight or ultraviolet light, because methane is saturated.",
+      "Gives a correct chlorination equation such as CH₄ + Cl₂ → CH₃Cl + HCl and states that HCl is also produced."
+    ],
+    "explanation": "The three parts test the same alkane from three angles: preparation, oxidation and substitution. Keep the conditions with each equation and remember that every substitution step releases HCl.",
+    "misconception": "Calling chlorination an addition reaction, omitting HCl, or claiming that methane reacts with chlorine without light.",
+    "source": "Original practice question"
+  }
+]

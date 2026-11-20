@@ -6,6 +6,9 @@ import ChapterHeroPanel from '../components/ChapterHeroPanel.vue'
 import LessonOne from '../components/chapters/chapter-12b/LessonOne.vue'
 import LessonTwo from '../components/chapters/chapter-12b/LessonTwo.vue'
 import LessonThree from '../components/chapters/chapter-12b/LessonThree.vue'
+import MemoryWorkshop from '../components/chapters/chapter-12b/MemoryWorkshop.vue'
+import RevisionCentre from '../components/chapters/chapter-12b/RevisionCentre.vue'
+import Assessment from '../components/Assessment.vue'
 </script>
 
 <template>
@@ -15,6 +18,9 @@ import LessonThree from '../components/chapters/chapter-12b/LessonThree.vue'
       <LessonOne />
       <LessonTwo />
       <LessonThree />
+      <MemoryWorkshop />
+      <RevisionCentre />
+      <Assessment />
     </ChapterShell>
   </ChapterProvider>
 </template>
