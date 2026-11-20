@@ -461,7 +461,7 @@ Water is polar; petrol is a non-polar organic solvent. The organic compound is n
 
 **Total:** 39 marks. Objective items are auto-scored; written items use marking-point self-assessment.
 
-The full question bank with answers, explanations, marking points and misconceptions is in `src/data/questions.json`. `chapter-questions.json` is generated from it with `npm run export:questions`, validated against the chapter question schema with `npm run validate:questions`, and uses the schema's field names.
+The full Chapter 1 question bank with answers, explanations, marking points and misconceptions is in `src/data/questions/chapter-1.json`. The Chapter 12A and 12B banks live in `src/data/questions/chapter-12a.json` and `src/data/questions/chapter-12b.json`. `npm run export:questions` writes all three banks to `exports/chapter-1-questions.json`, `exports/chapter-12a-questions.json` and `exports/chapter-12b-questions.json`. `npm run validate:questions` checks those exports against the chapter question schema, and the exports use the schema's field names.
 
 ---
 

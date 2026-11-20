@@ -89,6 +89,10 @@ playwright.config.js
 scripts/
   export-questions.mjs
   validate-questions.mjs
+exports/
+  chapter-1-questions.json
+  chapter-12a-questions.json
+  chapter-12b-questions.json
 tests/
   landing.spec.js
   chapter-1.spec.js

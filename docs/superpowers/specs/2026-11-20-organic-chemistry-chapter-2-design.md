@@ -3,7 +3,6 @@
 **Status:** Superseded. The planned tetravalency Chapter 2 was not built separately; its material is absorbed into Chapter 12A. See `2026-11-20-organic-chemistry-12a-12b-design.md`. This file is retained for historical context only.
 
 **Date:** 20 November 2026
-**Status:** Approved by user in chat
 **Delivery:** Vue 3 + Vite multi-page static application for GitHub Pages
 **Syllabus:** CISCE ICSE Chemistry (Science Paper 2), examination year 2027
 **Unit:** 9.1 Organic Chemistry: unique nature of carbon — tetravalency
