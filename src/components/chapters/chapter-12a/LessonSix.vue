@@ -201,19 +201,21 @@ import IsomerExplorer from './IsomerExplorer.vue'
       <h3>Classifying a pair</h3>
       <p>
         Ask two questions in order. First, do the two compounds have the same molecular formula? If
-        not, they are not isomers. Second, what exactly has changed?
+        not, they are not isomers. Second, compare the functional groups before the carbon skeleton,
+        because a different functional group changes the whole family.
       </p>
       <ol>
         <li>
-          If the carbon skeleton has changed, the pair shows <strong>chain isomerism</strong>.
-        </li>
-        <li>
-          If the skeleton and family are the same but the position of the group or bond has changed,
-          the pair shows <strong>position isomerism</strong>.
-        </li>
-        <li>
           If the functional group has changed, the pair shows
           <strong>functional isomerism</strong>, labelled as an extension at this level.
+        </li>
+        <li>
+          If the functional group is unchanged but the carbon skeleton has changed, the pair shows
+          <strong>chain isomerism</strong>.
+        </li>
+        <li>
+          If the functional group and skeleton are unchanged but the position of the group or bond
+          has changed, the pair shows <strong>position isomerism</strong>.
         </li>
       </ol>
 
@@ -268,10 +270,11 @@ import IsomerExplorer from './IsomerExplorer.vue'
       <h3>Why the number of isomers rises with carbon count</h3>
       <p>
         Each additional carbon atom creates new ways to branch the skeleton or to place a functional
-        group. With one or two carbon atoms there is only one arrangement. With four carbon atoms
-        there are two chain isomers of C₄H₁₀, and with five carbon atoms there are three chain isomers
-        of C₅H₁₂. The number grows quickly because every new carbon can lengthen a chain, start a
-        branch, or take part in a different position for a multiple bond or functional group.
+        group. For alkane skeletons, one or two carbon atoms give only one chain arrangement; chain
+        branching first becomes possible at four carbon atoms. With four carbon atoms there are two
+        chain isomers of C₄H₁₀, and with five carbon atoms there are three chain isomers of C₅H₁₂.
+        The number grows quickly because every new carbon can lengthen a chain, start a branch, or
+        take part in a different position for a multiple bond or functional group.
       </p>
       <p>
         This is one reason organic chemistry contains so many compounds. A molecular formula does not

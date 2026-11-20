@@ -98,6 +98,21 @@ test('isomer explorer shows chain and functional isomers', async ({ page }) => {
   await expect(lab).toContainText('Ethanol')
   await expect(lab).toContainText('Methoxymethane')
   await expect(lab).toContainText('Functional isomerism')
+  await lab.locator('#isomer-formula').selectOption('c4h8')
+  await expect(lab).toContainText('3 isomers shown')
+})
+
+test('lesson 6 classifies functional-group changes first and qualifies alkane skeletons', async ({
+  page
+}) => {
+  const lesson = page.locator('#lesson-6')
+  await expect(lesson).toContainText('If the functional group has changed')
+  await expect(lesson).toContainText(
+    'If the functional group is unchanged but the carbon skeleton has changed'
+  )
+  await expect(lesson).toContainText(
+    'For alkane skeletons, one or two carbon atoms give only one chain arrangement'
+  )
 })
 
 test('12A memory and revision sections work', async ({ page }) => {

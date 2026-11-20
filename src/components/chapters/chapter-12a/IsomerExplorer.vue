@@ -31,7 +31,7 @@ const selected = computed(
 
     <div class="lab-output" aria-live="polite">
       <p><strong>Type:</strong> {{ selected.type }}</p>
-      <p><strong>Count:</strong> {{ selected.isomers.length }} structural isomers</p>
+      <p><strong>Count:</strong> {{ selected.isomers.length }} isomers shown</p>
       <p>{{ selected.note }}</p>
 
       <div class="isomer-grid">
