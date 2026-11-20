@@ -1896,3 +1896,8 @@ main {
 .isomer-card p {
   margin: 0.25rem 0;
 }
+
+#alkane-n {
+  width: 100%;
+  max-width: 28rem;
+}
