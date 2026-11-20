@@ -14,7 +14,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(root, 'index.html'),
-        chapter1: resolve(root, 'chapter-1.html')
+        chapter1: resolve(root, 'chapter-1.html'),
+        chapter12a: resolve(root, 'chapter-12a.html')
       }
     }
   }
