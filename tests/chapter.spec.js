@@ -182,3 +182,16 @@ test('lesson progress persists across reload and reset', async ({ page }) => {
   await page.waitForLoadState('domcontentloaded')
   await expect(page.locator('#progress-label')).toContainText('0 of 6 milestones')
 })
+
+test('chapter context preserves the chapter 1 storage contract', async ({ page }) => {
+  for (const [id, value] of [
+    ['l1-q1', 'B'],
+    ['l1-q2', 'A'],
+    ['l1-q3', 'C']
+  ]) {
+    await page.locator(`input[name="${id}"][value="${value}"]`).check()
+  }
+
+  const keys = await page.evaluate(() => Object.keys(localStorage))
+  expect(keys.some((key) => key === 'icse10.organic1.state')).toBe(true)
+})

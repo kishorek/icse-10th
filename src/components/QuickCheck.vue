@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
-import { useProgress } from '../composables/useProgress'
+import { useChapter } from '../composables/useChapter'
 
 const props = defineProps({
   id: { type: String, required: true },
@@ -11,7 +11,8 @@ const props = defineProps({
   wrongFeedback: { type: String, required: true }
 })
 
-const { state, recordCheck } = useProgress()
+const { progress } = useChapter()
+const { state, recordCheck } = progress
 const selected = ref(state.checks[props.id]?.answer ?? '')
 const feedbackId = computed(() => `${props.id}-feedback`)
 

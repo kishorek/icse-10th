@@ -1,12 +1,15 @@
 <script setup>
 import { computed } from 'vue'
-import { outcomes } from '../data/chapter'
+import { useChapter } from '../composables/useChapter'
 import {
   answerIsCorrect,
   formatCorrectAnswer,
   matchScore,
   selfMax
 } from '../lib/scoring'
+
+const { chapter } = useChapter()
+const outcomes = chapter.outcomes
 
 const props = defineProps({
   question: { type: Object, required: true },

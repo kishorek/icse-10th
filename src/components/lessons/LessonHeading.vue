@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { lessons } from '../../data/chapter'
-import { useProgress } from '../../composables/useProgress'
+import { useChapter } from '../../composables/useChapter'
 
 const props = defineProps({
   id: { type: String, required: true },
@@ -10,11 +9,12 @@ const props = defineProps({
   objective: { type: String, required: true }
 })
 
-const { state, completedIds } = useProgress()
-const lesson = lessons.find((item) => item.id === props.id)
+const { chapter, progress } = useChapter()
+const { state, completedIds } = progress
+const lesson = computed(() => chapter.lessons.find((item) => item.id === props.id))
 const complete = computed(() => completedIds.value.has(props.id))
 const started = computed(() =>
-  lesson ? lesson.checkIds.some((checkId) => Boolean(state.checks[checkId])) : false
+  lesson.value ? lesson.value.checkIds.some((checkId) => Boolean(state.checks[checkId])) : false
 )
 </script>
 

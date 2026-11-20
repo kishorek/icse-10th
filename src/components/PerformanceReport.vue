@@ -1,6 +1,9 @@
 <script setup>
 import { computed } from 'vue'
-import { outcomes } from '../data/chapter'
+import { useChapter } from '../composables/useChapter'
+
+const { chapter } = useChapter()
+const outcomes = chapter.outcomes
 
 const props = defineProps({
   score: { type: Object, required: true },

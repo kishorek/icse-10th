@@ -1,16 +1,20 @@
 <script setup>
 import { computed, nextTick, onMounted } from 'vue'
-import questions from '../data/questions.json'
-import { useProgress } from '../composables/useProgress'
+import { useChapter } from '../composables/useChapter'
 import { isAnswered, scoreAssessment } from '../lib/scoring'
 import QuestionCard from './QuestionCard.vue'
 import PerformanceReport from './PerformanceReport.vue'
 
-const { state, save } = useProgress()
+const { chapter, progress } = useChapter()
+const questions = chapter.questions
+const { state, save } = progress
 const answers = state.assessment.answers
 const selfScores = state.assessment.selfScores
 
 const submitted = computed(() => state.assessment.submitted)
+const totalMarks = computed(() =>
+  questions.reduce((sum, question) => sum + Number(question.marks || 0), 0)
+)
 const answeredCount = computed(
   () => questions.filter((question) => isAnswered(question, answers)).length
 )
@@ -79,8 +83,9 @@ function reset() {
       <p class="lesson-kicker">Chapter assessment</p>
       <h2 id="assessment-title">Check your examination readiness</h2>
       <p class="lesson-objective">
-        24 original practice questions, worth 39 marks. Objective answers are scored automatically.
-        Written answers reveal marking points after submission and are self-assessed.
+        {{ questions.length }} original practice questions, worth {{ totalMarks }} marks.
+        Objective answers are scored automatically. Written answers reveal marking points after
+        submission and are self-assessed.
       </p>
     </header>
 

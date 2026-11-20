@@ -1,31 +1,21 @@
 import { computed, reactive } from 'vue'
-import { lessons, storageKey } from '../data/chapter'
 
 function defaultState() {
   return {
     checks: {},
-    assessment: {
-      answers: {},
-      selfScores: {},
-      submitted: false
-    }
+    assessment: { answers: {}, selfScores: {}, submitted: false }
   }
 }
 
-function loadState() {
-  if (typeof localStorage === 'undefined') {
-    return defaultState()
-  }
+export function loadChapterState(storageKey) {
+  if (typeof localStorage === 'undefined') return defaultState()
 
   try {
     const raw = localStorage.getItem(storageKey)
     if (!raw) return defaultState()
     const parsed = JSON.parse(raw)
     const checks =
-      parsed &&
-      parsed.checks &&
-      typeof parsed.checks === 'object' &&
-      !Array.isArray(parsed.checks)
+      parsed && parsed.checks && typeof parsed.checks === 'object' && !Array.isArray(parsed.checks)
         ? parsed.checks
         : {}
     const assessment = parsed?.assessment || {}
@@ -33,15 +23,11 @@ function loadState() {
       checks,
       assessment: {
         answers:
-          assessment.answers &&
-          typeof assessment.answers === 'object' &&
-          !Array.isArray(assessment.answers)
+          assessment.answers && typeof assessment.answers === 'object' && !Array.isArray(assessment.answers)
             ? assessment.answers
             : {},
         selfScores:
-          assessment.selfScores &&
-          typeof assessment.selfScores === 'object' &&
-          !Array.isArray(assessment.selfScores)
+          assessment.selfScores && typeof assessment.selfScores === 'object' && !Array.isArray(assessment.selfScores)
             ? assessment.selfScores
             : {},
         submitted: Boolean(assessment.submitted)
@@ -52,12 +38,12 @@ function loadState() {
   }
 }
 
-const state = reactive(loadState())
+export function createChapterProgress(chapter) {
+  const state = reactive(loadChapterState(chapter.storageKey))
 
-export function useProgress() {
   const save = () => {
     try {
-      localStorage.setItem(storageKey, JSON.stringify(state))
+      localStorage.setItem(chapter.storageKey, JSON.stringify(state))
     } catch {
       // Storage can be unavailable in private or restricted browser contexts.
     }
@@ -74,25 +60,24 @@ export function useProgress() {
   }
 
   const completedLessons = computed(() =>
-    lessons.filter((lesson) =>
+    chapter.lessons.filter((lesson) =>
       lesson.checkIds.every((checkId) => state.checks[checkId]?.correct === true)
     )
   )
 
   const completedIds = computed(() => new Set(completedLessons.value.map((lesson) => lesson.id)))
-
   const assessmentSubmitted = computed(() => state.assessment.submitted)
-
-  const milestonesTotal = lessons.length + 1
+  const assessmentMilestone = chapter.features.assessment ? 1 : 0
+  const milestonesTotal = chapter.lessons.length + assessmentMilestone
 
   const progressPercent = computed(() => {
-    const done = completedLessons.value.length + (assessmentSubmitted.value ? 1 : 0)
-    return Math.round((done / milestonesTotal) * 100)
+    const done = completedLessons.value.length + (assessmentSubmitted.value ? assessmentMilestone : 0)
+    return milestonesTotal ? Math.round((done / milestonesTotal) * 100) : 0
   })
 
   const resetAll = () => {
     try {
-      localStorage.removeItem(storageKey)
+      localStorage.removeItem(chapter.storageKey)
     } catch {
       // Ignore storage failures; reload still restores in-memory defaults.
     }
