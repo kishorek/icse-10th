@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/icse-class10-question.schema.json",
+  "title": "ICSE Class 10 Interactive Chapter Question",
+  "description": "A structured assessment item mapped to a syllabus learning outcome.",
+  "type": "object",
+  "required": [
+    "id",
+    "subject",
+    "topic",
+    "learning_outcome",
+    "type",
+    "difficulty",
+    "marks",
+    "prompt",
+    "answer",
+    "explanation",
+    "source_classification"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[A-Z0-9_]+$" },
+    "subject": { "enum": ["Mathematics", "Physics", "Chemistry", "Biology"] },
+    "topic": { "type": "string", "minLength": 1 },
+    "subtopic": { "type": "string" },
+    "syllabus_reference": { "type": "string" },
+    "learning_outcome": { "type": "string", "minLength": 1 },
+    "type": {
+      "enum": [
+        "single_choice",
+        "multiple_select",
+        "true_false_justify",
+        "short_answer",
+        "long_answer",
+        "numeric",
+        "fill_blank",
+        "matching",
+        "ordering",
+        "diagram_label",
+        "worked_solution"
+      ]
+    },
+    "difficulty": { "enum": ["foundation", "standard", "challenging"] },
+    "marks": { "type": "number", "exclusiveMinimum": 0 },
+    "estimated_time_seconds": { "type": "integer", "minimum": 1 },
+    "prompt": { "type": "string", "minLength": 1 },
+    "stimulus": { "type": ["string", "null"] },
+    "figure": {
+      "type": ["object", "null"],
+      "properties": {
+        "asset": { "type": "string" },
+        "alt": { "type": "string" },
+        "caption": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "text"],
+        "properties": {
+          "id": { "type": "string" },
+          "text": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "hints": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "answer": {},
+    "accepted_answers": { "type": "array" },
+    "explanation": { "type": "string", "minLength": 1 },
+    "marking_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["point", "marks"],
+        "properties": {
+          "point": { "type": "string" },
+          "marks": { "type": "number", "exclusiveMinimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "common_mistake": { "type": "string" },
+    "source_classification": {
+      "enum": ["original_practice", "verified_past_paper", "adapted_practice"]
+    },
+    "source_reference": { "type": ["string", "null"] },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

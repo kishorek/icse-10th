@@ -1,0 +1,420 @@
+[
+  {
+    "id": "Q1",
+    "outcome": "O1",
+    "topic": "Meaning of organic chemistry",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which statement best defines organic chemistry?",
+    "options": [
+      { "value": "A", "text": "The study of all compounds that contain carbon, including CO₂ and carbonates" },
+      { "value": "B", "text": "The study of compounds obtained only from living organisms" },
+      { "value": "C", "text": "The study of carbon compounds, especially those with carbon–hydrogen bonds, excluding simple carbon compounds such as CO, CO₂, carbonates, bicarbonates, cyanides and carbides" },
+      { "value": "D", "text": "The study of compounds that contain oxygen" }
+    ],
+    "answer": "C",
+    "explanation": "Organic chemistry is the study of carbon compounds, especially hydrocarbons and their derivatives. A few simple carbon-containing compounds, such as CO, CO₂, carbonates, bicarbonates, cyanides and carbides, are conventionally treated as inorganic.",
+    "misconception": "Assuming that every compound containing carbon is organic.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q2",
+    "outcome": "O1",
+    "topic": "Vital-force theory and Wöhler's synthesis",
+    "type": "truefalse",
+    "marks": 2,
+    "autoMarks": 1,
+    "justify": true,
+    "prompt": "The vital-force theory claimed that organic compounds could be produced only by living organisms.",
+    "answer": "True",
+    "modelAnswer": "True. The vital-force theory held that a special ‘vital force’ present only in living things was needed to make organic compounds. In 1828, Friedrich Wöhler synthesized urea from ammonium cyanate, an inorganic compound, in the laboratory. This showed that organic compounds could be made without living organisms.",
+    "markingPoints": [
+      "States that the statement is true.",
+      "Mentions Wöhler or the laboratory synthesis of urea.",
+      "Explains that laboratory synthesis disproved the need for a vital force."
+    ],
+    "explanation": "Wöhler's synthesis of urea is the standard ICSE example of an organic compound being prepared from an inorganic compound in the laboratory.",
+    "misconception": "Believing that organic compounds can only be obtained from plants or animals.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q3",
+    "outcome": "O2",
+    "topic": "Tetravalency of carbon",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Carbon has atomic number 6 and the electronic configuration 2,4. How many covalent bonds does one carbon atom normally form?",
+    "options": [
+      { "value": "A", "text": "Two" },
+      { "value": "B", "text": "Three" },
+      { "value": "C", "text": "Four" },
+      { "value": "D", "text": "Six" }
+    ],
+    "answer": "C",
+    "explanation": "Carbon has four valence electrons. It shares four pairs of electrons to complete its octet, so it forms four covalent bonds. This is called tetravalency.",
+    "misconception": "Counting the total number of electrons (six) instead of the four valence electrons.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q4",
+    "outcome": "O2",
+    "topic": "Catenation",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "The self-linking of carbon atoms into chains and rings is called ______.",
+    "answer": ["catenation"],
+    "explanation": "Catenation is the ability of carbon atoms to bond with other carbon atoms, forming straight chains, branched chains and rings.",
+    "misconception": "Confusing catenation with tetravalency, which is the formation of four bonds.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q5",
+    "outcome": "O2",
+    "topic": "Catenation",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which property of carbon directly allows it to form long chains and rings?",
+    "options": [
+      { "value": "A", "text": "Tetravalency" },
+      { "value": "B", "text": "Catenation" },
+      { "value": "C", "text": "Ionisation" },
+      { "value": "D", "text": "Electrolysis" }
+    ],
+    "answer": "B",
+    "explanation": "Catenation is the self-linking of carbon atoms. Tetravalency explains why carbon forms four bonds, but catenation specifically explains chains and rings.",
+    "misconception": "Choosing tetravalency for every question about carbon's versatility.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q6",
+    "outcome": "O2",
+    "topic": "Chain types",
+    "type": "match",
+    "marks": 3,
+    "prompt": "Match each carbon skeleton with its description.",
+    "pairs": [
+      { "left": "Straight chain", "answer": "Carbon atoms form a continuous line." },
+      { "left": "Branched chain", "answer": "A side chain is attached to the main chain." },
+      { "left": "Cyclic compound", "answer": "Carbon atoms form a closed ring." }
+    ],
+    "options": [
+      "A side chain is attached to the main chain.",
+      "Carbon atoms form a closed ring.",
+      "Carbon atoms form a continuous line."
+    ],
+    "explanation": "Carbon skeletons may be straight, branched or cyclic. The same number of carbon atoms can give different skeletons, which is one reason organic compounds are so varied.",
+    "misconception": "Treating a branched chain and a ring as the same arrangement.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q7",
+    "outcome": "O2",
+    "topic": "Bond order",
+    "type": "single",
+    "marks": 1,
+    "prompt": "A carbon–carbon triple bond contains how many shared pairs of electrons?",
+    "options": [
+      { "value": "A", "text": "One" },
+      { "value": "B", "text": "Two" },
+      { "value": "C", "text": "Three" },
+      { "value": "D", "text": "Four" }
+    ],
+    "answer": "C",
+    "explanation": "A single bond has one shared pair, a double bond has two shared pairs, and a triple bond has three shared pairs.",
+    "misconception": "Thinking a triple bond means three separate bonds to three different atoms.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q8",
+    "outcome": "O2",
+    "topic": "Reasons for the large number of organic compounds",
+    "type": "multiple",
+    "marks": 2,
+    "prompt": "Which factors help explain the very large number of organic compounds? Select all that apply.",
+    "options": [
+      { "value": "A", "text": "Tetravalency of carbon" },
+      { "value": "B", "text": "Catenation" },
+      { "value": "C", "text": "Formation of multiple bonds" },
+      { "value": "D", "text": "Isomerism" },
+      { "value": "E", "text": "High electrical conductivity" }
+    ],
+    "answer": ["A", "B", "C", "D"],
+    "explanation": "Tetravalency, catenation, multiple bonding and isomerism all increase the number and variety of possible carbon compounds. Organic compounds are generally poor conductors, so high conductivity is not a reason.",
+    "misconception": "Selecting every property of carbon, including unrelated ones such as conductivity.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q9",
+    "outcome": "O3",
+    "topic": "Properties of organic compounds",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which set of properties is most typical of simple organic compounds?",
+    "options": [
+      { "value": "A", "text": "High melting point, ionic bonding, conducts when molten" },
+      { "value": "B", "text": "Low melting point, covalent bonding, poor electrical conductivity" },
+      { "value": "C", "text": "High melting point, soluble in water, strong electrolyte" },
+      { "value": "D", "text": "Low melting point, ionic bonding, conducts in water" }
+    ],
+    "answer": "B",
+    "explanation": "Simple organic compounds are usually covalent molecules with weak forces between molecules. They therefore have low melting and boiling points and do not conduct electricity.",
+    "misconception": "Assuming all organic compounds are ionic because many contain several elements.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q10",
+    "outcome": "O3",
+    "topic": "Carbon-containing inorganic compounds",
+    "type": "truefalse",
+    "marks": 2,
+    "autoMarks": 1,
+    "justify": true,
+    "prompt": "Carbon dioxide is an organic compound because it contains carbon.",
+    "answer": "False",
+    "modelAnswer": "False. Carbon dioxide contains carbon, but it is an oxide of carbon and is conventionally classified as inorganic. Organic compounds are carbon compounds excluding simple carbon compounds such as CO, CO₂, carbonates, bicarbonates, cyanides and carbides.",
+    "markingPoints": [
+      "States that the statement is false.",
+      "Identifies CO₂ as an oxide of carbon or as a conventional exception.",
+      "Explains that containing carbon alone does not make a compound organic."
+    ],
+    "explanation": "CO₂ is a carbon-containing compound, but it is not an organic compound under the standard school classification.",
+    "misconception": "Using ‘contains carbon’ as the only test for an organic compound.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q11",
+    "outcome": "O2",
+    "topic": "Bonding in methane",
+    "type": "short",
+    "marks": 2,
+    "prompt": "Describe the bonding in a methane molecule, CH₄. State the number of C–H bonds and the shape of the molecule.",
+    "modelAnswer": "A methane molecule has one carbon atom bonded to four hydrogen atoms. Carbon shares four pairs of electrons, forming four C–H single covalent bonds. The four bonds point towards the corners of a tetrahedron, so the molecule is tetrahedral.",
+    "markingPoints": [
+      "States that carbon forms four C–H single covalent bonds.",
+      "States that carbon shares four pairs of electrons.",
+      "States that the shape is tetrahedral."
+    ],
+    "explanation": "Methane is the simplest hydrocarbon. Carbon uses all four of its valence electrons to form single covalent bonds with hydrogen.",
+    "misconception": "Describing methane as ionic or drawing only two C–H bonds.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q12",
+    "outcome": "O2",
+    "topic": "Catenation examples",
+    "type": "short",
+    "marks": 2,
+    "prompt": "Explain catenation. Give one example of a straight-chain compound and one example of a cyclic compound.",
+    "modelAnswer": "Catenation is the self-linking of carbon atoms to form chains or rings. Propane (C₃H₈) or butane (C₄H₁₀) is a straight-chain example. Cyclohexane (C₆H₁₂) or benzene (C₆H₆) is a cyclic example.",
+    "markingPoints": [
+      "Defines catenation as the self-linking of carbon atoms.",
+      "Gives a correct straight-chain example.",
+      "Gives a correct cyclic example."
+    ],
+    "explanation": "Carbon atoms can bond to one another repeatedly. This produces straight chains, branched chains and closed rings.",
+    "misconception": "Defining catenation as ‘carbon forming four bonds’.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q13",
+    "outcome": "O2",
+    "topic": "Ethene and ethyne",
+    "type": "short",
+    "marks": 2,
+    "prompt": "Compare ethene (C₂H₄) and ethyne (C₂H₂) in terms of the carbon–carbon bond and the number of hydrogen atoms.",
+    "modelAnswer": "Ethene has a carbon–carbon double bond (C=C) and four hydrogen atoms. Ethyne has a carbon–carbon triple bond (C≡C) and two hydrogen atoms. Both are unsaturated hydrocarbons.",
+    "markingPoints": [
+      "Identifies the C=C double bond in ethene and the C≡C triple bond in ethyne.",
+      "States the correct number of hydrogen atoms in each compound.",
+      "May note that both are unsaturated."
+    ],
+    "explanation": "A double bond contains two shared pairs and a triple bond contains three shared pairs. The extra bonding uses electrons that could otherwise bond to hydrogen.",
+    "misconception": "Thinking ethene and ethyne have the same number of hydrogen atoms because both have two carbon atoms.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q14",
+    "outcome": "O2",
+    "topic": "Isomerism preview",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Two compounds have the same molecular formula but different structural formulae. They are called:",
+    "options": [
+      { "value": "A", "text": "Isotopes" },
+      { "value": "B", "text": "Isomers" },
+      { "value": "C", "text": "Allotropes" },
+      { "value": "D", "text": "Polymers" }
+    ],
+    "answer": "B",
+    "explanation": "Isomers have the same molecular formula but different arrangements of atoms, and therefore different structural formulae.",
+    "misconception": "Confusing isomers with isotopes (same element, different neutrons) or allotropes (different forms of an element).",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q15",
+    "outcome": "O3",
+    "topic": "Solubility and like dissolves like",
+    "type": "short",
+    "marks": 2,
+    "prompt": "A simple covalent organic compound does not dissolve in water but dissolves readily in petrol. Explain this using the idea ‘like dissolves like’.",
+    "modelAnswer": "Water is a polar solvent, while petrol is a non-polar organic solvent. The simple covalent organic compound is non-polar. ‘Like dissolves like’ means that non-polar substances dissolve in non-polar solvents, so the compound dissolves in petrol rather than in water.",
+    "markingPoints": [
+      "Identifies water as polar and petrol as non-polar or organic.",
+      "Identifies the organic compound as non-polar.",
+      "Applies ‘like dissolves like’ to explain the observation."
+    ],
+    "explanation": "Many simple organic compounds are non-polar molecules. They mix with non-polar organic solvents but not with polar water.",
+    "misconception": "Believing that water dissolves every substance.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q16",
+    "outcome": "O1",
+    "topic": "Why organic chemistry is a separate branch",
+    "type": "short",
+    "marks": 2,
+    "prompt": "Why is organic chemistry studied as a separate branch of chemistry?",
+    "modelAnswer": "Carbon forms an extremely large number of compounds because of its tetravalency, catenation, multiple bonding and isomerism. These compounds are central to life, fuels, medicines, food and materials, so they are studied as a separate branch for convenience and depth.",
+    "markingPoints": [
+      "Mentions the very large number of carbon compounds.",
+      "Refers to carbon's unique properties such as tetravalency or catenation.",
+      "Mentions the importance of organic compounds in life or industry."
+    ],
+    "explanation": "The number and variety of organic compounds are so great that a separate branch of study is useful.",
+    "misconception": "Saying that organic chemistry is separate because organic compounds are alive.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q17",
+    "outcome": "O2",
+    "topic": "Why carbon forms four bonds",
+    "type": "short",
+    "marks": 2,
+    "prompt": "Explain, using its electronic configuration, why carbon forms four covalent bonds.",
+    "modelAnswer": "Carbon has atomic number 6 and the electronic configuration 2,4. It has four electrons in its valence shell and needs four more to complete an octet. It shares four pairs of electrons with other atoms, forming four covalent bonds.",
+    "markingPoints": [
+      "Gives the electronic configuration 2,4.",
+      "States that carbon has four valence electrons.",
+      "Explains that it shares four pairs to complete its octet.",
+      "Names the property tetravalency."
+    ],
+    "explanation": "Carbon cannot lose or gain four electrons easily, so sharing is the favourable way to complete its outer shell.",
+    "misconception": "Saying carbon loses four electrons to become C⁴⁺.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q18",
+    "outcome": "O2",
+    "topic": "Ring structure application",
+    "type": "short",
+    "marks": 2,
+    "prompt": "A carbon compound has six carbon atoms arranged in a closed ring, with one hydrogen atom attached to each carbon. Name the ring and give its molecular formula.",
+    "modelAnswer": "The compound has a cyclic or ring structure. With six carbon atoms and six hydrogen atoms, its molecular formula is C₆H₆. This is the benzene ring.",
+    "markingPoints": [
+      "Identifies the structure as cyclic or a ring.",
+      "States the molecular formula C₆H₆.",
+      "May name benzene."
+    ],
+    "explanation": "Benzene is the standard ICSE example of a cyclic compound. Cyclohexane, by contrast, has the formula C₆H₁₂.",
+    "misconception": "Giving C₆H₁₂, which is cyclohexane rather than benzene.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q19",
+    "outcome": "O3",
+    "topic": "Comparing organic and inorganic compounds",
+    "type": "long",
+    "marks": 3,
+    "prompt": "Compare organic and inorganic compounds under these headings: bonding, melting and boiling points, solubility, and electrical conductivity.",
+    "modelAnswer": "Organic compounds are mostly covalent. Simple organic compounds have low melting and boiling points, are usually insoluble in water but soluble in organic solvents, and are poor conductors of electricity. Inorganic compounds are often ionic, though some are covalent. Ionic inorganic compounds have high melting and boiling points, are often soluble in water, and conduct electricity when molten or in aqueous solution.",
+    "markingPoints": [
+      "Contrasts the bonding: organic mostly covalent; inorganic often ionic.",
+      "Contrasts melting and boiling points: organic generally lower; ionic inorganic generally higher.",
+      "Contrasts solubility: organic usually insoluble in water but soluble in organic solvents; inorganic often water-soluble.",
+      "Contrasts conductivity: organic poor; ionic inorganic conducts when molten or aqueous."
+    ],
+    "explanation": "These are general trends with exceptions. For example, some organic compounds are water-soluble, and some inorganic compounds are covalent.",
+    "misconception": "Treating every difference as absolute rather than a general trend with exceptions.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q20",
+    "outcome": "O4",
+    "topic": "Everyday organic compounds",
+    "type": "short",
+    "marks": 2,
+    "prompt": "Give two everyday examples of organic compounds and state one use of each.",
+    "modelAnswer": "Methane, the main component of natural gas, is used as a fuel. Ethanol is used in hand sanitizers and as a solvent. Other acceptable examples include glucose in food, polythene in bags, aspirin as a medicine, and urea as a fertiliser.",
+    "markingPoints": [
+      "Gives two correct organic compounds.",
+      "States a correct use for each compound."
+    ],
+    "explanation": "Organic compounds are common in fuels, food, clothing, medicines, plastics and cleaning products.",
+    "misconception": "Naming salt or water as organic because they are common household substances.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q21",
+    "outcome": "O5",
+    "topic": "Importance in medicine",
+    "type": "short",
+    "marks": 1,
+    "prompt": "State one reason organic compounds are important in medicine.",
+    "modelAnswer": "Many medicines are organic compounds. For example, aspirin and paracetamol are organic compounds used to relieve pain and reduce fever.",
+    "markingPoints": [
+      "States that many medicines are organic compounds.",
+      "Gives a correct example or a correct medical use."
+    ],
+    "explanation": "Organic chemistry is central to the design, synthesis and production of medicines.",
+    "misconception": "Believing that medicines are inorganic because they are made in factories.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q22",
+    "outcome": "O5",
+    "topic": "Environmental impact",
+    "type": "short",
+    "marks": 1,
+    "prompt": "State one environmental problem linked to organic compounds.",
+    "modelAnswer": "Plastic pollution is a major problem because many plastics are non-biodegradable. Another example is the release of carbon dioxide when fossil fuels burn, which contributes to global warming.",
+    "markingPoints": [
+      "Names a valid environmental problem.",
+      "Links it correctly to an organic compound or organic material."
+    ],
+    "explanation": "Organic compounds bring many benefits, but plastics, fuels and some solvents can cause pollution.",
+    "misconception": "Assuming that ‘natural’ or ‘organic’ always means environmentally harmless.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q23",
+    "outcome": "O4",
+    "topic": "Urea fertiliser",
+    "type": "short",
+    "marks": 1,
+    "prompt": "Name the organic compound widely used as a nitrogen fertiliser and state its importance.",
+    "modelAnswer": "Urea, CO(NH₂)₂, is widely used as a nitrogen fertiliser. It supplies nitrogen, which plants need for growth, and helps improve crop yield.",
+    "markingPoints": [
+      "Names urea.",
+      "States that it supplies nitrogen or improves plant growth."
+    ],
+    "explanation": "Urea is an organic compound containing carbon, nitrogen, oxygen and hydrogen. It is a major nitrogen fertiliser.",
+    "misconception": "Thinking urea is inorganic because it is sold as a fertiliser.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "Q24",
+    "outcome": "O3",
+    "topic": "Counterexample to ‘all carbon compounds are organic’",
+    "type": "short",
+    "marks": 1,
+    "prompt": "A student says, ‘Every compound that contains carbon is organic.’ Is the student correct? Give one counterexample.",
+    "modelAnswer": "No. Carbon dioxide (CO₂), calcium carbonate (CaCO₃), sodium cyanide (NaCN) and carbon monoxide (CO) contain carbon but are conventionally classified as inorganic.",
+    "markingPoints": [
+      "States that the student is not correct.",
+      "Gives a valid carbon-containing inorganic counterexample."
+    ],
+    "explanation": "The standard school definition excludes simple carbon compounds such as oxides of carbon, carbonates, bicarbonates, cyanides and carbides.",
+    "misconception": "Using the presence of carbon as the only criterion for an organic compound.",
+    "source": "Original practice question"
+  }
+]
