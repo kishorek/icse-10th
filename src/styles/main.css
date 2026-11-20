@@ -1874,3 +1874,25 @@ main {
 #name-builder .btn {
   margin-top: 0.5rem;
 }
+
+.isomer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.isomer-card {
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  background: var(--paper);
+}
+
+.isomer-card h4 {
+  margin: 0 0 0.35rem;
+}
+
+.isomer-card p {
+  margin: 0.25rem 0;
+}

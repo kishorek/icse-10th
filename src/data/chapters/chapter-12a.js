@@ -15,7 +15,8 @@ export const chapter = {
     { id: 'lesson-2', number: 2, navLabel: 'Hydrocarbons and families', checkIds: ['a2-q1', 'a2-q2', 'a2-q3'] },
     { id: 'lesson-3', number: 3, navLabel: 'Structures and functional groups', checkIds: ['a3-q1', 'a3-q2', 'a3-q3'] },
     { id: 'lesson-4', number: 4, navLabel: 'Homologous series', checkIds: ['a4-q1', 'a4-q2', 'a4-q3'] },
-    { id: 'lesson-5', number: 5, navLabel: 'Naming organic compounds', checkIds: ['a5-q1', 'a5-q2', 'a5-q3'] }
+    { id: 'lesson-5', number: 5, navLabel: 'Naming organic compounds', checkIds: ['a5-q1', 'a5-q2', 'a5-q3'] },
+    { id: 'lesson-6', number: 6, navLabel: 'Isomerism', checkIds: ['a6-q1', 'a6-q2', 'a6-q3'] }
   ],
   outcomes: {
     A1: 'Organic compounds, sources, and organic vs inorganic trends',
@@ -25,7 +26,7 @@ export const chapter = {
     A5: 'IUPAC nomenclature',
     A6: 'Structural isomerism'
   },
-  features: { memory: false, revision: false, assessment: false },
+  features: { memory: true, revision: true, assessment: false },
   questions: [],
   hero: {
     eyebrow: 'ICSE Class 10 · Chemistry · Unit 9(ii)–(iv)',
@@ -48,7 +49,9 @@ export const chapter = {
       { href: '#lesson-1', label: 'Carbon and organic compounds' },
       { href: '#lesson-2', label: 'Hydrocarbon families' },
       { href: '#lesson-3', label: 'Structure and functional groups' },
-      { href: '#lesson-4', label: 'Homologous series' }
+      { href: '#lesson-4', label: 'Homologous series' },
+      { href: '#lesson-5', label: 'Naming organic compounds' },
+      { href: '#lesson-6', label: 'Isomerism' }
     ],
     scopeNote:
       'This chapter follows the supplied 12A pages and the CISCE 2027 Unit 9 scope. Metamerism is omitted because the book marks it outside the syllabus. Functional isomerism is labelled as an extension.'

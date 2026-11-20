@@ -8,6 +8,9 @@ import LessonTwo from '../components/chapters/chapter-12a/LessonTwo.vue'
 import LessonThree from '../components/chapters/chapter-12a/LessonThree.vue'
 import LessonFour from '../components/chapters/chapter-12a/LessonFour.vue'
 import LessonFive from '../components/chapters/chapter-12a/LessonFive.vue'
+import LessonSix from '../components/chapters/chapter-12a/LessonSix.vue'
+import MemoryWorkshop from '../components/chapters/chapter-12a/MemoryWorkshop.vue'
+import RevisionCentre from '../components/chapters/chapter-12a/RevisionCentre.vue'
 </script>
 
 <template>
@@ -19,6 +22,9 @@ import LessonFive from '../components/chapters/chapter-12a/LessonFive.vue'
       <LessonThree />
       <LessonFour />
       <LessonFive />
+      <LessonSix />
+      <MemoryWorkshop />
+      <RevisionCentre />
     </ChapterShell>
   </ChapterProvider>
 </template>

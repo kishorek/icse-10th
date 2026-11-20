@@ -48,10 +48,12 @@ import NameBuilderLab from './NameBuilderLab.vue'
       <div class="definition">
         <span class="definition__label">Name skeleton</span>
         <p>
-          <span class="formula">prefix + root + primary suffix + secondary suffix</span>. For
-          example, in <span class="formula">2-bromobutane</span> the prefix is bromo, the root is
-          but, and the primary suffix is ane. In <span class="formula">propan-2-ol</span> the root
-          is prop and the secondary suffix is ol.
+          <span class="formula">prefix</span> + <span class="formula">root</span> +
+          <span class="formula">primary suffix</span> +
+          <span class="formula">secondary suffix</span>. For example, in
+          <span class="formula">2-bromobutane</span> the prefix is bromo, the root is but, and the
+          primary suffix is ane. In <span class="formula">propan-2-ol</span> the root is prop and the
+          secondary suffix is ol.
         </p>
       </div>
 

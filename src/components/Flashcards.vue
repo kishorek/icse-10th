@@ -1,8 +1,12 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { flashcards } from '../data/flashcards'
+import { flashcards as defaultCards } from '../data/flashcards'
 
-const deck = ref([...flashcards])
+const props = defineProps({
+  cards: { type: Array, default: () => defaultCards }
+})
+
+const deck = ref([...props.cards])
 const index = ref(0)
 const flipped = ref(false)
 
