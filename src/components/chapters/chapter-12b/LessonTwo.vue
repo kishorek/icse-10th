@@ -174,7 +174,7 @@ import GasPrepLab from './GasPrepLab.vue'
           { value: 'A', text: 'Sodium propanoate and soda lime' },
           { value: 'B', text: 'Sodium ethanoate and soda lime' },
           { value: 'C', text: 'Iodomethane and sodium in dry ether' },
-          { value: 'D', text: 'Aluminium carbide and dilute hydrochloric acid' }
+          { value: 'D', text: 'Sodium chloride and concentrated sulfuric acid' }
         ]"
         correct-value="B"
         correct-feedback="Correct. Sodium ethanoate and soda lime are heated together to about 300°C, giving methane and sodium carbonate."
