@@ -372,7 +372,7 @@
     "justify": true,
     "prompt": "Every compound that contains carbon is classified as organic.",
     "answer": "False",
-    "modelAnswer": "False. Several simple carbon-containing compounds are conventionally classified as inorganic, including carbon monoxide, carbon dioxide, carbonates, bicarbonates, cyanides and carbides. Organic compounds are carbon compounds, usually containing hydrogen, with carbon–hydrogen and carbon–carbon bonds.",
+    "modelAnswer": "False. Several simple carbon-containing compounds are conventionally classified as inorganic, including carbon monoxide, carbon dioxide, carbonates, bicarbonates, cyanides and carbides. Organic compounds are carbon compounds that usually contain carbon–hydrogen bonds and often contain carbon–carbon bonds; methane, methanol and urea are organic even though they have no carbon–carbon bond.",
     "markingPoints": [
       "States that the statement is false.",
       "Gives at least one conventional exception such as CO₂, CO, a carbonate, a bicarbonate, a cyanide or a carbide.",
@@ -472,15 +472,15 @@
     "topic": "Characteristics of a homologous series",
     "type": "short",
     "marks": 2,
-    "prompt": "State two characteristics that the members of a homologous series share.",
-    "modelAnswer": "Members of a homologous series share the same general formula and the same functional group, so they show similar chemical properties. Consecutive members differ by one CH₂ unit, a mass difference of 14 u. Their physical properties change gradually as the chain length increases.",
+    "prompt": "State two characteristics of a homologous series.",
+    "modelAnswer": "Members of a homologous series have the same general formula and the same functional group or bond pattern, so they show similar chemical properties. Consecutive members differ by one CH₂ unit, a mass difference of 14 u, and physical properties change gradually as the chain length increases.",
     "markingPoints": [
-      "States that members share the same general formula.",
-      "States that members share the same functional group and similar chemical properties.",
+      "States that members have the same general formula.",
+      "States that members have the same functional group or bond pattern, so they show similar chemical properties.",
       "States that consecutive members differ by CH₂, a mass difference of 14 u.",
       "States that physical properties change gradually along the series."
     ],
-    "explanation": "Any two of the listed characteristics earn the two marks. The CH₂ step and the shared functional group are the defining features.",
+    "explanation": "Any two valid characteristics earn the two marks. The shared general formula and functional group or bond pattern are the defining features; the CH₂ step and gradual physical trends follow from them.",
     "misconception": "Claiming that all members have identical physical properties or the same molecular formula.",
     "source": "Original practice question"
   },
