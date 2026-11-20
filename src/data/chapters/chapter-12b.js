@@ -16,6 +16,18 @@ export const chapter = {
       number: 1,
       navLabel: 'The alkane family',
       checkIds: ['b1-q1', 'b1-q2', 'b1-q3']
+    },
+    {
+      id: 'lesson-2',
+      number: 2,
+      navLabel: 'Methane and ethane',
+      checkIds: ['b2-q1', 'b2-q2', 'b2-q3']
+    },
+    {
+      id: 'lesson-3',
+      number: 3,
+      navLabel: 'Reactions and uses',
+      checkIds: ['b3-q1', 'b3-q2', 'b3-q3']
     }
   ],
   outcomes: {
@@ -46,7 +58,11 @@ export const chapter = {
       'The idea of a hydrocarbon from Chapter 12A.',
       'Balanced chemical equations and state symbols.'
     ],
-    conceptMap: [{ href: '#lesson-1', label: 'The alkane family' }],
+    conceptMap: [
+      { href: '#lesson-1', label: 'The alkane family' },
+      { href: '#lesson-2', label: 'Methane and ethane' },
+      { href: '#lesson-3', label: 'Reactions and uses' }
+    ],
     scopeNote:
       'This chapter follows the supplied 12B pages and the CISCE 2027 Unit 9(v) scope. Alkenes and alkynes belong to later chapters and are out of scope here. Catalytic oxidation and slow combustion are omitted because the book marks them outside the syllabus.'
   },

@@ -28,3 +28,38 @@ test('12B lesson 1 loads and the alkane ladder works', async ({ page }) => {
   await expect(lab).toContainText('72')
   await expect(lab).toContainText('3')
 })
+
+test('gas preparation lab shows the methane route and Wurtz limitation', async ({ page }) => {
+  const lab = page.locator('#gas-prep')
+  await lab.locator('#gas-route').selectOption('methane-acetate')
+  await expect(lab).toContainText('Sodium ethanoate')
+  await expect(lab).toContainText('CaO')
+  await expect(lab).toContainText('CH₄')
+  await expect(lab).toContainText('Na₂CO₃')
+
+  await lab.locator('#gas-route').selectOption('wurtz')
+  await expect(lab).toContainText('dry ether')
+  await expect(lab).toContainText('even number')
+})
+
+test('chlorination lab steps from methane to tetrachloromethane', async ({ page }) => {
+  const lab = page.locator('#chlorination')
+  await expect(lab).toContainText('CH3Cl')
+  await lab.locator('#chlorination-next').click()
+  await expect(lab).toContainText('CH2Cl2')
+  await lab.locator('#chlorination-next').click()
+  await expect(lab).toContainText('CHCl3')
+  await lab.locator('#chlorination-next').click()
+  await expect(lab).toContainText('CCl4')
+  await expect(lab).toContainText('HCl')
+})
+
+test('combustion lab switches between complete and incomplete products', async ({ page }) => {
+  const lab = page.locator('#combustion')
+  await lab.locator('#combustion-mode').selectOption('complete')
+  await expect(lab).toContainText('CO₂')
+  await lab.locator('#combustion-mode').selectOption('incomplete')
+  await expect(lab).toContainText('CO')
+  await lab.locator('#combustion-mode').selectOption('limited')
+  await expect(lab).toContainText('soot')
+})
