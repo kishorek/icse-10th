@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
   })
   page.on('pageerror', (error) => errors.push(error.message))
   page.on('requestfailed', (request) => errors.push(`Request failed: ${request.url()}`))
-  await page.goto('/')
+  await page.goto('/chapter-1.html')
 })
 
 test.afterEach(() => {
