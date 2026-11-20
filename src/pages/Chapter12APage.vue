@@ -11,6 +11,7 @@ import LessonFive from '../components/chapters/chapter-12a/LessonFive.vue'
 import LessonSix from '../components/chapters/chapter-12a/LessonSix.vue'
 import MemoryWorkshop from '../components/chapters/chapter-12a/MemoryWorkshop.vue'
 import RevisionCentre from '../components/chapters/chapter-12a/RevisionCentre.vue'
+import Assessment from '../components/Assessment.vue'
 </script>
 
 <template>
@@ -25,6 +26,7 @@ import RevisionCentre from '../components/chapters/chapter-12a/RevisionCentre.vu
       <LessonSix />
       <MemoryWorkshop />
       <RevisionCentre />
+      <Assessment />
     </ChapterShell>
   </ChapterProvider>
 </template>

@@ -1,3 +1,5 @@
+import questions from '../questions/chapter-12a.json'
+
 export const chapter = {
   id: 'chapter-12a',
   href: './chapter-12a.html',
@@ -26,8 +28,8 @@ export const chapter = {
     A5: 'IUPAC nomenclature',
     A6: 'Structural isomerism'
   },
-  features: { memory: true, revision: true, assessment: false },
-  questions: [],
+  features: { memory: true, revision: true, assessment: true },
+  questions,
   hero: {
     eyebrow: 'ICSE Class 10 · Chemistry · Unit 9(ii)–(iv)',
     title: 'Organic Compounds',

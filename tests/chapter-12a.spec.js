@@ -49,7 +49,7 @@ test('12A lessons 1 to 6 quick checks mark the lessons complete', async ({ page 
     await page.locator(`input[name="${id}"][value="${value}"]`).check()
   }
 
-  await expect(page.locator('#progress-label')).toContainText('6 of 6 milestones')
+  await expect(page.locator('#progress-label')).toContainText('6 of 7 milestones')
   await expect(page.locator('#lesson-1 .lesson-status')).toHaveText('Complete')
   await expect(page.locator('#lesson-2 .lesson-status')).toHaveText('Complete')
   await expect(page.locator('#lesson-3 .lesson-status')).toHaveText('Complete')
@@ -121,6 +121,26 @@ test('12A memory and revision sections work', async ({ page }) => {
   const flashcards = page.locator('#flashcards')
   await flashcards.locator('.flashcard').click()
   await expect(flashcards).toContainText('carbon compound')
+})
+
+test('12A assessment submits, self-marks, persists and resets', async ({ page }) => {
+  page.on('dialog', (dialog) => dialog.accept())
+
+  await page.locator('#AQ29').fill('Propan-2-ol: three-carbon chain, OH on carbon 2.')
+  await page.getByRole('button', { name: 'Submit assessment' }).click()
+  await expect(page.locator('#assessment-summary')).toBeVisible()
+  await expect(page.locator('.score-big')).toContainText('/ 50')
+
+  await page.locator('#AQ29-self').selectOption('3')
+  await expect(page.locator('.score-big')).toContainText('3 / 50')
+
+  await page.reload()
+  await expect(page.locator('#assessment-summary')).toBeVisible()
+  await expect(page.locator('.score-big')).toContainText('3 / 50')
+
+  await page.getByRole('button', { name: 'Reset answers' }).click()
+  await expect(page.locator('.assessment-status')).toContainText('0 of 30 answered')
+  await expect(page.locator('#assessment-summary')).toHaveCount(0)
 })
 
 test('12A layouts reflow without page-level horizontal overflow', async ({ page }) => {
