@@ -11,7 +11,7 @@ import { homologousSeries } from '../../../data/chapter-12a/homologousSeries'
       id="lesson-4"
       :number="4"
       title="Homologous series"
-      objective="Define a homologous series, use the CH₂ and 14 u steps, apply the general formulae, explain the gradation in properties, and predict the next member of a series."
+      objective="Define a homologous series, use the CH₂ and 14 g/mol steps, apply the general formulae, explain the gradation in properties, and predict the next member of a series."
     />
 
     <div class="prose">
@@ -36,21 +36,21 @@ import { homologousSeries } from '../../../data/chapter-12a/homologousSeries'
         from one another by a constant <span class="formula">CH₂</span> step.
       </p>
 
-      <h3>The CH₂ step and the 14 u difference</h3>
+      <h3>The CH₂ step and the 14 g/mol difference</h3>
       <p>
         Moving from one member to the next adds one carbon atom and two hydrogen atoms. That group is
-        <span class="formula">CH₂</span>. Its mass is the mass of one carbon atom plus two hydrogen
-        atoms:
+        <span class="formula">CH₂</span>. Its molar mass is the molar mass of one carbon atom plus
+        two hydrogen atoms:
       </p>
 
-      <p class="formula">CH₂ = 12 u + (2 × 1 u) = 14 u</p>
+      <p class="formula">CH₂ = 12 g/mol + (2 × 1 g/mol) = 14 g/mol</p>
 
       <p>
-        So the molar mass increases by 14 u at every step. Methane
-        <span class="formula">CH₄</span> has a molar mass of 16 u and ethane
-        <span class="formula">C₂H₆</span> has 30 u; the difference is 14 u. Ethane to propane is
-        30 u to 44 u, again 14 u. This constant step is the test that a list of formulae belongs to
-        one homologous series.
+        So the molar mass increases by 14 g/mol at every step. Methane
+        <span class="formula">CH₄</span> has a molar mass of 16 g/mol and ethane
+        <span class="formula">C₂H₆</span> has 30 g/mol; the difference is 14 g/mol. Ethane to
+        propane is 30 g/mol to 44 g/mol, again 14 g/mol. This constant step is the test that a list
+        of formulae belongs to one homologous series.
       </p>
 
       <h3>General formulae of four series</h3>
@@ -126,19 +126,20 @@ import { homologousSeries } from '../../../data/chapter-12a/homologousSeries'
 
       <h3>Worked example: find the next member</h3>
       <p>
-        Propane has the formula <span class="formula">C₃H₈</span> and a molar mass of 44 u. It belongs
-        to the alkane series, whose general formula is <span class="formula">CₙH₂ₙ₊₂</span>. Find the
-        next member.
+        Propane has the formula <span class="formula">C₃H₈</span> and a molar mass of 44 g/mol. It
+        belongs to the alkane series, whose general formula is
+        <span class="formula">CₙH₂ₙ₊₂</span>. Find the next member.
       </p>
       <ol>
         <li>Identify the series from the formula: C₃H₈ fits CₙH₂ₙ₊₂, so it is an alkane.</li>
         <li>Add one CH₂ unit: C₃H₈ + CH₂ gives C₄H₁₀.</li>
         <li>Name the member: C₄H₁₀ is butane.</li>
-        <li>Add 14 u to the molar mass: 44 u + 14 u = 58 u.</li>
+        <li>Add 14 g/mol to the molar mass: 44 g/mol + 14 g/mol = 58 g/mol.</li>
       </ol>
       <p>
-        The next member is butane, <span class="formula">C₄H₁₀</span>, with a molar mass of 58 u.
-        Repeating the step once more gives pentane, <span class="formula">C₅H₁₂</span>, at 72 u.
+        The next member is butane, <span class="formula">C₄H₁₀</span>, with a molar mass of
+        58 g/mol. Repeating the step once more gives pentane,
+        <span class="formula">C₅H₁₂</span>, at 72 g/mol.
       </p>
 
       <HomologousLadderLab />
@@ -146,7 +147,7 @@ import { homologousSeries } from '../../../data/chapter-12a/homologousSeries'
       <div class="exam-tip">
         <span class="tag">Exam tip</span>
         <p>
-          Do not use the 14 u difference on its own to identify a series. A list of formulae must
+          Do not use the 14 g/mol difference on its own to identify a series. A list of formulae must
           also share the same general formula and functional group. State both the CH₂ step and the
           similar chemical properties when you define a homologous series.
         </p>
@@ -172,14 +173,14 @@ import { homologousSeries } from '../../../data/chapter-12a/homologousSeries'
         id="a4-q2"
         question="2. What is the increase in molar mass between successive members of a homologous series?"
         :options="[
-          { value: 'A', text: '12 u' },
-          { value: 'B', text: '16 u' },
-          { value: 'C', text: '14 u' },
-          { value: 'D', text: '28 u' }
+          { value: 'A', text: '12 g/mol' },
+          { value: 'B', text: '16 g/mol' },
+          { value: 'C', text: '14 g/mol' },
+          { value: 'D', text: '28 g/mol' }
         ]"
         correct-value="C"
-        correct-feedback="Correct. CH₂ has a mass of 12 + 2 = 14 u, so the molar mass rises by 14 u each step."
-        wrong-feedback="Add the mass of one carbon atom (12 u) and two hydrogen atoms (2 × 1 u). The step is 14 u."
+        correct-feedback="Correct. CH₂ has a molar mass of 12 + 2 = 14 g/mol, so the molar mass rises by 14 g/mol each step."
+        wrong-feedback="Add the molar mass of one carbon atom (12 g/mol) and two hydrogen atoms (2 × 1 g/mol). The step is 14 g/mol."
       />
 
       <QuickCheck

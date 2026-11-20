@@ -157,8 +157,8 @@ import NameBuilderLab from './NameBuilderLab.vue'
       <h3>Secondary suffixes: the principal functional group</h3>
       <p>
         The secondary suffix names the principal functional group. It follows the primary suffix,
-        and the final <em>e</em> of ane, ene or yne is dropped before a vowel, as in propanol and
-        propanal.
+        and the final <em>e</em> of ane, ene or yne is dropped before a vowel, as in propan-1-ol
+        and propanal.
       </p>
       <div class="table-wrap">
         <table class="compare-table">

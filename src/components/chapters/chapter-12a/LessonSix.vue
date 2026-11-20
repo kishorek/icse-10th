@@ -244,7 +244,9 @@ import IsomerExplorer from './IsomerExplorer.vue'
       <p>
         For C₄H₁₀ this gives butane and 2-methylpropane. For C₅H₁₂ it gives pentane, 2-methylbutane
         and 2,2-dimethylpropane. For C₄H₈, the double bond adds position isomers such as but-1-ene
-        and but-2-ene, as well as the branched 2-methylpropene.
+        and but-2-ene, as well as the branched 2-methylpropene. These examples are acyclic alkene
+        isomers; cyclic isomers such as cyclobutane and methylcyclopropane also exist but are
+        outside this chapter’s scope.
       </p>
 
       <div class="definition">

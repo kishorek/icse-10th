@@ -48,8 +48,8 @@ import GasPrepLab from './GasPrepLab.vue'
       <p>
         A methane molecule has one carbon atom joined to four hydrogen atoms by four single covalent
         bonds. The four bonds point towards the corners of a <strong>tetrahedron</strong>, so the
-        molecule is not flat. All four C–H bonds are identical, which is why methane has no separate
-        isomers.
+        molecule is not flat. With only one carbon atom and four hydrogen atoms, there is only one
+        possible arrangement, so methane has no separate isomers.
       </p>
       <p>
         The tetrahedral arrangement gives a bond angle of about 109.5°. The value is useful for

@@ -65,10 +65,10 @@ watch(familyId, () => {
           <strong>Formula:</strong>
           <span class="formula">{{ member.formula }}</span>
         </p>
-        <p><strong>Molar mass:</strong> {{ member.molarMass }} u</p>
+        <p><strong>Molar mass:</strong> {{ member.molarMass }} g/mol</p>
         <p>
           <strong>CH₂ step:</strong> Successive members differ by CH₂, so the molar mass rises by
-          12 + 2 = 14 u each step.
+          12 + 2 = 14 g/mol each step.
         </p>
       </template>
       <p v-else>

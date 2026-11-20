@@ -24,9 +24,9 @@ export const flashcards = [
   },
   {
     id: 'a-fc5',
-    question: 'What is the CH₂ step in mass units, and why?',
+    question: 'What is the CH₂ step in molar mass units, and why?',
     answer:
-      'One CH₂ unit has a mass of 12 + 2 = 14 u, so the molar mass increases by 14 u between successive members of a homologous series.'
+      'One CH₂ unit has a molar mass of 12 + 2 = 14 g/mol, so the molar mass increases by 14 g/mol between successive members of a homologous series.'
   },
   {
     id: 'a-fc6',

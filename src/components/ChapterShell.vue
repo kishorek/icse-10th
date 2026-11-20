@@ -141,6 +141,11 @@ onBeforeUnmount(() => {
     <main id="main-content" class="chapter">
       <slot />
       <SourcesPanel :sources="chapter.sources" />
+      <nav class="chapter-end-nav" aria-label="Chapter navigation">
+        <a href="./">All chapters</a>
+        <a v-if="previous" :href="previous.href">{{ previous.label }}</a>
+        <a v-if="next" :href="next.href">{{ next.label }}</a>
+      </nav>
     </main>
   </div>
 

@@ -174,7 +174,7 @@
     "type": "fill",
     "marks": 1,
     "prompt": "The Wurtz reaction is carried out in the solvent ______.",
-    "answer": ["dry ether", "ether", "diethyl ether", "dry diethyl ether"],
+    "answer": ["dry ether", "dry diethyl ether", "anhydrous ether"],
     "explanation": "Iodomethane and sodium are heated in dry ether for the Wurtz reaction: 2CH₃I + 2Na → C₂H₆ + 2NaI. The ether must be dry because water would react with the sodium.",
     "misconception": "Naming water or aqueous sodium hydroxide as the solvent; sodium metal requires a dry, unreactive solvent.",
     "source": "Original practice question"
@@ -186,7 +186,7 @@
     "type": "fill",
     "marks": 1,
     "prompt": "Methane reacts with chlorine in the presence of ______.",
-    "answer": ["diffused sunlight", "ultraviolet light", "UV light", "sunlight", "diffused sunlight or ultraviolet light", "ultraviolet radiation"],
+    "answer": ["diffused sunlight", "ultraviolet light", "UV light", "diffused sunlight or ultraviolet light", "ultraviolet radiation"],
     "explanation": "Diffused sunlight or ultraviolet light supplies the energy that starts the substitution. Direct sunlight can be too energetic and may cause an explosion, so diffused light is used.",
     "misconception": "Writing 'darkness' or 'water'; chlorine substitution in alkanes needs light energy to begin.",
     "source": "Original practice question"

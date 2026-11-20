@@ -289,18 +289,3 @@ Skeleton:  C–C</pre>
     </div>
   </section>
 </template>
-
-<style scoped>
-.structure-block {
-  margin: 1rem 0;
-  padding: 0.9rem 1rem;
-  overflow-x: auto;
-  border: 1px solid var(--line);
-  border-radius: 0.5rem;
-  background: var(--paper-soft);
-  font-family: 'Courier New', monospace;
-  font-size: 0.86rem;
-  line-height: 1.45;
-  white-space: pre;
-}
-</style>

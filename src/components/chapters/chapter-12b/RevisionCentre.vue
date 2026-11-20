@@ -3,7 +3,7 @@ import { preparationRoutes } from '../../../data/chapter-12b/preparations'
 
 const rapidSheet = [
   'An alkane is a saturated hydrocarbon containing only single carbon–carbon bonds; alkanes are also called paraffins.',
-  'The general formula of the alkanes is CₙH₂ₙ₊₂. Successive members differ by CH₂, a mass step of 14 u.',
+  'The general formula of the alkanes is CₙH₂ₙ₊₂. Successive members differ by CH₂, a molar mass step of 14 g/mol.',
   'Natural gas and petroleum are the main sources. Natural gas is mainly methane with about 10–20% ethane.',
   'Methane occurs as marsh gas, in exhaled air and intestinal gases, as coal-mine fire-damp, and in the dry distillation of wood, peat and coal.',
   'Methane has a tetrahedral structure with four C–H single bonds. Ethane has a single C–C bond and six C–H bonds.',

@@ -84,7 +84,7 @@ const mistakes = [
           <li>Alkenes contain a C=C double bond and have the general formula CₙH₂ₙ.</li>
           <li>Alkynes contain a C≡C triple bond and have the general formula CₙH₂ₙ₋₂.</li>
           <li>Alcohols contain –OH and have the general formula CₙH₂ₙ₊₁OH.</li>
-          <li>A homologous series differs by CH₂, or 14 u, at each step.</li>
+          <li>A homologous series differs by CH₂, or 14 g/mol, at each step.</li>
           <li>An IUPAC name is built from a prefix, root, primary suffix and secondary suffix.</li>
           <li>The longest chain supplies the root; numbering gives the lowest locant to the principal group.</li>
           <li>Chain and position isomerism are examinable; functional isomerism is a labelled extension.</li>
@@ -125,7 +125,7 @@ const mistakes = [
       <h3>Homologous series</h3>
       <div class="table-wrap">
         <table class="compare-table">
-          <caption>General formulae and the CH₂ / 14 u step</caption>
+          <caption>General formulae and the CH₂ / 14 g/mol step</caption>
           <thead>
             <tr>
               <th scope="col">Series</th>
@@ -148,8 +148,8 @@ const mistakes = [
         </table>
       </div>
       <p>
-        Each successive member adds one CH₂ unit. The mass step is
-        <span class="formula">12 + (2 × 1) = 14 u</span>.
+        Each successive member adds one CH₂ unit. The molar mass step is
+        <span class="formula">12 + (2 × 1) = 14 g/mol</span>.
       </p>
 
       <h3>Nomenclature decision checklist</h3>
@@ -192,7 +192,7 @@ const mistakes = [
         <li>Define an organic compound and name two carbon-containing compounds that are not classified as organic.</li>
         <li>Distinguish a saturated hydrocarbon from an unsaturated hydrocarbon, giving one example of each.</li>
         <li>What is a functional group? Name the group and suffix for alcohols, aldehydes and carboxylic acids.</li>
-        <li>State three features that every homologous series must have, and explain the 14 u step.</li>
+        <li>State three features that every homologous series must have, and explain the 14 g/mol step.</li>
         <li>Explain the longest-chain rule and the lowest-locant rule using one worked structure.</li>
         <li>Classify each pair as chain, position or functional isomers: butane and 2-methylpropane; but-1-ene and but-2-ene; ethanol and methoxymethane.</li>
       </ol>

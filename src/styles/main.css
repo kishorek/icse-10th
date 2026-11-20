@@ -624,9 +624,23 @@ main {
 }
 
 .formula {
-  font-family: 'Courier New', monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 0.94em;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.structure-block {
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--paper-2);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  white-space: pre;
 }
 
 .lab {
@@ -1818,6 +1832,21 @@ main {
   color: inherit;
 }
 
+.chapter-end-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+  margin: 2rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.chapter-end-nav a {
+  color: var(--teal);
+}
+
 @media (max-width: 600px) {
   .home {
     width: min(100% - 1.25rem, 1100px);
@@ -1900,13 +1929,6 @@ main {
 #alkane-n {
   width: 100%;
   max-width: 28rem;
-}
-
-.formula {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 1.05rem;
-  white-space: normal;
-  overflow-wrap: anywhere;
 }
 
 #chlorination .formula {

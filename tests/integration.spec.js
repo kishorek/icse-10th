@@ -45,6 +45,20 @@ test('chapter switcher and deep links work', async ({ page }) => {
   await expect(page.locator('#chapter-title')).toHaveText('Hydrocarbons: Alkanes')
 })
 
+test('end-of-chapter navigation follows the next chapter link', async ({ page }) => {
+  await page.goto('/chapter-12a.html')
+  const endNav = page.getByRole('navigation', { name: 'Chapter navigation' })
+  await expect(endNav).toBeVisible()
+  await expect(endNav.getByRole('link', { name: 'All chapters' })).toBeVisible()
+  await endNav.getByRole('link', { name: /Chapter 12B/ }).click()
+  await expect(page).toHaveURL(/chapter-12b\.html$/)
+  await expect(page.locator('#chapter-title')).toHaveText('Hydrocarbons: Alkanes')
+
+  const lastChapterNav = page.getByRole('navigation', { name: 'Chapter navigation' })
+  await expect(lastChapterNav.getByRole('link', { name: /Chapter 12A/ })).toBeVisible()
+  await expect(lastChapterNav.getByRole('link', { name: /Chapter 12B/ })).toHaveCount(0)
+})
+
 test('required widths have no page-level horizontal overflow', async ({ page }) => {
   for (const path of ['/', '/chapter-1.html', '/chapter-12a.html', '/chapter-12b.html']) {
     for (const [width, height] of [

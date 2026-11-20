@@ -33,6 +33,7 @@ const selected = computed(
       <p><strong>Type:</strong> {{ selected.type }}</p>
       <p><strong>Count:</strong> {{ selected.isomers.length }} isomers shown</p>
       <p>{{ selected.note }}</p>
+      <p v-if="selected.scopeNote" class="lab__note">{{ selected.scopeNote }}</p>
 
       <div class="isomer-grid">
         <article v-for="isomer in selected.isomers" :key="isomer.name" class="isomer-card">

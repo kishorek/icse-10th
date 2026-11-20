@@ -396,15 +396,13 @@
     ],
     "answer": [
       "dry ether",
-      "ether",
-      "diethyl ether",
-      "dry diethyl ether"
+      "dry diethyl ether",
+      "anhydrous ether"
     ],
     "accepted_answers": [
       "dry ether",
-      "ether",
-      "diethyl ether",
-      "dry diethyl ether"
+      "dry diethyl ether",
+      "anhydrous ether"
     ]
   },
   {
@@ -430,7 +428,6 @@
       "diffused sunlight",
       "ultraviolet light",
       "UV light",
-      "sunlight",
       "diffused sunlight or ultraviolet light",
       "ultraviolet radiation"
     ],
@@ -438,7 +435,6 @@
       "diffused sunlight",
       "ultraviolet light",
       "UV light",
-      "sunlight",
       "diffused sunlight or ultraviolet light",
       "ultraviolet radiation"
     ]

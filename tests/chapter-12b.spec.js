@@ -25,7 +25,7 @@ test('12B lesson 1 loads and the alkane ladder works', async ({ page }) => {
   const lab = page.locator('#alkane-ladder')
   await lab.locator('#alkane-n').fill('5')
   await expect(lab).toContainText('C5H12')
-  await expect(lab).toContainText('72')
+  await expect(lab).toContainText('72 g/mol')
   await expect(lab).toContainText('3')
 })
 
@@ -70,6 +70,25 @@ test('12B memory and revision sections work', async ({ page }) => {
   const flashcards = page.locator('#flashcards')
   await flashcards.locator('.flashcard').click()
   await expect(flashcards).toContainText('CₙH₂ₙ₊₂')
+})
+
+test('12B fill answers require the safe reaction conditions', async ({ page }) => {
+  page.on('dialog', (dialog) => dialog.accept())
+
+  await page.locator('#BQ11').fill('ether')
+  await page.locator('#BQ12').fill('sunlight')
+  await page.getByRole('button', { name: 'Submit assessment' }).click()
+
+  const q11 = page.locator('#q-BQ11')
+  await expect(q11.locator('.feedback-status')).toHaveText('Not correct.')
+  await expect(q11).toContainText(
+    'Correct answer: dry ether or dry diethyl ether or anhydrous ether'
+  )
+
+  const q12 = page.locator('#q-BQ12')
+  await expect(q12.locator('.feedback-status')).toHaveText('Not correct.')
+  await expect(q12).toContainText('Correct answer: diffused sunlight or ultraviolet light')
+  await expect(q12).toContainText('ultraviolet radiation')
 })
 
 test('12B assessment submits, self-marks, persists and resets', async ({ page }) => {

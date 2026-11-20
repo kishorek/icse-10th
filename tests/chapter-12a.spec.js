@@ -70,7 +70,7 @@ test('homologous ladder updates formula and molar mass', async ({ page }) => {
   const lab = page.locator('#homologous-ladder')
   await lab.locator('#homologous-n').fill('4')
   await expect(lab).toContainText('C4H10')
-  await expect(lab).toContainText('58')
+  await expect(lab).toContainText('58 g/mol')
   await lab.getByRole('button', { name: 'Alkenes' }).click()
   await lab.locator('#homologous-n').fill('3')
   await expect(lab).toContainText('C3H6')
@@ -100,6 +100,8 @@ test('isomer explorer shows chain and functional isomers', async ({ page }) => {
   await expect(lab).toContainText('Functional isomerism')
   await lab.locator('#isomer-formula').selectOption('c4h8')
   await expect(lab).toContainText('3 isomers shown')
+  await expect(lab).toContainText('acyclic alkene isomers')
+  await expect(lab).toContainText('cyclobutane')
 })
 
 test('lesson 6 classifies functional-group changes first and qualifies alkane skeletons', async ({

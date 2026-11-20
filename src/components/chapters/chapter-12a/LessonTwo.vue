@@ -240,7 +240,7 @@ import QuickCheck from '../../QuickCheck.vue'
         ]"
         correct-value="A"
         correct-feedback="Correct. Alkynes are unsaturated hydrocarbons containing at least one C≡C triple bond, such as ethyne C₂H₂."
-        wrong-feedback="Alkynes are defined by the carbon–carbon triple bond. A double bond belongs to an alkene; single bonds only belong to an alkane."
+        wrong-feedback="Alkynes are defined by the carbon–carbon triple bond. A double bond belongs to an alkene; among open-chain hydrocarbons, single bonds belong to an alkane, while alicyclic rings such as cyclohexane also contain only single bonds."
       />
     </div>
   </section>

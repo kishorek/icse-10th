@@ -40,7 +40,7 @@ const maxN = alkanes[alkanes.length - 1].n
           <strong>Formula:</strong>
           <span class="formula">{{ member.formula }}</span>
         </p>
-        <p><strong>Molar mass:</strong> {{ member.molarMass }} u</p>
+        <p><strong>Molar mass:</strong> {{ member.molarMass }} g/mol</p>
         <p><strong>State at room temperature:</strong> {{ member.state }}</p>
         <p><strong>Chain isomers:</strong> {{ member.isomers }}</p>
         <p>

@@ -44,7 +44,9 @@ export const isomerSets = [
     id: 'c4h8',
     formula: 'C₄H₈',
     type: 'Position and chain isomerism',
-    note: 'The double bond can move along the chain, or the carbon skeleton itself can change.',
+    note: 'These are acyclic alkene isomers: the double bond can move along the chain, or the carbon skeleton itself can change.',
+    scopeNote:
+      'Cyclic isomers such as cyclobutane and methylcyclopropane also exist but are outside this chapter’s scope.',
     isomers: [
       {
         name: 'But-1-ene',
