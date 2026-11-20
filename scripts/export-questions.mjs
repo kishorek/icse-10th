@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 
-const source = JSON.parse(fs.readFileSync('src/data/questions.json', 'utf8'))
+const source = JSON.parse(fs.readFileSync('src/data/questions/chapter-1.json', 'utf8'))
 
 const outcomeLabels = {
   O1: 'Explain the meaning and history of organic chemistry.',
