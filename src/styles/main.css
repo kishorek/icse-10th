@@ -1854,3 +1854,23 @@ main {
   width: 100%;
   max-width: 28rem;
 }
+
+.builder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.builder-grid label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+#name-builder .q-select {
+  width: 100%;
+}
+
+#name-builder .btn {
+  margin-top: 0.5rem;
+}

@@ -7,6 +7,7 @@ import LessonOne from '../components/chapters/chapter-12a/LessonOne.vue'
 import LessonTwo from '../components/chapters/chapter-12a/LessonTwo.vue'
 import LessonThree from '../components/chapters/chapter-12a/LessonThree.vue'
 import LessonFour from '../components/chapters/chapter-12a/LessonFour.vue'
+import LessonFive from '../components/chapters/chapter-12a/LessonFive.vue'
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import LessonFour from '../components/chapters/chapter-12a/LessonFour.vue'
       <LessonTwo />
       <LessonThree />
       <LessonFour />
+      <LessonFive />
     </ChapterShell>
   </ChapterProvider>
 </template>
