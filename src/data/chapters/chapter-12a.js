@@ -12,7 +12,9 @@ export const chapter = {
   assessmentLabel: '30-question assessment',
   lessons: [
     { id: 'lesson-1', number: 1, navLabel: 'Organic compounds and carbon', checkIds: ['a1-q1', 'a1-q2', 'a1-q3'] },
-    { id: 'lesson-2', number: 2, navLabel: 'Hydrocarbons and families', checkIds: ['a2-q1', 'a2-q2', 'a2-q3'] }
+    { id: 'lesson-2', number: 2, navLabel: 'Hydrocarbons and families', checkIds: ['a2-q1', 'a2-q2', 'a2-q3'] },
+    { id: 'lesson-3', number: 3, navLabel: 'Structures and functional groups', checkIds: ['a3-q1', 'a3-q2', 'a3-q3'] },
+    { id: 'lesson-4', number: 4, navLabel: 'Homologous series', checkIds: ['a4-q1', 'a4-q2', 'a4-q3'] }
   ],
   outcomes: {
     A1: 'Organic compounds, sources, and organic vs inorganic trends',
@@ -43,7 +45,9 @@ export const chapter = {
     ],
     conceptMap: [
       { href: '#lesson-1', label: 'Carbon and organic compounds' },
-      { href: '#lesson-2', label: 'Hydrocarbon families' }
+      { href: '#lesson-2', label: 'Hydrocarbon families' },
+      { href: '#lesson-3', label: 'Structure and functional groups' },
+      { href: '#lesson-4', label: 'Homologous series' }
     ],
     scopeNote:
       'This chapter follows the supplied 12A pages and the CISCE 2027 Unit 9 scope. Metamerism is omitted because the book marks it outside the syllabus. Functional isomerism is labelled as an extension.'

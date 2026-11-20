@@ -25,19 +25,46 @@ test('12A lessons 1 and 2 load with scope and sources', async ({ page }) => {
   await expect(page.locator('#sources')).toContainText('original practice questions')
 })
 
-test('12A lessons 1 and 2 quick checks mark the lessons complete', async ({ page }) => {
+test('12A lessons 1 to 4 quick checks mark the lessons complete', async ({ page }) => {
   for (const [id, value] of [
     ['a1-q1', 'C'],
     ['a1-q2', 'B'],
     ['a1-q3', 'D'],
     ['a2-q1', 'B'],
     ['a2-q2', 'C'],
-    ['a2-q3', 'A']
+    ['a2-q3', 'A'],
+    ['a3-q1', 'B'],
+    ['a3-q2', 'C'],
+    ['a3-q3', 'A'],
+    ['a4-q1', 'B'],
+    ['a4-q2', 'C'],
+    ['a4-q3', 'A']
   ]) {
     await page.locator(`input[name="${id}"][value="${value}"]`).check()
   }
 
-  await expect(page.locator('#progress-label')).toContainText('2 of 2 milestones')
+  await expect(page.locator('#progress-label')).toContainText('4 of 4 milestones')
   await expect(page.locator('#lesson-1 .lesson-status')).toHaveText('Complete')
   await expect(page.locator('#lesson-2 .lesson-status')).toHaveText('Complete')
+  await expect(page.locator('#lesson-3 .lesson-status')).toHaveText('Complete')
+  await expect(page.locator('#lesson-4 .lesson-status')).toHaveText('Complete')
+})
+
+test('functional group lab identifies families and suffixes', async ({ page }) => {
+  const lab = page.locator('#functional-group-lab')
+  await lab.getByRole('button', { name: /Ethanol/ }).click()
+  await expect(lab).toContainText('Alcohol')
+  await expect(lab).toContainText('–OH')
+  await expect(lab).toContainText('-ol')
+})
+
+test('homologous ladder updates formula and molar mass', async ({ page }) => {
+  const lab = page.locator('#homologous-ladder')
+  await lab.locator('#homologous-n').fill('4')
+  await expect(lab).toContainText('C4H10')
+  await expect(lab).toContainText('58')
+  await lab.getByRole('button', { name: 'Alkenes' }).click()
+  await lab.locator('#homologous-n').fill('3')
+  await expect(lab).toContainText('C3H6')
+  await expect(lab).toContainText('42')
 })
