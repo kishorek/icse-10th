@@ -61,6 +61,14 @@ Screenshots:
 - `qa/preview-desktop.png`
 - `qa/preview-mobile-360.png`
 
+### GitHub Pages deployment
+
+- Repository: https://github.com/kishorek/icse-10th
+- Live URL: https://kishorek.github.io/icse-10th/
+- Pages source: GitHub Actions (`build_type: workflow`)
+- Workflow: `Deploy to GitHub Pages`, run `44744652038` — completed successfully (build 13s, deploy 9s)
+- Live verification: HTTP 200; title, H1, built CSS, and bond-builder interaction worked; no console errors, failed requests, or 400+ responses; page-level horizontal overflow `0` at 1280 px.
+
 ---
 
 ## 4. Browser end-to-end tests
@@ -177,7 +185,7 @@ Visual review covered hierarchy, spacing, line wrapping, lab sizing, sticky navi
 2. **Textbook mapping:** CISCE does not prescribe a Chemistry textbook, and no textbook was supplied. No page or chapter mapping is claimed.
 3. **Written answers:** marked by student self-assessment against marking points. Scores depend on honest self-marking; there is no teacher or backend marking.
 4. **Progress storage:** localStorage only. It is not synchronised across devices and can be erased by clearing browser data.
-5. **GitHub Pages deployment:** the workflow file is present, but the deployment itself was not executed in this environment.
+5. **GitHub Pages:** deployment succeeded at the default `github.io` URL. No custom domain is configured.
 6. **Cross-browser:** tested in Chromium only. Firefox and Safari were not tested.
 7. **Real devices:** no physical phone or tablet testing. Responsive checks used Chromium viewport emulation.
 8. **Screen reader:** no NVDA/JAWS/VoiceOver pass was performed.
@@ -188,4 +196,4 @@ Visual review covered hierarchy, spacing, line wrapping, lab sizing, sticky navi
 
 ## 9. Delivery status
 
-The chapter is functional, builds successfully, passes the seven automated browser tests, and passed the production-preview check. The remaining limitations are disclosed above rather than claimed as verified.
+The chapter is functional, builds successfully, passes the seven automated browser tests, passed the production-preview and static-host checks, and is deployed at https://kishorek.github.io/icse-10th/. The remaining limitations are disclosed above rather than claimed as verified.

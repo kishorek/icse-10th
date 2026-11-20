@@ -2,6 +2,8 @@
 
 An interactive Vue 3 chapter on the introduction to organic compounds for the CISCE ICSE Chemistry syllabus, examination year 2027 (Unit 9.1).
 
+**Live site:** https://kishorek.github.io/icse-10th/
+
 ## What is included
 
 - Five lessons: organic compounds, carbon's unique nature, organic vs inorganic, everyday examples, and importance.

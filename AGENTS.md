@@ -100,7 +100,7 @@ src/
 
 ## GitHub Pages
 
-`vite.config.js` uses `base: './'` so `dist/` works at a project subpath such as `https://<user>.github.io/<repo>/`. The workflow at `.github/workflows/deploy.yml` builds and deploys `dist/` with GitHub Pages Actions.
+`vite.config.js` uses `base: './'` so `dist/` works at a project subpath such as `https://<user>.github.io/<repo>/`. The workflow at `.github/workflows/deploy.yml` builds and deploys `dist/` with GitHub Pages Actions. The current live site is https://kishorek.github.io/icse-10th/.
 
 If the site is hosted at a domain root instead, `base: '/'` is also valid. Keep the relative base for portability.
 
