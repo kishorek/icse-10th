@@ -1,14 +1,42 @@
 import fs from 'node:fs'
 
-const source = JSON.parse(fs.readFileSync('src/data/questions/chapter-1.json', 'utf8'))
-
-const outcomeLabels = {
-  O1: 'Explain the meaning and history of organic chemistry.',
-  O2: "Explain carbon's central role using tetravalency, catenation, multiple bonds and isomerism.",
-  O3: 'Distinguish organic from inorganic compounds and recognise the standard exceptions.',
-  O4: 'Identify everyday organic compounds and their uses.',
-  O5: 'Explain the importance and environmental impact of organic compounds.'
-}
+const chapters = [
+  {
+    id: 'chapter-1',
+    source: 'src/data/questions/chapter-1.json',
+    syllabus: 'CISCE ICSE Chemistry 2027, Unit 9.1',
+    outcomes: {
+      O1: 'Meaning and history',
+      O2: "Carbon's central role",
+      O3: 'Organic vs inorganic',
+      O4: 'Everyday examples',
+      O5: 'Importance and environment'
+    }
+  },
+  {
+    id: 'chapter-12a',
+    source: 'src/data/questions/chapter-12a.json',
+    syllabus: 'CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)',
+    outcomes: {
+      A1: 'Organic compounds, sources, and organic vs inorganic trends',
+      A2: "Carbon's unique nature, bonding and hydrocarbon classification",
+      A3: 'Structural formulae, alkyl groups and functional groups',
+      A4: 'Homologous series',
+      A5: 'IUPAC nomenclature',
+      A6: 'Structural isomerism'
+    }
+  },
+  {
+    id: 'chapter-12b',
+    source: 'src/data/questions/chapter-12b.json',
+    syllabus: 'CISCE ICSE Chemistry 2027, Unit 9(v), alkanes',
+    outcomes: {
+      B1: 'Alkane family, sources and chain isomerism',
+      B2: 'Methane and ethane: occurrence, structure, preparation and physical properties',
+      B3: 'Reactions and uses of methane and ethane'
+    }
+  }
+]
 
 const typeMap = {
   single: 'single_choice',
@@ -46,13 +74,13 @@ function optionObjects(question) {
   })
 }
 
-const exported = source.map((question) => {
+function transform(question, chapter) {
   const base = {
     id: question.id,
     subject: 'Chemistry',
     topic: question.topic,
-    syllabus_reference: 'CISCE ICSE Chemistry 2027, Unit 9.1',
-    learning_outcome: outcomeLabels[question.outcome],
+    syllabus_reference: chapter.syllabus,
+    learning_outcome: chapter.outcomes[question.outcome],
     type: typeMap[question.type],
     difficulty:
       question.marks >= 3 ? 'challenging' : question.marks === 2 ? 'standard' : 'foundation',
@@ -92,17 +120,24 @@ const exported = source.map((question) => {
   }
 
   if (question.type === 'match') {
-    base.stimulus = question.pairs
-      .map((pair, index) => `${index + 1}. ${pair.left}`)
-      .join('\n')
+    base.stimulus = question.pairs.map((pair, index) => `${index + 1}. ${pair.left}`).join('\n')
     base.options = optionObjects(question)
-    base.answer = Object.fromEntries(
-      question.pairs.map((pair) => [pair.left, pair.answer])
-    )
+    base.answer = Object.fromEntries(question.pairs.map((pair) => [pair.left, pair.answer]))
   }
 
   return base
-})
+}
 
-fs.writeFileSync('chapter-questions.json', `${JSON.stringify(exported, null, 2)}\n`)
-console.log(`Exported ${exported.length} questions to chapter-questions.json`)
+fs.mkdirSync('exports', { recursive: true })
+
+let total = 0
+for (const chapter of chapters) {
+  const source = JSON.parse(fs.readFileSync(chapter.source, 'utf8'))
+  const exported = source.map((question) => transform(question, chapter))
+  const output = `exports/${chapter.id}-questions.json`
+  fs.writeFileSync(output, `${JSON.stringify(exported, null, 2)}\n`)
+  total += exported.length
+  console.log(`Exported ${exported.length} questions from ${chapter.source} to ${output}`)
+}
+
+console.log(`Exported ${total} questions across ${chapters.length} chapters.`)

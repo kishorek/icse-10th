@@ -1,5 +1,7 @@
 <script setup>
 import chapter from '../data/chapters/chapter-12a'
+import chapterOne from '../data/chapters/chapter-1'
+import chapter12b from '../data/chapters/chapter-12b'
 import ChapterProvider from '../components/ChapterProvider.vue'
 import ChapterShell from '../components/ChapterShell.vue'
 import ChapterHeroPanel from '../components/ChapterHeroPanel.vue'
@@ -16,7 +18,7 @@ import Assessment from '../components/Assessment.vue'
 
 <template>
   <ChapterProvider :chapter="chapter">
-    <ChapterShell :chapter="chapter">
+    <ChapterShell :chapter="chapter" :previous="chapterOne" :next="chapter12b">
       <ChapterHeroPanel :hero="chapter.hero" />
       <LessonOne />
       <LessonTwo />

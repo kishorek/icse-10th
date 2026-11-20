@@ -1,5 +1,6 @@
 <script setup>
 import chapter from '../data/chapters/chapter-1'
+import chapter12a from '../data/chapters/chapter-12a'
 import ChapterProvider from '../components/ChapterProvider.vue'
 import ChapterShell from '../components/ChapterShell.vue'
 import ChapterHero from '../components/ChapterHero.vue'
@@ -15,7 +16,7 @@ import Assessment from '../components/Assessment.vue'
 
 <template>
   <ChapterProvider :chapter="chapter">
-    <ChapterShell :chapter="chapter">
+    <ChapterShell :chapter="chapter" :next="chapter12a">
       <ChapterHero />
       <LessonOne />
       <LessonTwo />

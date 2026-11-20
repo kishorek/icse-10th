@@ -1,6 +1,6 @@
 # Chapter Sources and Verification Notes
 
-**Chapter:** ICSE Class 10 Chemistry — Organic Chemistry, Chapter 1: Introduction to Organic Compounds
+**Chapters:** ICSE Class 10 Chemistry — Organic Chemistry, Chapters 1, 12A and 12B
 **Examination year:** 2027
 **Access date:** 20 November 2026
 
@@ -9,39 +9,57 @@
 ## 1. Official syllabus
 
 **CISCE — Regulations and Syllabuses ICSE 2027**
+
 - Publisher: Council for the Indian School Certificate Examinations (CISCE)
 - URL: https://cisce.org/regulations-and-syllabuses
-- Relevant scope: Science Paper 2 (Chemistry), Unit 9.1 Organic Chemistry — Organic Compounds.
-- Access note: the CISCE page returned HTTP 403 to automated retrieval. The Unit 9.1 wording was therefore cross-checked against current 2026-27 syllabus summaries and the published 2025-26 wording, which is unchanged for this introduction.
+- Relevant scope: Science Paper 2 (Chemistry), Unit 9 Organic Chemistry.
+- Access note: the CISCE page returned HTTP 403 to automated retrieval. The scope was therefore cross-checked against current 2026-27 syllabus summaries and the published 2025-26 wording.
 
-The relevant scope lines are:
+The chapter scopes used in this project are:
 
-> Introduction to Organic compounds.
-> - Unique nature of Carbon atom — tetra valency, catenation.
-> - Formation of single, double and triple bonds, straight chain, branched chain, cyclic compounds (only benzene structure).
+- **Chapter 1 — Unit 9(i) introduction.** Introduction to organic compounds; unique nature of the carbon atom — tetravalency and catenation; formation of single, double and triple bonds; straight-chain, branched-chain and cyclic compounds (benzene structure only).
+- **Chapter 12A — Unit 9(ii)–(iv).** Organic compounds and their sources; organic versus inorganic compounds; carbon's bonding; hydrocarbons; structural formulae; alkyl groups; functional groups; homologous series; IUPAC nomenclature; structural isomerism.
+- **Chapter 12B — Unit 9(v), alkanes.** The alkane family and general formula; sources; chain isomerism; occurrence, structure, laboratory preparation and physical properties of methane and ethane; complete and incomplete combustion; substitution with chlorine; uses.
 
-**Verification status:** scope cross-checked, but the official CISCE PDF was not downloaded directly by the build environment. This limitation is disclosed in `QA-REPORT.md`.
+**Verification status:** the scope lines were cross-checked against public 2026-27 syllabus summaries. The official CISCE PDF was not downloaded directly by the build environment. This limitation is repeated in `QA-REPORT.md`.
 
 ---
 
-## 2. Secondary syllabus cross-checks
+## 2. Supplied source pages
 
-These were used only to confirm the wording and scope of Unit 9.1, not as textbook authorities.
+The two later chapters were built from supplied scanned pages:
+
+| Chapter | Supplied book pages | Use |
+|---|---|---|
+| Chapter 12A | pp. 194–209 | Sequence, terminology, worked nomenclature examples and exercise coverage |
+| Chapter 12B | pp. 210–216 | Alkane sequence, preparation routes, equations, reactions and uses |
+
+These were **supplied scans**, not pages retrieved by the build environment. They were used as a coverage and terminology guide. The chapters do not copy the book's exercise questions; all quick checks and assessment items were written independently.
+
+CISCE does not prescribe a Chemistry textbook. No page mapping, chapter number or publisher-specific claim is made in student-facing prose.
+
+For Chapter 1, no external textbook pages were supplied.
+
+---
+
+## 3. Secondary syllabus cross-checks
+
+These were used only to confirm syllabus wording and scope, not as textbook authorities.
 
 1. **Future Topper — ICSE Class 10 Chemistry Syllabus 2026-27**
    - URL: https://www.futuretopper.in/icse-and-isc/class-10-chemistry-syllabus
    - Accessed: 20 November 2026.
-   - Relevant use: confirms the 9.1 scope lines and that CISCE does not prescribe a Chemistry textbook.
+   - Relevant use: confirms the Unit 9 scope lines and that CISCE does not prescribe a Chemistry textbook.
 
 2. **Shaalaa — CISCE ICSE Class 10 Chemistry Syllabus 2026-27**
    - URL: https://www.shaalaa.com/syllabus/cisce-icse-class-10-chemistry_3786
    - Accessed: 20 November 2026.
-   - Relevant use: chapter structure and 9.1 topic outline.
+   - Relevant use: chapter structure and Unit 9 topic outline.
 
 3. **Vedantu — ICSE Class 10 Chemistry Syllabus**
    - URL: https://www.vedantu.com/icse/icse-syllabus-class-10-chemistry
    - Accessed: 20 November 2026.
-   - Relevant use: confirms the 9.1 introduction lines.
+   - Relevant use: confirms the Unit 9 introduction lines.
 
 4. **Jagran Josh — ICSE Class 10 Chemistry Syllabus 2025-26**
    - URL: https://www.jagranjosh.com/articles/icse-class-10-chemistry-syllabus-2025-2026-pdf-download-1800001143-1
@@ -50,41 +68,68 @@ These were used only to confirm the wording and scope of Unit 9.1, not as textbo
 
 ---
 
-## 3. Standard chemistry references
+## 4. Standard chemistry references
 
-The following standard facts were checked against multiple public chemistry references and the syllabus summaries above:
+The following standard facts were checked against multiple public chemistry references, the syllabus summaries above and the supplied pages:
 
 - Carbon atomic number 6 and electronic configuration 2,4.
-- Tetravalency: four covalent bonds.
-- Catenation: self-linking into chains and rings.
+- Tetravalency: four covalent bonds. Catenation: self-linking into chains and rings.
 - Single, double and triple bonds: one, two and three shared pairs.
 - Methane CH₄, ethane C₂H₆, ethene C₂H₄, ethyne C₂H₂, benzene C₆H₆.
 - Wöhler's 1828 synthesis of urea from ammonium cyanate.
-- Typical organic vs inorganic property trends and their exceptions.
+- Typical organic versus inorganic property trends and their exceptions.
 - Everyday examples: LPG, petrol, cellulose, proteins, aspirin, polythene, soap, urea.
 - Environmental concerns: plastic persistence and combustion emissions.
+- IUPAC naming conventions: longest chain, lowest locants, suffix priority and alphabetical substituent order.
+- Alkane preparations from sodium ethanoate or sodium propanoate with soda lime; reduction of haloalkanes; aluminium carbide with water; the Wurtz reaction and its even-carbon limitation.
+- Balanced combustion and chlorination equations, including limited-air combustion to carbon monoxide and soot.
 
 No claim is made that these were copied from a specific prescribed textbook.
 
 ---
 
-## 4. Textbook status
+## 5. Deliberate omissions
 
-CISCE does not prescribe a Chemistry textbook for ICSE. No textbook page mapping, chapter number or publisher-specific claim is made in this chapter.
+The supplied book marks the following items as outside the syllabus, so they are omitted or mentioned only as non-examinable context:
 
-If a school textbook is later supplied, the chapter can be mapped to it, but that mapping must be verified against the actual pages and edition.
+- **Metamerism** — omitted from Chapter 12A.
+- **Catalytic oxidation of alkanes** — omitted from Chapter 12B.
+- **Slow combustion with acidified K₂Cr₂O₇ or KMnO₄** — omitted from Chapter 12B.
+- **Alkenes and alkynes as taught topics** — out of scope for Chapter 12B; they belong to later chapters.
+
+Functional isomerism is included in Chapter 12A as a **labelled extension**, because the supplied book teaches it while the 2027 syllabus names chain and position isomerism.
+
+Enrichment material, such as the tetrahedral bond angle of 109.5°, is labelled as enrichment.
 
 ---
 
-## 5. Question provenance
+## 6. Textbook status
 
-All 24 assessment questions and all quick-check questions are **original practice questions** authored for this chapter. They are not reproduced from CISCE past papers, specimen papers or published question banks.
+CISCE does not prescribe a Chemistry textbook for ICSE. The supplied 12A and 12B scans guided sequence and terminology, but no publisher-specific page mapping is claimed in the student-facing chapters.
+
+If a school textbook is later supplied, the chapters can be mapped to it, but that mapping must be verified against the actual pages and edition.
 
 ---
 
-## 6. Source limitations
+## 7. Question provenance
+
+All assessment and quick-check questions are **original practice questions** authored for this project. They are not reproduced from CISCE past papers, specimen papers or published question banks.
+
+| Chapter | Assessment questions | Marks |
+|---|---|---|
+| Chapter 1 | 24 | 39 |
+| Chapter 12A | 30 | 50 |
+| Chapter 12B | 20 | 34 |
+
+The exports in `exports/` are generated from the internal banks in `src/data/questions/` by `npm run export:questions` and checked by `npm run validate:questions`.
+
+---
+
+## 8. Source limitations
 
 - The official CISCE PDF could not be fetched by the build tool because the site returned HTTP 403.
-- Secondary syllabus summaries agree on the 9.1 introduction scope, but they are not a substitute for the official PDF.
-- No external textbook pages were supplied.
+- Secondary syllabus summaries agree on the Unit 9 scope, but they are not a substitute for the official PDF.
+- The 12A and 12B pages were supplied scans; their edition and publisher were not supplied with the scans.
+- Chapter 1 had no supplied textbook pages.
 - No past-paper source was used.
+- Chemistry accuracy was checked by reading the rendered chapters and comparing equations, names and conditions with the supplied pages; it was not checked by an independent subject expert.

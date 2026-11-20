@@ -1,0 +1,1137 @@
+[
+  {
+    "id": "AQ1",
+    "subject": "Chemistry",
+    "topic": "Modern definition of organic compounds",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Organic compounds, sources, and organic vs inorganic trends",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which statement best defines organic compounds?",
+    "explanation": "The modern definition is structural. Organic compounds are carbon compounds, usually with carbon–hydrogen bonds. Simple carbon compounds such as CO, CO₂, carbonates, bicarbonates, cyanides and carbides are conventionally inorganic.",
+    "common_mistake": "Assuming every carbon-containing compound is organic.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A1",
+      "Modern definition of organic compounds"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "All carbon-containing compounds"
+      },
+      {
+        "id": "B",
+        "text": "Compounds obtained only from living organisms"
+      },
+      {
+        "id": "C",
+        "text": "Carbon compounds, usually containing hydrogen, excluding simple carbon compounds such as CO₂ and carbonates"
+      },
+      {
+        "id": "D",
+        "text": "Compounds containing oxygen"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "AQ2",
+    "subject": "Chemistry",
+    "topic": "Wöhler and the vital-force theory",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Organic compounds, sources, and organic vs inorganic trends",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which statement about Wöhler's 1828 experiment is correct?",
+    "explanation": "Wöhler heated ammonium cyanate, an inorganic salt, and obtained urea. This laboratory synthesis of an organic compound weakened the vital-force theory.",
+    "common_mistake": "Believing that organic compounds can be obtained only from plants or animals.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A1",
+      "Wöhler and the vital-force theory"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "He prepared urea from ammonium cyanate, showing that an organic compound could be made in the laboratory."
+      },
+      {
+        "id": "B",
+        "text": "He prepared carbon dioxide from urea, disproving the tetravalency of carbon."
+      },
+      {
+        "id": "C",
+        "text": "He proved that a vital force from living organisms is needed to make organic compounds."
+      },
+      {
+        "id": "D",
+        "text": "He synthesized methane directly from carbon and hydrogen."
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "AQ3",
+    "subject": "Chemistry",
+    "topic": "Conventional inorganic exceptions",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Organic compounds, sources, and organic vs inorganic trends",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which set contains carbon but is conventionally classified as inorganic?",
+    "explanation": "CO₂, carbonates, bicarbonates, cyanides and carbides are simple carbon compounds that are conventionally treated as inorganic even though they contain carbon.",
+    "common_mistake": "Assuming that the presence of carbon always makes a compound organic.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A1",
+      "Conventional inorganic exceptions"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "CO₂, carbonates, cyanides and carbides"
+      },
+      {
+        "id": "B",
+        "text": "CH₄, C₂H₆ and C₃H₈"
+      },
+      {
+        "id": "C",
+        "text": "Ethanol, ethanoic acid and glucose"
+      },
+      {
+        "id": "D",
+        "text": "Ethene, ethyne and benzene"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "AQ4",
+    "subject": "Chemistry",
+    "topic": "Tetravalency of carbon",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Carbon's unique nature, bonding and hydrocarbon classification",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What does the tetravalency of carbon mean?",
+    "explanation": "Carbon has four valence electrons and shares them to form four covalent bonds. Catenation, the linking of carbon atoms, is a separate property.",
+    "common_mistake": "Confusing tetravalency with catenation or with the number of carbon allotropes.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A2",
+      "Tetravalency of carbon"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Carbon forms four covalent bonds."
+      },
+      {
+        "id": "B",
+        "text": "Carbon links with other carbon atoms in long chains."
+      },
+      {
+        "id": "C",
+        "text": "Carbon exists in four allotropes."
+      },
+      {
+        "id": "D",
+        "text": "Carbon has four naturally occurring isotopes."
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "AQ5",
+    "subject": "Chemistry",
+    "topic": "Catenation",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Carbon's unique nature, bonding and hydrocarbon classification",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What name is given to the ability of carbon atoms to link to one another and form chains and rings?",
+    "explanation": "Catenation is the self-linking of carbon atoms. It produces straight chains, branched chains and rings, which is one reason carbon forms so many compounds.",
+    "common_mistake": "Confusing catenation with tetravalency, which is the formation of four bonds.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A2",
+      "Catenation"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Tetravalency"
+      },
+      {
+        "id": "B",
+        "text": "Catenation"
+      },
+      {
+        "id": "C",
+        "text": "Isomerism"
+      },
+      {
+        "id": "D",
+        "text": "Hydrogenation"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "AQ6",
+    "subject": "Chemistry",
+    "topic": "General formulae of alkanes, alkenes and alkynes",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Carbon's unique nature, bonding and hydrocarbon classification",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which row correctly gives the general formulae of alkanes, alkenes and alkynes, in that order?",
+    "explanation": "Alkanes are saturated and follow CₙH₂ₙ₊₂. Alkenes contain one C=C bond and follow CₙH₂ₙ. Alkynes contain one C≡C bond and follow CₙH₂ₙ₋₂.",
+    "common_mistake": "Mixing up the hydrogen counts for the three hydrocarbon families.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A2",
+      "General formulae of alkanes, alkenes and alkynes"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "CₙH₂ₙ₊₂, CₙH₂ₙ, CₙH₂ₙ₋₂"
+      },
+      {
+        "id": "B",
+        "text": "CₙH₂ₙ, CₙH₂ₙ₊₂, CₙH₂ₙ₋₂"
+      },
+      {
+        "id": "C",
+        "text": "CₙH₂ₙ₋₂, CₙH₂ₙ, CₙH₂ₙ₊₂"
+      },
+      {
+        "id": "D",
+        "text": "CₙH₂ₙ₊₁, CₙH₂ₙ, CₙH₂ₙ₋₁"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "AQ7",
+    "subject": "Chemistry",
+    "topic": "Identifying the carboxyl group",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Structural formulae, alkyl groups and functional groups",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which compound contains the carboxyl group, –COOH?",
+    "explanation": "CH₃COOH is ethanoic acid. Its –COOH group combines a carbonyl group with a hydroxyl group and defines the carboxylic acid family.",
+    "common_mistake": "Treating any C=O or any –OH as the carboxyl group instead of the combined –COOH group.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A3",
+      "Identifying the carboxyl group"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "CH₃OH"
+      },
+      {
+        "id": "B",
+        "text": "CH₃CHO"
+      },
+      {
+        "id": "C",
+        "text": "CH₃COOH"
+      },
+      {
+        "id": "D",
+        "text": "CH₃COCH₃"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "AQ8",
+    "subject": "Chemistry",
+    "topic": "General formula of an alkyl group",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Structural formulae, alkyl groups and functional groups",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What is the general formula of an alkyl group?",
+    "explanation": "An alkyl group is an alkane that has lost one hydrogen atom, so it has one fewer hydrogen: CₙH₂ₙ₊₁. For example, methane CH₄ gives the methyl group –CH₃.",
+    "common_mistake": "Using the alkane formula CₙH₂ₙ₊₂ for an alkyl group.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A3",
+      "General formula of an alkyl group"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "CₙH₂ₙ₊₂"
+      },
+      {
+        "id": "B",
+        "text": "CₙH₂ₙ₊₁"
+      },
+      {
+        "id": "C",
+        "text": "CₙH₂ₙ"
+      },
+      {
+        "id": "D",
+        "text": "CₙH₂ₙ₋₂"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "AQ9",
+    "subject": "Chemistry",
+    "topic": "The CH₂ step in a homologous series",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Homologous series",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Consecutive members of a homologous series differ by one CH₂ unit. What is the mass of this step?",
+    "explanation": "One CH₂ unit has a mass of 12 + 2 = 14 u. For example, ethane C₂H₆ has molar mass 30 g/mol and propane C₃H₈ has 44 g/mol, a difference of 14.",
+    "common_mistake": "Using the mass of carbon alone (12 u) instead of the whole CH₂ unit.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A4",
+      "The CH₂ step in a homologous series"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "12 u"
+      },
+      {
+        "id": "B",
+        "text": "14 u"
+      },
+      {
+        "id": "C",
+        "text": "16 u"
+      },
+      {
+        "id": "D",
+        "text": "28 u"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "AQ10",
+    "subject": "Chemistry",
+    "topic": "Longest-chain rule",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "IUPAC nomenclature",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "In 2-methylbutane, CH₃–CH(CH₃)–CH₂–CH₃, how many carbon atoms are in the longest continuous parent chain?",
+    "explanation": "The longest continuous path through the molecule contains four carbon atoms. That is why the root is but and the compound is named as a butane with a methyl branch.",
+    "common_mistake": "Choosing a short branched path or counting the branch as part of the main chain.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A5",
+      "Longest-chain rule"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "2"
+      },
+      {
+        "id": "B",
+        "text": "3"
+      },
+      {
+        "id": "C",
+        "text": "4"
+      },
+      {
+        "id": "D",
+        "text": "5"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "AQ11",
+    "subject": "Chemistry",
+    "topic": "Lowest-locant rule",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "IUPAC nomenclature",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "In CH₃–CH(OH)–CH₂–CH₃, which locant is given to the –OH group?",
+    "explanation": "Number the chain from the end that gives the principal functional group the lowest locant. Numbering from the left gives –OH at carbon 2, so the name is butan-2-ol.",
+    "common_mistake": "Numbering from the right regardless of where the functional group lies.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A5",
+      "Lowest-locant rule"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "AQ12",
+    "subject": "Chemistry",
+    "topic": "Definition of structural isomerism",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Structural isomerism",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Structural isomers are compounds that have:",
+    "explanation": "Structural isomers share a molecular formula but differ in how the atoms are joined, so their structural formulae and properties differ.",
+    "common_mistake": "Believing that compounds with the same molecular formula must be the same compound.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A6",
+      "Definition of structural isomerism"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "the same molecular formula but different structural formulae"
+      },
+      {
+        "id": "B",
+        "text": "the same structural formula but different molecular formulae"
+      },
+      {
+        "id": "C",
+        "text": "different molecular formulae and different structural formulae"
+      },
+      {
+        "id": "D",
+        "text": "the same molecular formula and the same structural formula"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "AQ13",
+    "subject": "Chemistry",
+    "topic": "Wöhler's product",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Organic compounds, sources, and organic vs inorganic trends",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "In 1828, Wöhler synthesized the organic compound ______ from ammonium cyanate.",
+    "explanation": "Wöhler obtained urea, an organic compound found in urine, by heating ammonium cyanate in the laboratory.",
+    "common_mistake": "Naming the starting salt, ammonium cyanate, as the product.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A1",
+      "Wöhler's product"
+    ],
+    "answer": [
+      "urea",
+      "carbamide"
+    ],
+    "accepted_answers": [
+      "urea",
+      "carbamide"
+    ]
+  },
+  {
+    "id": "AQ14",
+    "subject": "Chemistry",
+    "topic": "General formula of the alkynes",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Carbon's unique nature, bonding and hydrocarbon classification",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "The general formula of the alkynes is ______.",
+    "explanation": "Alkynes contain one carbon–carbon triple bond and follow CₙH₂ₙ₋₂. Ethyne, C₂H₂, is the first member.",
+    "common_mistake": "Giving the alkene formula CₙH₂ₙ or the alkane formula CₙH₂ₙ₊₂.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A2",
+      "General formula of the alkynes"
+    ],
+    "answer": [
+      "CₙH₂ₙ₋₂",
+      "CnH2n-2",
+      "CₙH₂ₙ-2",
+      "CnH2n−2",
+      "CnH₂ₙ₋₂"
+    ],
+    "accepted_answers": [
+      "CₙH₂ₙ₋₂",
+      "CnH2n-2",
+      "CₙH₂ₙ-2",
+      "CnH2n−2",
+      "CnH₂ₙ₋₂"
+    ]
+  },
+  {
+    "id": "AQ15",
+    "subject": "Chemistry",
+    "topic": "Suffix of the alcohol family",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Structural formulae, alkyl groups and functional groups",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "The IUPAC secondary suffix used for the alcohol family is ______.",
+    "explanation": "The –OH group is named with the suffix -ol, as in ethanol and propan-2-ol.",
+    "common_mistake": "Confusing the alcohol suffix -ol with the aldehyde suffix -al.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A3",
+      "Suffix of the alcohol family"
+    ],
+    "answer": [
+      "ol",
+      "-ol"
+    ],
+    "accepted_answers": [
+      "ol",
+      "-ol"
+    ]
+  },
+  {
+    "id": "AQ16",
+    "subject": "Chemistry",
+    "topic": "Mass difference between homologous members",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Homologous series",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "The mass difference between consecutive members of a homologous series is ______ u.",
+    "explanation": "Each successive member differs by CH₂, whose mass is 12 + 2 = 14 u.",
+    "common_mistake": "Using 12 u, the mass of carbon alone.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A4",
+      "Mass difference between homologous members"
+    ],
+    "answer": [
+      "14",
+      "14 u",
+      "14u",
+      "fourteen"
+    ],
+    "accepted_answers": [
+      "14",
+      "14 u",
+      "14u",
+      "fourteen"
+    ]
+  },
+  {
+    "id": "AQ17",
+    "subject": "Chemistry",
+    "topic": "Root word for four carbon atoms",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "IUPAC nomenclature",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "The IUPAC root word for a parent chain containing four carbon atoms is ______.",
+    "explanation": "The roots are meth (1), eth (2), prop (3), but (4), pent (5) and so on. A four-carbon alkane is butane.",
+    "common_mistake": "Using the prefix for a branch rather than the root for the parent chain.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A5",
+      "Root word for four carbon atoms"
+    ],
+    "answer": [
+      "but"
+    ],
+    "accepted_answers": [
+      "but"
+    ]
+  },
+  {
+    "id": "AQ18",
+    "subject": "Chemistry",
+    "topic": "Carbon properties that increase variety",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Carbon's unique nature, bonding and hydrocarbon classification",
+    "type": "multiple_select",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Which properties of carbon help explain the very large number and variety of organic compounds? Select all that apply.",
+    "explanation": "Tetravalency lets carbon form four bonds, catenation lets it build chains and rings, and multiple bonds create further families. Organic compounds are generally poor conductors of electricity.",
+    "common_mistake": "Selecting unrelated properties such as conductivity or a valency of two.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A2",
+      "Carbon properties that increase variety"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Tetravalency"
+      },
+      {
+        "id": "B",
+        "text": "Catenation"
+      },
+      {
+        "id": "C",
+        "text": "Formation of multiple bonds"
+      },
+      {
+        "id": "D",
+        "text": "High electrical conductivity"
+      },
+      {
+        "id": "E",
+        "text": "A fixed valency of two"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "AQ19",
+    "subject": "Chemistry",
+    "topic": "Functional group and family pairs",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Structural formulae, alkyl groups and functional groups",
+    "type": "multiple_select",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Which functional group and family pairs are correct? Select all that apply.",
+    "explanation": "–OH defines alcohols, –COOH defines carboxylic acids and –CHO defines aldehydes. Ketones contain a carbonyl group between two carbons, and ethers have an oxygen linking two carbon groups.",
+    "common_mistake": "Matching a group to a family by a single atom rather than the complete functional group.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A3",
+      "Functional group and family pairs"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "–OH and alcohol"
+      },
+      {
+        "id": "B",
+        "text": "–COOH and carboxylic acid"
+      },
+      {
+        "id": "C",
+        "text": "–CHO and aldehyde"
+      },
+      {
+        "id": "D",
+        "text": "–OH and ketone"
+      },
+      {
+        "id": "E",
+        "text": "–COOH and ether"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "AQ20",
+    "subject": "Chemistry",
+    "topic": "Correct steps in IUPAC naming",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "IUPAC nomenclature",
+    "type": "multiple_select",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Which steps are correct when building an IUPAC name? Select all that apply.",
+    "explanation": "The parent chain is the longest continuous carbon chain, numbering gives the principal group the lowest locant, and substituents are named as prefixes with locants. The root comes before the suffix.",
+    "common_mistake": "Treating the shortest chain as the parent or placing the suffix before the root.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A5",
+      "Correct steps in IUPAC naming"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Find the longest continuous chain of carbon atoms for the root."
+      },
+      {
+        "id": "B",
+        "text": "Number the chain to give the principal functional group the lowest locant."
+      },
+      {
+        "id": "C",
+        "text": "Choose the shortest carbon chain as the parent chain."
+      },
+      {
+        "id": "D",
+        "text": "Write the suffix before the root word."
+      },
+      {
+        "id": "E",
+        "text": "Name substituents as prefixes and give each its locant."
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "E"
+    ]
+  },
+  {
+    "id": "AQ21",
+    "subject": "Chemistry",
+    "topic": "Organic classification and exceptions",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Organic compounds, sources, and organic vs inorganic trends",
+    "type": "true_false_justify",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Every compound that contains carbon is classified as organic.",
+    "explanation": "Carbon alone does not decide the classification. Simple carbon compounds such as CO₂ and carbonates are conventionally included with inorganic chemistry.",
+    "common_mistake": "Using a simple carbon test instead of the structural definition.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A1",
+      "Organic classification and exceptions"
+    ],
+    "answer": "False",
+    "marking_points": [
+      {
+        "point": "States that the statement is false.",
+        "marks": 0.67
+      },
+      {
+        "point": "Gives at least one conventional exception such as CO₂, CO, a carbonate, a bicarbonate, a cyanide or a carbide.",
+        "marks": 0.67
+      },
+      {
+        "point": "Explains that organic classification depends on the structure and behaviour of the compound, not on carbon alone.",
+        "marks": 0.66
+      }
+    ]
+  },
+  {
+    "id": "AQ22",
+    "subject": "Chemistry",
+    "topic": "CH₂ step in a homologous series",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Homologous series",
+    "type": "true_false_justify",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Consecutive members of a homologous series differ by one CH₂ unit, a mass difference of 14 u.",
+    "explanation": "The CH₂ step is what makes the molecular masses of a homologous series rise in a regular way.",
+    "common_mistake": "Using 12 u for the step by counting only the carbon atom.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A4",
+      "CH₂ step in a homologous series"
+    ],
+    "answer": "True",
+    "marking_points": [
+      {
+        "point": "States that the statement is true.",
+        "marks": 0.67
+      },
+      {
+        "point": "Shows that CH₂ has a mass of 12 + 2 = 14 u.",
+        "marks": 0.67
+      },
+      {
+        "point": "Gives a correct example of successive members separated by 14 u.",
+        "marks": 0.66
+      }
+    ]
+  },
+  {
+    "id": "AQ23",
+    "subject": "Chemistry",
+    "topic": "Classifying an isomer pair",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Structural isomerism",
+    "type": "true_false_justify",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Ethanol and methoxymethane are chain isomers.",
+    "explanation": "In classification, compare the functional group before the carbon skeleton. A change of functional group makes the pair functional isomers.",
+    "common_mistake": "Calling every isomer pair with the same formula a chain isomer.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A6",
+      "Classifying an isomer pair"
+    ],
+    "answer": "False",
+    "marking_points": [
+      {
+        "point": "States that the statement is false.",
+        "marks": 0.67
+      },
+      {
+        "point": "Identifies that both compounds have the same molecular formula, C₂H₆O.",
+        "marks": 0.67
+      },
+      {
+        "point": "Explains that their functional groups differ, so they are functional isomers rather than chain isomers.",
+        "marks": 0.66
+      }
+    ]
+  },
+  {
+    "id": "AQ24",
+    "subject": "Chemistry",
+    "topic": "Matching functional groups to families",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Structural formulae, alkyl groups and functional groups",
+    "type": "matching",
+    "difficulty": "challenging",
+    "marks": 6,
+    "estimated_time_seconds": 360,
+    "prompt": "Match each functional group to the organic family it defines.",
+    "explanation": "Each family is defined by its functional group: –OH for alcohols, –CHO for aldehydes, –COOH for carboxylic acids, a carbonyl group between two carbons for ketones, –COO– for esters and an oxygen link for ethers.",
+    "common_mistake": "Matching families by name similarity rather than by the atoms in the functional group.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A3",
+      "Matching functional groups to families"
+    ],
+    "stimulus": "1. –OH\n2. –CHO\n3. –COOH\n4. >C=O between two carbons\n5. –COO–\n6. –O– linking two carbon groups",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alcohol"
+      },
+      {
+        "id": "B",
+        "text": "Aldehyde"
+      },
+      {
+        "id": "C",
+        "text": "Carboxylic acid"
+      },
+      {
+        "id": "D",
+        "text": "Ether"
+      },
+      {
+        "id": "E",
+        "text": "Ester"
+      },
+      {
+        "id": "F",
+        "text": "Ketone"
+      }
+    ],
+    "answer": {
+      "–OH": "Alcohol",
+      "–CHO": "Aldehyde",
+      "–COOH": "Carboxylic acid",
+      ">C=O between two carbons": "Ketone",
+      "–COO–": "Ester",
+      "–O– linking two carbon groups": "Ether"
+    }
+  },
+  {
+    "id": "AQ25",
+    "subject": "Chemistry",
+    "topic": "Tetravalency and catenation",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Carbon's unique nature, bonding and hydrocarbon classification",
+    "type": "short_answer",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Explain what is meant by the tetravalency of carbon and by catenation. State one consequence of each for the variety of organic compounds.",
+    "explanation": "Tetravalency controls how many bonds carbon can form; catenation controls how carbon atoms can join together. Both increase structural variety.",
+    "common_mistake": "Defining tetravalency as four carbon atoms or catenation as bonding only to hydrogen.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A2",
+      "Tetravalency and catenation"
+    ],
+    "answer": "Tetravalency means that a carbon atom has four valence electrons and forms four covalent bonds. This lets carbon join four different atoms or groups, including hydrogen, halogens and other carbon atoms. Catenation is the ability of carbon atoms to bond with one another to form straight chains, branched chains and rings. Together, tetravalency and catenation allow many different carbon skeletons and functional groups, which explains the very large number of organic compounds.",
+    "marking_points": [
+      {
+        "point": "Defines tetravalency as the formation of four covalent bonds by carbon.",
+        "marks": 0.67
+      },
+      {
+        "point": "Defines catenation as the linking of carbon atoms into chains or rings.",
+        "marks": 0.67
+      },
+      {
+        "point": "States a correct consequence, such as many possible skeletons, branches, rings or functional-group arrangements.",
+        "marks": 0.66
+      }
+    ]
+  },
+  {
+    "id": "AQ26",
+    "subject": "Chemistry",
+    "topic": "Characteristics of a homologous series",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Homologous series",
+    "type": "short_answer",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "State two characteristics of a homologous series.",
+    "explanation": "Any two valid characteristics earn the two marks. The shared general formula and functional group or bond pattern are the defining features; the CH₂ step and gradual physical trends follow from them.",
+    "common_mistake": "Claiming that all members have identical physical properties or the same molecular formula.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A4",
+      "Characteristics of a homologous series"
+    ],
+    "answer": "Members of a homologous series have the same general formula and the same functional group or bond pattern, so they show similar chemical properties. Consecutive members differ by one CH₂ unit, a mass difference of 14 u, and physical properties change gradually as the chain length increases.",
+    "marking_points": [
+      {
+        "point": "States that members have the same general formula.",
+        "marks": 0.5
+      },
+      {
+        "point": "States that members have the same functional group or bond pattern, so they show similar chemical properties.",
+        "marks": 0.5
+      },
+      {
+        "point": "States that consecutive members differ by CH₂, a mass difference of 14 u.",
+        "marks": 0.5
+      },
+      {
+        "point": "States that physical properties change gradually along the series.",
+        "marks": 0.5
+      }
+    ]
+  },
+  {
+    "id": "AQ27",
+    "subject": "Chemistry",
+    "topic": "Naming a branched alkane",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "IUPAC nomenclature",
+    "type": "short_answer",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Name the compound CH₃–CH(CH₃)–CH₂–CH₃ and explain why the locant 2 is used for the methyl group.",
+    "explanation": "The longest-chain rule chooses butane as the parent, and the lowest-locant rule fixes the position of the methyl branch.",
+    "common_mistake": "Naming the compound 3-methylbutane by numbering from the wrong end.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A5",
+      "Naming a branched alkane"
+    ],
+    "answer": "The compound is 2-methylbutane. The longest continuous carbon chain contains four carbon atoms, so the root is but and the parent is butane. A methyl group is attached as a branch. Numbering from the end nearer the branch gives the methyl group locant 2, which is the lowest possible locant, so the name is 2-methylbutane.",
+    "marking_points": [
+      {
+        "point": "Names the compound as 2-methylbutane.",
+        "marks": 0.67
+      },
+      {
+        "point": "Identifies the four-carbon longest chain and the methyl branch.",
+        "marks": 0.67
+      },
+      {
+        "point": "Explains that numbering gives the methyl group the lowest locant, 2.",
+        "marks": 0.66
+      }
+    ]
+  },
+  {
+    "id": "AQ28",
+    "subject": "Chemistry",
+    "topic": "Classifying position isomers",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "Structural isomerism",
+    "type": "short_answer",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Propan-1-ol and propan-2-ol both have the molecular formula C₃H₈O. State the type of isomerism they show and give a reason.",
+    "explanation": "When the functional group is unchanged but its locant changes, the pair shows position isomerism.",
+    "common_mistake": "Calling the pair chain isomers because the names look different.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A6",
+      "Classifying position isomers"
+    ],
+    "answer": "They show position isomerism. Both compounds have the same three-carbon skeleton and the same alcohol functional group, –OH. The –OH group is attached to a terminal carbon in propan-1-ol and to the middle carbon in propan-2-ol, so only its position differs.",
+    "marking_points": [
+      {
+        "point": "States that the pair shows position isomerism.",
+        "marks": 0.67
+      },
+      {
+        "point": "Explains that the carbon skeleton and functional group are unchanged.",
+        "marks": 0.67
+      },
+      {
+        "point": "Explains that the –OH group is at a different position, carbon 1 compared with carbon 2.",
+        "marks": 0.66
+      }
+    ]
+  },
+  {
+    "id": "AQ29",
+    "subject": "Chemistry",
+    "topic": "Naming and describing propan-2-ol",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "IUPAC nomenclature",
+    "type": "short_answer",
+    "difficulty": "challenging",
+    "marks": 3,
+    "estimated_time_seconds": 180,
+    "prompt": "Name the alcohol CH₃–CH(OH)–CH₃ and describe its structure. Identify the parent chain, the functional group and the locant.",
+    "explanation": "The root prop gives three carbons, the suffix -ol gives the alcohol family, and the locant 2 places the –OH on the middle carbon.",
+    "common_mistake": "Naming it propan-1-ol by ignoring the position of the –OH group.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A5",
+      "Naming and describing propan-2-ol"
+    ],
+    "answer": "The compound is propan-2-ol. Its parent chain has three carbon atoms, so the root is prop. The functional group is the hydroxyl group, –OH, which gives the suffix -ol. The –OH is attached to the middle carbon atom, so its locant is 2. The structure is CH₃–CH(OH)–CH₃, with the –OH on the central carbon of a three-carbon chain.",
+    "marking_points": [
+      {
+        "point": "Names the compound as propan-2-ol.",
+        "marks": 1
+      },
+      {
+        "point": "Identifies a three-carbon parent chain and the –OH functional group.",
+        "marks": 1
+      },
+      {
+        "point": "Explains that the –OH group is on carbon 2, giving the locant 2.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "AQ30",
+    "subject": "Chemistry",
+    "topic": "Naming a branched alcohol and explaining isomerism",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(ii)-(iv)",
+    "learning_outcome": "IUPAC nomenclature",
+    "type": "long_answer",
+    "difficulty": "challenging",
+    "marks": 4,
+    "estimated_time_seconds": 240,
+    "prompt": "A compound has the structure CH₃–CH(CH₃)–CH₂–OH. Name it and explain the naming decisions. Butan-2-ol has the same molecular formula, C₄H₁₀O. State the type of isomerism the two compounds show and give a reason.",
+    "explanation": "Apply the naming rules in order: longest chain, principal functional group, then lowest locants. For isomerism, compare the functional group first and then the carbon skeleton.",
+    "common_mistake": "Calling the pair position isomers without noticing that the carbon skeleton also changes.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "A5",
+      "Naming a branched alcohol and explaining isomerism"
+    ],
+    "answer": "The compound is 2-methylpropan-1-ol. The longest continuous carbon chain has three carbon atoms, so the root is prop. The –OH group is the principal functional group and gives the suffix -ol. Numbering from the end nearest the –OH gives the –OH locant 1 and the methyl branch locant 2, so the name is 2-methylpropan-1-ol. Butan-2-ol has the same molecular formula, C₄H₁₀O, but a straight four-carbon skeleton, while 2-methylpropan-1-ol has a branched three-carbon skeleton. Because the functional group is unchanged but the carbon skeleton differs, the pair shows chain isomerism.",
+    "marking_points": [
+      {
+        "point": "Names the compound as 2-methylpropan-1-ol.",
+        "marks": 1
+      },
+      {
+        "point": "Identifies the three-carbon parent chain, the –OH group and the methyl branch at carbon 2.",
+        "marks": 1
+      },
+      {
+        "point": "States that butan-2-ol has the same molecular formula, C₄H₁₀O.",
+        "marks": 1
+      },
+      {
+        "point": "Classifies the pair as chain isomers because the carbon skeletons differ, with branched and straight arrangements.",
+        "marks": 1
+      }
+    ]
+  }
+]

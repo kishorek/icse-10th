@@ -1,9 +1,9 @@
-# QA Report — Organic Chemistry Chapter 1
+# QA Report — Organic Chemistry Chapters 1, 12A and 12B
 
 **Date:** 20 November 2026
-**Chapter:** ICSE Class 10 Chemistry — Organic Chemistry, Chapter 1: Introduction to Organic Compounds
-**Syllabus:** CISCE ICSE Chemistry, examination year 2027, Unit 9.1 introduction
-**Build tested:** Vue 3 + Vite application, production `dist/`
+**Chapters:** ICSE Class 10 Chemistry — Introduction to Organic Compounds, Organic Compounds (12A), Hydrocarbons: Alkanes (12B)
+**Syllabus:** CISCE ICSE Chemistry, examination year 2027, Unit 9
+**Build tested:** Vue 3 + Vite multi-page application, production `dist/`
 
 ---
 
@@ -17,7 +17,7 @@
 | Vite | 8.3.8 |
 | Playwright | 1.65.1 |
 | Browser | Chromium 159.0.8154.6 (Playwright build) |
-| Server | Vite dev server on 5173; Vite preview on 4174–4176; static checks on 8090–8095 |
+| Server | Vite dev server on 5173; Vite preview on 4176 |
 
 ---
 
@@ -25,175 +25,171 @@
 
 **Command:** `npm run build`
 
-**Result:** Passed. `npm ci` also completed successfully: 45 packages added, 46 audited, 0 vulnerabilities.
+**Result:** Passed.
 
 ```text
-dist/index.html                   1.00 kB │ gzip: 0.55 kB
-dist/assets/index-Du5NjC5-.css   23.31 kB │ gzip: 5.39 kB
-dist/assets/index-4GB24_1U.js   171.93 kB │ gzip: 55.54 kB
-✓ built in 430ms
+dist/index.html                                     1.21 kB │ gzip:  0.60 kB
+dist/chapter-12b.html                               1.29 kB │ gzip:  0.62 kB
+dist/chapter-1.html                                 1.42 kB │ gzip:  0.65 kB
+dist/chapter-12a.html                               1.60 kB │ gzip:  0.72 kB
+dist/assets/main-CEpdd1Fl.css                      24.70 kB │ gzip:  5.71 kB
+dist/assets/main-CVXTOa8Z.js                       98.84 kB │ gzip: 35.03 kB
+✓ built in 604ms
 ```
 
-The production output is in `dist/`. It has no external font, script, stylesheet or image dependencies.
+`dist/` contains exactly the four expected HTML entries:
+
+- `dist/index.html`
+- `dist/chapter-1.html`
+- `dist/chapter-12a.html`
+- `dist/chapter-12b.html`
+
+The built output has no remote font, script, stylesheet or image dependencies.
 
 ---
 
 ## 3. Production preview check
 
-The built `dist/` was served with `npm run preview` and checked with Playwright.
+The built `dist/` was served with `npm run preview` on port 4176 and checked with Playwright.
 
 **Result:** Passed.
 
-- Title: `Organic Chemistry Chapter 1 | ICSE Class 10 Chemistry`
-- H1: `Organic Chemistry`
-- Body background applied from the built CSS: `rgb(247, 243, 234)`
-- Bond builder interaction worked in the built app (`Ethene` rendered `C₂H₄`).
-- Catenation explorer worked in the built app: one carbon rendered “1 carbon atom,” and six carbons in a ring rendered the closed-ring summary.
-- Page-level horizontal overflow at 1280 px: `0`
-- Page-level horizontal overflow at 360 px: `0`
-- Console errors: none
-- Failed requests: none
-- HTTP responses of 400 or above: none
+| Check | Result |
+|---|---|
+| All four pages return HTTP 200 | Passed |
+| Titles and H1 headings match the intended chapters | Passed |
+| Chapter switcher: Chapter 1 → 12A → 12B and 12B → 12A | Passed |
+| Deep link `chapter-12a.html#lesson-5` shows lesson 5 | Passed |
+| 12A quick-check progress reached `1 of 7 milestones` | Passed |
+| Reset progress returned 12A to `0 of 7 milestones` | Passed |
+| Chapter 1 assessment submitted, persisted, and reset to `0 of 24 answered` | Passed |
+| 12A assessment submitted, persisted, and reset to `0 of 30 answered` | Passed |
+| 12B assessment submitted, persisted, and reset to `0 of 20 answered` | Passed |
+| Console errors, page errors and failed requests | None |
+| HTTP responses of 400 or above | None |
+| Page-level horizontal overflow, all four pages at 360, 768 and 1280 px | `0` in every case |
 
-The built `dist/` was also served by a plain static server (`python3 -m http.server 8090 --directory dist`) to approximate GitHub Pages hosting. The page loaded, the bond builder worked, there were no console errors or failed requests, and page-level horizontal overflow was `0`.
-
-Screenshots:
-- `qa/preview-desktop.png`
-- `qa/preview-mobile-360.png`
-
-### GitHub Pages deployment
-
-- Repository: https://github.com/kishorek/icse-10th
-- Live URL: https://kishorek.github.io/icse-10th/
-- Pages source: GitHub Actions (`build_type: workflow`)
-- Workflow: `Deploy to GitHub Pages`, run `44744652038` — completed successfully (build 13s, deploy 9s)
-- Live verification: HTTP 200; title, H1, built CSS, and bond-builder interaction worked; no console errors, failed requests, or 400+ responses; page-level horizontal overflow `0` at 1280 px.
+A visual review of 1280 × 900 Chapter 12A and 360 × 800 Chapter 12B preview captures found the header switcher, progress block, section navigation, hero and chapter map readable and correctly reflowed.
 
 ---
 
-## 4. Browser end-to-end tests
+## 4. Question exports and validation
+
+**Commands:** `npm run export:questions` then `npm run validate:questions`
+
+**Result:** Passed.
+
+```text
+Exported 24 questions from src/data/questions/chapter-1.json to exports/chapter-1-questions.json
+Exported 30 questions from src/data/questions/chapter-12a.json to exports/chapter-12a-questions.json
+Exported 20 questions from src/data/questions/chapter-12b.json to exports/chapter-12b-questions.json
+Exported 74 questions across 3 chapters.
+
+Validated 24 questions in exports/chapter-1-questions.json.
+Validated 30 questions in exports/chapter-12a-questions.json.
+Validated 20 questions in exports/chapter-12b-questions.json.
+Validated all 3 chapter question exports.
+```
+
+The validation script compiles the schema once, reports each file and count, and exits non-zero on a missing file or an invalid question. The retired root `chapter-questions.json` has been removed.
+
+---
+
+## 5. Browser end-to-end tests
 
 **Command:** `npm run test:e2e`
 
-**Result:** 7 passed, 0 failed.
+**Result:** 29 passed, 0 failed (53.2 s).
 
-| Test | Result |
-|---|---|
-| Loads, exposes landmarks, and supports skip navigation | Passed |
-| Quick checks complete lessons and update progress | Passed |
-| Carbon labs, sorter, explorer and flashcards work | Passed |
-| Assessment submits, self-marks, and resets | Passed |
-| Desktop layout has no page-level horizontal overflow | Passed |
-| Mobile and tablet layouts reflow without page-level horizontal overflow | Passed |
-| Lesson progress persists across reload and reset | Passed |
+| Suite | Tests | Result |
+|---|---|---|
+| `landing.spec.js` | 1 | Passed |
+| `chapter-1.spec.js` | 8 | Passed |
+| `chapter-12a.spec.js` | 10 | Passed |
+| `chapter-12b.spec.js` | 6 | Passed |
+| `integration.spec.js` | 4 | Passed |
 
-### What the tests exercised
+Coverage includes:
 
-- `h1`, `main`, navigation landmark, skip link and focus.
-- Every internal anchor target exists exactly once.
-- All 15 quick-check questions across five lessons.
-- Lesson completion, progress bar and nav completion state.
-- Quick-check answers, latest correctness and attempt counts are persisted.
-- Bond builder: methane, ethene and ethyne.
-- Catenation explorer: carbon count, straight chain and ring.
-- Organic/inorganic sorter: a wrong placement, a correction, and a correct placement.
-- Everyday-object explorer: cotton → cellulose.
-- Flashcards: flip and next.
-- Assessment: submit with unanswered questions, summary display, self-score gating (enabled after an answer, disabled without one), self-score update, persistence of the submitted summary across reload, reset, and active-nav state.
-- Progress persistence across reload.
-- Progress reset with confirmation.
-- No console errors, page errors or failed requests.
+- Landing page lists and links Chapter 1, 12A and 12B.
+- Chapter 1 lessons, quick checks, both carbon labs, sorter, explorer, flashcards, assessment, persistence and reset.
+- All 12A and 12B quick-check sets, named labs, memory and revision sections.
+- 12A and 12B assessment submission, self-marking, persistence across reload and reset.
+- Progress isolation: completing 12A lesson 1 leaves Chapter 1 at `0 of 6` and 12B at `0 of 4`.
+- Chapter switcher navigation and deep hash links.
+- No page-level horizontal overflow at 360, 768 and 1280 px on all four pages.
+- No console errors, page errors or failed requests during the tested flows.
 
 ---
 
-## 5. Responsive checks
+## 6. Responsive checks
 
-No page-level horizontal overflow was found at:
+Page-level horizontal overflow was `0` for:
 
-- 360 × 800 px
-- 390 × 844 px
-- 768 × 1024 px
-- 1280 × 900 px
+- `/` at 360, 768 and 1280 px.
+- `/chapter-1.html` at 360, 768 and 1280 px.
+- `/chapter-12a.html` at 360, 768 and 1280 px.
+- `/chapter-12b.html` at 360, 768 and 1280 px.
 
-Screenshots reviewed:
-- `qa/desktop-top.png`
-- `qa/tablet-768-top.png`
-- `qa/mobile-360-top.png`
-- `qa/mobile-top.png`
-- `qa/bond-lab.png`
-- `qa/chain-lab.png`
-- `qa/memory.png`
-- `qa/revision.png`
-- `qa/assessment-top.png`
-- `qa/assessment-summary.png`
-- `qa/assessment-summary-marked.png`
-- `qa/mobile-bond-lab.png`
-- `qa/mobile-assessment.png`
-- `qa/mobile-assessment-summary.png`
+Chapter 1 also retains its existing 390 px and tablet checks in `chapter-1.spec.js`.
 
-Visual review covered hierarchy, spacing, line wrapping, lab sizing, sticky navigation, sorter layout, assessment feedback, summary layout and mobile reflow. Defects found during review were fixed and retested:
-
-- Active navigation could remain on the previous section inside the long assessment section. Replaced with a scroll-position calculation.
-- Mobile navigation hid later sections in a horizontal scroller with little affordance. Replaced with a responsive grid.
-- Mobile outcome rows were cramped. Changed to a two-row layout with the bar below the label and score.
-- Methane's readout label said “Carbon–carbon bond” despite having no C–C bond. Changed to “Key bonding.”
-- The everyday “plastic bottle” example implied polythene for all bottles. Changed to “plastic bag.”
-- The carbon atom diagram's electron positions were corrected to show 2 inner-shell and 4 outer-shell electrons.
-- Benzene's prose was aligned with the dashed-ring representation used in the diagram.
-- Self-score controls are now disabled until the student writes an answer, preventing marking of blank responses.
+**Not performed:** physical phone or tablet testing. These checks used Chromium viewport emulation.
 
 ---
 
-## 6. Content checks
+## 7. Keyboard and accessibility checks
 
-- All 24 assessment questions have a stable ID, outcome, type, marks, answer/model answer, explanation, misconception and source label.
-- All 24 questions in `chapter-questions.json` validate against the chapter schema with `npm run validate:questions`. The companion file is generated from `src/data/questions.json` with `npm run export:questions`.
-- Total assessment marks: 39.
-- Objective marks: 14; self-assessed written marks: 25.
-- Written marking points are hidden until submission.
-- Self-scoring is disabled for a written answer until the student has written an answer.
-- The acrostic is a sentence, **“Tiny Carbon Makes Isomers,”** with an explicit word-to-item mapping in this order: Tetravalency, Catenation, Multiple bonds, Isomerism.
-- Carbon-containing inorganic exceptions are stated consistently: CO, CO₂, carbonates, bicarbonates, cyanides, carbides.
-- Enrichment (silicon comparison) is labelled.
-- All exam-style questions are labelled as original practice questions.
-- No textbook page mapping is claimed.
+Performed against the production preview:
 
----
+- The skip link is the first focusable element and receives focus.
+- The chapter switcher links are reachable with Tab and activate with Enter; Chapter 1 → 12A was completed by keyboard.
+- A 12A quick-check radio was selected with Space.
+- The 12A functional-group lab was operated with keyboard focus and Enter.
+- The 12B chlorination lab advanced with keyboard focus and Enter.
+- Assessment reset controls for all three chapters were operated from the preview.
+- Native links, radio buttons, checkboxes, selects, buttons and text inputs are used throughout.
+- Correct/incorrect and complete/incomplete status uses text, not colour alone.
+- Progress bars expose labels and `aria-valuenow`.
+- `prefers-reduced-motion` rules remain in the stylesheet.
+- Tables use captions and scoped headers.
 
-## 7. Accessibility checks performed
-
-- Semantic landmarks: header, navigation, main, footer, sections with labelled headings.
-- Native radio buttons, checkboxes, text inputs, textareas and selects.
-- Every form control has an associated label or accessible name.
-- Visible `:focus-visible` outline using the amber accent.
-- Skip link is the first focusable element and was tested with the keyboard.
-- Correct/incorrect feedback uses text, not colour alone.
-- Progress bar has a label and `aria-valuenow`.
-- Feedback and score updates use `role="status"` / `aria-live` where appropriate.
-- SVGs use `role="img"` with title/description or an accessible label.
-- `prefers-reduced-motion` is respected in CSS.
-- No hover-only essential information.
-- Muted and amber text tokens were checked by calculation against paper backgrounds: muted ≈5.27:1 and amber ≈4.58:1 on the main paper background. This is a token check, not a full contrast audit of every component.
-
-**Not performed:** a full screen-reader audit with NVDA, JAWS or VoiceOver; an automated axe scan; a complete keyboard-only walkthrough of all 24 assessment questions. These remain unverified.
+**Not performed:** a full screen-reader audit with NVDA, JAWS or VoiceOver; an automated axe scan; a complete keyboard-only walkthrough of every assessment question and every lab. These remain unverified.
 
 ---
 
-## 8. Known limitations and unverified items
+## 8. Content and scope checks
 
-1. **Official CISCE PDF:** the cisce.org page returned HTTP 403 to automated retrieval. The Unit 9.1 scope was cross-checked against current 2026-27 syllabus summaries and the unchanged 2025-26 wording. The official PDF was not downloaded directly.
-2. **Textbook mapping:** CISCE does not prescribe a Chemistry textbook, and no textbook was supplied. No page or chapter mapping is claimed.
-3. **Written answers:** marked by student self-assessment against marking points. Scores depend on honest self-marking; there is no teacher or backend marking.
+- Three chapters are present with the intended scope: Chapter 1 Unit 9(i); 12A Unit 9(ii)–(iv); 12B Unit 9(v) alkanes only.
+- Question counts and marks: Chapter 1 24 questions / 39 marks; 12A 30 questions / 50 marks; 12B 20 questions / 34 marks.
+- All 74 exported questions validate against the project schema.
+- Every exported question is labelled `original_practice`; the chapters state that questions are not board past-paper questions.
+- Written marking points are hidden until submission; written answers are self-assessed.
+- Progress keys are per chapter and unchanged for Chapter 1: `icse10.organic1.state`, `icse10.organic12a.state`, `icse10.organic12b.state`.
+- 12A omits metamerism and labels functional isomerism as an extension.
+- 12B omits catalytic oxidation and slow combustion, and keeps alkenes/alkynes out of scope.
+- Enrichment material is labelled.
+- No textbook page mapping is claimed in student-facing prose; the supplied scans are disclosed in `chapter-sources.md`.
+- The old tetravalency Chapter 2 spec is marked **Superseded** and points to the 12A/12B design.
+
+**Not performed:** a fresh line-by-line subject-expert review of every taught sentence and equation during this final integration pass. Chemistry accuracy was checked during the content tasks; the final pass verified rendering, navigation, exports and the tested interactions.
+
+---
+
+## 9. Known limitations and unverified items
+
+1. **Official CISCE PDF:** the cisce.org page returned HTTP 403 to automated retrieval. Scope was cross-checked against current 2026-27 syllabus summaries and the unchanged 2025-26 wording.
+2. **Textbook:** CISCE does not prescribe a Chemistry textbook. The 12A/12B scans were supplied without edition or publisher details, and no page mapping is claimed in the chapters.
+3. **Written answers:** marked by student self-assessment against marking points. There is no teacher or backend marking.
 4. **Progress storage:** localStorage only. It is not synchronised across devices and can be erased by clearing browser data.
-5. **GitHub Pages:** deployment succeeded at the default `github.io` URL. No custom domain is configured.
-6. **Cross-browser:** tested in Chromium only. Firefox and Safari were not tested.
-7. **Real devices:** no physical phone or tablet testing. Responsive checks used Chromium viewport emulation.
-8. **Screen reader:** no NVDA/JAWS/VoiceOver pass was performed.
-9. **Print:** print styles exist but were not printed or PDF-tested.
-10. **Assessment edge cases:** submitting with a mixture of answered and unanswered questions was tested; every possible combination of answers was not.
+5. **Cross-browser:** tested in Chromium only. Firefox and Safari were not tested.
+6. **Real devices:** no physical phone or tablet testing.
+7. **Screen reader:** no NVDA/JAWS/VoiceOver pass and no automated axe scan.
+8. **Print:** print styles were not printed or PDF-tested.
+9. **Assessment edge cases:** submission with answered and unanswered questions was tested; not every possible answer combination was.
+10. **Deployment:** this task did not push or redeploy. The live site reflects the previously deployed version until the workflow runs again.
 
 ---
 
-## 9. Delivery status
+## 10. Delivery status
 
-The chapter is functional, builds successfully, passes the seven automated browser tests, passed the production-preview and static-host checks, and is deployed at https://kishorek.github.io/icse-10th/. The remaining limitations are disclosed above rather than claimed as verified.
+The three-chapter application builds successfully, produces four HTML entries, passes all 29 automated browser tests, validates all 74 exported questions, and passed the production-preview checks for navigation, deep links, progress isolation, assessment reset, keyboard operation and responsive overflow. The limitations above are disclosed rather than claimed as verified.

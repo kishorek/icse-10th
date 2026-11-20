@@ -1,5 +1,7 @@
 # ICSE Class 10 Chemistry — Organic Chemistry, Chapter 2: Design
 
+**Status:** Superseded. The planned tetravalency Chapter 2 was not built separately; its material is absorbed into Chapter 12A. See `2026-11-20-organic-chemistry-12a-12b-design.md`. This file is retained for historical context only.
+
 **Date:** 20 November 2026
 **Status:** Approved by user in chat
 **Delivery:** Vue 3 + Vite multi-page static application for GitHub Pages
