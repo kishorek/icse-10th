@@ -8,7 +8,7 @@ export const nameExamples = [
     locant: '1',
     name: 'chloromethane',
     reason:
-      'The longest chain has one carbon, so the root is meth. The –Cl substituent uses the prefix chloro. Only one carbon is possible, so the locant is 1 and is not written in the name.'
+      'The longest chain has one carbon, so the root is meth. The –Cl substituent uses the prefix chloro. The carbon is joined to chlorine by a single bond and the chain has only single bonds, so the primary suffix is ane. Only one carbon is possible, so the locant is 1 and is not written in the name.'
   },
   {
     id: '2-bromobutane',
