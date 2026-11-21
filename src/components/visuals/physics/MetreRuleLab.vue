@@ -8,7 +8,9 @@ const rightMass = ref(40)
 const rightPos = ref(80)
 const pivot = ref(50)
 const tilt = reactive({ value: 0 })
+const pulse = reactive({ r: 16, o: 0 })
 let animation = null
+let pulseRun = null
 let reduced = false
 
 const startX = 80
@@ -47,10 +49,23 @@ function applyTilt() {
     tilt.value = goal
     return
   }
-  animation = animate(tilt, { value: goal, duration: 520, easing: 'easeOutQuad' })
+  animation = animate(tilt, { value: goal, duration: 950, easing: 'easeOutElastic' })
 }
 
 watch([leftMass, leftPos, rightMass, rightPos, pivot], applyTilt)
+
+function pulseBalance() {
+  if (reduced) return
+  pulseRun?.pause()
+  pulseRun?.revert?.()
+  pulse.r = 16
+  pulse.o = 0.75
+  pulseRun = animate(pulse, { r: 46, o: 0, duration: 950, easing: 'easeOutQuad' })
+}
+
+watch(balanced, (value) => {
+  if (value) pulseBalance()
+})
 
 function reset() {
   leftMass.value = 40
@@ -69,13 +84,16 @@ applyTilt()
 onBeforeUnmount(() => {
   animation?.pause()
   animation?.revert?.()
+  pulseRun?.pause()
+  pulseRun?.revert?.()
   animation = null
+  pulseRun = null
 })
 </script>
 
 <template>
   <div class="rule-lab">
-    <svg viewBox="0 0 720 330" role="img" aria-labelledby="rule-title rule-desc">
+    <svg viewBox="0 0 720 390" role="img" aria-labelledby="rule-title rule-desc">
       <title id="rule-title">Metre rule balance</title>
       <desc id="rule-desc">{{ status }}</desc>
       <defs>
@@ -95,16 +113,32 @@ onBeforeUnmount(() => {
           <line :x1="leftX" y1="210" :x2="leftX" y2="238" stroke="var(--ink-soft)" stroke-width="2" />
           <rect :x="leftX - 18" y="238" width="36" height="26" rx="4" fill="#d9e7df" stroke="var(--teal-dark)" stroke-width="2" />
           <text :x="leftX" y="256" text-anchor="middle" class="weight-label">{{ leftMass }}</text>
+          <text :x="leftX" y="270" text-anchor="middle" class="weight-unit">gf</text>
         </g>
         <g v-if="rightMass > 0">
           <line :x1="rightX" y1="210" :x2="rightX" y2="238" stroke="var(--ink-soft)" stroke-width="2" />
           <rect :x="rightX - 18" y="238" width="36" height="26" rx="4" fill="#f5e3c8" stroke="var(--amber-deep)" stroke-width="2" />
           <text :x="rightX" y="256" text-anchor="middle" class="weight-label">{{ rightMass }}</text>
+          <text :x="rightX" y="270" text-anchor="middle" class="weight-unit">gf</text>
         </g>
       </g>
 
       <path :d="`M ${pivotX} 268 L ${pivotX} 292 L ${pivotX - 16} 310 L ${pivotX + 16} 310 Z`" fill="var(--teal)" />
+      <line :x1="pivotX" y1="264" :x2="pivotX" y2="222" stroke="var(--teal)" stroke-width="4" marker-end="url(#rule-up)" />
+      <text :x="pivotX + 20" y="242" class="reaction">reaction R</text>
       <text :x="pivotX" y="326" text-anchor="middle" class="tiny">fulcrum at {{ pivot }} cm</text>
+
+      <circle :cx="pivotX" cy="200" :r="pulse.r" :opacity="pulse.o" fill="none" stroke="var(--ok)" stroke-width="4" />
+
+      <g v-if="balanced">
+        <rect x="552" y="40" width="116" height="30" rx="15" fill="var(--ok-bg)" stroke="var(--ok)" stroke-width="2" />
+        <text x="610" y="60" text-anchor="middle" class="badge">BALANCED</text>
+      </g>
+
+      <line :x1="Math.min(leftX, pivotX)" y1="344" :x2="Math.max(leftX, pivotX)" y2="344" stroke="var(--line)" stroke-width="2" />
+      <text :x="(leftX + pivotX) / 2" y="362" text-anchor="middle" class="tiny">{{ Math.abs(leftPos - pivot) }} cm</text>
+      <line :x1="Math.min(rightX, pivotX)" y1="344" :x2="Math.max(rightX, pivotX)" y2="344" stroke="var(--line)" stroke-width="2" />
+      <text :x="(rightX + pivotX) / 2" y="362" text-anchor="middle" class="tiny">{{ Math.abs(rightPos - pivot) }} cm</text>
     </svg>
 
     <div class="balance-bars">
@@ -236,5 +270,25 @@ onBeforeUnmount(() => {
   font-size: 12px;
   font-weight: 700;
   fill: var(--ink);
+}
+.weight-unit,
+.reaction,
+.badge {
+  font-family: system-ui, sans-serif;
+}
+.weight-unit {
+  font-size: 9px;
+  fill: var(--ink-soft);
+}
+.reaction {
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--teal-dark);
+}
+.badge {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  fill: var(--ok);
 }
 </style>

@@ -1,10 +1,13 @@
 <script setup>
 import { computed, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import { animate } from 'animejs'
+import { useVisibilityPause } from '../../../composables/useVisibilityPause'
 
+const root = ref(null)
 const speed = ref(5)
 const angle = reactive({ value: 45 })
 const running = ref(false)
+const showAcceleration = ref(true)
 const status = ref('Ready')
 let loop = null
 let reduced = false
@@ -31,6 +34,25 @@ const tip = computed(() => ({
   y: position.value.y + tangent.value.y * 52
 }))
 
+const trail = computed(() => {
+  const start = ((angle.value - 68) * Math.PI) / 180
+  const x0 = cx + radius * Math.cos(start)
+  const y0 = cy - radius * Math.sin(start)
+  return `M ${x0} ${y0} A ${radius} ${radius} 0 0 0 ${position.value.x} ${position.value.y}`
+})
+
+const acceleration = computed(() => {
+  const len = Math.hypot(cx - position.value.x, cy - position.value.y) || 1
+  const ux = (cx - position.value.x) / len
+  const uy = (cy - position.value.y) / len
+  return {
+    x1: position.value.x,
+    y1: position.value.y,
+    x2: position.value.x + ux * 44,
+    y2: position.value.y + uy * 44
+  }
+})
+
 const compass = computed(() => {
   const { x, y } = tangent.value
   if (Math.abs(x) > Math.abs(y)) return x > 0 ? 'east' : 'west'
@@ -50,7 +72,6 @@ const ghosts = [90, 180, 270, 0].map((deg) => {
 
 function start() {
   loop?.pause()
-  loop?.revert?.()
   loop = null
   if (reduced) {
     angle.value = 45
@@ -83,6 +104,15 @@ watch(speed, () => {
   if (running.value) start()
 })
 
+useVisibilityPause(root, (visible) => {
+  if (visible) {
+    if (!running.value && !reduced) start()
+  } else if (running.value) {
+    loop?.pause()
+    running.value = false
+  }
+})
+
 if (typeof window !== 'undefined') {
   reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   if (reduced) {
@@ -100,7 +130,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="circular-velocity">
+  <div ref="root" class="circular-velocity">
     <svg viewBox="0 0 720 345" role="img" aria-labelledby="vel-title vel-desc">
       <title id="vel-title">Velocity along the tangent in circular motion</title>
       <desc id="vel-desc">
@@ -116,7 +146,9 @@ onBeforeUnmount(() => {
       <circle :cx="cx" :cy="cy" :r="radius" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="6 6" />
       <circle :cx="cx" :cy="cy" r="6" fill="var(--teal-dark)" />
 
-      <g v-for="ghost in ghosts" :key="ghost.deg" opacity="0.35">
+      <path :d="trail" fill="none" stroke="var(--teal)" stroke-width="5" opacity="0.22" stroke-linecap="round" />
+
+      <g v-for="ghost in ghosts" :key="ghost.deg" opacity="0.4">
         <line
           :x1="ghost.x"
           :y1="ghost.y"
@@ -126,6 +158,19 @@ onBeforeUnmount(() => {
           stroke-width="2"
         />
       </g>
+
+      <line
+        v-if="showAcceleration"
+        :x1="acceleration.x1"
+        :y1="acceleration.y1"
+        :x2="acceleration.x2"
+        :y2="acceleration.y2"
+        stroke="var(--teal)"
+        stroke-width="4"
+        stroke-linecap="round"
+        marker-end="url(#vel-acc-head)"
+      />
+      <text v-if="showAcceleration" :x="acceleration.x2 - 2" :y="acceleration.y2 + 16" text-anchor="middle" class="a-label">a</text>
 
       <circle :cx="position.x" :cy="position.y" r="10" fill="var(--teal)" stroke="var(--teal-dark)" stroke-width="2" />
       <line
@@ -151,14 +196,17 @@ onBeforeUnmount(() => {
       <button type="button" class="btn btn-small" @click="start">Play</button>
       <button type="button" class="btn btn-small" @click="pause">Pause</button>
       <button type="button" class="btn btn-small" @click="restart">Restart</button>
+      <button type="button" class="btn btn-small" :aria-pressed="showAcceleration" @click="showAcceleration = !showAcceleration">
+        {{ showAcceleration ? 'Hide acceleration' : 'Show acceleration' }}
+      </button>
     </div>
     <label class="bench-field">
       <span>Speed setting: {{ speed.toFixed(1) }} m/s</span>
       <input v-model.number="speed" type="range" min="2" max="10" step="0.5" aria-label="Speed in metres per second" />
     </label>
     <p class="sim-summary" aria-live="polite">
-      <strong>Speed is constant; velocity is not.</strong> The arrow never changes length, but it keeps changing
-      direction, so the velocity changes. A change of velocity is an acceleration.
+      <strong>Speed is constant; velocity is not.</strong> The amber arrow never changes length, but it keeps
+      changing direction. The teal arrow shows the acceleration pointing to the centre.
     </p>
     <p class="sr-only" aria-live="polite">{{ status }}</p>
   </div>

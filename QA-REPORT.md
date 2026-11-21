@@ -353,3 +353,30 @@ Physics Chapter 1 is implemented to the approved plan: five lessons, twelve purp
   - The torque bench changes the moment when its direction control is used.
   - Reduced motion renders the final line-of-action state.
   - No page-level overflow at 1280 px and no console, page or request errors.
+
+## A13. Visual and animation quality pass (21 November 2026)
+
+Approved follow-up pass to raise the quality of all twelve physics visuals. No lesson prose, syllabus scope or assessment changed.
+
+**Motion and behaviour**
+
+- Door, metre rule, beam and centre-of-gravity support now settle with elastic easing instead of a linear ease-out.
+- Couple, tangent-velocity and merry-go-round visuals loop continuously with Play, Pause and Restart, and pause automatically when scrolled out of view via an IntersectionObserver.
+- Numeric readouts now count to their new values (see-saw total and adult distance, spring-balance reading).
+- Added motion trails and ghosts: displacement and rotation ghosts in the equilibrium classifier, orbit trail in the velocity visual, ghost starting position and rotation arc, tangent trail after release.
+- Centripetal release is now sequenced: the force is removed first, then the body leaves along the tangent.
+- The spring-balance visual now has a two-state toggle that animates the rule’s weight in and scales the spring force arrow between 16 kgf and 26 kgf.
+- The two-observer visual adds a split view with both frames side by side; controls and summaries still work in single-frame mode.
+
+**Diagram quality**
+
+- Consistent larger arrowheads using `markerUnits="userSpaceOnUse"`.
+- Collision-safe labels and paint-order outlines on force, arm and angle labels.
+- Improved compositions: moment bench angle arc, full-distance comparison and moment gauge; live perpendicular-distance lab with an angle slider; couple arm outside the wheel; metre-rule reaction arrow, distance dimensions, weight units and a BALANCED badge; spring-balance labels separated; ring support shown below G with a leader line; plumb-line support pin and thread; velocity acceleration arrow; centripetal force meter; split-view mini scenes.
+- Mobile: controls stay wrapped at 360 px, diagrams scroll inside their own containers, split view collapses to one column, page-level overflow remains 0.
+
+**Verification**
+
+- `npm run build`: passed, nine HTML entries.
+- `npx playwright test`: 65 passed, 0 failed (2.5 minutes), including the physics suite’s new checks for the spring toggle, acceleration toggle, split view and reduced motion.
+- Manual screenshot review at 1280 px and 360 px covered all twelve labs; label collisions found in the first pass were fixed and rechecked.

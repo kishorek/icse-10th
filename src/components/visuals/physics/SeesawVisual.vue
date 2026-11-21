@@ -5,8 +5,10 @@ import { animate } from 'animejs'
 const stage = ref(0)
 const phase = reactive({ value: 0 })
 const beamTilt = reactive({ value: -7 })
+const numbers = reactive({ acw: 0, distance: 0 })
 let run = null
 let tiltRun = null
+let countRun = null
 let reduced = false
 
 const pivotX = 360
@@ -23,6 +25,24 @@ const stepText = computed(() => {
   return 'x = 185 ÷ 74 = 2.5 m. The adult sits 2.5 m from the pivot and the beam levels.'
 })
 
+function animateNumbers() {
+  const acw = stage.value >= 1 ? 185 : 0
+  const distance = stage.value >= 3 ? 2.5 : 0
+  if (reduced) {
+    numbers.acw = acw
+    numbers.distance = distance
+    return
+  }
+  countRun?.pause()
+  countRun?.revert?.()
+  countRun = animate(numbers, {
+    acw,
+    distance,
+    duration: 900,
+    easing: 'easeOutQuad'
+  })
+}
+
 function setStage(next) {
   stage.value = Math.max(0, Math.min(3, next))
   phase.value = stage.value
@@ -31,9 +51,11 @@ function setStage(next) {
   tiltRun?.revert?.()
   if (reduced) {
     beamTilt.value = goal
+    animateNumbers()
     return
   }
-  tiltRun = animate(beamTilt, { value: goal, duration: 620, easing: 'easeOutQuad' })
+  tiltRun = animate(beamTilt, { value: goal, duration: 950, easing: 'easeOutElastic' })
+  animateNumbers()
 }
 
 function play() {
@@ -86,14 +108,17 @@ onBeforeUnmount(() => {
   run?.revert?.()
   tiltRun?.pause()
   tiltRun?.revert?.()
+  countRun?.pause()
+  countRun?.revert?.()
   run = null
   tiltRun = null
+  countRun = null
 })
 </script>
 
 <template>
   <div class="seesaw-visual">
-    <svg viewBox="0 0 720 360" role="img" aria-labelledby="seesaw-title seesaw-desc">
+    <svg viewBox="0 0 720 380" role="img" aria-labelledby="seesaw-title seesaw-desc">
       <title id="seesaw-title">See-saw moment calculation</title>
       <desc id="seesaw-desc">{{ stepText }}</desc>
       <defs>
@@ -124,7 +149,9 @@ onBeforeUnmount(() => {
           <line :x1="adultX" :y1="pivotY" :x2="adultX" :y2="pivotY + 52" stroke="var(--ink-soft)" stroke-width="2" marker-end="url(#seesaw-head)" />
           <rect :x="adultX - 23" :y="pivotY - 60" width="46" height="44" rx="8" fill="#f5e3c8" stroke="var(--amber-deep)" stroke-width="2" />
           <text :x="adultX" :y="pivotY - 34" text-anchor="middle" class="person">74 kg</text>
-          <text :x="adultX" :y="pivotY + 46" text-anchor="middle" class="small">x m</text>
+          <text :x="adultX" :y="pivotY + 46" text-anchor="middle" class="small">
+            {{ stage >= 3 ? numbers.distance.toFixed(1) + ' m' : 'x m' }}
+          </text>
         </g>
       </g>
 
@@ -134,14 +161,16 @@ onBeforeUnmount(() => {
       <g v-if="stage >= 1">
         <text x="150" y="70" class="moment">30 × 2.0 = 60</text>
         <text x="150" y="92" class="moment">50 × 2.5 = 125</text>
-        <text x="150" y="118" class="moment-total">total = 185 kgf m</text>
+        <text x="150" y="118" class="moment-total">total = {{ numbers.acw.toFixed(0) }} kgf m</text>
       </g>
-      <g v-if="stage >= 3">
-        <text x="540" y="86" class="moment">74 × 2.5 = 185</text>
-        <text x="540" y="110" class="moment-total">balanced</text>
+      <g v-if="stage >= 2">
+        <text x="540" y="86" class="moment">74 × x = 185</text>
+        <text x="540" y="110" class="moment-total">
+          {{ stage >= 3 ? 'x = ' + numbers.distance.toFixed(1) + ' m · balanced' : 'solve for x' }}
+        </text>
       </g>
 
-      <text x="360" y="336" text-anchor="middle" class="step">{{ stepText }}</text>
+      <text x="360" y="358" text-anchor="middle" class="step">{{ stepText }}</text>
     </svg>
 
     <div class="lab-controls">
@@ -191,6 +220,11 @@ onBeforeUnmount(() => {
 }
 .step {
   font-size: 12px;
+  fill: var(--ink-soft);
+}
+.arc-label {
+  font-family: system-ui, sans-serif;
+  font-size: 10px;
   fill: var(--ink-soft);
 }
 .seesaw-note {

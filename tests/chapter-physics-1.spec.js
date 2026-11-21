@@ -75,6 +75,13 @@ test('metre rule lab balances and unbalances as the weights move', async ({ page
   await rule.getByRole('button', { name: 'Reset' }).click()
   await expect(rule).toContainText('Balanced: clockwise moment = anticlockwise moment.')
 
+  const spring = page.locator('#p3-spring-visual')
+  await expect(spring).toContainText('F = 16 kgf')
+  await spring.getByRole('button', { name: /Include the rule/ }).click()
+  await expect(spring).toContainText('F = 26 kgf')
+  await spring.getByRole('button', { name: /Remove the rule/ }).click()
+  await expect(spring).toContainText('F = 16 kgf')
+
   const seesaw = page.locator('#p3-seesaw-visual')
   await seesaw.getByRole('button', { name: 'Next step' }).click()
   await expect(seesaw).toContainText('60 + 125 = 185')
@@ -102,6 +109,9 @@ test('circular motion visuals show tangent velocity, removal of force and frames
   await expect(velocity).toContainText('speed = 5.0 m/s (constant)')
   await velocity.getByRole('button', { name: 'Pause' }).click()
   await velocity.getByRole('button', { name: 'Play' }).click()
+  await velocity.getByRole('button', { name: 'Hide acceleration' }).click()
+  await expect(velocity.getByRole('button', { name: 'Show acceleration' })).toBeVisible()
+  await velocity.getByRole('button', { name: 'Show acceleration' }).click()
 
   const centripetal = page.locator('#p5-centripetal-visual')
   await centripetal.getByRole('button', { name: 'Cut the string' }).click()
@@ -114,6 +124,9 @@ test('circular motion visuals show tangent velocity, removal of force and frames
   await expect(frames).toContainText('invents an outward centrifugal force')
   await frames.getByRole('button', { name: 'Observer on the ground' }).click()
   await expect(frames).toContainText('travels in a circle')
+  await frames.getByRole('button', { name: 'Show both observers' }).click()
+  await expect(frames.locator('.mini-frame')).toHaveCount(2)
+  await expect(frames).toContainText('Split view')
 })
 
 test('reduced motion renders the final animation state', async ({ page }) => {

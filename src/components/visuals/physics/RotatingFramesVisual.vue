@@ -1,7 +1,10 @@
 <script setup>
 import { computed, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import { animate } from 'animejs'
+import FrameMiniScene from './FrameMiniScene.vue'
+import { useVisibilityPause } from '../../../composables/useVisibilityPause'
 
+const root = ref(null)
 const view = ref('ground')
 const spin = reactive({ value: 25 })
 let loop = null
@@ -17,17 +20,20 @@ const ball = computed(() => {
   return { x: cx + radius * Math.cos(radians), y: cy - radius * Math.sin(radians) }
 })
 
-const summary = computed(() =>
-  view.value === 'ground'
-    ? 'Observer M stands on the ground. The ball travels in a circle because the tension provides the centripetal force.'
-    : 'Observer A rotates with the platform. The ball stays in front of A, so A invents an outward centrifugal force to balance the tension.'
-)
+const summary = computed(() => {
+  if (view.value === 'ground') {
+    return 'Observer M stands on the ground. The ball travels in a circle because the tension provides the centripetal force.'
+  }
+  if (view.value === 'platform') {
+    return 'Observer A rotates with the platform. The ball stays in front of A, so A invents an outward centrifugal force to balance the tension.'
+  }
+  return 'Both observers describe the same ball. M uses one real tension force; A adds a fictitious centrifugal force because A’s frame rotates.'
+})
 
 function startLoop() {
   loop?.pause()
-  loop?.revert?.()
   loop = null
-  if (view.value !== 'ground' || reduced) return
+  if (view.value === 'platform' || reduced) return
   loop = animate(spin, {
     value: spin.value + 360,
     duration: 9000,
@@ -67,6 +73,15 @@ watch(view, (next) => {
   }
 })
 
+useVisibilityPause(root, (visible) => {
+  if (visible) {
+    if (!loop && view.value !== 'platform' && !reduced) startLoop()
+  } else if (loop) {
+    loop.pause()
+    loop = null
+  }
+})
+
 if (typeof window !== 'undefined') {
   reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   if (!reduced) startLoop()
@@ -80,8 +95,8 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="frames-visual">
-    <svg viewBox="0 0 720 360" role="img" aria-labelledby="frames-title frames-desc">
+  <div ref="root" class="frames-visual">
+    <svg v-if="view !== 'both'" viewBox="0 0 720 360" role="img" aria-labelledby="frames-title frames-desc">
       <title id="frames-title">Two observers of the same ball</title>
       <desc id="frames-desc">{{ summary }}</desc>
       <defs>
@@ -158,6 +173,11 @@ onBeforeUnmount(() => {
       <text x="360" y="336" text-anchor="middle" class="step">{{ summary }}</text>
     </svg>
 
+    <div v-else class="split-frames">
+      <FrameMiniScene view="ground" :spin="spin.value" />
+      <FrameMiniScene view="platform" :spin="spin.value" />
+    </div>
+
     <div class="lab-controls">
       <button type="button" class="btn btn-small" :aria-pressed="view === 'ground'" @click="setView('ground')">
         Observer on the ground
@@ -165,9 +185,20 @@ onBeforeUnmount(() => {
       <button type="button" class="btn btn-small" :aria-pressed="view === 'platform'" @click="setView('platform')">
         Observer on the platform
       </button>
+      <button type="button" class="btn btn-small" :aria-pressed="view === 'both'" @click="setView('both')">
+        Show both observers
+      </button>
     </div>
     <p class="sim-summary" aria-live="polite">
-      <strong>{{ view === 'ground' ? 'Ground frame: one real force.' : 'Rotating frame: one real force, one invented force.' }}</strong>
+      <strong>
+        {{
+          view === 'ground'
+            ? 'Ground frame: one real force.'
+            : view === 'platform'
+              ? 'Rotating frame: one real force, one invented force.'
+              : 'Split view: the same ball, two consistent descriptions.'
+        }}
+      </strong>
       {{ summary }}
     </p>
   </div>
@@ -205,6 +236,32 @@ onBeforeUnmount(() => {
 .step {
   font-size: 12px;
   fill: var(--ink-soft);
+}
+.split-frames {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  animation: split-in 260ms ease-out;
+}
+@keyframes split-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 620px) {
+  .split-frames {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .split-frames {
+    animation: none;
+  }
 }
 .sim-summary {
   margin: 0;

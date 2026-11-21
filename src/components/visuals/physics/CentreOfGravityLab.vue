@@ -16,7 +16,9 @@ const shapes = [
 const shape = ref('rod')
 const supported = ref(true)
 const tilt = reactive({ value: 0 })
+const pulse = reactive({ r: 7, o: 0 })
 let animation = null
+let pulseRun = null
 let reduced = false
 
 const active = computed(() => shapes.find((item) => item.id === shape.value))
@@ -28,7 +30,11 @@ const gPoint = computed(() => {
 })
 const gx = computed(() => gPoint.value.x)
 const gy = computed(() => gPoint.value.y)
-const supportStart = computed(() => (shape.value === 'cone' ? 250 : gy.value + 26))
+const supportStart = computed(() => {
+  if (shape.value === 'cone') return 250
+  if (shape.value === 'ring') return 255
+  return gy.value + 26
+})
 
 function apply() {
   animation?.pause()
@@ -42,11 +48,25 @@ function apply() {
   animation = animate(tilt, {
     value: goal,
     duration: 520,
-    easing: supported.value ? 'easeOutBack' : 'easeOutQuad'
+    easing: 'easeOutElastic'
   })
 }
 
+function pulseG() {
+  if (reduced) {
+    pulse.r = 20
+    pulse.o = 0.5
+    return
+  }
+  pulseRun?.pause()
+  pulseRun?.revert?.()
+  pulse.r = 7
+  pulse.o = 0.9
+  pulseRun = animate(pulse, { r: 24, o: 0, duration: 1000, easing: 'easeOutQuad' })
+}
+
 watch([shape, supported], apply)
+watch(shape, pulseG)
 
 function reset() {
   shape.value = 'rod'
@@ -62,7 +82,10 @@ apply()
 onBeforeUnmount(() => {
   animation?.pause()
   animation?.revert?.()
+  pulseRun?.pause()
+  pulseRun?.revert?.()
   animation = null
+  pulseRun = null
 })
 </script>
 
@@ -82,10 +105,14 @@ onBeforeUnmount(() => {
         <g v-else-if="shape === 'disc'">
           <circle cx="360" cy="165" r="86" fill="#efe4cf" stroke="var(--teal-dark)" stroke-width="3" />
           <line x1="274" y1="165" x2="446" y2="165" stroke="var(--line)" stroke-width="2" stroke-dasharray="4 4" />
+          <line x1="360" y1="79" x2="360" y2="251" stroke="var(--line)" stroke-width="2" stroke-dasharray="4 4" />
         </g>
         <g v-else-if="shape === 'ring'">
           <circle cx="360" cy="165" r="86" fill="none" stroke="var(--teal-dark)" stroke-width="22" />
           <line x1="274" y1="165" x2="446" y2="165" stroke="var(--line)" stroke-width="2" stroke-dasharray="4 4" />
+          <line x1="360" y1="79" x2="360" y2="251" stroke="var(--line)" stroke-width="2" stroke-dasharray="4 4" />
+          <circle cx="360" cy="165" r="34" fill="none" stroke="var(--teal)" stroke-width="2" stroke-dasharray="5 5" />
+          <text x="360" y="122" text-anchor="middle" class="empty-note">empty centre</text>
         </g>
         <g v-else-if="shape === 'triangle'">
           <polygon points="360,78 448,238 272,238" fill="#efe4cf" stroke="var(--teal-dark)" stroke-width="3" />
@@ -114,13 +141,15 @@ onBeforeUnmount(() => {
           <line x1="360" y1="78" x2="360" y2="238" stroke="var(--teal)" stroke-width="1.5" stroke-dasharray="4 4" />
         </g>
 
+        <circle :cx="gx" :cy="gy" :r="pulse.r" :opacity="pulse.o" fill="none" stroke="var(--amber)" stroke-width="3" />
         <circle :cx="gx" :cy="gy" r="7" fill="var(--amber)" stroke="var(--amber-deep)" stroke-width="2" />
         <text :x="gx + 14" :y="gy + 5" class="g-label">G</text>
       </g>
 
+      <line v-if="shape === 'ring'" :x1="gx" :y1="gy + 10" :x2="gx" :y2="supportStart" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 4" />
       <path :d="`M ${gx} ${supportStart} L ${gx} ${supportStart + 24} L ${gx - 18} ${supportStart + 48} L ${gx + 18} ${supportStart + 48} Z`" fill="var(--teal)" />
       <text :x="gx" :y="supportStart + 66" text-anchor="middle" class="small">
-        {{ shape === 'cone' ? 'support under the base centre' : 'support at G' }}
+        {{ shape === 'cone' ? 'support under the base centre' : shape === 'ring' ? 'support below G' : 'support at G' }}
       </text>
 
       <text x="360" y="36" text-anchor="middle" class="heading">{{ active.name }}</text>
@@ -188,6 +217,11 @@ onBeforeUnmount(() => {
 .badge {
   font-size: 11px;
   font-weight: 700;
+  fill: var(--teal-dark);
+}
+.empty-note {
+  font-family: system-ui, sans-serif;
+  font-size: 10px;
   fill: var(--teal-dark);
 }
 .sim-summary {

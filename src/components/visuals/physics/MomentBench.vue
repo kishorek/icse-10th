@@ -19,6 +19,7 @@ const radians = computed(() => (angle.value * Math.PI) / 180)
 const moment = computed(() => force.value * dist.value * Math.sin(radians.value))
 const arm = computed(() => dist.value * Math.sin(radians.value))
 const maxMoment = 50 * 1.2
+const gaugePercent = computed(() => Math.min(100, (moment.value / maxMoment) * 100))
 
 const handle = computed(() => ({ x: pivotX + doorLength.value, y: pivotY }))
 const unit = computed(() => ({
@@ -35,27 +36,42 @@ const foot = computed(() => {
   }
 })
 const armLine = computed(() => ({ x1: pivotX, y1: pivotY, x2: foot.value.x, y2: foot.value.y }))
+const arrowLength = computed(() => 12 + force.value * 1.6)
 const tip = computed(() => ({
-  x: handle.value.x + unit.value.x * 74,
-  y: handle.value.y + unit.value.y * 74
+  x: handle.value.x + unit.value.x * arrowLength.value,
+  y: handle.value.y + unit.value.y * arrowLength.value
 }))
 const lineStart = computed(() => ({
-  x: handle.value.x - unit.value.x * 60,
-  y: handle.value.y - unit.value.y * 60
+  x: handle.value.x - unit.value.x * 70,
+  y: handle.value.y - unit.value.y * 70
+}))
+
+const arcPath = computed(() => {
+  const radius = 54
+  const startX = handle.value.x + radius
+  const startY = handle.value.y
+  const endX = handle.value.x + radius * Math.cos(radians.value)
+  const endY = handle.value.y + (upward.value ? -1 : 1) * radius * Math.sin(radians.value)
+  return `M ${startX} ${startY} A ${radius} ${radius} 0 0 ${upward.value ? 0 : 1} ${endX} ${endY}`
+})
+
+const angleLabel = computed(() => ({
+  x: handle.value.x + 54,
+  y: handle.value.y + (upward.value ? 32 : -32)
 }))
 
 const rightAngle = computed(() => {
-  const n = { x: pivotX - foot.value.x, y: pivotY - foot.value.y }
-  const len = Math.hypot(n.x, n.y) || 1
-  n.x /= len
-  n.y /= len
-  const ux = unit.value.x
-  const uy = unit.value.y
+  const nx = pivotX - foot.value.x
+  const ny = pivotY - foot.value.y
+  const len = Math.hypot(nx, ny) || 1
   const size = 10
   return [
-    { x: foot.value.x + ux * size, y: foot.value.y + uy * size },
-    { x: foot.value.x + ux * size + n.x * size, y: foot.value.y + uy * size + n.y * size },
-    { x: foot.value.x + n.x * size, y: foot.value.y + n.y * size }
+    { x: foot.value.x + unit.value.x * size, y: foot.value.y + unit.value.y * size },
+    {
+      x: foot.value.x + unit.value.x * size + (nx / len) * size,
+      y: foot.value.y + unit.value.y * size + (ny / len) * size
+    },
+    { x: foot.value.x + (nx / len) * size, y: foot.value.y + (ny / len) * size }
   ]
 })
 
@@ -68,7 +84,7 @@ const summary = computed(
 
 function targetSwing() {
   const fraction = Math.min(1, moment.value / maxMoment)
-  return (upward.value ? -1 : 1) * fraction * 42
+  return (upward.value ? -1 : 1) * fraction * 44
 }
 
 function updateMotion() {
@@ -82,8 +98,8 @@ function updateMotion() {
   }
   animation = animate(swing, {
     value: target,
-    duration: 480,
-    easing: 'easeOutQuad'
+    duration: 900,
+    easing: 'easeOutElastic'
   })
 }
 
@@ -110,17 +126,17 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="moment-bench">
-    <svg viewBox="0 0 720 360" role="img" aria-labelledby="moment-bench-title moment-bench-desc">
+    <svg viewBox="0 0 720 370" role="img" aria-labelledby="moment-bench-title moment-bench-desc">
       <title id="moment-bench-title">Door torque bench</title>
       <desc id="moment-bench-desc">{{ summary }}</desc>
       <defs>
-        <marker markerUnits="userSpaceOnUse" id="moment-force-head" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
-          <path d="M 0 0 L 14 7 L 0 14 z" fill="#a05f0c" />
+        <marker id="moment-force-head" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto">
+          <path d="M 0 0 L 16 8 L 0 16 z" fill="#a05f0c" />
         </marker>
       </defs>
 
-      <line x1="60" y1="300" x2="660" y2="300" stroke="var(--line)" stroke-width="2" stroke-dasharray="6 6" />
-      <text x="96" y="326" class="floor">floor plan</text>
+      <line x1="52" y1="302" x2="668" y2="302" stroke="var(--line)" stroke-width="2" stroke-dasharray="6 6" />
+      <text x="88" y="326" class="floor">floor plan</text>
 
       <g :transform="`rotate(${swing.value} ${pivotX} ${pivotY})`">
         <rect
@@ -134,9 +150,9 @@ onBeforeUnmount(() => {
           stroke-width="3"
         />
         <line
-          :x1="pivotX + 8"
+          :x1="pivotX + 10"
           :y1="pivotY"
-          :x2="pivotX + doorLength - 6"
+          :x2="pivotX + doorLength - 8"
           :y2="pivotY"
           stroke="var(--line)"
           stroke-width="2"
@@ -146,6 +162,10 @@ onBeforeUnmount(() => {
 
       <circle :cx="pivotX" :cy="pivotY" r="10" fill="var(--amber-light)" stroke="var(--amber-deep)" stroke-width="3" />
       <text :x="pivotX - 10" :y="pivotY + 34" text-anchor="end" class="label">pivot O</text>
+
+      <g :transform="`rotate(${swing.value} ${pivotX} ${pivotY})`">
+      <path :d="arcPath" fill="none" stroke="var(--teal)" stroke-width="2" stroke-dasharray="4 3" />
+      <text :x="angleLabel.x" :y="angleLabel.y" text-anchor="middle" class="angle-label">θ = {{ angle }}°</text>
 
       <line
         :x1="lineStart.x"
@@ -162,11 +182,11 @@ onBeforeUnmount(() => {
         :x2="tip.x"
         :y2="tip.y"
         stroke="var(--amber)"
-        stroke-width="5"
+        stroke-width="6"
         stroke-linecap="round"
         marker-end="url(#moment-force-head)"
       />
-      <text :x="tip.x + 10" :y="tip.y + 4" class="force-label">F</text>
+      <text :x="tip.x + 10" :y="tip.y - 8" class="force-label">F = {{ force }} N</text>
 
       <line
         :x1="armLine.x1"
@@ -174,8 +194,8 @@ onBeforeUnmount(() => {
         :x2="armLine.x2"
         :y2="armLine.y2"
         stroke="var(--teal)"
-        stroke-width="3"
-        stroke-dasharray="7 4"
+        stroke-width="4"
+        stroke-dasharray="8 5"
       />
       <polyline
         :points="rightAngle.map((point) => `${point.x},${point.y}`).join(' ')"
@@ -183,16 +203,34 @@ onBeforeUnmount(() => {
         stroke="var(--teal)"
         stroke-width="2"
       />
-      <text :x="(pivotX + foot.x) / 2" :y="(pivotY + foot.y) / 2 - 24" text-anchor="middle" class="arm-label">
+      <text :x="pivotX + doorLength / 2" :y="pivotY + 44" text-anchor="middle" class="arm-label">
         d = {{ arm.toFixed(2) }} m
       </text>
+      <text
+        v-if="angle < 90"
+        :x="pivotX + doorLength / 2"
+        :y="pivotY + 66"
+        text-anchor="middle"
+        class="ghost-label"
+      >
+        full distance {{ dist.toFixed(1) }} m
+      </text>
+      </g>
 
       <g v-if="moment < 0.05">
-        <text x="420" y="120" text-anchor="middle" class="zero-note">
+        <text x="430" y="112" text-anchor="middle" class="zero-note">
           Line of action passes through the pivot → zero moment
         </text>
       </g>
     </svg>
+
+    <div class="moment-gauge" aria-hidden="true">
+      <span class="gauge-label">Turning effect</span>
+      <span class="gauge-track">
+        <span class="gauge-fill" :class="{ reverse: !upward }" :style="{ width: `${gaugePercent}%` }"></span>
+      </span>
+      <span class="gauge-value">{{ moment.toFixed(1) }} N m</span>
+    </div>
 
     <div class="bench-controls">
       <label class="bench-field">
@@ -217,7 +255,8 @@ onBeforeUnmount(() => {
 
     <p class="sim-summary" aria-live="polite">
       <strong>Moment = {{ moment.toFixed(1) }} N m {{ direction }}.</strong>
-      Perpendicular distance {{ arm.toFixed(2) }} m; force {{ force }} N at {{ angle }}°.
+      M = F × d = {{ force }} N × {{ arm.toFixed(2) }} m. The full distance is
+      {{ dist.toFixed(1) }} m; at {{ angle }}° only its perpendicular part counts.
     </p>
   </div>
 </template>
@@ -227,6 +266,35 @@ onBeforeUnmount(() => {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 0.6rem;
+}
+.moment-gauge {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+.gauge-track {
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--paper-3);
+  overflow: hidden;
+}
+.gauge-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal), #2b8a78);
+  transition: width 240ms ease-out;
+}
+.gauge-fill.reverse {
+  background: linear-gradient(90deg, var(--amber-deep), var(--amber));
+}
+.gauge-value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--teal-dark);
 }
 .bench-controls {
   display: grid;
@@ -260,7 +328,9 @@ onBeforeUnmount(() => {
 .label,
 .arm-label,
 .force-label,
-.zero-note {
+.zero-note,
+.angle-label,
+.ghost-label {
   font-family: system-ui, sans-serif;
 }
 .floor {
@@ -272,17 +342,32 @@ onBeforeUnmount(() => {
   fill: var(--ink-soft);
 }
 .force-label {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 700;
   fill: var(--amber-deep);
-}
-.arm-label {
   paint-order: stroke;
   stroke: var(--paper-2);
   stroke-width: 3px;
+}
+.arm-label {
   font-size: 13px;
   font-weight: 700;
   fill: var(--teal-dark);
+  paint-order: stroke;
+  stroke: var(--paper-2);
+  stroke-width: 3px;
+}
+.angle-label {
+  font-size: 12px;
+  font-weight: 700;
+  fill: var(--teal-dark);
+  paint-order: stroke;
+  stroke: var(--paper-2);
+  stroke-width: 3px;
+}
+.ghost-label {
+  font-size: 11px;
+  fill: var(--muted);
 }
 .zero-note {
   font-size: 13px;

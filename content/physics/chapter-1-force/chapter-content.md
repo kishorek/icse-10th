@@ -120,3 +120,16 @@ All twelve visuals are implemented in `src/components/visuals/physics/`. Every a
 | **Total** | **63** | **42.5** | **40.3%** | Yes | Excludes memory workshop, revision and assessment |
 
 These are estimates using the skill's 150 words/min prose rate and its 1 min static, 2-3 min animation and 3-5 min interactive-simulation allowances. Chapter study time including memory, revision and assessment remains 165-180 minutes, as stated in the hero.
+
+
+## Visual quality pass — 2026-11-21
+
+A follow-up quality pass kept every approved learning objective and the 40% visual budget, and upgraded the execution:
+
+- elastic settling for doors, rules, beams and supports;
+- continuous looping for the steering wheel, velocity orbit and merry-go-round;
+- motion trails, before/after ghosts and counting values;
+- a two-state spring-balance toggle, a live angle slider in the perpendicular-distance lab, a moment gauge, force/moment meters, a centripetal force meter and a side-by-side two-observer view;
+- collision-safe labelling, consistent arrowheads and visibility-based pausing for looping animations.
+
+The twelve visual IDs and their learning objectives are unchanged.

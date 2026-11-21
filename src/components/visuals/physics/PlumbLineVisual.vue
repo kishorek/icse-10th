@@ -1,12 +1,14 @@
 <script setup>
 import { computed, onBeforeUnmount, reactive, ref } from 'vue'
-import { createTimeline, svg } from 'animejs'
+import { animate, createTimeline, svg } from 'animejs'
 
 const rotation = reactive({ value: 0 })
+const pulse = reactive({ r: 8, o: 0 })
 const stage = ref(0)
 const status = ref('Ready')
 const lineEls = ref([])
 let timeline = null
+let pulseRun = null
 let reduced = false
 
 const gx = 360
@@ -52,6 +54,32 @@ const lines = computed(() =>
   })
 )
 
+const activeHole = computed(() =>
+  stage.value <= 1 ? holes[0] : stage.value === 2 ? holes[1] : holes[2]
+)
+
+const rotatedHole = computed(() => {
+  const rad = (rotation.value * Math.PI) / 180
+  const hole = activeHole.value
+  return {
+    x: gx + hole.x * Math.cos(rad) - hole.y * Math.sin(rad),
+    y: gy + hole.x * Math.sin(rad) + hole.y * Math.cos(rad)
+  }
+})
+
+function pulseG() {
+  if (reduced) {
+    pulse.r = 22
+    pulse.o = 0.45
+    return
+  }
+  pulseRun?.pause()
+  pulseRun?.revert?.()
+  pulse.r = 8
+  pulse.o = 0.9
+  pulseRun = animate(pulse, { r: 26, o: 0, duration: 1000, easing: 'easeOutQuad' })
+}
+
 const stageText = computed(() => {
   if (stage.value === 0) return 'Hang the lamina from hole a. It settles with G vertically below the hole; mark the plumb line.'
   if (stage.value === 1) return 'Now hang it from hole b. The card turns, and a second plumb line is marked.'
@@ -72,16 +100,19 @@ function buildTimeline() {
     .call(() => {
       stage.value = 1
     }, 880)
-    .add(rotation, { value: rotations[1], duration: 850, easing: 'easeInOutQuad' }, 900)
+    .add(rotation, { value: rotations[1], duration: 1000, easing: 'easeOutElastic' }, 900)
     .add(draws[1], { draw: '0 1', duration: 320 }, 1760)
     .call(() => {
       stage.value = 2
     }, 2090)
-    .add(rotation, { value: rotations[2], duration: 850, easing: 'easeInOutQuad' }, 2110)
+    .add(rotation, { value: rotations[2], duration: 1000, easing: 'easeOutElastic' }, 2110)
     .add(draws[2], { draw: '0 1', duration: 320 }, 2970)
     .call(() => {
       stage.value = 3
     }, 3300)
+    .call(() => {
+      pulseG()
+    }, 3480)
 }
 
 function play() {
@@ -113,6 +144,8 @@ if (typeof window !== 'undefined') {
       timeline.progress = 1
       timeline.pause()
       stage.value = 3
+      pulse.r = 22
+      pulse.o = 0.45
       status.value = 'Final state shown because reduced motion is on'
     }
   })
@@ -121,7 +154,10 @@ if (typeof window !== 'undefined') {
 onBeforeUnmount(() => {
   timeline?.pause()
   timeline?.revert?.()
+  pulseRun?.pause()
+  pulseRun?.revert?.()
   timeline = null
+  pulseRun = null
 })
 </script>
 
@@ -131,7 +167,12 @@ onBeforeUnmount(() => {
       <title id="plumb-title">Finding the centre of gravity with a plumb line</title>
       <desc id="plumb-desc">{{ stageText }}</desc>
 
-      <line x1="360" y1="24" x2="360" y2="336" stroke="var(--line)" stroke-width="1" stroke-dasharray="5 6" />
+      <line x1="292" y1="26" x2="428" y2="26" stroke="var(--teal-dark)" stroke-width="4" />
+      <line x1="306" y1="26" x2="298" y2="38" stroke="var(--teal-dark)" stroke-width="2" />
+      <line x1="330" y1="26" x2="322" y2="38" stroke="var(--teal-dark)" stroke-width="2" />
+      <line x1="354" y1="26" x2="346" y2="38" stroke="var(--teal-dark)" stroke-width="2" />
+      <circle :cx="gx" cy="30" r="5" fill="var(--paper-2)" stroke="var(--teal-dark)" stroke-width="2" />
+      <line :x1="gx" y1="30" :x2="rotatedHole.x" :y2="rotatedHole.y" stroke="var(--ink-soft)" stroke-width="1.6" stroke-dasharray="4 3" />
 
       <g :transform="`rotate(${rotation.value} ${gx} ${gy})`">
         <path :d="laminaPath" fill="#efe4cf" stroke="var(--teal-dark)" stroke-width="3" />
@@ -166,6 +207,7 @@ onBeforeUnmount(() => {
         />
       </g>
 
+      <circle :cx="gx" :cy="gy" :r="pulse.r" :opacity="pulse.o" fill="none" stroke="var(--amber)" stroke-width="3" />
       <circle :cx="gx" :cy="gy" r="8" fill="var(--amber)" stroke="var(--amber-deep)" stroke-width="2" />
       <text :x="gx + 14" :y="gy + 6" class="g-label">G</text>
 

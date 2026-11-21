@@ -1,11 +1,12 @@
 <script setup>
 import { computed, onBeforeUnmount, reactive, ref, watch } from 'vue'
-import { animate } from 'animejs'
+import { createTimeline } from 'animejs'
 
 const source = ref('tension')
 const escape = reactive({ value: 0 })
+const forceLevel = reactive({ value: 1 })
 const released = ref(false)
-let run = null
+let timeline = null
 let reduced = false
 
 const cx = 360
@@ -39,20 +40,26 @@ const verdict = computed(() => {
 
 function release() {
   released.value = true
-  run?.pause()
-  run?.revert?.()
-  run = null
+  timeline?.pause()
+  timeline?.revert?.()
+  timeline = null
   if (reduced) {
+    forceLevel.value = 0
     escape.value = 1
     return
   }
-  run = animate(escape, { value: 1, duration: 1100, easing: 'easeInOutQuad' })
+  timeline = createTimeline({ autoplay: false })
+  timeline
+    .add(forceLevel, { value: 0, duration: 320, easing: 'easeOutQuad' })
+    .add(escape, { value: 1, duration: 1100, easing: 'easeInOutQuad' })
+    .play()
 }
 
 function reset() {
-  run?.pause()
-  run?.revert?.()
-  run = null
+  timeline?.pause()
+  timeline?.revert?.()
+  timeline = null
+  forceLevel.value = 1
   escape.value = 0
   released.value = false
 }
@@ -64,9 +71,9 @@ if (typeof window !== 'undefined') {
 }
 
 onBeforeUnmount(() => {
-  run?.pause()
-  run?.revert?.()
-  run = null
+  timeline?.pause()
+  timeline?.revert?.()
+  timeline = null
 })
 </script>
 
@@ -114,14 +121,14 @@ onBeforeUnmount(() => {
         stroke-width="4"
         stroke-linecap="round"
         marker-end="url(#cent-head)"
-        :opacity="1 - escape.value"
+        :opacity="forceLevel.value"
       />
       <text
         :x="cx + (point.x - cx) * 0.62"
         :y="cy + (point.y - cy) * 0.62 - 8"
         text-anchor="middle"
         class="force-label"
-        :opacity="1 - escape.value"
+        :opacity="forceLevel.value"
       >
         {{ source === 'tension' ? 'tension' : source === 'gravity' ? 'gravity' : 'electrostatic' }}
       </text>
@@ -150,6 +157,12 @@ onBeforeUnmount(() => {
       <circle :cx="escapePoint.x" :cy="escapePoint.y" r="10" fill="var(--teal)" stroke="var(--teal-dark)" stroke-width="2" />
       <text x="360" y="322" text-anchor="middle" class="step">{{ verdict }}</text>
     </svg>
+
+    <div class="force-meter">
+      <span class="force-meter__label">Centripetal force</span>
+      <span class="force-meter__track"><span class="force-meter__fill" :style="{ width: `${forceLevel.value * 100}%` }"></span></span>
+      <span class="force-meter__value">{{ released ? 'removed' : 'supplied' }}</span>
+    </div>
 
     <div class="lab-controls">
       <button type="button" class="btn btn-small" :aria-pressed="source === 'tension'" @click="source = 'tension'">
@@ -196,6 +209,31 @@ onBeforeUnmount(() => {
 .step {
   font-size: 12px;
   fill: var(--ink-soft);
+}
+.force-meter {
+  display: grid;
+  grid-template-columns: 9rem 1fr 5rem;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.force-meter__track {
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--paper-3);
+  overflow: hidden;
+}
+.force-meter__fill {
+  display: block;
+  height: 100%;
+  background: var(--teal);
+  transition: width 260ms ease-out;
+}
+.force-meter__value {
+  font-weight: 700;
+  color: var(--teal-dark);
 }
 .sim-summary {
   margin: 0;
