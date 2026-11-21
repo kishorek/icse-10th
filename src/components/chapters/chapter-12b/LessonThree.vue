@@ -1,6 +1,9 @@
 <script setup>
 import LessonHeading from '../../lessons/LessonHeading.vue'
 import QuickCheck from '../../QuickCheck.vue'
+import LessonVisual from '../../visuals/LessonVisual.vue'
+import MemoryHook from '../../MemoryHook.vue'
+import ReactionMapVisual from '../../visuals/chapter-12b/ReactionMapVisual.vue'
 import ChlorinationLab from './ChlorinationLab.vue'
 import CombustionLab from './CombustionLab.vue'
 </script>
@@ -117,6 +120,33 @@ import CombustionLab from './CombustionLab.vue'
       </div>
 
       <h3>Check your understanding</h3>
+
+      <LessonVisual
+        title="One reactant, two reaction maps"
+        caption="Methane burns differently as oxygen changes, and substitutes one hydrogen at a time with chlorine."
+        description="The left side shows complete, incomplete and soot-forming combustion. The right side shows the four chlorination products with HCl released at each step."
+        :notice="[
+          'Less oxygen moves the product from CO₂ to CO to soot.',
+          'Chlorination is substitution, not addition.',
+          'Each substitution step releases HCl and leaves one more chlorine in the product.'
+        ]"
+      >
+        <ReactionMapVisual />
+      </LessonVisual>
+
+      <MemoryHook
+        technique="Cause-effect chain"
+        title="Follow the atoms"
+        aid="For chlorine: light starts it, chlorine takes a hydrogen, HCl leaves, and the substituted product stays. For oxygen: climb down the ladder as oxygen falls."
+        :mapping="[
+          { cue: 'Enough O₂', target: 'CO₂ + H₂O', meaning: 'Complete combustion with a non-sooty flame.' },
+          { cue: 'Less O₂', target: 'CO + H₂O', meaning: 'Incomplete combustion; carbon monoxide is poisonous.' },
+          { cue: 'Very little O₂', target: 'C + H₂O', meaning: 'Soot forms.' },
+          { cue: 'Cl₂ + UV', target: 'Substitution begins', meaning: 'Chlorine replaces one hydrogen and HCl is released.' },
+          { cue: 'Repeat with Cl₂', target: 'CH₃Cl → CH₂Cl₂ → CHCl₃ → CCl₄', meaning: 'Each step replaces one more hydrogen.' }
+        ]"
+        recall="Cover the mapping. Trace the three combustion outcomes, then recite the four chlorination products in order."
+      />
 
       <QuickCheck
         id="b3-q1"

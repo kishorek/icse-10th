@@ -26,6 +26,7 @@ The root page (`index.html`) is a chapter list with local-progress summaries. Th
 **Chapter 12A**
 
 - Six lessons: carbon and organic compounds, hydrocarbon families, structures and functional groups, homologous series, IUPAC naming, and isomerism.
+- Every lesson has a purpose-built diagram and a lesson-specific memory hook with a cover/reveal mapping.
 - Four interactive labs: functional groups, homologous-series ladder, name builder and isomer explorer.
 - Memory workshop based on a name-building routine, flashcards and a revision centre.
 - A 30-question assessment (50 marks).
@@ -33,6 +34,7 @@ The root page (`index.html`) is a chapter list with local-progress summaries. Th
 **Chapter 12B**
 
 - Three lessons: the alkane family, methane and ethane structure and preparation, and reactions and uses.
+- Every lesson has a purpose-built diagram and a lesson-specific memory hook with a cover/reveal mapping.
 - Four interactive labs: alkane ladder, gas preparation, chlorination and combustion.
 - Memory workshop based on a reaction map, flashcards and a revision centre.
 - A 20-question assessment (34 marks).

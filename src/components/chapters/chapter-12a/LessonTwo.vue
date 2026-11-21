@@ -1,6 +1,9 @@
 <script setup>
 import LessonHeading from '../../lessons/LessonHeading.vue'
 import QuickCheck from '../../QuickCheck.vue'
+import LessonVisual from '../../visuals/LessonVisual.vue'
+import MemoryHook from '../../MemoryHook.vue'
+import HydrocarbonTreeVisual from '../../visuals/chapter-12a/HydrocarbonTreeVisual.vue'
 </script>
 
 <template>
@@ -200,6 +203,34 @@ import QuickCheck from '../../QuickCheck.vue'
       </div>
 
       <h3>Check your understanding</h3>
+
+      <LessonVisual
+        title="Classify a hydrocarbon in two decisions"
+        caption="First decide open chain or ring; then decide single or multiple bonds."
+        description="The tree separates aliphatic open chains from cyclic compounds. Open chains are saturated alkanes or unsaturated alkenes and alkynes. Rings are alicyclic or aromatic."
+        :notice="[
+          'Open-chain and cyclic are the first split.',
+          'Saturated means single bonds only.',
+          'Aromatic is a ring family, not just any ring.'
+        ]"
+      >
+        <HydrocarbonTreeVisual />
+      </LessonVisual>
+
+      <MemoryHook
+        technique="Chunking"
+        title="Open or ring, single or multiple"
+        aid="Say the two-question chant: “Open or ring? Single or multiple?” Then attach the family name."
+        :mapping="[
+          { cue: 'Open', target: 'Aliphatic / open chain', meaning: 'The carbon chain is not closed into a ring.' },
+          { cue: 'Ring', target: 'Cyclic', meaning: 'The carbon atoms form a closed loop.' },
+          { cue: 'Single', target: 'Saturated — alkane', meaning: 'Only single carbon–carbon bonds are present.' },
+          { cue: 'Double', target: 'Unsaturated — alkene', meaning: 'One C=C double bond is present.' },
+          { cue: 'Triple', target: 'Unsaturated — alkyne', meaning: 'One C≡C triple bond is present.' },
+          { cue: 'Alternating double bonds in a ring', target: 'Aromatic — benzene', meaning: 'The ring has delocalised electrons.' }
+        ]"
+        recall="Cover the mapping. Classify methane, ethene, ethyne and benzene using only the two-question chant."
+      />
 
       <QuickCheck
         id="a2-q1"

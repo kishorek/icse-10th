@@ -1,6 +1,9 @@
 <script setup>
 import LessonHeading from '../../lessons/LessonHeading.vue'
 import QuickCheck from '../../QuickCheck.vue'
+import LessonVisual from '../../visuals/LessonVisual.vue'
+import MemoryHook from '../../MemoryHook.vue'
+import NameAnatomyVisual from '../../visuals/chapter-12a/NameAnatomyVisual.vue'
 import NameBuilderLab from './NameBuilderLab.vue'
 </script>
 
@@ -451,6 +454,33 @@ import NameBuilderLab from './NameBuilderLab.vue'
       </div>
 
       <h3>Check your understanding</h3>
+
+      <LessonVisual
+        title="Read a name as four building blocks"
+        caption="Locant, prefix, root and suffix each answer a different question about the structure."
+        description="The name 2-methylbutane is split into 2-, methyl, but and ane. The structure shows four chain carbons and a methyl branch on carbon 2."
+        :notice="[
+          'The root gives the number of carbons in the longest chain.',
+          'The suffix gives the principal bond or functional group.',
+          'The locant tells you where the branch or group sits.'
+        ]"
+      >
+        <NameAnatomyVisual />
+      </LessonVisual>
+
+      <MemoryHook
+        technique="Hand mnemonic"
+        title="Five-finger name check"
+        aid="Use one finger for each decision: thumb, index, middle, ring and little finger."
+        :mapping="[
+          { cue: 'Thumb', target: 'Longest chain and root', meaning: 'Find the parent chain first.' },
+          { cue: 'Index finger', target: 'Principal group and suffix', meaning: 'Choose the ending that controls the name.' },
+          { cue: 'Middle finger', target: 'Lowest locant and numbering', meaning: 'Number from the end that gives the group the smallest number.' },
+          { cue: 'Ring finger', target: 'Substituents and prefixes', meaning: 'Name branches and halogens, then alphabetise them.' },
+          { cue: 'Little finger', target: 'Assemble and check', meaning: 'Join the parts and re-check every locant.' }
+        ]"
+        recall="Cover the mapping. Build propan-2-ol finger by finger, saying what each finger decides."
+      />
 
       <QuickCheck
         id="a5-q1"

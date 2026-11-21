@@ -125,6 +125,7 @@ src/
 7. Chapter 12B covers Unit 9(v) alkanes only: the alkane family, methane and ethane, preparation, physical properties, combustion, substitution and uses. Do not drift into alkenes or alkynes. Catalytic oxidation and slow combustion are omitted because the supplied book marks them outside the syllabus.
 8. Preserve correct chemical formulae, state symbols where relevant, and clear distinctions between observation and inference.
 9. Mark enrichment content as enrichment, not required examination content.
+10. Every lesson must include at least one purpose-built `LessonVisual` and one `MemoryHook`. The visual needs a caption, an accessible SVG description and “What to notice” points; the memory hook needs an explicit cue-to-content mapping and a recall prompt. Acrostics must be real sentences with a word-to-item mapping, never acronyms.
 
 ## UI rules
 
@@ -136,6 +137,7 @@ src/
 6. Keep the layout usable at 360 px, 768 px, and 1280 px widths.
 7. Avoid generic gradient/glass/card-soup styling. Use the warm paper, teal, and amber design language.
 8. Do not add remote fonts, scripts, stylesheets, or images.
+9. Every lesson visual must remain keyboard-readable, have a text caption and equivalent description, and must not rely on colour alone. On narrow screens, diagrams may scroll horizontally inside their own container but must not cause page-level overflow.
 
 ## Progress and scoring
 

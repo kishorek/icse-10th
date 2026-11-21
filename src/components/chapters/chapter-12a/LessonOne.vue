@@ -1,6 +1,9 @@
 <script setup>
 import LessonHeading from '../../lessons/LessonHeading.vue'
 import QuickCheck from '../../QuickCheck.vue'
+import LessonVisual from '../../visuals/LessonVisual.vue'
+import MemoryHook from '../../MemoryHook.vue'
+import CarbonBondingVisual from '../../visuals/chapter-12a/CarbonBondingVisual.vue'
 </script>
 
 <template>
@@ -288,6 +291,32 @@ import QuickCheck from '../../QuickCheck.vue'
       </div>
 
       <h3>Check your understanding</h3>
+
+      <LessonVisual
+        title="Carbon’s four bonds build chains and rings"
+        caption="One carbon atom forms four bonds; carbon atoms then link into straight chains, branched chains and rings."
+        description="The left panel shows tetravalency. The middle panel shows carbon atoms linked in a chain with a branch. The right panel shows a closed six-carbon ring."
+        :notice="[
+          'Four bonds come from carbon’s four valence electrons.',
+          'Self-linking produces long chains, branches and rings.',
+          'These carbon skeletons are the base of every organic family.'
+        ]"
+      >
+        <CarbonBondingVisual />
+      </LessonVisual>
+
+      <MemoryHook
+        technique="Story"
+        title="Carbon’s four hands"
+        aid="Picture carbon with four hands: it holds four partners, holds other carbons, and arranges them in lines, forks or rings."
+        :mapping="[
+          { cue: 'Four hands', target: 'Tetravalency', meaning: 'Carbon forms four covalent bonds.' },
+          { cue: 'Holding other carbons', target: 'Catenation', meaning: 'Carbon atoms link to one another.' },
+          { cue: 'One, two or three handshakes', target: 'Single, double and triple bonds', meaning: 'Carbon shares one, two or three pairs.' },
+          { cue: 'Lines, forks or rings', target: 'Straight, branched and cyclic chains', meaning: 'The carbon skeleton can take three shapes.' }
+        ]"
+        recall="Cover the mapping. Retell the four-hand story, then name the property or bond type each part represents."
+      />
 
       <QuickCheck
         id="a1-q1"

@@ -1,6 +1,9 @@
 <script setup>
 import LessonHeading from '../../lessons/LessonHeading.vue'
 import QuickCheck from '../../QuickCheck.vue'
+import LessonVisual from '../../visuals/LessonVisual.vue'
+import MemoryHook from '../../MemoryHook.vue'
+import FunctionalGroupMapVisual from '../../visuals/chapter-12a/FunctionalGroupMapVisual.vue'
 import FunctionalGroupLab from './FunctionalGroupLab.vue'
 import { functionalGroups } from '../../../data/chapter-12a/functionalGroups'
 </script>
@@ -244,6 +247,32 @@ Skeleton:  C–C</pre>
       </div>
 
       <h3>Check your understanding</h3>
+
+      <LessonVisual
+        title="Nine functional groups around one skeleton"
+        caption="The functional group is the part that decides the family and the chemical behaviour."
+        description="A central carbon skeleton is surrounded by halide, alcohol, aldehyde, ketone, carboxylic acid, ether, ester, alkene and alkyne groups."
+        :notice="[
+          'The carbon skeleton carries the group; the group carries the chemistry.',
+          'Halogens and multiple bonds are handled as prefixes or bond suffixes.',
+          'The oxygen-containing groups are the ones most often named by their suffix.'
+        ]"
+      >
+        <FunctionalGroupMapVisual />
+      </LessonVisual>
+
+      <MemoryHook
+        technique="Chunking"
+        title="O-count families"
+        aid="Group the oxygen-containing families by how many oxygen atoms the functional group contains."
+        :mapping="[
+          { cue: 'No oxygen', target: 'Haloalkane, alkene, alkyne', meaning: '–X, C=C and C≡C are handled as prefixes or bond suffixes.' },
+          { cue: 'One oxygen', target: 'Alcohol, aldehyde, ketone, ether', meaning: '–OH, –CHO, >C=O and –O– each contain one oxygen.' },
+          { cue: 'Two oxygens', target: 'Carboxylic acid, ester', meaning: '–COOH and –COO– each contain two oxygens.' },
+          { cue: 'Suffix clue', target: '-ol, -al, -one, -oic acid, -oate', meaning: 'The ending identifies the principal family.' }
+        ]"
+        recall="Cover the mapping. Sort –OH, –CHO, –COOH, –O– and –COO– into the O-count groups, then name each family."
+      />
 
       <QuickCheck
         id="a3-q1"

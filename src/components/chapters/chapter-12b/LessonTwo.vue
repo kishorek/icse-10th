@@ -1,6 +1,9 @@
 <script setup>
 import LessonHeading from '../../lessons/LessonHeading.vue'
 import QuickCheck from '../../QuickCheck.vue'
+import LessonVisual from '../../visuals/LessonVisual.vue'
+import MemoryHook from '../../MemoryHook.vue'
+import MethanePrepVisual from '../../visuals/chapter-12b/MethanePrepVisual.vue'
 import GasPrepLab from './GasPrepLab.vue'
 </script>
 
@@ -166,6 +169,32 @@ import GasPrepLab from './GasPrepLab.vue'
       </div>
 
       <h3>Check your understanding</h3>
+
+      <LessonVisual
+        title="Make methane in the laboratory"
+        caption="Heat sodium ethanoate with soda lime, then collect the gas over water."
+        description="The apparatus shows the reaction tube, burner, delivery tube, trough and gas jar. An inset shows methane as a tetrahedral molecule."
+        :notice="[
+          'The reaction needs heat and a soda-lime/CaO mixture.',
+          'Methane is collected over water because it is only slightly soluble.',
+          'The tetrahedral shape comes from four single C–H bonds.'
+        ]"
+      >
+        <MethanePrepVisual />
+      </LessonVisual>
+
+      <MemoryHook
+        technique="Story"
+        title="Salt, Zinc, Carbide, Wurtz"
+        aid="Four preparation routes, four pictures: a salt in a hot tube, zinc reducing a halide, carbide meeting water, and sodium joining two halides."
+        :mapping="[
+          { cue: 'Salt', target: 'Sodium ethanoate/propanoate + soda lime', meaning: 'Heat with CaO at about 300°C; one carbon leaves as carbonate.' },
+          { cue: 'Zinc', target: 'Reduce iodomethane or bromoethane', meaning: 'Zn and dilute HCl supply nascent hydrogen.' },
+          { cue: 'Carbide', target: 'Aluminium carbide + water', meaning: 'Hydrolysis gives methane and aluminium hydroxide.' },
+          { cue: 'Wurtz', target: 'Iodomethane + sodium in dry ether', meaning: 'Two alkyl groups join; the product has an even carbon count.' }
+        ]"
+        recall="Cover the mapping. For each route, name the gas, the condition and one equation."
+      />
 
       <QuickCheck
         id="b2-q1"

@@ -1,6 +1,9 @@
 <script setup>
 import LessonHeading from '../../lessons/LessonHeading.vue'
 import QuickCheck from '../../QuickCheck.vue'
+import LessonVisual from '../../visuals/LessonVisual.vue'
+import MemoryHook from '../../MemoryHook.vue'
+import AlkaneIsomerVisual from '../../visuals/chapter-12b/AlkaneIsomerVisual.vue'
 import AlkaneLadderLab from './AlkaneLadderLab.vue'
 </script>
 
@@ -148,6 +151,31 @@ import AlkaneLadderLab from './AlkaneLadderLab.vue'
       </div>
 
       <h3>Check your understanding</h3>
+
+      <LessonVisual
+        title="The alkane family and its chain isomers"
+        caption="Single bonds make alkanes saturated; longer chains add CH₂ steps and more branching possibilities."
+        description="A staircase runs from methane to pentane. Beside it, butane has two chain skeletons and pentane has three."
+        :notice="[
+          'All alkane carbon–carbon bonds are single.',
+          'The family formula is CₙH₂ₙ₊₂.',
+          'Branching creates chain isomers without changing the formula.'
+        ]"
+      >
+        <AlkaneIsomerVisual />
+      </LessonVisual>
+
+      <MemoryHook
+        technique="Chant"
+        title="Single bonds, same step, more branches"
+        aid="“Single bonds, same step, more branches.” Three phrases hold the whole alkane idea."
+        :mapping="[
+          { cue: 'Single bonds', target: 'Saturated alkane', meaning: 'Only single C–C and C–H bonds are present.' },
+          { cue: 'Same step', target: 'CₙH₂ₙ₊₂ and CH₂', meaning: 'Each member adds CH₂ and 14 g/mol.' },
+          { cue: 'More branches', target: 'Chain isomers', meaning: 'Butane has two and pentane has three chain isomers.' }
+        ]"
+        recall="Cover the mapping. Say the chant, then draw the two butane isomers and state how many pentane isomers exist."
+      />
 
       <QuickCheck
         id="b1-q1"

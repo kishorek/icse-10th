@@ -1,6 +1,9 @@
 <script setup>
 import LessonHeading from '../../lessons/LessonHeading.vue'
 import QuickCheck from '../../QuickCheck.vue'
+import LessonVisual from '../../visuals/LessonVisual.vue'
+import MemoryHook from '../../MemoryHook.vue'
+import HomologousStaircaseVisual from '../../visuals/chapter-12a/HomologousStaircaseVisual.vue'
 import HomologousLadderLab from './HomologousLadderLab.vue'
 import { homologousSeries } from '../../../data/chapter-12a/homologousSeries'
 </script>
@@ -154,6 +157,32 @@ import { homologousSeries } from '../../../data/chapter-12a/homologousSeries'
       </div>
 
       <h3>Check your understanding</h3>
+
+      <LessonVisual
+        title="Climb the homologous staircase"
+        caption="Each member adds CH₂ and 14 g/mol; the family keeps the same general formula and similar chemistry."
+        description="Methane, ethane, propane, butane and pentane are shown as rising steps with their formulae and molar masses."
+        :notice="[
+          'The step is always CH₂, not a random group.',
+          'The formula pattern stays the same for the whole family.',
+          'Physical trends change gradually; chemical behaviour stays similar.'
+        ]"
+      >
+        <HomologousStaircaseVisual />
+      </LessonVisual>
+
+      <MemoryHook
+        technique="Acrostic sentence"
+        title="Same Formula, Same Family, Same Chemistry, Step by CH₂"
+        aid="“Same Formula, Same Family, Same Chemistry, Step by CH₂.” Each phrase maps to one characteristic."
+        :mapping="[
+          { cue: 'Same Formula', target: 'Same general formula', meaning: 'Every member follows the family formula, such as CₙH₂ₙ₊₂ for alkanes.' },
+          { cue: 'Same Family', target: 'Same functional group or bond pattern', meaning: 'Members share the group that defines the family.' },
+          { cue: 'Same Chemistry', target: 'Similar chemical properties', meaning: 'Members react in similar ways.' },
+          { cue: 'Step by CH₂', target: 'Successive members differ by CH₂', meaning: 'The molecular mass rises by 14 g/mol each step.' }
+        ]"
+        recall="Cover the mapping. Say the sentence, then rebuild the four characteristics and give the CH₂ mass step."
+      />
 
       <QuickCheck
         id="a4-q1"

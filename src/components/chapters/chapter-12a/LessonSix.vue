@@ -1,6 +1,9 @@
 <script setup>
 import LessonHeading from '../../lessons/LessonHeading.vue'
 import QuickCheck from '../../QuickCheck.vue'
+import LessonVisual from '../../visuals/LessonVisual.vue'
+import MemoryHook from '../../MemoryHook.vue'
+import IsomerTreeVisual from '../../visuals/chapter-12a/IsomerTreeVisual.vue'
 import IsomerExplorer from './IsomerExplorer.vue'
 </script>
 
@@ -295,6 +298,31 @@ import IsomerExplorer from './IsomerExplorer.vue'
       </div>
 
       <h3>Check your understanding</h3>
+
+      <LessonVisual
+        title="Same formula, three doors"
+        caption="Chain, position and functional isomerism are three different answers to “what changed?”"
+        description="Three branches compare C₄H₁₀ chain isomers, C₄H₈ position isomers and C₂H₆O functional isomers."
+        :notice="[
+          'Start with the same molecular formula.',
+          'Ask whether the skeleton, the position or the functional group changed.',
+          'Different structures can still have the same formula.'
+        ]"
+      >
+        <IsomerTreeVisual />
+      </LessonVisual>
+
+      <MemoryHook
+        technique="Story"
+        title="Same formula, three doors"
+        aid="A molecule walks up to three doors. Behind each door, one thing has changed."
+        :mapping="[
+          { cue: 'Door 1: the skeleton forks', target: 'Chain isomerism', meaning: 'Same functional group, different carbon skeleton — butane and 2-methylpropane.' },
+          { cue: 'Door 2: the group moves', target: 'Position isomerism', meaning: 'Same functional group, different position — but-1-ene and but-2-ene.' },
+          { cue: 'Door 3: the group changes', target: 'Functional isomerism (extension)', meaning: 'Different functional group — ethanol and methoxymethane.' }
+        ]"
+        recall="Cover the mapping. Classify butane/2-methylpropane, but-1-ene/but-2-ene and ethanol/methoxymethane by naming the door."
+      />
 
       <QuickCheck
         id="a6-q1"
