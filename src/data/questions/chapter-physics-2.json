@@ -1,0 +1,397 @@
+[
+  {
+    "id": "WQ1",
+    "outcome": "W1",
+    "topic": "Zero work",
+    "type": "single",
+    "marks": 1,
+    "prompt": "A force acts on a moving body but does no work on it. Which condition must be true?",
+    "options": [
+      { "value": "A", "text": "The force is perpendicular to the displacement." },
+      { "value": "B", "text": "The force is smaller than the weight." },
+      { "value": "C", "text": "The body moves with constant speed." },
+      { "value": "D", "text": "The force is constant." }
+    ],
+    "answer": "A",
+    "explanation": "W = Fs cos θ. When θ = 90°, cos θ = 0, so the work is zero even though the force and displacement are both non-zero.",
+    "misconception": "Assuming a moving body always has work done on it, or that a large force must do work.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ2",
+    "outcome": "W1",
+    "topic": "Work at an angle",
+    "type": "fill",
+    "marks": 2,
+    "prompt": "A force of 25 N moves a body 4.0 m along a straight line. The force makes an angle of 60° with the displacement. Calculate the work done, in joules.",
+    "answer": ["50", "50 j", "50j", "50 joules"],
+    "explanation": "W = Fs cos θ = 25 × 4.0 × cos 60° = 25 × 4.0 × 0.5 = 50 J.",
+    "misconception": "Using W = Fs without the cosine factor, which would give 100 J.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ3",
+    "outcome": "W1",
+    "topic": "Work is a scalar",
+    "type": "truefalse",
+    "marks": 2,
+    "prompt": "Work is a vector quantity because force and displacement are vectors.",
+    "answer": "False",
+    "justify": true,
+    "autoMarks": 1,
+    "modelAnswer": "Work is a scalar quantity. It is the dot product of force and displacement, so it has magnitude and a sign but no direction in space. The sign shows whether energy is transferred to the body or removed from it.",
+    "markingPoints": [
+      "States that work is a scalar and explains that it is the dot product of force and displacement."
+    ],
+    "explanation": "Multiplying two vectors as a dot product gives a scalar. Work can be positive, zero or negative, but it does not have a direction.",
+    "misconception": "Thinking that a quantity must be a vector whenever the quantities multiplied to obtain it are vectors.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ4",
+    "outcome": "W1",
+    "topic": "Positive, zero and negative work",
+    "type": "short",
+    "marks": 3,
+    "prompt": "Explain what is meant by positive work, zero work and negative work. Give one example of each.",
+    "modelAnswer": "Positive work is done when the force has a component in the direction of the displacement, for example a push moving a box forward. Zero work is done when the displacement along the force is zero, for example carrying a load horizontally against gravity, or pushing a stationary wall. Negative work is done when the force has a component opposite to the displacement, for example friction on a sliding box.",
+    "markingPoints": [
+      "Defines positive work and gives a valid example.",
+      "Defines zero work and gives a valid example.",
+      "Defines negative work and gives a valid example."
+    ],
+    "explanation": "The sign of W = Fs cos θ records the direction of the force relative to the displacement.",
+    "misconception": "Thinking that negative work means a negative force, rather than a force opposing the displacement.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ5",
+    "outcome": "W2",
+    "topic": "Work by gravity and path",
+    "type": "single",
+    "marks": 1,
+    "prompt": "A body of mass m is raised through a vertical height h by stairs, by a slope and by a lift. Which statement is correct?",
+    "options": [
+      { "value": "A", "text": "The work against gravity is greatest for the stairs." },
+      { "value": "B", "text": "The work against gravity is greatest for the slope." },
+      { "value": "C", "text": "The work against gravity is the same mgh in all three cases." },
+      { "value": "D", "text": "The work is zero because the body returns to the ground." }
+    ],
+    "answer": "C",
+    "explanation": "The work done against gravity depends on the vertical height, not on the route: W = mgh.",
+    "misconception": "Using the length of the path instead of the vertical height.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ6",
+    "outcome": "W2",
+    "topic": "Work against gravity",
+    "type": "fill",
+    "marks": 2,
+    "prompt": "A box of mass 20 kg is lifted vertically through 3.0 m. Taking g = 10 m s⁻², calculate the work done against gravity, in joules.",
+    "answer": ["600", "600 j", "600j", "600 joules"],
+    "explanation": "W = mgh = 20 × 10 × 3.0 = 600 J.",
+    "misconception": "Multiplying by the slant distance rather than the vertical height.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ7",
+    "outcome": "W2",
+    "topic": "Units of work",
+    "type": "match",
+    "marks": 4,
+    "prompt": "Match each unit to its correct value or definition.",
+    "pairs": [
+      { "left": "1 J", "answer": "1 N m" },
+      { "left": "1 kJ", "answer": "10³ J" },
+      { "left": "1 MJ", "answer": "10⁶ J" },
+      { "left": "1 erg", "answer": "10⁻⁷ J" }
+    ],
+    "options": ["1 N m", "10³ J", "10⁶ J", "10⁻⁷ J", "10⁹ J", "746 J"],
+    "explanation": "The joule is 1 N m. Kilo- and mega- multiply by 10³ and 10⁶. The erg is the CGS unit, equal to 10⁻⁷ J.",
+    "misconception": "Confusing the erg with a large unit, or treating kJ and MJ as powers of ten of each other only.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ8",
+    "outcome": "W3",
+    "topic": "Definition of power",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Power is best defined as:",
+    "options": [
+      { "value": "A", "text": "the total work done by a machine" },
+      { "value": "B", "text": "the rate of doing work" },
+      { "value": "C", "text": "the force exerted by a machine" },
+      { "value": "D", "text": "the energy stored in a machine" }
+    ],
+    "answer": "B",
+    "explanation": "Power = work ÷ time, so it is the rate at which work is done.",
+    "misconception": "Confusing power with the total amount of work or energy.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ9",
+    "outcome": "W3",
+    "topic": "Calculating power",
+    "type": "fill",
+    "marks": 2,
+    "prompt": "A motor does 1500 J of work in 5.0 s. Calculate its power, in watts.",
+    "answer": ["300", "300 w", "300w", "300 watts", "0.3 kw", "0.3 kw"],
+    "explanation": "P = W/t = 1500/5.0 = 300 W.",
+    "misconception": "Multiplying work by time instead of dividing.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ10",
+    "outcome": "W3",
+    "topic": "Work and power",
+    "type": "short",
+    "marks": 3,
+    "prompt": "Two cranes lift identical loads through the same height. Crane A takes 10 s and crane B takes 20 s. Compare the work done and the power developed, and explain your answer.",
+    "modelAnswer": "Both cranes do the same work because they lift the same weight through the same height. Crane A takes half the time, so its power is twice that of crane B. Work is the amount of energy transferred; power is the rate of transfer, P = W/t.",
+    "markingPoints": [
+      "States that the work done is the same for both cranes.",
+      "States that crane A has twice the power of crane B.",
+      "Explains that power is work divided by time, so the shorter time gives the greater power."
+    ],
+    "explanation": "The identical load and height give equal work. Dividing equal work by half the time doubles the power.",
+    "misconception": "Claiming the faster crane does more work rather than more power.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ11",
+    "outcome": "W4",
+    "topic": "Energy units",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which unit measures energy rather than power?",
+    "options": [
+      { "value": "A", "text": "watt" },
+      { "value": "B", "text": "kilowatt" },
+      { "value": "C", "text": "kilowatt-hour" },
+      { "value": "D", "text": "joule per second" }
+    ],
+    "answer": "C",
+    "explanation": "A kilowatt-hour is power multiplied by time, so it measures energy. The others are units of power.",
+    "misconception": "Seeing the word watt and assuming the whole unit is power.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ12",
+    "outcome": "W4",
+    "topic": "Converting kWh",
+    "type": "fill",
+    "marks": 2,
+    "prompt": "Convert 2.0 kWh to joules. Give the answer in joules.",
+    "answer": ["7200000", "7.2e6", "7.2 x 10^6", "7.2 × 10^6", "7.2 x 10⁶", "7.2 × 10⁶", "7200000 j"],
+    "explanation": "1 kWh = 3.6 × 10⁶ J, so 2.0 kWh = 7.2 × 10⁶ J.",
+    "misconception": "Using 1000 J for a kilowatt-hour, or treating kWh as power.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ13",
+    "outcome": "W4",
+    "topic": "Watt and watt-hour",
+    "type": "truefalse",
+    "marks": 2,
+    "prompt": "A watt-hour is a unit of power because it contains the word watt.",
+    "answer": "False",
+    "justify": true,
+    "autoMarks": 1,
+    "modelAnswer": "A watt-hour is a unit of energy. It is the energy transferred by a power of one watt acting for one hour, so 1 Wh = 1 W × 3600 s = 3600 J. The watt alone is the unit of power.",
+    "markingPoints": [
+      "States that a watt-hour is energy and gives its value in joules or the power × time relation."
+    ],
+    "explanation": "The hour factor turns power into energy. One watt-hour is 3600 J.",
+    "misconception": "Judging the quantity from part of the unit name instead of the whole definition.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ14",
+    "outcome": "W5",
+    "topic": "Potential energy formula",
+    "type": "single",
+    "marks": 1,
+    "prompt": "The gravitational potential energy of a body of mass m at height h above a chosen zero level is:",
+    "options": [
+      { "value": "A", "text": "mgh" },
+      { "value": "B", "text": "½mv²" },
+      { "value": "C", "text": "mg/h" },
+      { "value": "D", "text": "mh/g" }
+    ],
+    "answer": "A",
+    "explanation": "Lifting the body at constant speed requires work mgh, which is stored as gravitational potential energy.",
+    "misconception": "Confusing potential energy with kinetic energy, or dividing instead of multiplying.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ15",
+    "outcome": "W5",
+    "topic": "Kinetic energy calculation",
+    "type": "fill",
+    "marks": 2,
+    "prompt": "A body of mass 0.50 kg moves at 20 m s⁻¹. Calculate its kinetic energy, in joules.",
+    "answer": ["100", "100 j", "100j", "100 joules"],
+    "explanation": "K = ½mv² = ½ × 0.50 × 20² = ½ × 0.50 × 400 = 100 J.",
+    "misconception": "Forgetting to square the speed, which would give 5 J.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ16",
+    "outcome": "W5",
+    "topic": "Kinetic energy and momentum",
+    "type": "multiple",
+    "marks": 2,
+    "prompt": "Which statements about kinetic energy are correct? Select all that apply.",
+    "options": [
+      { "value": "A", "text": "Kinetic energy is a scalar." },
+      { "value": "B", "text": "Kinetic energy is proportional to the square of speed." },
+      { "value": "C", "text": "For a moving body, K = p²/(2m)." },
+      { "value": "D", "text": "Doubling the speed doubles the kinetic energy." },
+      { "value": "E", "text": "Kinetic energy has the same unit as momentum." }
+    ],
+    "answer": ["A", "B", "C"],
+    "explanation": "Kinetic energy is a scalar, depends on v², and can be written p²/(2m). Doubling v multiplies K by four; the unit of K is the joule, not the momentum unit.",
+    "misconception": "Confusing the linear dependence of momentum on speed with the square dependence of kinetic energy.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ17",
+    "outcome": "W5",
+    "topic": "Deriving U = mgh",
+    "type": "short",
+    "marks": 4,
+    "prompt": "Derive the expression U = mgh for the gravitational potential energy of a body of mass m raised through a vertical height h near the Earth’s surface.",
+    "modelAnswer": "The weight of the body is mg, directed vertically downwards. To lift the body at constant speed, an upward force equal to mg is needed. The displacement in the direction of this upward force is h. Therefore the work done by the lifting force is W = mg × h = mgh. This work is stored in the body as gravitational potential energy, taking the starting level as zero.",
+    "markingPoints": [
+      "Identifies the weight mg and the upward force needed to lift the body.",
+      "States that the displacement in the direction of the lifting force is h.",
+      "Multiplies force by displacement to obtain W = mgh.",
+      "States that this work is stored as gravitational potential energy relative to the chosen zero level."
+    ],
+    "explanation": "The derivation is an application of W = Fs with F = mg and s = h.",
+    "misconception": "Using the distance along a slope rather than the vertical height, or omitting the zero-level assumption.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ18",
+    "outcome": "W5",
+    "topic": "Work-energy theorem",
+    "type": "short",
+    "marks": 4,
+    "prompt": "A 2.0 kg body moving at 2.0 m s⁻¹ is acted on by a constant net force of 6.0 N in the direction of motion over a distance of 4.0 m. Use the work-energy theorem to find the final speed.",
+    "modelAnswer": "Net work W = Fs = 6.0 × 4.0 = 24 J. Initial kinetic energy = ½ × 2.0 × 2.0² = 4.0 J. Final kinetic energy = 4.0 + 24 = 28 J. Then ½ × 2.0 × v² = 28, so v² = 28 and v = 5.3 m s⁻¹ (to two significant figures).",
+    "markingPoints": [
+      "Calculates the net work as 24 J.",
+      "Calculates the initial kinetic energy as 4.0 J.",
+      "Adds the work to the initial kinetic energy to obtain 28 J.",
+      "Solves for v and gives about 5.3 m s⁻¹."
+    ],
+    "explanation": "The work-energy theorem gives K_f = K_i + W_net. The mass is 2.0 kg, so v² = 28.",
+    "misconception": "Using the force as the final kinetic energy, or forgetting the initial kinetic energy.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ19",
+    "outcome": "W6",
+    "topic": "Energy conversion",
+    "type": "single",
+    "marks": 1,
+    "prompt": "A solar cell is used to run a small fan. Which is the main energy conversion in the solar cell?",
+    "options": [
+      { "value": "A", "text": "Light to electrical" },
+      { "value": "B", "text": "Electrical to light" },
+      { "value": "C", "text": "Chemical to electrical" },
+      { "value": "D", "text": "Sound to electrical" }
+    ],
+    "answer": "A",
+    "explanation": "A solar cell absorbs light and delivers electrical energy. The fan then converts electrical energy to mechanical energy.",
+    "misconception": "Confusing a solar cell with a battery, which stores chemical energy.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ20",
+    "outcome": "W6",
+    "topic": "Dissipation",
+    "type": "short",
+    "marks": 3,
+    "prompt": "A ball is dropped and bounces lower each time until it stops. Explain what happens to its mechanical energy. Refer to dissipation in your answer.",
+    "modelAnswer": "At each impact and during motion through the air, friction and air resistance convert some mechanical energy into heat and sound. This energy spreads into the surroundings and is no longer available as mechanical energy, which is dissipation. The ball therefore has less mechanical energy after each bounce and eventually stops. The total energy is still conserved, but it is now in degraded forms.",
+    "markingPoints": [
+      "States that mechanical energy decreases at each bounce.",
+      "Identifies heat and sound produced by impact, friction or air resistance.",
+      "Explains that the energy is dissipated and degraded, not destroyed."
+    ],
+    "explanation": "The ball’s loss of height is evidence that mechanical energy is leaving the mechanical account, not disappearing from the universe.",
+    "misconception": "Saying the energy is destroyed or used up completely.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ21",
+    "outcome": "W7",
+    "topic": "Conservation in free fall",
+    "type": "single",
+    "marks": 1,
+    "prompt": "A body falls freely with air resistance neglected. Which quantity remains constant throughout the fall?",
+    "options": [
+      { "value": "A", "text": "Potential energy" },
+      { "value": "B", "text": "Kinetic energy" },
+      { "value": "C", "text": "The sum of potential and kinetic energy" },
+      { "value": "D", "text": "The speed" }
+    ],
+    "answer": "C",
+    "explanation": "Potential energy falls and kinetic energy rises by the same amount, so U + K remains constant.",
+    "misconception": "Thinking one of the individual energies stays constant, or that the speed is constant.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ22",
+    "outcome": "W7",
+    "topic": "Speed after free fall",
+    "type": "fill",
+    "marks": 2,
+    "prompt": "A ball is dropped from rest at a height of 20 m. Taking g = 10 m s⁻² and ignoring air resistance, calculate its speed just before impact, in m s⁻¹.",
+    "answer": ["20", "20 m/s", "20 m s-1", "20 ms-1", "20 m s^-1"],
+    "explanation": "mgh = ½mv², so v² = 2gh = 2 × 10 × 20 = 400 and v = 20 m s⁻¹.",
+    "misconception": "Using v = gh instead of v² = 2gh.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ23",
+    "outcome": "W7",
+    "topic": "Pendulum energy",
+    "type": "truefalse",
+    "marks": 2,
+    "prompt": "At the mean position of an ideal simple pendulum, the bob has maximum kinetic energy and minimum potential energy.",
+    "answer": "True",
+    "justify": true,
+    "autoMarks": 1,
+    "modelAnswer": "At the mean position the bob is at its lowest point, so its potential energy is minimum. Its speed is greatest there, so its kinetic energy is maximum. In an ideal pendulum the total of potential and kinetic energy remains constant.",
+    "markingPoints": [
+      "Explains that the mean position is the lowest point and the bob is fastest there."
+    ],
+    "explanation": "The bob exchanges potential energy for kinetic energy as it swings down to the mean position.",
+    "misconception": "Thinking the bob has zero energy at the mean position because it is momentarily horizontal.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "WQ24",
+    "outcome": "W7",
+    "topic": "Verifying conservation",
+    "type": "long",
+    "marks": 5,
+    "prompt": "A body of mass m is released from rest at height h above the ground. Show that U + K remains constant at the top, after falling a distance x, and at the ground.",
+    "modelAnswer": "At the top, speed is zero, so K = 0 and U = mgh, giving U + K = mgh. After falling a distance x, the height is h − x, so U = mg(h − x). The speed satisfies v² = 2gx, so K = ½m(2gx) = mgx. Then U + K = mg(h − x) + mgx = mgh. At the ground, h = 0 so U = 0; the speed satisfies v² = 2gh, so K = ½m(2gh) = mgh. The total is again mgh. Therefore U + K is constant throughout the fall.",
+    "markingPoints": [
+      "States the top values U = mgh, K = 0 and total mgh.",
+      "Uses the reduced height h − x at the intermediate position.",
+      "Uses v² = 2gx to obtain K = mgx at the intermediate position.",
+      "Shows that the intermediate total simplifies to mgh.",
+      "States the ground values U = 0, K = mgh and total mgh."
+    ],
+    "explanation": "Each position gives the same total mgh, which verifies conservation of mechanical energy in free fall.",
+    "misconception": "Using v = gt at an arbitrary position without relating the speed to the distance fallen.",
+    "source": "Original practice question"
+  }
+]

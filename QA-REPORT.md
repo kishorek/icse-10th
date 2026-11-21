@@ -1,9 +1,11 @@
-# QA Report — ICSE Class 10 Science: Physics 1 Force and Chemistry 1, 12A–12F
+# QA Report — ICSE Class 10 Science: Physics 1 Force, Physics 2 Work, Energy and Power, and Chemistry 1, 12A–12F
 
 **Date:** 21 November 2026
-**Chapters:** ICSE Class 10 Chemistry — Introduction to Organic Compounds, Organic Compounds (12A), Hydrocarbons: Alkanes (12B), Hydrocarbons: Alkenes (12C), Hydrocarbons: Alkynes (12D), Alcohols (12E), Carboxylic Acids (12F)
+**Chapters:** ICSE Class 10 Physics — Force (1) and Work, Energy and Power (2); Chemistry — Introduction to Organic Compounds, Organic Compounds (12A), Hydrocarbons: Alkanes (12B), Hydrocarbons: Alkenes (12C), Hydrocarbons: Alkynes (12D), Alcohols (12E), Carboxylic Acids (12F)
 **Syllabus:** CISCE ICSE Chemistry, examination year 2027, Unit 9
 **Build tested:** Vue 3 + Vite multi-page application, production `dist/`
+
+> Sections 1–8 record the original eight-chapter build. Sections A and B record the later Physics 1 and Physics 2 additions. The current build produces ten HTML entries and nine question exports; section B is the current Physics 2 record.
 
 ---
 
@@ -380,3 +382,160 @@ Approved follow-up pass to raise the quality of all twelve physics visuals. No l
 - `npm run build`: passed, nine HTML entries.
 - `npx playwright test`: 65 passed, 0 failed (2.5 minutes), including the physics suite’s new checks for the spring toggle, acceleration toggle, split view and reduced motion.
 - Manual screenshot review at 1280 px and 360 px covered all twelve labs; label collisions found in the first pass were fixed and rechecked.
+
+
+---
+
+# B. Physics Chapter 2 — Work, Energy and Power
+
+**Date:** 21 November 2026
+**Chapter:** Physics 2, Work, Energy and Power
+**Syllabus:** CISCE ICSE Physics 2027, Unit 1(iii), (iv) and (vi)
+**Source:** supplied Selina ICSE Class 10 Physics Chapter 2 scan, 28 pages, no usable text layer
+
+## B1. Gates and approvals
+
+| Gate | Result | Date |
+|---|---|---|
+| GATE 1 — lesson list | Approved | 21 November 2026 |
+| GATE 2 — complex-term analysis | Approved | 21 November 2026 |
+| GATE 3 — visual and animation plan | Approved | 21 November 2026 |
+| Skipped gates | None | — |
+
+The approved lesson list, complex-term table, 22-visual plan and final budget are recorded in `content/physics/chapter-2-work-energy-and-power/chapter-content.md`. No lesson, term or visual outside the approved lists was added.
+
+## B2. Source intake and scope
+
+- Uploaded file: `selina-class-10-physics-chapter-2-work-energy-and-power.pdf`, 28 scanned pages.
+- Filed unmodified at `content/physics/chapter-2-work-energy-and-power/source/` and excluded from publication by `.gitignore`.
+- Read page by page from 110 dpi page images.
+- The printed syllabus box matches the 2027 Unit 1 parts (iii), (iv) and (vi).
+- Unit 1(v) Machines is absent from the supplied chapter and is explicitly excluded; it requires a separate later chapter.
+- The scan states no edition or publication year, so no page mapping is claimed.
+
+## B3. Build, exports and validation
+
+**Commands:** `npm run build`, `npm run export:questions`, `npm run validate:questions`.
+
+**Results:** passed.
+
+- `dist/` contains ten HTML entries: `index.html`, `chapter-physics-1.html`, `chapter-physics-2.html`, `chapter-1.html`, `chapter-12a.html`, `chapter-12b.html`, `chapter-12c.html`, `chapter-12d.html`, `chapter-12e.html`, `chapter-12f.html`.
+- Physics 2 entry is `dist/chapter-physics-2.html`; its bundled JS and CSS are local, with no remote assets.
+- `npm run export:questions` exported 202 questions across 9 chapters. Physics 2 contributes 24 questions and 53 marks.
+- `npm run validate:questions` validated all 9 exports, including `exports/chapter-physics-2-questions.json` (24 questions).
+- Every bank question is labelled `original_practice`.
+
+## B4. Automated browser tests
+
+**Command:** `npm run test:e2e` (`npx playwright test`) against the Vite development server with Chromium.
+
+**Result:** **81 passed, 0 failed** (3.4 minutes).
+
+Physics 2 coverage (14 tests, all passed):
+
+1. Seven lessons and all 22 approved visual IDs render.
+2. Work bench calculates positive, zero and negative work.
+3. Angle resolver, playback controls and component values work.
+4. Zero-work classifier gives reasons for wall, load and orbit cases.
+5. Stairs, slope and lift all give W = mgh = 1500 J.
+6. Unit ladder converts J to erg and kJ.
+7. Power race and P = Fv labs calculate correctly.
+8. Work/power, energy/power and friction comparisons toggle correctly.
+9. Energy meter and energy-unit ordering task work.
+10. PE-KE ramp, KE-speed, work-energy and KE-forms visuals work.
+11. Conversion-chain and dissipation animations support Play/Pause/Restart.
+12. Free fall, pendulum and energy graph show conservation.
+13. Reduced motion renders the final state and reports it.
+14. Memory, revision, assessment submission, persistence and the 8-milestone progress count work.
+
+The rest of the suite covers the landing page, Physics 1, seven chemistry chapters, isolation, deep links, next/previous navigation and no page-level overflow at 360, 768 and 1280 px. `lesson-media.spec.js` confirms every lesson in Physics 1 and Physics 2 has a visual and a memory hook.
+
+## B5. Production preview verification
+
+The built `dist/` was served with `npm run preview` on port 4175 and checked with Playwright.
+
+| Check | Result |
+|---|---|
+| All ten pages return HTTP 200 | Passed |
+| Physics 2 title and H1 match the intended chapter | Passed |
+| Deep link `chapter-physics-2.html#lesson-5` shows lesson 5 | Passed |
+| Page-level overflow at 360, 768 and 1280 px | `0` in every case |
+| Work bench gives −500.0 J at 100 N, 5 m, 180° | Passed |
+| Keyboard: range 60° → 75° with ArrowRight | Passed |
+| Keyboard: Play button activates with Enter | Passed |
+| Reduced motion reports the final state for Angle Resolve and Power Race | Passed |
+| Assessment submit changes progress to `1 of 8 milestones · 13%` | Passed |
+| Assessment answer and summary persist after reload | Passed |
+| Console errors, page errors and failed requests | None |
+
+## B6. Visual review
+
+Captures at 1280 px and 360 px were inspected for the whole chapter plus representative visuals: Work Bench, Angle Resolve, Gravity Paths, Power Race, kWh Meter, PE-KE Ramp, Dissipation, Pendulum and the energy graph. Evidence files:
+
+- `qa/wep-desktop-top.png`
+- `qa/wep-mobile-360-top.png`
+- `qa/wep-work-bench.png`
+- `qa/wep-pendulum-360.png`
+
+Issues found and fixed:
+
+- The Angle Resolve template called `toFixed` on the reactive object instead of its value, which stopped the page rendering; corrected before the final test run.
+- Long summaries in grid visuals inherited the diagram's min-content width at 360 px. `grid-template-columns: minmax(0, 1fr)` was added to the affected roots so summaries wrap while diagrams scroll inside their own container.
+- Reduced-motion initial states were made explicit for all animated labs, so each shows its final state without requiring Play.
+- Unit conversion formatting was adjusted to avoid exponential notation for ordinary values such as 10⁷ erg.
+- Labels use paint-order outlines and arrow markers use `userSpaceOnUse`; force, angle and value labels remain readable in the checked states.
+- The approved GATE 3 table named `createTimeline`, `svg.createDrawable` and `svg.createMotionPath` for several rows. The implementation uses single anime.js `animate` calls that drive the same SVG attributes and reactive quantities, because each visual teaches one relationship. The subject transformations, measurements, controls and accessibility behaviour match the approved rows; this is recorded as a technique simplification, not a content change.
+
+At 360 px, controls remain visible above the diagrams; the diagrams themselves scroll horizontally with the standard scroll hint. Page-level overflow remains 0.
+
+## B7. Text/visual learning-time budget
+
+| Lesson | Text-led minutes | Visual-led minutes | Visual share | Within 35–45%? |
+|---|---:|---:|---:|---|
+| 1 | 9.8 | 8 | 45.0% | Yes |
+| 2 | 7.5 | 5 | 40.0% | Yes |
+| 3 | 7.3 | 6 | 45.0% | Yes |
+| 4 | 6.2 | 5 | 44.5% | Yes |
+| 5 | 9.8 | 8 | 45.0% | Yes |
+| 6 | 7.5 | 5 | 40.1% | Yes |
+| 7 | 10.1 | 8 | 44.1% | Yes |
+| **Total** | **58.2** | **45** | **43.6%** | Yes |
+
+Text minutes use the 150 words per minute rule on lesson prose, definitions, tables, worked examples, exam tips, misconceptions, memory hooks and quick checks. Visual minutes count only guided tasks. The approved GATE 3 planning table estimated 142 text-led and 88 visual-led minutes; the final measured result is lower in both categories but remains inside the 35–45% band. The deviation is recorded in `chapter-content.md`.
+
+## B8. Coverage map
+
+| Syllabus point | Lesson | Assessment questions |
+|---|---|---|
+| Definition of work, `W = FS cos θ`, special cases θ = 0° and 90° | 1 | WQ1–WQ4 |
+| Work by gravity, `W = mgh`, path independence | 2 | WQ5–WQ6 |
+| Units of work and energy; erg and conversions | 2, 4 | WQ7, WQ12–WQ13 |
+| Power, `P = W/t`, SI and CGS units, kW/MW/GW, horsepower | 3 | WQ8–WQ10 |
+| Energy as work done; kWh, calorie and eV | 4 | WQ11–WQ13 |
+| Mechanical energy; `U = mgh` derivation | 5 | WQ14, WQ17 |
+| Kinetic energy; `K = ½mv²` derivation and numericals | 5 | WQ15–WQ16, WQ18 |
+| Work-energy theorem | 5 | WQ18 |
+| Translational, rotational and vibrational kinetic energy | 5 | WQ16 |
+| Forms of energy and conversions | 6 | WQ19–WQ20 |
+| Principle of conservation of energy | 7 | WQ21, WQ24 |
+| `U + K` constant in free fall | 7 | WQ21–WQ22, WQ24 |
+| Simple pendulum (qualitative) | 7 | WQ23 |
+| Machines, Unit 1(v) | Excluded | Separate chapter required |
+
+## B9. Limitations and unverified items
+
+1. The supplied textbook edition is unknown, so no page mapping is claimed.
+2. The official CISCE site returned HTTP 403 to automated retrieval; the 2027 wording was cross-checked against a public copy of the 2027 Science (52) Physics syllabus and current syllabus summaries.
+3. Written responses are self-marked against marking points; there is no teacher or backend marking.
+4. Progress uses localStorage only and is not synchronised across devices.
+5. Chromium only; Firefox and Safari were not tested.
+6. No physical phone or tablet; 360 px checks used an emulated viewport.
+7. No NVDA, JAWS, VoiceOver or axe pass.
+8. All 22 visuals were inspected at 1280 px and representative visuals at 360 px; every visual was not individually captured at both widths.
+9. Diagrams are teaching schematics, not scale-accurate engineering drawings.
+10. Print styles were not printed or PDF-tested.
+11. Machines (Unit 1(v)) is deliberately not covered because it is absent from the supplied chapter and reserved for a separate chapter.
+
+## B10. Delivery status
+
+Physics Chapter 2 is implemented to the approved plan: seven lessons, 22 purpose-built visuals, 21 lesson quick checks, seven memory hooks, a memory workshop with 22 flashcards, a revision centre and a 24-question/53-mark original practice assessment. It builds, exports and validates with the full project, passes all 81 browser tests, and passes the production-preview checks recorded above. The limitations in section B9 are disclosed rather than claimed as verified.

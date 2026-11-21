@@ -23,7 +23,7 @@ const chemistryChapters = chapters.filter((chapter) => chapter.subject !== 'Phys
     <section id="chapters" aria-label="Chapters">
       <div class="chapter-group">
         <p class="subject-heading">Physics</p>
-        <p class="group-note">Force and motion, starting with turning effects and circular motion.</p>
+        <p class="group-note">Force and motion: turning effects, circular motion, work, energy and power.</p>
         <div class="chapter-grid">
           <ChapterCard
             v-for="chapter in physicsChapters"

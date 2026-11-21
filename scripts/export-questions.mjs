@@ -15,6 +15,21 @@ const chapters = [
     }
   },
   {
+    id: 'chapter-physics-2',
+    subject: 'Physics',
+    source: 'src/data/questions/chapter-physics-2.json',
+    syllabus: 'CISCE ICSE Physics 2027, Unit 1(iii), (iv) and (vi)',
+    outcomes: {
+      W1: 'Work, force, displacement and the angle between them',
+      W2: 'Work done by gravity and units of work',
+      W3: 'Power, its units and the relation P = Fv',
+      W4: 'Energy, its units and the difference between energy and power',
+      W5: 'Potential energy, kinetic energy and the work-energy theorem',
+      W6: 'Forms of energy, transformations and dissipation',
+      W7: 'Conservation of energy, free fall and the simple pendulum'
+    }
+  },
+  {
     id: 'chapter-1',
     source: 'src/data/questions/chapter-1.json',
     syllabus: 'CISCE ICSE Chemistry 2027, Unit 9.1',

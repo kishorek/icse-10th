@@ -1,6 +1,6 @@
 # ICSE Class 10 Science — Physics and Organic Chemistry
 
-Eight interactive Vue 3 chapters for the CISCE ICSE examination year 2027: one Physics chapter on Force, plus seven organic chemistry chapters from the introduction through alkanes, alkenes, alkynes, alcohols and carboxylic acids.
+Ten interactive Vue 3 chapters for the CISCE ICSE examination year 2027: two Physics chapters, Force and Work, Energy and Power, plus seven organic chemistry chapters from the introduction through alkanes, alkenes, alkynes, alcohols and carboxylic acids.
 
 **Live site:** https://kishorek.github.io/icse-10th/
 
@@ -9,6 +9,7 @@ Eight interactive Vue 3 chapters for the CISCE ICSE examination year 2027: one P
 | Chapter | Subject | Title | URL | Scope |
 |---|---|---|---|---|---|
 | Physics 1 | Physics | Force | `chapter-physics-1.html` | Unit 1 Force: moment of force, couple, equilibrium, principle of moments, centre of gravity and uniform circular motion |
+| Physics 2 | Physics | Work, Energy and Power | `chapter-physics-2.html` | Unit 1(iii), (iv), (vi): work, work by gravity, power, energy units, U = mgh, K = ½mv², work-energy theorem, energy forms, dissipation, conservation, free fall and the simple pendulum |
 | Chapter 1 | Chemistry | Introduction to Organic Compounds | `chapter-1.html` | Unit 9(i): organic compounds, carbon's tetravalency and catenation, organic vs inorganic, examples and importance |
 | Chapter 12A | Chemistry | Organic Compounds | `chapter-12a.html` | Unit 9(ii)–(iv): sources, carbon's bonding, hydrocarbon families, functional groups, homologous series, IUPAC naming and isomerism |
 | Chapter 12B | Chemistry | Hydrocarbons: Alkanes | `chapter-12b.html` | Unit 9(v), alkanes only: the alkane family, methane and ethane, preparation, properties, combustion, substitution and uses |
@@ -27,6 +28,13 @@ The root page (`index.html`) is a chapter list with local-progress summaries. Th
 - Twelve purpose-built visuals: five interactive labs, five teaching animations, one comparison toggle and one static diagram — a door torque bench, line-of-action animation, couple demonstration, equilibrium classifier, metre-rule balance, see-saw calculation, spring-balance diagram, centre-of-gravity explorer, plumb-line method, tangent-velocity orbit, centripetal-force escape and a two-observer rotating-frame comparison.
 - Every animation has Play, Pause and Restart controls, respects reduced motion and cleans up its anime.js instance.
 - Memory workshop, flashcards, revision centre and a 24-question assessment (50 marks).
+
+**Physics 2 — Work, Energy and Power**
+
+- Seven lessons: work and its measurement, work by gravity and units, power, energy units, potential and kinetic energy, forms and transformations, and conservation of energy.
+- Twenty-two purpose-built visuals covering work at an angle, force-displacement graphs, gravity paths, unit conversion, power races, energy meters, PE-KE exchange, energy forms, dissipation, free fall and the pendulum.
+- Guided predictions, Play/Pause/Restart controls, reduced-motion final states and anime.js cleanup on unmount.
+- Memory workshop, flashcards, revision centre and a 24-question assessment (53 marks).
 
 **Chapter 1 (Chemistry)**
 
@@ -111,10 +119,12 @@ npm run validate:questions
 ```
 
 - `npm run dev` starts the Vite development server.
-- `npm run build` writes the static production build to `dist/`, including eight HTML entries.
+- `npm run build` writes the static production build to `dist/`, including ten HTML entries.
 - `npm run preview` serves the built `dist/` locally. Use a static server; opening the HTML files directly from the filesystem may be blocked by browser module rules.
 - `npm run test:e2e` runs the Playwright browser checks. The first run may require `npx playwright install chromium`.
-- `npm run export:questions` regenerates the seven schema-shaped question exports:
+- `npm run export:questions` regenerates the nine schema-shaped question exports:
+  - `exports/chapter-physics-1-questions.json` (24 questions)
+  - `exports/chapter-physics-2-questions.json` (24 questions)
   - `exports/chapter-1-questions.json` (24 questions)
   - `exports/chapter-12a-questions.json` (30 questions)
   - `exports/chapter-12b-questions.json` (20 questions)
@@ -128,6 +138,8 @@ npm run validate:questions
 
 ```text
 index.html
+chapter-physics-1.html
+chapter-physics-2.html
 chapter-1.html
 chapter-12a.html
 chapter-12b.html
@@ -141,6 +153,8 @@ scripts/
   export-questions.mjs
   validate-questions.mjs
 exports/
+  chapter-physics-1-questions.json
+  chapter-physics-2-questions.json
   chapter-1-questions.json
   chapter-12a-questions.json
   chapter-12b-questions.json
@@ -150,6 +164,8 @@ exports/
   chapter-12f-questions.json
 tests/
   landing.spec.js
+  chapter-physics-1.spec.js
+  chapter-physics-2.spec.js
   chapter-1.spec.js
   chapter-12a.spec.js
   chapter-12b.spec.js
@@ -159,6 +175,12 @@ tests/
   chapter-12f.spec.js
   integration.spec.js
   lesson-media.spec.js
+content/physics/chapter-1-force/
+  source/                 supplied Force scan (local only)
+  chapter-content.md      gate approvals, scope and budget
+content/physics/chapter-2-work-energy-and-power/
+  source/                 supplied Chapter 2 scan (local only)
+  chapter-content.md      gate approvals, scope and budget
 content/chemistry/chapter-12c-12f/
   source/12C.pdf          supplied scanned pages (local only; not committed)
   chapter-content.md      gate approvals, scope and budget
@@ -189,12 +211,12 @@ src/
     chapter-12f/
 ```
 
-The build deploys the contents of `dist/`. The eight HTML entries are `index.html`, `chapter-1.html`, `chapter-12a.html`, `chapter-12b.html`, `chapter-12c.html`, `chapter-12d.html`, `chapter-12e.html` and `chapter-12f.html`.
+The build deploys the contents of `dist/`. The ten HTML entries are `index.html`, `chapter-physics-1.html`, `chapter-physics-2.html`, `chapter-1.html`, `chapter-12a.html`, `chapter-12b.html`, `chapter-12c.html`, `chapter-12d.html`, `chapter-12e.html` and `chapter-12f.html`.
 
 ## Content and documentation files
 
 - `chapter-content.md` — teaching content and notes for Chapter 1 plus syllabus and scope summaries for the later chapters.
-- `chapter-sources.md` — syllabus and source notes for all seven chapters.
+- `chapter-sources.md` — syllabus and source notes for all nine chapters.
 - `QA-REPORT.md` — what was tested, what passed, and what remains unverified.
 - `AGENTS.md` — project conventions for future work.
 - `docs/superpowers/specs/2026-11-20-organic-chemistry-12a-12b-design.md` — current 12A/12B design.
@@ -218,6 +240,7 @@ If the site is hosted at a domain root, `base: '/'` is also valid. Keep the rela
 
 ## Content scope
 
+- Physics 1 covers Unit 1 Force. Physics 2 covers Unit 1(iii), (iv) and (vi). Machines, Unit 1(v), belongs in a separate chapter and is not included in Physics 2.
 - Chapter 1 is the Unit 9(i) introduction. It does not teach the full hydrocarbons, nomenclature, homologous-series or functional-group unit.
 - Chapter 12A covers Unit 9(ii)–(iv). Functional isomerism is labelled as an extension because the 2027 syllabus names chain and position isomerism. Metamerism is omitted because the supplied book marks it outside the syllabus.
 - Chapter 12B covers alkanes only. Alkenes and alkynes belong to later chapters. Catalytic oxidation and slow combustion are omitted because the supplied book marks them outside the syllabus.
@@ -230,6 +253,8 @@ All examination-style questions are original practice questions. They are not CI
 
 Progress is stored in the browser under one key per chapter:
 
+- Physics 1: `icse10.physics1.state`
+- Physics 2: `icse10.physics2.state`
 - Chapter 1: `icse10.organic1.state`
 - Chapter 12A: `icse10.organic12a.state`
 - Chapter 12B: `icse10.organic12b.state`
@@ -244,8 +269,8 @@ Progress is local to the browser. It is not synchronised across devices. Each ch
 
 Before delivery:
 
-1. Run `npm run build` and confirm `dist/` contains all eight HTML files.
+1. Run `npm run build` and confirm `dist/` contains all ten HTML files.
 2. Run `npm run test:e2e`.
 3. Run `npm run validate:questions`.
-4. Open `npm run preview` and check all seven chapters, chapter switching, deep links, assessment submission and reset, and mobile layout.
+4. Open `npm run preview` and check all nine chapters, chapter switching, deep links, assessment submission and reset, and mobile layout.
 5. Update `QA-REPORT.md` with the actual results.

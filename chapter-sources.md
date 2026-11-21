@@ -1,6 +1,6 @@
 # Chapter Sources and Verification Notes
 
-**Chapters:** ICSE Class 10 Science — Physics Chapter 1 Force, and Chemistry Chapters 1 and 12A–12F
+**Chapters:** ICSE Class 10 Science — Physics Chapters 1–2 (Force; Work, Energy and Power), and Chemistry Chapters 1 and 12A–12F
 **Examination year:** 2027
 **Access date:** 21 November 2026
 
@@ -185,3 +185,37 @@ The exports in `exports/` are generated from the internal banks in `src/data/que
 | Physics 1 | 24 | 50 |
 
 **Physics source limitation:** the official CISCE Physics PDF could not be downloaded directly, and the textbook edition is unknown. The limitation is recorded again in `QA-REPORT.md`.
+
+
+---
+
+## 10. Physics Chapter 2 — Work, Energy and Power
+
+**Official scope:** CISCE ICSE Physics 2027, Unit 1 Force, Work, Power and Energy, parts (iii), (iv) and (vi).
+
+- Work and its measurement; `W = FS cos θ`; special cases θ = 0°, 90°; `W = mgh`.
+- Energy as work done; units of work and energy; erg, calorie, kWh and eV.
+- Power `P = W/t`; SI and CGS units; kW, MW, GW; horsepower `1 HP = 746 W`.
+- Mechanical energy: `U = mgh` (derivation included) and `K = ½mv²` (derivation included).
+- Forms of kinetic energy: translational, rotational and vibrational, with simple examples.
+- Qualitative discussion of chemical, mechanical, heat, electrical, nuclear, sound and light energy, and conversions.
+- Principle of conservation of energy; theoretical verification that `U + K` is constant for a freely falling body; simple pendulum (qualitative only).
+
+**Supplied source:** `content/physics/chapter-2-work-energy-and-power/source/selina-class-10-physics-chapter-2-work-energy-and-power.pdf` — 28 scanned pages of Selina ICSE Class 10 Physics Chapter 2. The PDF has no usable text layer, so every page was read from a rendered page image. The scan states no edition or publication year, and no page mapping is claimed.
+
+**Verification notes:**
+
+- The syllabus box printed in the supplied chapter matches the 2027 Unit 1 parts (iii), (iv) and (vi) used here.
+- The official CISCE 2027 Physics PDF wording was cross-checked against a public copy of the 2027 Science (52) Physics syllabus and current 2026-27 syllabus summaries.
+- Unit 1(v) Machines is present in the official unit but absent from the supplied Chapter 2. It is explicitly excluded from this chapter and treated as a separate later chapter; no machine content is taught here.
+- Ozonolysis, polymerisation, machine efficiency and rotational-dynamics formulae are outside this chapter and are not taught.
+- Work and kinetic-energy numericals are limited to translational motion, as required by the syllabus.
+- All 24 assessment questions and 21 quick checks are original practice questions. No textbook exercise or past-paper question was copied.
+
+**Assessment bank:**
+
+| Chapter | Questions | Marks |
+|---|---:|---:|
+| Physics 2 | 24 | 53 |
+
+**Physics source limitation:** the textbook edition is unknown, and the chapter's worked-example style was used as a guide rather than copied.

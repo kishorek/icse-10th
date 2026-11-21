@@ -8,6 +8,10 @@ test('root lists the available chapters and links to them', async ({ page }) => 
     'href',
     './chapter-physics-1.html'
   )
+  await expect(page.getByRole('link', { name: /^Physics 2\b/ })).toHaveAttribute(
+    'href',
+    './chapter-physics-2.html'
+  )
   const link = page.getByRole('link', { name: /^Chapter 1\b/ })
   await expect(link).toHaveAttribute('href', './chapter-1.html')
   await expect(page.getByRole('link', { name: /^Chapter 12A\b/ })).toHaveAttribute(

@@ -1,5 +1,6 @@
 <script setup>
 import chapter from '../data/chapters/physics-1'
+import physics2 from '../data/chapters/physics-2'
 import ChapterProvider from '../components/ChapterProvider.vue'
 import ChapterShell from '../components/ChapterShell.vue'
 import ChapterHeroPanel from '../components/ChapterHeroPanel.vue'
@@ -12,7 +13,7 @@ import { lessonContent, memoryWorkshop, revision } from '../data/chapter-physics
 
 <template>
   <ChapterProvider :chapter="chapter">
-    <ChapterShell :chapter="chapter">
+    <ChapterShell :chapter="chapter" :next="physics2">
       <ChapterHeroPanel :hero="chapter.hero" />
       <LessonRenderer v-for="lesson in lessonContent" :key="lesson.id" :lesson="lesson" />
       <ChapterMemoryWorkshop :data="memoryWorkshop" />

@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test'
 
 const pages = [
+  { path: '/chapter-physics-1.html', lessons: 5 },
+  { path: '/chapter-physics-2.html', lessons: 7 },
   { path: '/chapter-12a.html', lessons: 6 },
   { path: '/chapter-12b.html', lessons: 3 },
   { path: '/chapter-12c.html', lessons: 4 },

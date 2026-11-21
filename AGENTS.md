@@ -2,11 +2,12 @@
 
 ## Project
 
-Interactive ICSE Class 10 Science chapters: one Physics chapter plus seven organic chemistry chapters.
+Interactive ICSE Class 10 Science chapters: two Physics chapters plus seven organic chemistry chapters.
 
 **Physics**
 
 - **Chapter 1: Force** — CISCE ICSE Physics 2027 Unit 1. Moment of a force, couple, equilibrium, principle of moments, centre of gravity, uniform circular motion and centripetal/centrifugal force.
+- **Chapter 2: Work, Energy and Power** — Unit 1(iii), (iv) and (vi). Work and its measurement, work by gravity, units, power, energy units, potential and kinetic energy, forms and transformations, conservation, free fall and the simple pendulum. Unit 1(v) Machines remains a separate chapter.
 
 **Chemistry**
 
@@ -60,13 +61,14 @@ npm run validate:questions
 
 The first Playwright run may require `npx playwright install chromium`.
 
-Run `npm run build` before claiming the work is complete. The deployable output is `dist/` and must contain `index.html`, `chapter-physics-1.html`, `chapter-1.html`, `chapter-12a.html`, `chapter-12b.html`, `chapter-12c.html`, `chapter-12d.html`, `chapter-12e.html` and `chapter-12f.html`.
+Run `npm run build` before claiming the work is complete. The deployable output is `dist/` and must contain `index.html`, `chapter-physics-1.html`, `chapter-physics-2.html`, `chapter-1.html`, `chapter-12a.html`, `chapter-12b.html`, `chapter-12c.html`, `chapter-12d.html`, `chapter-12e.html` and `chapter-12f.html`.
 
 ## Structure
 
 ```text
 index.html
 chapter-physics-1.html
+chapter-physics-2.html
 chapter-1.html
 chapter-12a.html
 chapter-12b.html
@@ -81,6 +83,7 @@ scripts/
   validate-questions.mjs
 exports/
   chapter-physics-1-questions.json
+  chapter-physics-2-questions.json
   chapter-1-questions.json
   chapter-12a-questions.json
   chapter-12b-questions.json
@@ -91,6 +94,7 @@ exports/
 tests/
   landing.spec.js
   chapter-physics-1.spec.js
+  chapter-physics-2.spec.js
   chapter-1.spec.js
   chapter-12a.spec.js
   chapter-12b.spec.js
@@ -104,6 +108,7 @@ src/
   entries/
     home.js
     chapter-physics-1.js
+    chapter-physics-2.js
     chapter-1.js
     chapter-12a.js
     chapter-12b.js
@@ -114,6 +119,7 @@ src/
   pages/
     HomePage.vue
     ChapterPhysics1Page.vue
+    ChapterPhysics2Page.vue
     ChapterOnePage.vue
     Chapter12APage.vue
     Chapter12BPage.vue
@@ -141,6 +147,7 @@ src/
       LessonOne.vue ... LessonFive.vue
     visuals/generic/  shared family, molecule, flow, comparison, test and trend visuals
     visuals/physics/  twelve Chapter 1 Force labs and animations
+    visuals/physics2/ 22 Chapter 2 Work, Energy and Power visuals
     labs/             shared isomer, preparation, test-bench, sorter and ester labs
     chapters/
       chapter-12a/    six lessons, labs, memory and revision
@@ -159,6 +166,7 @@ src/
   data/
     chapters/
       physics-1.js
+      physics-2.js
       chapter-1.js
       chapter-12a.js
       chapter-12b.js
@@ -169,6 +177,7 @@ src/
       index.js
     questions/
       chapter-physics-1.json
+      chapter-physics-2.json
       chapter-1.json
       chapter-12a.json
       chapter-12b.json
@@ -177,6 +186,7 @@ src/
       chapter-12e.json
       chapter-12f.json
     chapter-physics-1/
+    chapter-physics-2/
     chapter-12a/
     chapter-12b/
     chapter-12c/
@@ -203,7 +213,8 @@ src/
 10. Chapter 12E covers Unit 9(vi) ethanol: the alcohol family, hydrolysis of an alkyl halide, required physical properties, combustion, sodium, esterification, dehydration, denatured/spurious alcohol and uses. Chapter 12F covers Unit 9(vii) acetic acid: the carboxyl family, structure, vinegar, glacial acetic acid, litmus/alkali/alcohol reactions and uses. Fermentation, industrial hydration and extra acid reactions are labelled enrichment or omitted.
 11. Preserve correct chemical formulae, state symbols where relevant, and clear distinctions between observation and inference.
 12. Mark enrichment content as enrichment, not required examination content.
-13. Every lesson must include at least one purpose-built `LessonVisual` and one `MemoryHook`. The visual needs a caption, an accessible text/title description and “What to notice” points; the memory hook needs an explicit cue-to-content mapping and a recall prompt. Acrostics must be real sentences with a word-to-item mapping, never acronyms.
+13. Physics Chapter 2 stays scoped to CISCE Unit 1(iii), (iv) and (vi): work and its measurement, work by gravity, work units, power, energy units, mechanical energy, U = mgh, K = ½mv², the work-energy theorem, forms and conversions, dissipation, conservation, free fall and the simple pendulum. Unit 1(v) Machines is excluded and belongs in a separate chapter. Ozonolysis, polymerisation, machine efficiency and rotational-dynamics formulae are outside this chapter.
+14. Every lesson must include at least one purpose-built `LessonVisual` and one `MemoryHook`. The visual needs a caption, an accessible text/title description and “What to notice” points; the memory hook needs an explicit cue-to-content mapping and a recall prompt. Acrostics must be real sentences with a word-to-item mapping, never acronyms.
 
 ## UI rules
 
@@ -221,6 +232,7 @@ src/
 
 - One localStorage key per chapter:
   - Physics Chapter 1: `icse10.physics1.state`
+  - Physics Chapter 2: `icse10.physics2.state`
   - Chapter 1: `icse10.organic1.state`
   - Chapter 12A: `icse10.organic12a.state`
   - Chapter 12B: `icse10.organic12b.state`
@@ -235,9 +247,10 @@ src/
 
 ## Question exports
 
-`npm run export:questions` reads the eight banks in `src/data/questions/` and writes:
+`npm run export:questions` reads the nine banks in `src/data/questions/` and writes:
 
 - `exports/chapter-physics-1-questions.json` — 24 questions.
+- `exports/chapter-physics-2-questions.json` — 24 questions.
 - `exports/chapter-1-questions.json` — 24 questions.
 - `exports/chapter-12a-questions.json` — 30 questions.
 - `exports/chapter-12b-questions.json` — 20 questions.
@@ -246,7 +259,7 @@ src/
 - `exports/chapter-12e-questions.json` — 20 questions.
 - `exports/chapter-12f-questions.json` — 20 questions.
 
-`npm run validate:questions` validates all eight exports against `.agents/icse-class10-interactive-learning-skill/schemas/question.schema.json` and fails non-zero if an export is missing or any question is invalid.
+`npm run validate:questions` validates all nine exports against `.agents/icse-class10-interactive-learning-skill/schemas/question.schema.json` and fails non-zero if an export is missing or any question is invalid.
 
 ## GitHub Pages
 
@@ -261,8 +274,8 @@ Before delivery:
 1. `npm run build`.
 2. `npm run test:e2e`.
 3. `npm run validate:questions`.
-4. Confirm `dist/` contains nine HTML files.
-6. Open the production preview and test all eight chapters, chapter switching, deep links, assessment submission and reset, and mobile layout.
+4. Confirm `dist/` contains ten HTML files.
+6. Open the production preview and test all nine chapters, chapter switching, deep links, assessment submission and reset, and mobile layout.
 7. Check the browser console for errors and failed requests.
 8. Check desktop and mobile layouts.
 9. Test keyboard-only operation of navigation, quick checks and at least one lab per chapter.

@@ -27,6 +27,29 @@ import CircularVelocityVisual from '../visuals/physics/CircularVelocityVisual.vu
 import CentripetalLab from '../visuals/physics/CentripetalLab.vue'
 import RotatingFramesVisual from '../visuals/physics/RotatingFramesVisual.vue'
 
+import WorkBench from '../visuals/physics2/WorkBench.vue'
+import AngleResolveVisual from '../visuals/physics2/AngleResolveVisual.vue'
+import ZeroWorkToggle from '../visuals/physics2/ZeroWorkToggle.vue'
+import ForceGraphVisual from '../visuals/physics2/ForceGraphVisual.vue'
+import GravityPathsLab from '../visuals/physics2/GravityPathsLab.vue'
+import UnitLadderLab from '../visuals/physics2/UnitLadderLab.vue'
+import PowerRaceLab from '../visuals/physics2/PowerRaceLab.vue'
+import PowerForceSpeedLab from '../visuals/physics2/PowerForceSpeedLab.vue'
+import WorkPowerToggle from '../visuals/physics2/WorkPowerToggle.vue'
+import EnergyScaleTask from '../visuals/physics2/EnergyScaleTask.vue'
+import KwhMeterLab from '../visuals/physics2/KwhMeterLab.vue'
+import EnergyPowerToggle from '../visuals/physics2/EnergyPowerToggle.vue'
+import PeKeRampLab from '../visuals/physics2/PeKeRampLab.vue'
+import KeSpeedLab from '../visuals/physics2/KeSpeedLab.vue'
+import WorkEnergyVisual from '../visuals/physics2/WorkEnergyVisual.vue'
+import KeFormsVisual from '../visuals/physics2/KeFormsVisual.vue'
+import ConversionChainLab from '../visuals/physics2/ConversionChainLab.vue'
+import DissipationVisual from '../visuals/physics2/DissipationVisual.vue'
+import FreeFallLab from '../visuals/physics2/FreeFallLab.vue'
+import PendulumVisual from '../visuals/physics2/PendulumVisual.vue'
+import EnergyGraphVisual from '../visuals/physics2/EnergyGraphVisual.vue'
+import FrictionLossToggle from '../visuals/physics2/FrictionLossToggle.vue'
+
 import IsomerLab from '../labs/IsomerLab.vue'
 import PreparationLab from '../labs/PreparationLab.vue'
 import TestBenchLab from '../labs/TestBenchLab.vue'
@@ -58,7 +81,29 @@ const visualMap = {
   PlumbLineVisual,
   CircularVelocityVisual,
   CentripetalLab,
-  RotatingFramesVisual
+  RotatingFramesVisual,
+  WorkBench,
+  AngleResolveVisual,
+  ZeroWorkToggle,
+  ForceGraphVisual,
+  GravityPathsLab,
+  UnitLadderLab,
+  PowerRaceLab,
+  PowerForceSpeedLab,
+  WorkPowerToggle,
+  EnergyScaleTask,
+  KwhMeterLab,
+  EnergyPowerToggle,
+  PeKeRampLab,
+  KeSpeedLab,
+  WorkEnergyVisual,
+  KeFormsVisual,
+  ConversionChainLab,
+  DissipationVisual,
+  FreeFallLab,
+  PendulumVisual,
+  EnergyGraphVisual,
+  FrictionLossToggle
 }
 
 const labMap = {
