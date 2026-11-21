@@ -202,10 +202,10 @@ Assessment, revision centre and memory workshop are excluded from the per-lesson
 8. **Reduced motion:** tested on the 12C preparation animation; the other animations share the same pattern but were not individually reduced-motion tested.
 9. **Print:** print styles were not printed or PDF-tested.
 10. **Assessment edge cases:** submission with answered and unanswered questions was tested; not every possible answer combination was.
-11. **Deployment:** this task did not push or redeploy. The live site reflects the previously deployed version until the workflow runs again.
+11. **Deployment:** pushed to `main` and deployed by GitHub Actions run 44866267039. The live landing page links all seven chapters, and `chapter-12c.html` was checked live with no console errors.
 
 ---
 
 ## 11. Delivery status
 
-The seven-chapter application builds successfully, produces eight HTML entries, passes all 57 automated browser tests, validates all 154 exported questions, and passed production-preview checks for navigation, deep links, progress isolation, assessment reset, responsive overflow, labs and lesson media. The limitations above are disclosed rather than claimed as verified.
+The seven-chapter application builds successfully, produces eight HTML entries, passes all 57 automated browser tests, validates all 154 exported questions, passed production-preview checks for navigation, deep links, progress isolation, assessment reset, responsive overflow, labs and lesson media, and is deployed at https://kishorek.github.io/icse-10th/. The limitations above are disclosed rather than claimed as verified.
