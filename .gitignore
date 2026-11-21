@@ -11,3 +11,6 @@ blob-report
 
 .worktrees
 .superpowers
+
+# Supplied textbook scans remain local; do not publish copyrighted source PDFs.
+content/**/source/*.pdf

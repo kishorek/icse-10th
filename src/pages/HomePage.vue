@@ -14,7 +14,7 @@ const summaries = Object.fromEntries(
     <header class="home-hero">
       <p class="eyebrow">ICSE Class 10 · Chemistry</p>
       <h1>Organic Chemistry</h1>
-      <p>Three chapters. Start with the introduction, then take 12A and 12B in order.</p>
+      <p>Seven chapters. Start with the introduction, then take 12A–12F in order.</p>
     </header>
 
     <section id="chapters" class="chapter-grid" aria-label="Chapters">

@@ -908,12 +908,12 @@
       }
     ],
     "answer": {
-      "–OH": "Alcohol",
-      "–CHO": "Aldehyde",
-      "–COOH": "Carboxylic acid",
-      ">C=O between two carbons": "Ketone",
-      "–COO–": "Ester",
-      "–O– linking two carbon groups": "Ether"
+      "–OH": "A",
+      "–CHO": "B",
+      "–COOH": "C",
+      ">C=O between two carbons": "F",
+      "–COO–": "E",
+      "–O– linking two carbon groups": "D"
     }
   },
   {

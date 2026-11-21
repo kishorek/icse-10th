@@ -10,7 +10,11 @@ const schema = JSON.parse(
 const files = [
   'exports/chapter-1-questions.json',
   'exports/chapter-12a-questions.json',
-  'exports/chapter-12b-questions.json'
+  'exports/chapter-12b-questions.json',
+  'exports/chapter-12c-questions.json',
+  'exports/chapter-12d-questions.json',
+  'exports/chapter-12e-questions.json',
+  'exports/chapter-12f-questions.json'
 ]
 
 const ajv = new Ajv2020({ allErrors: true, strict: false })

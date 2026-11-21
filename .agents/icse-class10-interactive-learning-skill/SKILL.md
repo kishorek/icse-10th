@@ -1,6 +1,6 @@
 ---
 name: icse-class10-interactive-learning
-description: Build comprehensive, syllabus-mapped, interactive HTML learning chapters for ICSE Class 10 Mathematics, Physics, Chemistry, and Biology using visual explanations, acrostic memory techniques, worked examples, practice, and examination-style assessment.
+description: Build comprehensive, syllabus-mapped, interactive HTML learning chapters for ICSE Class 10 Mathematics, Physics, Chemistry, and Biology. Uses an approval-gated intake workflow (lesson list, complex-term breakdowns, visual and animation plan), a measured 60% text / 40% visual learning budget, anime.js v4 animations, acrostic memory techniques, worked examples, practice, Playwright validation, and examination-style assessment.
 ---
 
 # ICSE Class 10 Interactive Learning Skill
@@ -57,7 +57,7 @@ Preserve correct scientific terminology, mathematical notation, units, condition
 
 Every visual must serve a specific learning objective. Prefer diagrams, labelled illustrations, step sequences, graphs, animations, or simulations over decorative imagery.
 
-Choose the simplest visual format that accurately communicates the concept. Use SVG for labelled diagrams and scalable illustrations, CSS for simple interface animations, and Canvas or SVG for interactive simulations. Use generated or sourced imagery only when it adds meaningful instructional value.
+Choose the simplest visual format that accurately communicates the concept. Use SVG for labelled diagrams and scalable illustrations, CSS for simple interface transitions of 300 ms or less, anime.js v4 for multi-step, timeline, or mechanism animations, and Canvas or SVG for interactive simulations. Use generated or sourced imagery only when it adds meaningful instructional value.
 
 Every essential visual must have a text explanation or accessible equivalent. Do not make understanding depend entirely on colour, animation, or hover interaction.
 
@@ -394,8 +394,9 @@ Use:
 4. Semantic HTML5 inside Vue templates.
 5. CSS variables for design tokens and theming.
 6. Inline SVG for scalable educational diagrams.
-7. KaTeX or MathJax for mathematical notation when necessary.
-8. localStorage for optional local progress persistence.
+7. anime.js v4 for scripted, timeline, and SVG animations, installed from npm and imported as ESM named exports.
+8. KaTeX or MathJax for mathematical notation when necessary.
+9. localStorage for optional local progress persistence.
 
 Keep scoring and progress calculations in plain JavaScript modules independent of Vue rendering. Split substantial lessons, labs, revision, and assessment into focused components rather than one oversized component.
 
@@ -475,6 +476,63 @@ Track at minimum:
 
 Use localStorage for a simple offline prototype. Include a clear reset-progress option and explain that clearing browser data may erase locally stored progress.
 
+### 8.6 Text and visual balance
+
+A completed chapter must teach mostly through text and roughly 40% through visuals, animations, and interaction. Balance is measured as estimated learning time per lesson, not word count.
+
+Target split:
+
+1. 60% text-led: analogies, ELI5 explanations, accurate subject explanations, formal statements, worked reasoning, acrostics and other memory aids, quick checks, practice, and assessment.
+2. 40% visual-led: static diagrams, animations, simulations, labelling tasks, and comparison toggles.
+
+Estimation rules, applied consistently:
+
+1. Prose: about 150 words per minute.
+2. Static diagram with caption and "what to notice": 1 minute.
+3. Animation with pause and replay: 2 minutes.
+4. Interactive simulation or labelling task: 3 minutes.
+5. Exclude site chrome, navigation, tables of contents, and the results screen.
+
+Record the plan before implementation and the measured result after it, using the same table:
+
+| Lesson | Text-led minutes | Visual-led minutes | Visual share | Within 35-45%? | Notes |
+|---|---:|---:|---:|---|---|
+
+The allowed band is 35-45% visual. A lesson outside the band must either be rebalanced or justify the deviation in `QA-REPORT.md`. Captions, alt text, and transcripts are accessibility overhead and do not count as text-led learning time. Motion must teach something; decorative animation does not count toward the visual budget.
+
+### 8.7 Animation standards: anime.js
+
+anime.js v4 is the approved animation library. Install it from npm (`npm install animejs`) and import named exports. Do not load it from a CDN and do not use the v3 global `anime({ ... })` API.
+
+```js
+import { animate, createTimeline, stagger, svg } from 'animejs'
+```
+
+Use anime.js when the approved visual plan needs motion to teach:
+
+1. `createTimeline` for ordered mechanisms, reaction sequences, and step-by-step processes.
+2. `stagger` for revealing a set of particles, labels, or stages in a controlled order.
+3. `svg.createDrawable` for drawing a curve, bond path, ray, or boundary on screen.
+4. `svg.createMotionPath` for a particle, ion, electron, or object travelling along a defined path.
+5. `animate` for a single state change that CSS cannot express clearly.
+
+Keep CSS transitions for trivial hover, focus, and open/close states of 300 ms or less. Do not add anime.js to animate decoration, page entrances, or scroll effects that carry no learning meaning.
+
+Vue integration rules:
+
+1. Create the animation in `onMounted` after the SVG refs exist.
+2. Hold the animation or timeline instance in a variable and expose pause, play, and restart through real controls.
+3. Cancel or revert the instance in `onBeforeUnmount` so repeated navigation does not stack listeners or timers.
+4. Do not start animations inside template expressions or computed properties.
+5. Prefer animating SVG attributes and CSS transforms over layout properties that cause reflow.
+
+Accessibility rules:
+
+1. Read `window.matchMedia('(prefers-reduced-motion: reduce)')` before autoplay. When reduced motion is requested, render the final state immediately and do not animate on a loop.
+2. Provide pause, play, restart, and where useful a speed control. These controls are real buttons with visible focus states.
+3. Never make the only copy of a fact, label, or result depend on motion. The static end state must be readable and complete.
+4. Stop or pause animations when the component is hidden or unmounted.
+
 ## 9. Deliverables for each chapter
 
 Unless the user requests a different format, deliver the following:
@@ -535,6 +593,8 @@ A chapter is not complete until all applicable checks below have been performed.
 5. Explanations are age-appropriate without sacrificing precision.
 6. All facts, equations, reactions, processes, units, and labels have been checked.
 7. Textbook-specific claims are attributed to the correct edition when known.
+8. Complex-term breakdowns are accurate or marked unverified, and no gloss contradicts the exam-safe definition.
+9. The delivered lesson list, terminology table, and visual plan match the approved versions, or every deviation is documented.
 
 ### Memory techniques
 
@@ -564,6 +624,12 @@ A chapter is not complete until all applicable checks below have been performed.
 5. Keyboard interaction is supported.
 6. Text alternatives exist for essential visual information.
 7. Animations can be paused or reduced where appropriate.
+8. Every approved visual and animation exists and matches its approved learning objective.
+9. The text/visual learning-time budget in Section 8.6 is met, or the deviation is justified in `QA-REPORT.md`.
+10. No decorative animation was counted toward the visual budget.
+11. Every anime.js instance is cancelled or reverted on component unmount, with no duplicated controls or timers.
+12. With `prefers-reduced-motion: reduce`, animations render the final static state and do not autoplay.
+13. anime.js is bundled from npm; no CDN or remote animation asset is loaded.
 
 ### Technical validation
 
@@ -576,65 +642,138 @@ A chapter is not complete until all applicable checks below have been performed.
 7. No essential content depends on an unavailable external resource.
 8. The production build is tested through `npm run preview`, not only the dev server.
 9. Browser tests are run where available, and their actual results are recorded.
+10. Playwright is run after a production build with coverage recorded; if Chromium cannot be installed, the gate is marked BLOCKED rather than passed.
+11. Gate approvals, their dates, and any skipped gates are recorded in `QA-REPORT.md`.
 
 If browser automation or local runtime testing is available, use it to test the actual page. If it is not available, perform a careful static inspection and clearly identify the untested behaviour. Never report a test as passed unless it was performed.
 
-## 12. Agent workflow
+## 12. Content intake and staged production workflow
 
-Follow this workflow for each chapter.
+This section defines the mandatory production sequence. The student-facing chapter architecture in Section 6 is unchanged; this workflow governs how the agent builds it. Work on one chapter at a time.
 
-### Step 1: Confirm the chapter scope
+The three approval gates are hard stops. Do not write lesson prose, plan further detail, build visuals, or scaffold code for a later phase until the current gate has received an explicit approval from the user. Present each gate as a table in the conversation and stop. Approval of one gate does not imply approval of the next. A user may explicitly say "skip gates" to bypass gates 1-3; if so, record `Gates 1-3: skipped by user instruction` in `QA-REPORT.md` and proceed.
 
-Resolve the examination year, subject, chapter, and available textbook or source material from conversation context. Do not repeat questions already answered.
+### Phase 0: Intake and subject filing
 
-### Step 2: Build the syllabus coverage map
+1. Accept the supplied chapter material in any form: PDF, scanned pages, plain text, DOCX, or pasted content.
+2. Read the material before planning. For PDFs, extract text and inspect page images where a page is scanned or ambiguous. Never infer unseen content from a filename or a partial excerpt.
+3. Record the examination year, subject, chapter title and number, supplied source, and textbook edition where known.
+4. Classify the material under its subject and file it using a consistent layout:
 
-Extract every relevant syllabus point. Create a table with the following columns:
+```text
+content/
+  <subject>/                  e.g. chemistry, physics, mathematics, biology
+    <chapter-slug>/
+      source/                 original supplied files, unmodified
+      chapter-content.md      derived teaching content and recorded decisions
+```
+
+5. Cross-check the supplied material against the official CISCE syllabus for the recorded examination year. If the material omits a syllabus point, covers out-of-scope content, or contradicts the syllabus, stop and raise the conflict before Phase 1. Label out-of-scope material as enrichment.
+6. Start the syllabus coverage map at this stage; refine it after each gate:
 
 | Syllabus point | Lesson or concept | Teaching content | Visual or activity | Assessment question IDs | Verification status |
 |---|---|---|---|---|---|
 
-Do not begin final HTML production until the coverage map is coherent.
+### Phase 1: Lesson list (GATE 1)
 
-### Step 3: Design the teaching sequence
+Produce a provisional lesson sequence as a table:
 
-Order concepts based on prerequisite relationships and learning difficulty. Identify where intuition, formal definitions, diagrams, derivations, comparisons, and examples are needed.
+| Lesson | Title | Concepts covered | Syllabus points | Prerequisites | Estimated minutes |
+|---|---|---|---|---|---|
 
-### Step 4: Author the full content
+Requirements:
 
-Write complete concept explanations and examination-ready statements. Verify technical accuracy. Avoid compressing complex sections into superficial bullet points.
+1. Order lessons by prerequisite dependency, not by page order.
+2. Every syllabus point must appear in at least one lesson. List any that cannot yet be placed.
+3. Estimated minutes are planning figures and must be labelled as estimates.
+4. Do not include teaching prose, visuals, or question banks yet.
 
-### Step 5: Design visuals and interactions
+Present the table and stop. After approval, record the agreed version at the top of `chapter-content.md` with the date and the word "approved".
 
-Create a visual plan for each lesson. Build the highest-value interactions first. Do not add an interaction merely to make the page appear interactive.
+### Phase 2: Complex-term analysis (GATE 2)
 
-### Step 6: Create the memory workshop
+Identify every term a Class 10 student could not decode from ordinary language, then decompose it. Produce a table:
 
-Identify facts and sequences that benefit from memory assistance. Write and validate acrostics using the mandatory acrostic rule. Add stories or visual associations when more appropriate.
+| Term | Breakdown | Plain-language gloss | Exam-safe definition | First lesson | Caution |
+|---|---|---|---|---|---|
 
-### Step 7: Create worked examples and question bank
+The breakdown splits the word into its meaningful parts, gives each part's meaning, and joins them. For example:
 
-Develop progressive worked examples and a balanced assessment. Map all questions back to the syllabus coverage table.
+- `tetravalency` -> *tetra* (four) + *valency* (combining capacity) = a combining capacity of four.
+- `electrolysis` -> *electro* (electricity) + *lysis* (splitting) = splitting a substance using electricity.
 
-### Step 8: Implement the Vue chapter application
+Rules:
 
-Use the standard chapter navigation and visual design. Keep the layout consistent with the shared platform while adapting the learning interactions to the subject. Split lessons, labs, revision, and assessment into focused Vue components. Keep content data separate from rendering where practical. Run `npm run build` and test the built `dist/` through `npm run preview`.
+1. The gloss simplifies language, never the science. If the word-parts would mislead, for example because the everyday sense differs from the subject sense or the borrowed parts no longer predict the meaning, say so in the Caution column and use an accurate analogy instead.
+2. Do not invent etymology. If a breakdown is uncertain, mark it unverified or omit it.
+3. Exam-safe definitions use the precise wording a student should reproduce; a gloss never replaces them.
+4. Teach each gloss in the lesson where the term first appears and summarise it again in the revision centre.
 
-### Step 9: Run quality assurance
+Present the table and stop. After approval, record it in `chapter-content.md`.
 
-Complete the curriculum, content, memory, assessment, visual, accessibility, and technical quality checks. Fix defects before delivery where possible.
+### Phase 3: Visual and animation plan (GATE 3)
 
-### Step 10: Deliver and report
+List only the concepts that genuinely benefit from a visual, animation, or interaction. Produce a table:
+
+| Visual ID | Lesson | Concept | Format | Learning objective | Student action | Visible response | Accessibility equivalent | Animation-worthy? |
+|---|---|---|---|---|---|---|---|---|
+
+Format values: `static_svg`, `animation`, `interactive_sim`, `label_task`, `comparison_toggle`. For `animation`, record the anime.js v4 technique in the Animation-worthy cell, for example `timeline`, `stagger`, `svg.createDrawable`, or `svg.createMotionPath`.
+
+Rules:
+
+1. Mark a visual Animation-worthy only when motion teaches something a static frame cannot, such as a sequence, a mechanism, a change over time, or a cause-and-effect transition. State the reason in the cell.
+2. A lesson with no worthwhile visual must say so explicitly and justify it. Do not add visuals to hit a quota.
+3. Every visual needs a text equivalent and a keyboard path; record both.
+4. Every planned animation must be implementable with anime.js v4 under Section 8.7. Do not plan a format that needs another animation library.
+5. Do not build any visual before this gate is approved.
+
+Present the table and stop. After approval, record the plan in `chapter-content.md`.
+
+### Phase 4: Content authoring under the text/visual budget
+
+Author the chapter to the approved lesson list, terminology table, and visual plan, using the student-facing architecture in Section 6. Balance text-led and visual-led learning to the budget in Section 8.6.
+
+1. Write the reason before any memory aid, as required by Section 3.2.
+2. Each lesson carries at least one purpose-built visual from the approved plan and at least one validated acrostic or alternative memory technique from Section 6 Stage 4.
+3. Record the planned text-led and visual-led minutes per lesson in the Section 8.6 table before implementation so that a shortfall is visible early.
+
+### Phase 5: Implementation
+
+1. Build the syllabus coverage map, teaching sequence, worked examples, question bank, and Vue application as specified in Sections 6, 9, and 10.
+2. Keep scoring and progress logic in plain JavaScript modules.
+3. Do not add content that was not in the approved lesson list, terminology table, or visual plan without returning to the relevant gate.
+
+### Phase 6: Validation
+
+Run the following in order and record actual results:
+
+1. `npm run build` and confirm the build output contains every entry page the project defines.
+2. `npm run preview` and exercise the built output, not only the dev server.
+3. `npm run test:e2e` (Playwright). Required coverage:
+   - every gate-approved visual and animation is present and operable;
+   - animations support pause and `prefers-reduced-motion`;
+   - anime.js instances clean up on unmount and render the final static state under reduced motion;
+   - each approved lab or interaction works by keyboard;
+   - no page-level horizontal overflow at 360 px, 768 px, and 1280 px;
+   - assessment submission and reset work, and progress persists in localStorage.
+   Playwright is a mandatory gate when Chromium can be installed. If it cannot, mark the gate BLOCKED in `QA-REPORT.md` and do not claim a pass. Never report a test as passed unless it was performed.
+4. `npm run validate:questions`, where configured.
+5. Re-measure the text/visual budget and record the final per-lesson minutes and percentages.
+6. Complete the quality gate in Section 11 and write `QA-REPORT.md`, including gate approvals with dates, any skipped gates, the budget table, Playwright results, and every unverified item.
+
+### Phase 7: Delivery report
 
 Provide the finished files and a short delivery summary stating:
 
 1. What was created.
 2. Which syllabus points were covered.
-3. Which interactive visuals were implemented.
+3. Which approved visuals and animations were implemented.
 4. How many questions and worked examples were included.
 5. Which sources were used.
-6. What was tested.
-7. Any limitation or item that still requires verification.
+6. The text/visual budget result per lesson.
+7. What was actually tested, with Playwright results.
+8. Any limitation or item that still requires verification.
 
 Do not claim full syllabus coverage if any syllabus point is unmapped or unverified.
 
@@ -663,4 +802,10 @@ A chapter is complete when a student can use it independently to:
 6. Complete a chapter assessment.
 7. Identify weak concepts and follow a revision recommendation.
 
-The deliverable must also pass the quality assurance gate, and its source and testing limitations must be disclosed.
+Production is complete when, in addition:
+
+1. The supplied chapter material was read, classified under its subject, and filed with the agreed layout.
+2. All three production gates (lesson list, complex-term analysis, visual and animation plan) were explicitly approved, or a user-requested skip is recorded.
+3. The text/visual learning-time budget in Section 8.6 is recorded and met, or deviations are justified.
+4. Playwright was run against the production build and its actual results are recorded, or the gate is marked BLOCKED.
+5. The quality assurance gate in Section 11 was completed, and all source and testing limitations are disclosed.

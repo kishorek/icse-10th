@@ -1,0 +1,352 @@
+[
+  {
+    "id": "CQ1",
+    "outcome": "C1",
+    "topic": "General formula of alkenes",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which general formula represents the alkenes?",
+    "options": [
+      { "value": "A", "text": "CₙH₂ₙ₊₂" },
+      { "value": "B", "text": "CₙH₂ₙ" },
+      { "value": "C", "text": "CₙH₂ₙ₋₂" },
+      { "value": "D", "text": "CₙH₂ₙ₊₁OH" }
+    ],
+    "answer": "B",
+    "explanation": "Alkenes contain one carbon–carbon double bond, so they have two fewer hydrogen atoms than the corresponding alkane. Their general formula is CₙH₂ₙ.",
+    "misconception": "Using the alkane formula CₙH₂ₙ₊₂ or the alkyne formula CₙH₂ₙ₋₂ for an alkene.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ2",
+    "outcome": "C1",
+    "topic": "Meaning of unsaturation",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What does it mean to say that an alkene is unsaturated?",
+    "options": [
+      { "value": "A", "text": "It contains a multiple bond, so atoms can add without replacing existing atoms." },
+      { "value": "B", "text": "It is a concentrated solution." },
+      { "value": "C", "text": "It contains only single bonds." },
+      { "value": "D", "text": "It contains no hydrogen." }
+    ],
+    "answer": "A",
+    "explanation": "An alkene has a C=C double bond. The carbon atoms can add more atoms across that bond, so the molecule is unsaturated.",
+    "misconception": "Confusing unsaturation with the concentration of a solution.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ3",
+    "outcome": "C1",
+    "topic": "Isomers of butene",
+    "type": "single",
+    "marks": 1,
+    "prompt": "How many structural isomers does butene, C₄H₈, have?",
+    "options": [
+      { "value": "A", "text": "1" },
+      { "value": "B", "text": "2" },
+      { "value": "C", "text": "3" },
+      { "value": "D", "text": "4" }
+    ],
+    "answer": "C",
+    "explanation": "Butene has three structural isomers: but-1-ene and but-2-ene are position isomers, and 2-methylpropene is a chain isomer.",
+    "misconception": "Counting only the straight-chain position isomers and forgetting the branched chain isomer.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ4",
+    "outcome": "C1",
+    "topic": "Alkene names and formulae",
+    "type": "match",
+    "marks": 3,
+    "prompt": "Match each alkene to its molecular formula.",
+    "pairs": [
+      { "left": "Ethene", "answer": "C₂H₄" },
+      { "left": "Propene", "answer": "C₃H₆" },
+      { "left": "Butene", "answer": "C₄H₈" }
+    ],
+    "options": ["C₂H₄", "C₃H₆", "C₄H₈", "C₂H₆", "C₃H₈"],
+    "explanation": "Applying CₙH₂ₙ: ethene has two carbons, propene three and butene four.",
+    "misconception": "Using the alkane formulae C₂H₆ and C₃H₈ for the alkenes.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ5",
+    "outcome": "C2",
+    "topic": "Shape of ethene",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "Complete the sentence: the ethene molecule is ______, with bond angles of about 120°.",
+    "answer": ["planar", "flat"],
+    "explanation": "All six atoms of ethene lie in one plane, so the molecule is planar. The bond angles are about 120°.",
+    "misconception": "Describing ethene as tetrahedral or linear.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ6",
+    "outcome": "C2",
+    "topic": "Bonding in ethene",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which description of the bonds in ethene is correct?",
+    "options": [
+      { "value": "A", "text": "Four C–H single bonds and one C=C double bond" },
+      { "value": "B", "text": "Six C–H single bonds and one C–C single bond" },
+      { "value": "C", "text": "Two C–H single bonds and one C≡C triple bond" },
+      { "value": "D", "text": "Four C–H double bonds" }
+    ],
+    "answer": "A",
+    "explanation": "Each carbon forms two C–H single bonds and shares two pairs of electrons with the other carbon, giving four C–H single bonds and one C=C double bond.",
+    "misconception": "Counting the double bond as two separate single bonds.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ7",
+    "outcome": "C2",
+    "topic": "Dehydration of ethanol",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which reagent and condition prepare ethene by dehydration of ethanol?",
+    "options": [
+      { "value": "A", "text": "Aqueous KOH at room temperature" },
+      { "value": "B", "text": "Concentrated H₂SO₄ at about 170°C" },
+      { "value": "C", "text": "Dilute HCl at 100°C" },
+      { "value": "D", "text": "Sodium metal in dry ether" }
+    ],
+    "answer": "B",
+    "explanation": "Concentrated sulphuric acid removes the elements of water from ethanol at about 170°C: C₂H₅OH → C₂H₄ + H₂O.",
+    "misconception": "Using aqueous KOH, which would favour substitution rather than dehydration.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ8",
+    "outcome": "C2",
+    "topic": "Dehydrohalogenation",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "Bromoethane is converted to ethene by heating with hot concentrated ______ potassium hydroxide.",
+    "answer": ["alcoholic", "alcohol"],
+    "explanation": "Hot concentrated alcoholic KOH removes H and Br from adjacent carbon atoms: C₂H₅Br + KOH → C₂H₄ + KBr + H₂O.",
+    "misconception": "Writing aqueous KOH, which would give ethanol by substitution.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ9",
+    "outcome": "C2",
+    "topic": "Collection of ethene",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Why is ethene collected by downward displacement of water?",
+    "options": [
+      { "value": "A", "text": "It is heavier than water." },
+      { "value": "B", "text": "It is only slightly soluble in water and is inflammable." },
+      { "value": "C", "text": "It reacts with water to give ethanol." },
+      { "value": "D", "text": "It is denser than air." }
+    ],
+    "answer": "B",
+    "explanation": "Ethene is only slightly soluble in water, so water displacement works, and collecting it over water avoids the risk of an inflammable gas mixing with air.",
+    "misconception": "Thinking that ethene dissolves completely in water.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ10",
+    "outcome": "C2",
+    "topic": "Ethene preparation safety",
+    "type": "truefalse",
+    "marks": 2,
+    "prompt": "Ethene can be collected safely by upward displacement of air because it is denser than air.",
+    "answer": "False",
+    "justify": true,
+    "autoMarks": 1,
+    "modelAnswer": "Ethene is collected over water, not by air displacement. It is only slightly soluble in water, and collecting it over water reduces the risk from an inflammable gas.",
+    "markingPoints": [
+      "States that ethene is collected over water.",
+      "Explains that ethene is inflammable or only slightly soluble."
+    ],
+    "explanation": "Ethene is only slightly soluble in water and is inflammable. Downward displacement of water is used; air displacement is not the standard method.",
+    "misconception": "Assuming that all gases heavier than air can be collected by upward displacement.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ11",
+    "outcome": "C3",
+    "topic": "Hydrogenation of ethene",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What is the product when ethene reacts with hydrogen over a nickel catalyst?",
+    "options": [
+      { "value": "A", "text": "Ethanol" },
+      { "value": "B", "text": "Ethane" },
+      { "value": "C", "text": "Ethyne" },
+      { "value": "D", "text": "Chloroethane" }
+    ],
+    "answer": "B",
+    "explanation": "Hydrogen adds across the C=C bond: C₂H₄ + H₂ → C₂H₆. The product is saturated ethane.",
+    "misconception": "Writing ethanol, which would require addition of water rather than hydrogen.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ12",
+    "outcome": "C3",
+    "topic": "Addition reagents",
+    "type": "multiple",
+    "marks": 2,
+    "prompt": "Which of these reagents add across the ethene double bond? Select all that apply.",
+    "options": [
+      { "value": "A", "text": "H₂ with a Ni, Pt or Pd catalyst" },
+      { "value": "B", "text": "Cl₂" },
+      { "value": "C", "text": "Br₂" },
+      { "value": "D", "text": "I₂" },
+      { "value": "E", "text": "NaCl" }
+    ],
+    "answer": ["A", "B", "C", "D"],
+    "explanation": "Hydrogen and the halogens Cl₂, Br₂ and I₂ add across the double bond. Sodium chloride does not add in this way.",
+    "misconception": "Including an ionic salt such as NaCl as an addition reagent.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ13",
+    "outcome": "C3",
+    "topic": "Bromination product",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "Ethene reacts with bromine to form the saturated compound ______.",
+    "answer": ["1,2-dibromoethane", "1,2 dibromoethane", "dibromoethane"],
+    "explanation": "Bromine adds across the double bond: C₂H₄ + Br₂ → C₂H₄Br₂, which is 1,2-dibromoethane.",
+    "misconception": "Calling the product dibromoethene, which would still contain a double bond.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ14",
+    "outcome": "C3",
+    "topic": "Bromine test",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What is observed when ethene is bubbled through bromine water?",
+    "options": [
+      { "value": "A", "text": "The orange-brown colour disappears." },
+      { "value": "B", "text": "A white precipitate forms." },
+      { "value": "C", "text": "The solution turns purple." },
+      { "value": "D", "text": "No change occurs." }
+    ],
+    "answer": "A",
+    "explanation": "Bromine adds across the ethene double bond, so the orange-brown colour of bromine water fades.",
+    "misconception": "Expecting a precipitate; the bromine test is a colour change, not a precipitation.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ15",
+    "outcome": "C3",
+    "topic": "Saturation after addition",
+    "type": "truefalse",
+    "marks": 2,
+    "prompt": "The product of bromine addition to ethene is saturated because the C=C bond has become a single bond.",
+    "answer": "True",
+    "justify": true,
+    "autoMarks": 1,
+    "modelAnswer": "Bromine adds across the double bond, so the product contains only single bonds. It is therefore saturated and cannot undergo further addition at that bond.",
+    "markingPoints": [
+      "States that bromine adds across the double bond.",
+      "Explains that the product has only single bonds and is saturated."
+    ],
+    "explanation": "Addition uses up the double bond. The product, 1,2-dibromoethane, contains only single bonds and is saturated.",
+    "misconception": "Thinking that the product still contains a double bond.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ16",
+    "outcome": "C4",
+    "topic": "Complete combustion",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which products form when ethene burns completely in a sufficient supply of oxygen?",
+    "options": [
+      { "value": "A", "text": "Carbon monoxide and water" },
+      { "value": "B", "text": "Carbon dioxide and water" },
+      { "value": "C", "text": "Soot and hydrogen" },
+      { "value": "D", "text": "Ethanol and oxygen" }
+    ],
+    "answer": "B",
+    "explanation": "Complete combustion gives carbon dioxide and water: C₂H₄ + 3O₂ → 2CO₂ + 2H₂O.",
+    "misconception": "Confusing complete combustion with incomplete combustion, which gives CO or soot.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ17",
+    "outcome": "C4",
+    "topic": "Uses of ethene",
+    "type": "match",
+    "marks": 3,
+    "prompt": "Match each use of ethene to the product or process involved.",
+    "pairs": [
+      { "left": "Packaging film", "answer": "Polythene" },
+      { "left": "Ripening fruit", "answer": "Ethene as a plant hormone" },
+      { "left": "Welding metals", "answer": "Oxy-ethylene flame" }
+    ],
+    "options": [
+      "Polythene",
+      "Ethene as a plant hormone",
+      "Oxy-ethylene flame",
+      "Vinegar",
+      "Table salt"
+    ],
+    "explanation": "Ethene is polymerised to polythene, acts as a ripening hormone, and burns in oxygen to give a hot welding flame.",
+    "misconception": "Matching ethene to food preservation or salt manufacture, which are not its main uses.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ18",
+    "outcome": "C4",
+    "topic": "Distinguishing ethene from ethane",
+    "type": "short",
+    "marks": 3,
+    "prompt": "Describe one chemical test that distinguishes ethene from ethane. State the observation and the conclusion for each gas.",
+    "modelAnswer": "Add bromine water to each gas. Ethene decolourises the orange-brown bromine water because bromine adds across the C=C bond. Ethane does not decolourise bromine water because it is saturated.",
+    "markingPoints": [
+      "Names bromine water as the test.",
+      "States that ethene decolourises bromine water.",
+      "States that ethane does not decolourise bromine water and links this to saturation."
+    ],
+    "explanation": "The bromine test is the standard test for unsaturation. The observation must be stated separately from the conclusion.",
+    "misconception": "Saying only that ethene is unsaturated without describing the observation.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ19",
+    "outcome": "C2",
+    "topic": "Preparation of ethene",
+    "type": "long",
+    "marks": 5,
+    "prompt": "Describe the laboratory preparation of ethene from ethanol. Include the reactants, condition, balanced equation, collection method and one safety point.",
+    "modelAnswer": "Ethanol is heated with concentrated sulphuric acid to about 170°C. The acid dehydrates the ethanol: C₂H₅OH → C₂H₄ + H₂O. The gas is passed through sodium hydroxide solution to remove carbon dioxide and sulphur dioxide impurities, then collected by downward displacement of water because it is inflammable and only slightly soluble. A little aluminium sulphate may be added to reduce frothing.",
+    "markingPoints": [
+      "Names ethanol and concentrated sulphuric acid.",
+      "States the condition of about 170°C.",
+      "Writes the balanced equation C₂H₅OH → C₂H₄ + H₂O.",
+      "States collection by downward displacement of water.",
+      "Gives a valid safety or purification point, such as removing acidic impurities or avoiding flames."
+    ],
+    "explanation": "The preparation is a dehydration. The condition, equation and collection method are all part of a complete answer.",
+    "misconception": "Omitting the condition or writing a substitution product such as ethanol from ethene.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "CQ20",
+    "outcome": "C3",
+    "topic": "Addition reactions and uses",
+    "type": "long",
+    "marks": 5,
+    "prompt": "Explain why ethene undergoes addition reactions. Describe the addition of hydrogen and bromine to ethene, giving equations, and state two uses of ethene.",
+    "modelAnswer": "Ethene contains a C=C double bond, so atoms can add across it without replacing existing atoms. Hydrogen adds over Ni at about 200°C or Pt/Pd: C₂H₄ + H₂ → C₂H₆. Bromine adds at room temperature: C₂H₄ + Br₂ → C₂H₄Br₂, and the orange-brown colour fades. The products are saturated. Ethene is used to make polythene and ethanol, and to ripen fruit.",
+    "markingPoints": [
+      "Explains that the C=C double bond allows addition.",
+      "Gives the hydrogenation equation and a condition.",
+      "Gives the bromination equation and the colour observation.",
+      "States that the products are saturated.",
+      "Gives two valid uses of ethene."
+    ],
+    "explanation": "Addition is the characteristic reaction of the double bond. Each addition removes the unsaturation and gives a saturated product.",
+    "misconception": "Describing addition as substitution, or omitting the condition for hydrogenation.",
+    "source": "Original practice question"
+  }
+]

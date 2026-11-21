@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-test('landing links to all three chapters', async ({ page }) => {
+test('landing links to all seven chapters', async ({ page }) => {
   await page.goto('/')
   await expect(page.getByRole('link', { name: /^Chapter 1\b/ })).toHaveAttribute(
     'href',
@@ -14,6 +14,12 @@ test('landing links to all three chapters', async ({ page }) => {
     'href',
     './chapter-12b.html'
   )
+  for (const suffix of ['12c', '12d', '12e', '12f']) {
+    await expect(page.getByRole('link', { name: new RegExp(`^Chapter ${suffix.toUpperCase()}\\b`) })).toHaveAttribute(
+      'href',
+      `./chapter-${suffix}.html`
+    )
+  }
 })
 
 test('chapter progress is isolated', async ({ page }) => {
@@ -32,6 +38,18 @@ test('chapter progress is isolated', async ({ page }) => {
 
   await page.goto('/chapter-12b.html')
   await expect(page.locator('#progress-label')).toContainText('0 of 4 milestones')
+
+  await page.goto('/chapter-12c.html')
+  await expect(page.locator('#progress-label')).toContainText('0 of 5 milestones')
+
+  await page.goto('/chapter-12d.html')
+  await expect(page.locator('#progress-label')).toContainText('0 of 5 milestones')
+
+  await page.goto('/chapter-12e.html')
+  await expect(page.locator('#progress-label')).toContainText('0 of 6 milestones')
+
+  await page.goto('/chapter-12f.html')
+  await expect(page.locator('#progress-label')).toContainText('0 of 5 milestones')
 })
 
 test('chapter switcher and deep links work', async ({ page }) => {
@@ -56,11 +74,11 @@ test('end-of-chapter navigation follows the next chapter link', async ({ page })
 
   const lastChapterNav = page.getByRole('navigation', { name: 'Chapter navigation' })
   await expect(lastChapterNav.getByRole('link', { name: /Chapter 12A/ })).toBeVisible()
-  await expect(lastChapterNav.getByRole('link', { name: /Chapter 12B/ })).toHaveCount(0)
+  await expect(lastChapterNav.getByRole('link', { name: /Chapter 12C/ })).toBeVisible()
 })
 
 test('required widths have no page-level horizontal overflow', async ({ page }) => {
-  for (const path of ['/', '/chapter-1.html', '/chapter-12a.html', '/chapter-12b.html']) {
+  for (const path of ['/', '/chapter-1.html', '/chapter-12a.html', '/chapter-12b.html', '/chapter-12c.html', '/chapter-12d.html', '/chapter-12e.html', '/chapter-12f.html']) {
     for (const [width, height] of [
       [360, 800],
       [768, 1024],

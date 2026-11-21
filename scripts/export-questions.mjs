@@ -27,6 +27,51 @@ const chapters = [
     }
   },
   {
+    id: 'chapter-12c',
+    source: 'src/data/questions/chapter-12c.json',
+    syllabus: 'CISCE ICSE Chemistry 2027, Unit 9(v), alkenes',
+    outcomes: {
+      C1: 'Alkene family, general formula and isomerism',
+      C2: 'Ethene structure and preparation',
+      C3: 'Addition reactions of ethene',
+      C4: 'Combustion, uses and testing for unsaturation'
+    }
+  },
+  {
+    id: 'chapter-12d',
+    source: 'src/data/questions/chapter-12d.json',
+    syllabus: 'CISCE ICSE Chemistry 2027, Unit 9(v), alkynes',
+    outcomes: {
+      D1: 'Alkyne family, general formula and isomerism',
+      D2: 'Ethyne structure and preparation',
+      D3: 'Stepwise addition reactions of ethyne',
+      D4: 'Combustion, uses and distinguishing tests'
+    }
+  },
+  {
+    id: 'chapter-12e',
+    source: 'src/data/questions/chapter-12e.json',
+    syllabus: 'CISCE ICSE Chemistry 2027, Unit 9(vi), alcohols',
+    outcomes: {
+      E1: 'Alcohol family, hydroxyl group and classification',
+      E2: 'Ethanol occurrence and preparation',
+      E3: 'Physical properties and combustion of ethanol',
+      E4: 'Reactions of ethanol',
+      E5: 'Denatured and spurious alcohol, and uses'
+    }
+  },
+  {
+    id: 'chapter-12f',
+    source: 'src/data/questions/chapter-12f.json',
+    syllabus: 'CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids',
+    outcomes: {
+      F1: 'Carboxylic acid family, carboxyl group and nomenclature',
+      F2: 'Acetic acid structure, vinegar, glacial acid and physical properties',
+      F3: 'Acidic reactions and esterification',
+      F4: 'Preparation context, tests and uses'
+    }
+  },
+  {
     id: 'chapter-12b',
     source: 'src/data/questions/chapter-12b.json',
     syllabus: 'CISCE ICSE Chemistry 2027, Unit 9(v), alkanes',
@@ -122,7 +167,15 @@ function transform(question, chapter) {
   if (question.type === 'match') {
     base.stimulus = question.pairs.map((pair, index) => `${index + 1}. ${pair.left}`).join('\n')
     base.options = optionObjects(question)
-    base.answer = Object.fromEntries(question.pairs.map((pair) => [pair.left, pair.answer]))
+    const optionIdFor = (text) => {
+      const index = (question.options || []).findIndex((option) =>
+        (typeof option === 'string' ? option : option.text) === text
+      )
+      return index >= 0 ? String.fromCharCode(65 + index) : text
+    }
+    base.answer = Object.fromEntries(
+      question.pairs.map((pair) => [pair.left, optionIdFor(pair.answer)])
+    )
   }
 
   return base

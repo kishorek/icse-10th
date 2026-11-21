@@ -212,9 +212,9 @@
       }
     ],
     "answer": {
-      "Straight chain": "Carbon atoms form a continuous line.",
-      "Branched chain": "A side chain is attached to the main chain.",
-      "Cyclic compound": "Carbon atoms form a closed ring."
+      "Straight chain": "C",
+      "Branched chain": "A",
+      "Cyclic compound": "B"
     }
   },
   {

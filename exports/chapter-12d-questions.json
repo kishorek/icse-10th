@@ -1,0 +1,770 @@
+[
+  {
+    "id": "DQ1",
+    "subject": "Chemistry",
+    "topic": "General formula of alkynes",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Alkyne family, general formula and isomerism",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which general formula represents the alkynes?",
+    "explanation": "Alkynes contain one carbon–carbon triple bond, so they have four fewer hydrogen atoms than the corresponding alkane. Their general formula is CₙH₂ₙ₋₂.",
+    "common_mistake": "Using the alkene formula CₙH₂ₙ for an alkyne.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D1",
+      "General formula of alkynes"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "CₙH₂ₙ₊₂"
+      },
+      {
+        "id": "B",
+        "text": "CₙH₂ₙ"
+      },
+      {
+        "id": "C",
+        "text": "CₙH₂ₙ₋₂"
+      },
+      {
+        "id": "D",
+        "text": "CₙH₂ₙ₊₁OH"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "DQ2",
+    "subject": "Chemistry",
+    "topic": "Meaning of a triple bond",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Alkyne family, general formula and isomerism",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What is a carbon–carbon triple bond?",
+    "explanation": "A triple bond is one bond made of three shared electron pairs between the same two carbon atoms.",
+    "common_mistake": "Thinking that a triple bond is three single bonds in a row.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D1",
+      "Meaning of a triple bond"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Three shared pairs of electrons between two carbon atoms"
+      },
+      {
+        "id": "B",
+        "text": "Three separate single bonds between three carbon atoms"
+      },
+      {
+        "id": "C",
+        "text": "One shared pair of electrons"
+      },
+      {
+        "id": "D",
+        "text": "An ionic bond between carbons"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "DQ3",
+    "subject": "Chemistry",
+    "topic": "Isomers of butyne",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Alkyne family, general formula and isomerism",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which pair are position isomers?",
+    "explanation": "But-1-yne and but-2-yne have the same carbon skeleton and molecular formula, but the triple bond is in a different position.",
+    "common_mistake": "Calling compounds with different molecular formulae isomers.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D1",
+      "Isomers of butyne"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "But-1-yne and but-2-yne"
+      },
+      {
+        "id": "B",
+        "text": "Ethyne and propyne"
+      },
+      {
+        "id": "C",
+        "text": "Ethene and ethane"
+      },
+      {
+        "id": "D",
+        "text": "Methane and ethane"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "DQ4",
+    "subject": "Chemistry",
+    "topic": "Alkyne names and formulae",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Alkyne family, general formula and isomerism",
+    "type": "matching",
+    "difficulty": "challenging",
+    "marks": 3,
+    "estimated_time_seconds": 180,
+    "prompt": "Match each alkyne to its molecular formula.",
+    "explanation": "Applying CₙH₂ₙ₋₂: ethyne has two carbons, propyne three and butyne four.",
+    "common_mistake": "Using the alkene formulae C₂H₄ and C₃H₆ for the alkynes.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D1",
+      "Alkyne names and formulae"
+    ],
+    "stimulus": "1. Ethyne\n2. Propyne\n3. Butyne",
+    "options": [
+      {
+        "id": "A",
+        "text": "C₂H₂"
+      },
+      {
+        "id": "B",
+        "text": "C₃H₄"
+      },
+      {
+        "id": "C",
+        "text": "C₄H₆"
+      },
+      {
+        "id": "D",
+        "text": "C₂H₄"
+      },
+      {
+        "id": "E",
+        "text": "C₃H₆"
+      }
+    ],
+    "answer": {
+      "Ethyne": "A",
+      "Propyne": "B",
+      "Butyne": "C"
+    }
+  },
+  {
+    "id": "DQ5",
+    "subject": "Chemistry",
+    "topic": "Shape of ethyne",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Ethyne structure and preparation",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "The shape of the ethyne molecule is ______.",
+    "explanation": "H–C≡C–H lies on a straight line, so ethyne is linear.",
+    "common_mistake": "Describing ethyne as planar or bent.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D2",
+      "Shape of ethyne"
+    ],
+    "answer": [
+      "linear",
+      "straight"
+    ],
+    "accepted_answers": [
+      "linear",
+      "straight"
+    ]
+  },
+  {
+    "id": "DQ6",
+    "subject": "Chemistry",
+    "topic": "Preparation from calcium carbide",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Ethyne structure and preparation",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which reactants are used to prepare ethyne in the laboratory?",
+    "explanation": "Calcium carbide reacts with water: CaC₂ + 2H₂O → Ca(OH)₂ + C₂H₂↑.",
+    "common_mistake": "Confusing calcium carbide with calcium carbonate.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D2",
+      "Preparation from calcium carbide"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Calcium carbide and water"
+      },
+      {
+        "id": "B",
+        "text": "Calcium carbonate and hydrochloric acid"
+      },
+      {
+        "id": "C",
+        "text": "Sodium ethanoate and soda lime"
+      },
+      {
+        "id": "D",
+        "text": "Ethanol and concentrated sulphuric acid"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "DQ7",
+    "subject": "Chemistry",
+    "topic": "Equation for ethyne preparation",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Ethyne structure and preparation",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Complete the equation: CaC₂ + 2H₂O → Ca(OH)₂ + ______.",
+    "explanation": "The gas produced is ethyne, C₂H₂.",
+    "common_mistake": "Writing C₂H₄, which is ethene, not ethyne.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D2",
+      "Equation for ethyne preparation"
+    ],
+    "answer": [
+      "C₂H₂",
+      "C2H2",
+      "ethyne",
+      "acetylene"
+    ],
+    "accepted_answers": [
+      "C₂H₂",
+      "C2H2",
+      "ethyne",
+      "acetylene"
+    ]
+  },
+  {
+    "id": "DQ8",
+    "subject": "Chemistry",
+    "topic": "Purification of ethyne",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Ethyne structure and preparation",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Why is ethyne prepared from calcium carbide passed through acidified copper(II) sulphate solution?",
+    "explanation": "Impurities such as phosphine, hydrogen sulphide and ammonia are removed by passing the gas through acidified copper(II) sulphate or acidified potassium dichromate.",
+    "common_mistake": "Thinking that purification changes the ethyne itself.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D2",
+      "Purification of ethyne"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "To remove phosphine and other impurities"
+      },
+      {
+        "id": "B",
+        "text": "To add water to the gas"
+      },
+      {
+        "id": "C",
+        "text": "To convert ethyne into ethene"
+      },
+      {
+        "id": "D",
+        "text": "To make the gas smell pleasant"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "DQ9",
+    "subject": "Chemistry",
+    "topic": "Safety in ethyne preparation",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Ethyne structure and preparation",
+    "type": "true_false_justify",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Air must be displaced from the apparatus before ethyne is collected because ethyne forms an explosive mixture with air.",
+    "explanation": "Ethyne is inflammable and forms explosive mixtures with air. Displacing the air is a standard safety precaution.",
+    "common_mistake": "Ignoring the air in the flask because ethyne is collected over water.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D2",
+      "Safety in ethyne preparation"
+    ],
+    "answer": "True",
+    "marking_points": [
+      {
+        "point": "States that ethyne–air mixtures are explosive.",
+        "marks": 1
+      },
+      {
+        "point": "States that air is displaced before collection or that flames are kept away.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "DQ10",
+    "subject": "Chemistry",
+    "topic": "Preparation from 1,2-dibromoethane",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Ethyne structure and preparation",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which reagent converts 1,2-dibromoethane to ethyne?",
+    "explanation": "Hot concentrated alcoholic KOH removes H and Br from each carbon: C₂H₄Br₂ + 2KOH → C₂H₂ + 2KBr + 2H₂O.",
+    "common_mistake": "Using aqueous KOH, which would favour substitution rather than double elimination.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D2",
+      "Preparation from 1,2-dibromoethane"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Hot concentrated alcoholic KOH"
+      },
+      {
+        "id": "B",
+        "text": "Dilute aqueous KOH"
+      },
+      {
+        "id": "C",
+        "text": "Dilute hydrochloric acid"
+      },
+      {
+        "id": "D",
+        "text": "Bromine water"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "DQ11",
+    "subject": "Chemistry",
+    "topic": "First stage of hydrogenation",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Stepwise addition reactions of ethyne",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What is the product of the first stage of hydrogenation of ethyne?",
+    "explanation": "The first H₂ molecule converts the triple bond to a double bond, giving ethene: C₂H₂ + H₂ → C₂H₄.",
+    "common_mistake": "Jumping straight to ethane and ignoring the two-stage nature of the addition.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D3",
+      "First stage of hydrogenation"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Ethane"
+      },
+      {
+        "id": "B",
+        "text": "Ethene"
+      },
+      {
+        "id": "C",
+        "text": "Ethanol"
+      },
+      {
+        "id": "D",
+        "text": "Ethyne"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "DQ12",
+    "subject": "Chemistry",
+    "topic": "Excess bromine",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Stepwise addition reactions of ethyne",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What is the formula of the product when excess bromine reacts with ethyne?",
+    "explanation": "With excess bromine, both stages occur: C₂H₂ + 2Br₂ → C₂H₂Br₄.",
+    "common_mistake": "Stopping at the dibromide when excess bromine is stated.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D3",
+      "Excess bromine"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "C₂H₂Br₂"
+      },
+      {
+        "id": "B",
+        "text": "C₂H₂Br₄"
+      },
+      {
+        "id": "C",
+        "text": "C₂H₄Br₂"
+      },
+      {
+        "id": "D",
+        "text": "C₂H₆"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "DQ13",
+    "subject": "Chemistry",
+    "topic": "Stepwise addition",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Stepwise addition reactions of ethyne",
+    "type": "multiple_select",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Which statements about addition to ethyne are correct? Select all that apply.",
+    "explanation": "Addition is stepwise. One pair of atoms gives the double-bonded product; two pairs give the saturated product.",
+    "common_mistake": "Thinking that ethyne is saturated and cannot add.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D3",
+      "Stepwise addition"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "One H₂ molecule gives ethene."
+      },
+      {
+        "id": "B",
+        "text": "Two H₂ molecules give ethane."
+      },
+      {
+        "id": "C",
+        "text": "One Br₂ molecule gives C₂H₂Br₂."
+      },
+      {
+        "id": "D",
+        "text": "Excess Br₂ gives C₂H₂Br₄."
+      },
+      {
+        "id": "E",
+        "text": "Ethyne cannot undergo addition."
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "DQ14",
+    "subject": "Chemistry",
+    "topic": "Saturation after two additions",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Stepwise addition reactions of ethyne",
+    "type": "true_false_justify",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "After two stages of hydrogenation, ethyne becomes ethane, which is saturated.",
+    "explanation": "The overall equation is C₂H₂ + 2H₂ → C₂H₆. Complete addition removes the multiple bond.",
+    "common_mistake": "Thinking that the product after one stage is already saturated.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D3",
+      "Saturation after two additions"
+    ],
+    "answer": "True",
+    "marking_points": [
+      {
+        "point": "States the two stages: ethyne → ethene → ethane.",
+        "marks": 1
+      },
+      {
+        "point": "Explains that ethane has only single bonds and is saturated.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "DQ15",
+    "subject": "Chemistry",
+    "topic": "Combustion of ethyne",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Combustion, uses and distinguishing tests",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which products form when ethyne burns completely in excess oxygen?",
+    "explanation": "Complete combustion gives carbon dioxide and water: 2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O.",
+    "common_mistake": "Confusing the sooty flame in limited air with complete combustion.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D4",
+      "Combustion of ethyne"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Carbon monoxide and water"
+      },
+      {
+        "id": "B",
+        "text": "Carbon dioxide and water"
+      },
+      {
+        "id": "C",
+        "text": "Soot and hydrogen"
+      },
+      {
+        "id": "D",
+        "text": "Ethanol and oxygen"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "DQ16",
+    "subject": "Chemistry",
+    "topic": "Uses of ethyne",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Combustion, uses and distinguishing tests",
+    "type": "matching",
+    "difficulty": "challenging",
+    "marks": 3,
+    "estimated_time_seconds": 180,
+    "prompt": "Match each use of ethyne to the property or process involved.",
+    "explanation": "Ethyne burns in oxygen to give a very hot flame, ripens fruit, and is a feedstock for polymers and other chemicals.",
+    "common_mistake": "Matching ethyne to fire extinguishing or vinegar production.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D4",
+      "Uses of ethyne"
+    ],
+    "stimulus": "1. Welding metals\n2. Ripening fruit\n3. Making plastics",
+    "options": [
+      {
+        "id": "A",
+        "text": "Very hot oxy-acetylene flame"
+      },
+      {
+        "id": "B",
+        "text": "Ethyne as a plant hormone"
+      },
+      {
+        "id": "C",
+        "text": "Feedstock for synthetic polymers"
+      },
+      {
+        "id": "D",
+        "text": "Vinegar production"
+      },
+      {
+        "id": "E",
+        "text": "Extinguishing fires"
+      }
+    ],
+    "answer": {
+      "Welding metals": "A",
+      "Ripening fruit": "B",
+      "Making plastics": "C"
+    }
+  },
+  {
+    "id": "DQ17",
+    "subject": "Chemistry",
+    "topic": "Cuprous chloride test",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Combustion, uses and distinguishing tests",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Ethyne gives a ______ precipitate with ammoniacal cuprous chloride.",
+    "explanation": "Ethyne forms red copper acetylide with ammoniacal cuprous chloride. This is a test for a terminal alkyne.",
+    "common_mistake": "Writing white, which is the colour of the silver acetylide precipitate.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D4",
+      "Cuprous chloride test"
+    ],
+    "answer": [
+      "red",
+      "reddish",
+      "brick red"
+    ],
+    "accepted_answers": [
+      "red",
+      "reddish",
+      "brick red"
+    ]
+  },
+  {
+    "id": "DQ18",
+    "subject": "Chemistry",
+    "topic": "Distinguishing ethene from ethyne",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Combustion, uses and distinguishing tests",
+    "type": "short_answer",
+    "difficulty": "challenging",
+    "marks": 3,
+    "estimated_time_seconds": 180,
+    "prompt": "Describe one test that distinguishes ethyne from ethene. State the observation and conclusion.",
+    "explanation": "The copper and silver tests detect a terminal alkyne. Bromine water shows unsaturation but does not distinguish ethene from ethyne.",
+    "common_mistake": "Using bromine water and claiming that only ethyne decolourises it.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D4",
+      "Distinguishing ethene from ethyne"
+    ],
+    "answer": "Add ammoniacal cuprous chloride. Ethyne gives a red precipitate of copper acetylide because it is a terminal alkyne. Ethene gives no precipitate. Bromine water would not distinguish them because both are unsaturated and both decolourise it.",
+    "marking_points": [
+      {
+        "point": "Names ammoniacal cuprous chloride or ammoniacal silver nitrate.",
+        "marks": 1
+      },
+      {
+        "point": "States the correct observation for ethyne (red or white precipitate).",
+        "marks": 1
+      },
+      {
+        "point": "States that ethene gives no precipitate, or explains why bromine water is not suitable.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "DQ19",
+    "subject": "Chemistry",
+    "topic": "Preparation of ethyne",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Ethyne structure and preparation",
+    "type": "long_answer",
+    "difficulty": "challenging",
+    "marks": 5,
+    "estimated_time_seconds": 300,
+    "prompt": "Describe the laboratory preparation of ethyne from calcium carbide. Include the equation, collection method, purification and one safety precaution.",
+    "explanation": "The preparation is a hydrolysis. The gas is collected over water, purified, and handled carefully because it is inflammable.",
+    "common_mistake": "Using calcium carbonate or collecting ethyne by air displacement.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D2",
+      "Preparation of ethyne"
+    ],
+    "answer": "Water is added drop by drop to calcium carbide in a flask: CaC₂ + 2H₂O → Ca(OH)₂ + C₂H₂↑. The reaction is exothermic. Ethyne is collected by downward displacement of water because it is insoluble. The gas is passed through acidified copper(II) sulphate solution to remove phosphine and other impurities. Air must be displaced from the apparatus before collection because ethyne forms an explosive mixture with air.",
+    "marking_points": [
+      {
+        "point": "Names calcium carbide and water.",
+        "marks": 1
+      },
+      {
+        "point": "Writes the balanced equation CaC₂ + 2H₂O → Ca(OH)₂ + C₂H₂↑.",
+        "marks": 1
+      },
+      {
+        "point": "States collection over water.",
+        "marks": 1
+      },
+      {
+        "point": "Describes purification with acidified copper(II) sulphate or acidified potassium dichromate.",
+        "marks": 1
+      },
+      {
+        "point": "Gives a valid safety precaution about air or flames.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "DQ20",
+    "subject": "Chemistry",
+    "topic": "Addition and identifying tests",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(v), alkynes",
+    "learning_outcome": "Stepwise addition reactions of ethyne",
+    "type": "long_answer",
+    "difficulty": "challenging",
+    "marks": 5,
+    "estimated_time_seconds": 300,
+    "prompt": "Explain why ethyne undergoes addition in two stages. Describe the addition of hydrogen and bromine, giving equations, and state how ethyne can be distinguished from ethene.",
+    "explanation": "The triple bond is the key to both the stepwise addition and the specific tests.",
+    "common_mistake": "Using bromine water to distinguish ethene from ethyne, since both decolourise it.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "D3",
+      "Addition and identifying tests"
+    ],
+    "answer": "Ethyne has a C≡C triple bond, so it can add two pairs of atoms. Hydrogenation: C₂H₂ + H₂ → C₂H₄, then C₂H₄ + H₂ → C₂H₆. Bromination: C₂H₂ + Br₂ → C₂H₂Br₂, then C₂H₂Br₂ + Br₂ → C₂H₂Br₄. The final products are saturated. Ethyne can be distinguished from ethene with ammoniacal cuprous chloride: ethyne gives a red precipitate of copper acetylide; ethene gives no precipitate.",
+    "marking_points": [
+      {
+        "point": "Explains that the triple bond allows two stages of addition.",
+        "marks": 1
+      },
+      {
+        "point": "Gives the two hydrogenation equations or the overall equation.",
+        "marks": 1
+      },
+      {
+        "point": "Gives the two bromination equations.",
+        "marks": 1
+      },
+      {
+        "point": "States that the final products are saturated.",
+        "marks": 1
+      },
+      {
+        "point": "Describes the cuprous chloride or silver nitrate test and the correct observation.",
+        "marks": 1
+      }
+    ]
+  }
+]

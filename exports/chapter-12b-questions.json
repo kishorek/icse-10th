@@ -642,10 +642,10 @@
       }
     ],
     "answer": {
-      "Sodium ethanoate + soda lime": "Methane",
-      "Sodium propanoate + soda lime": "Ethane",
-      "Aluminium carbide + water": "Methane",
-      "Iodomethane + sodium in dry ether": "Ethane"
+      "Sodium ethanoate + soda lime": "A",
+      "Sodium propanoate + soda lime": "B",
+      "Aluminium carbide + water": "A",
+      "Iodomethane + sodium in dry ether": "B"
     }
   },
   {

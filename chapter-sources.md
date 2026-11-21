@@ -1,8 +1,8 @@
 # Chapter Sources and Verification Notes
 
-**Chapters:** ICSE Class 10 Chemistry — Organic Chemistry, Chapters 1, 12A and 12B
+**Chapters:** ICSE Class 10 Chemistry — Organic Chemistry, Chapters 1 and 12A–12F
 **Examination year:** 2027
-**Access date:** 20 November 2026
+**Access date:** 21 November 2026
 
 ---
 
@@ -20,6 +20,10 @@ The chapter scopes used in this project are:
 - **Chapter 1 — Unit 9(i) introduction.** Introduction to organic compounds; unique nature of the carbon atom — tetravalency and catenation; formation of single, double and triple bonds; straight-chain, branched-chain and cyclic compounds (benzene structure only).
 - **Chapter 12A — Unit 9(ii)–(iv).** Organic compounds and their sources; organic versus inorganic compounds; carbon's bonding; hydrocarbons; structural formulae; alkyl groups; functional groups; homologous series; IUPAC nomenclature; structural isomerism.
 - **Chapter 12B — Unit 9(v), alkanes.** The alkane family and general formula; sources; chain isomerism; occurrence, structure, laboratory preparation and physical properties of methane and ethane; complete and incomplete combustion; substitution with chlorine; uses.
+- **Chapter 12C — Unit 9(v), alkenes.** Alkenes as unsaturated hydrocarbons with one double bond; ethene as the example; preparation by dehydrohalogenation and dehydration; main properties, particularly addition with H₂, Cl₂, Br₂ and I₂; uses of ethene.
+- **Chapter 12D — Unit 9(v), alkynes.** Alkynes as unsaturated hydrocarbons with one triple bond; ethyne as the example; preparation from calcium carbide and 1,2-dibromoethane; main properties, particularly addition with H₂, Cl₂, Br₂ and I₂; uses of ethyne.
+- **Chapter 12E — Unit 9(vi), alcohols.** Ethanol preparation by hydrolysis of an alkyl halide; physical properties (nature, solubility, density, boiling points); chemical properties (combustion, sodium, ester formation with acetic acid, dehydration with concentrated sulphuric acid); denatured/methylated/spurious alcohol; uses.
+- **Chapter 12F — Unit 9(vii), carboxylic acids.** Acetic acid structure; physical properties (vinegar odour, glacial acetic acid); chemical properties (litmus, alkalis, alcohols/esterification); uses.
 
 **Verification status:** the scope lines were cross-checked against public 2026-27 syllabus summaries. The official CISCE PDF was not downloaded directly by the build environment. This limitation is repeated in `QA-REPORT.md`.
 
@@ -27,14 +31,18 @@ The chapter scopes used in this project are:
 
 ## 2. Supplied source pages
 
-The two later chapters were built from supplied scanned pages:
+The later chapters were built from supplied scanned pages:
 
 | Chapter | Supplied book pages | Use |
 |---|---|---|
 | Chapter 12A | pp. 194–209 | Sequence, terminology, worked nomenclature examples and exercise coverage |
 | Chapter 12B | pp. 210–216 | Alkane sequence, preparation routes, equations, reactions and uses |
+| Chapter 12C | p. 213–216 | Alkene family, ethene structure and preparation, addition, uses and tests |
+| Chapter 12D | p. 216–219 | Alkyne family, ethyne structure and preparation, stepwise addition, uses and tests |
+| Chapter 12E | p. 220–223 | Alcohol family, ethanol preparation, properties, reactions and uses |
+| Chapter 12F | p. 223–226 | Carboxylic acid family, acetic acid structure, properties, reactions and uses |
 
-These were **supplied scans**, not pages retrieved by the build environment. They were used as a coverage and terminology guide. The chapters do not copy the book's exercise questions; all quick checks and assessment items were written independently.
+These were **supplied scans**, not pages retrieved by the build environment. The PDF is kept locally under `content/chemistry/chapter-12c-12f/source/` and is excluded from the public repository because it is a copyrighted textbook scan. They were used as a coverage and terminology guide. The chapters do not copy the book's exercise questions; all quick checks and assessment items were written independently.
 
 CISCE does not prescribe a Chemistry textbook. No page mapping, chapter number or publisher-specific claim is made in student-facing prose.
 
@@ -95,7 +103,12 @@ The supplied book marks the following items as outside the syllabus, so they are
 - **Metamerism** — omitted from Chapter 12A.
 - **Catalytic oxidation of alkanes** — omitted from Chapter 12B.
 - **Slow combustion with acidified K₂Cr₂O₇ or KMnO₄** — omitted from Chapter 12B.
-- **Alkenes and alkynes as taught topics** — out of scope for Chapter 12B; they belong to later chapters.
+- **Alkenes and alkynes as taught topics** — out of scope for Chapter 12B; they belong to Chapters 12C and 12D.
+- **Ozonolysis, polymerisation and KMnO₄ oxidation** — labelled enrichment or omitted from the required alkene content; the 2027 wording emphasises addition with H₂ and halogens.
+- **HCl and ozone addition to ethyne** — labelled enrichment in Chapter 12D; the required properties are addition with H₂ and halogens.
+- **Fermentation and industrial hydration** — labelled enrichment context in Chapter 12E; the required preparation is hydrolysis of an alkyl halide.
+- **Oxidation, PCl₃ and ether formation** — labelled enrichment or omitted in Chapter 12E.
+- **Preparation routes and extra acid reactions** — labelled enrichment or omitted in Chapter 12F; the required chemical properties are litmus, alkalis and alcohols.
 
 Functional isomerism is included in Chapter 12A as a **labelled extension**, because the supplied book teaches it while the 2027 syllabus names chain and position isomerism.
 
@@ -120,6 +133,10 @@ All assessment and quick-check questions are **original practice questions** aut
 | Chapter 1 | 24 | 39 |
 | Chapter 12A | 30 | 50 |
 | Chapter 12B | 20 | 34 |
+| Chapter 12C | 20 | 37 |
+| Chapter 12D | 20 | 37 |
+| Chapter 12E | 20 | 33 |
+| Chapter 12F | 20 | 36 |
 
 The exports in `exports/` are generated from the internal banks in `src/data/questions/` by `npm run export:questions` and checked by `npm run validate:questions`.
 
@@ -129,7 +146,8 @@ The exports in `exports/` are generated from the internal banks in `src/data/que
 
 - The official CISCE PDF could not be fetched by the build tool because the site returned HTTP 403.
 - Secondary syllabus summaries agree on the Unit 9 scope, but they are not a substitute for the official PDF.
-- The 12A and 12B pages were supplied scans; their edition and publisher were not supplied with the scans.
+- The 12A–12F pages were supplied scans; their edition and publisher were not supplied with the scans.
 - Chapter 1 had no supplied textbook pages.
+- The mixed and year-labelled exercise pages in the supplied PDF were not used as past-paper sources; all questions are original practice questions.
 - No past-paper source was used.
 - Chemistry accuracy was checked by reading the rendered chapters and comparing equations, names and conditions with the supplied pages; it was not checked by an independent subject expert.

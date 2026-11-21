@@ -2,13 +2,32 @@
 
 ## Project
 
-Interactive ICSE Class 10 Chemistry chapters, covering three organic chemistry chapters:
+Interactive ICSE Class 10 Chemistry chapters, covering seven organic chemistry chapters:
 
 - **Chapter 1: Introduction to Organic Compounds** — Unit 9(i).
 - **Chapter 12A: Organic Compounds** — Unit 9(ii)–(iv).
 - **Chapter 12B: Hydrocarbons: Alkanes** — Unit 9(v), alkanes only.
+- **Chapter 12C: Hydrocarbons: Alkenes** — Unit 9(v), alkenes; ethene.
+- **Chapter 12D: Hydrocarbons: Alkynes** — Unit 9(v), alkynes; ethyne.
+- **Chapter 12E: Alcohols** — Unit 9(vi), ethanol.
+- **Chapter 12F: Carboxylic Acids** — Unit 9(vii), acetic acid.
 
 They follow the CISCE ICSE Chemistry syllabus for examination year 2027. The root page is a chapter list; each chapter is a separate HTML page.
+
+## Starting a chapter
+
+Before starting, resuming, or substantially changing any chapter, always read and follow `.agents/icse-class10-interactive-learning-skill/SKILL.md`. This is mandatory for every chapter.
+
+That skill's approval-gated workflow controls the work:
+
+1. Intake the supplied PDF, text, or notes and file it under the correct subject.
+2. Present the lesson list and wait for explicit approval (GATE 1).
+3. Present complex-term breakdowns, for example `tetravalency = tetra (four) + valency (combining capacity)`, and wait for approval (GATE 2).
+4. Present the visual and animation plan, marking which concepts are animation-worthy and which anime.js technique each will use, and wait for approval (GATE 3).
+5. Author to the approved plan and keep the 60% text / 40% visual learning-time budget.
+6. Validate with `npm run build`, `npm run preview`, and `npm run test:e2e`, then record the actual results in `QA-REPORT.md`.
+
+Do not skip a gate unless the user explicitly says "skip gates"; record any skip in `QA-REPORT.md`.
 
 ## Stack
 
@@ -16,6 +35,7 @@ They follow the CISCE ICSE Chemistry syllabus for examination year 2027. The roo
 - Vite multi-page build for development and static builds.
 - npm for dependency management.
 - Plain CSS with design tokens in `src/styles/main.css`.
+- anime.js v4 is the approved animation library, installed from npm when an approved visual plan needs it.
 - localStorage for local progress.
 - Playwright for browser QA.
 - No router, state library, CSS framework, remote fonts or remote assets.
@@ -34,7 +54,7 @@ npm run validate:questions
 
 The first Playwright run may require `npx playwright install chromium`.
 
-Run `npm run build` before claiming the work is complete. The deployable output is `dist/` and must contain `index.html`, `chapter-1.html`, `chapter-12a.html` and `chapter-12b.html`.
+Run `npm run build` before claiming the work is complete. The deployable output is `dist/` and must contain `index.html`, `chapter-1.html`, `chapter-12a.html`, `chapter-12b.html`, `chapter-12c.html`, `chapter-12d.html`, `chapter-12e.html` and `chapter-12f.html`.
 
 ## Structure
 
@@ -43,6 +63,10 @@ index.html
 chapter-1.html
 chapter-12a.html
 chapter-12b.html
+chapter-12c.html
+chapter-12d.html
+chapter-12e.html
+chapter-12f.html
 vite.config.js
 playwright.config.js
 scripts/
@@ -52,23 +76,40 @@ exports/
   chapter-1-questions.json
   chapter-12a-questions.json
   chapter-12b-questions.json
+  chapter-12c-questions.json
+  chapter-12d-questions.json
+  chapter-12e-questions.json
+  chapter-12f-questions.json
 tests/
   landing.spec.js
   chapter-1.spec.js
   chapter-12a.spec.js
   chapter-12b.spec.js
+  chapter-12c.spec.js
+  chapter-12d.spec.js
+  chapter-12e.spec.js
+  chapter-12f.spec.js
   integration.spec.js
+  lesson-media.spec.js
 src/
   entries/
     home.js
     chapter-1.js
     chapter-12a.js
     chapter-12b.js
+    chapter-12c.js
+    chapter-12d.js
+    chapter-12e.js
+    chapter-12f.js
   pages/
     HomePage.vue
     ChapterOnePage.vue
     Chapter12APage.vue
     Chapter12BPage.vue
+    Chapter12CPage.vue
+    Chapter12DPage.vue
+    Chapter12EPage.vue
+    Chapter12FPage.vue
   components/
     ChapterShell.vue
     ChapterProvider.vue
@@ -85,10 +126,17 @@ src/
     BondLab.vue, ChainLab.vue, OrganicSorter.vue, EverydayExplorer.vue
     lessons/
       LessonHeading.vue
+      LessonRenderer.vue
       LessonOne.vue ... LessonFive.vue
+    visuals/generic/  shared family, molecule, flow, comparison, test and trend visuals
+    labs/             shared isomer, preparation, test-bench, sorter and ester labs
     chapters/
       chapter-12a/    six lessons, labs, memory and revision
       chapter-12b/    three lessons, labs, memory and revision
+      chapter-12c/    four lessons, labs, memory and revision
+      chapter-12d/    four lessons, labs, memory and revision
+      chapter-12e/    five lessons, labs, memory and revision
+      chapter-12f/    four lessons, labs, memory and revision
   composables/
     useChapter.js
     useProgress.js
@@ -101,13 +149,25 @@ src/
       chapter-1.js
       chapter-12a.js
       chapter-12b.js
+      chapter-12c.js
+      chapter-12d.js
+      chapter-12e.js
+      chapter-12f.js
       index.js
     questions/
       chapter-1.json
       chapter-12a.json
       chapter-12b.json
+      chapter-12c.json
+      chapter-12d.json
+      chapter-12e.json
+      chapter-12f.json
     chapter-12a/
     chapter-12b/
+    chapter-12c/
+    chapter-12d/
+    chapter-12e/
+    chapter-12f/
     sorterItems.js
     everydayItems.js
     flashcards.js
@@ -123,9 +183,11 @@ src/
 5. Chapter 1 stays scoped to Unit 9(i): organic compounds, carbon's tetravalency and catenation, bond/chain preview, organic vs inorganic, examples, and importance.
 6. Chapter 12A covers Unit 9(ii)–(iv): sources, carbon's bonding, hydrocarbons, structural formulae, functional groups, homologous series, IUPAC nomenclature and structural isomerism. Functional isomerism is a labelled extension because the 2027 syllabus names chain and position isomerism. Metamerism is omitted because the supplied book marks it outside the syllabus.
 7. Chapter 12B covers Unit 9(v) alkanes only: the alkane family, methane and ethane, preparation, physical properties, combustion, substitution and uses. Do not drift into alkenes or alkynes. Catalytic oxidation and slow combustion are omitted because the supplied book marks them outside the syllabus.
-8. Preserve correct chemical formulae, state symbols where relevant, and clear distinctions between observation and inference.
-9. Mark enrichment content as enrichment, not required examination content.
-10. Every lesson must include at least one purpose-built `LessonVisual` and one `MemoryHook`. The visual needs a caption, an accessible SVG description and “What to notice” points; the memory hook needs an explicit cue-to-content mapping and a recall prompt. Acrostics must be real sentences with a word-to-item mapping, never acronyms.
+8. Chapter 12C covers Unit 9(v) alkenes: the alkene family, ethene structure and preparation, addition with H₂/Cl₂/Br₂/I₂, combustion, uses and tests. Chapter 12D covers Unit 9(v) alkynes: the alkyne family, ethyne structure and preparation, stepwise addition, combustion, uses and distinguishing tests. Ozonolysis and polymerisation are labelled enrichment or omitted.
+9. Chapter 12E covers Unit 9(vi) ethanol: the alcohol family, hydrolysis of an alkyl halide, required physical properties, combustion, sodium, esterification, dehydration, denatured/spurious alcohol and uses. Chapter 12F covers Unit 9(vii) acetic acid: the carboxyl family, structure, vinegar, glacial acetic acid, litmus/alkali/alcohol reactions and uses. Fermentation, industrial hydration and extra acid reactions are labelled enrichment or omitted.
+10. Preserve correct chemical formulae, state symbols where relevant, and clear distinctions between observation and inference.
+11. Mark enrichment content as enrichment, not required examination content.
+12. Every lesson must include at least one purpose-built `LessonVisual` and one `MemoryHook`. The visual needs a caption, an accessible text/title description and “What to notice” points; the memory hook needs an explicit cue-to-content mapping and a recall prompt. Acrostics must be real sentences with a word-to-item mapping, never acronyms.
 
 ## UI rules
 
@@ -145,6 +207,10 @@ src/
   - Chapter 1: `icse10.organic1.state`
   - Chapter 12A: `icse10.organic12a.state`
   - Chapter 12B: `icse10.organic12b.state`
+  - Chapter 12C: `icse10.organic12c.state`
+  - Chapter 12D: `icse10.organic12d.state`
+  - Chapter 12E: `icse10.organic12e.state`
+  - Chapter 12F: `icse10.organic12f.state`
 - Progress is local to the browser only. Do not claim cross-device sync.
 - Each chapter's progress and assessment reset independently.
 - Scoring logic belongs in `src/lib/scoring.js` and must remain independent of Vue rendering.
@@ -152,13 +218,17 @@ src/
 
 ## Question exports
 
-`npm run export:questions` reads the three banks in `src/data/questions/` and writes:
+`npm run export:questions` reads the seven banks in `src/data/questions/` and writes:
 
 - `exports/chapter-1-questions.json` — 24 questions.
 - `exports/chapter-12a-questions.json` — 30 questions.
 - `exports/chapter-12b-questions.json` — 20 questions.
+- `exports/chapter-12c-questions.json` — 20 questions.
+- `exports/chapter-12d-questions.json` — 20 questions.
+- `exports/chapter-12e-questions.json` — 20 questions.
+- `exports/chapter-12f-questions.json` — 20 questions.
 
-`npm run validate:questions` validates all three exports against `.agents/icse-class10-interactive-learning-skill/schemas/question.schema.json` and fails non-zero if an export is missing or any question is invalid.
+`npm run validate:questions` validates all seven exports against `.agents/icse-class10-interactive-learning-skill/schemas/question.schema.json` and fails non-zero if an export is missing or any question is invalid.
 
 ## GitHub Pages
 
@@ -173,8 +243,8 @@ Before delivery:
 1. `npm run build`.
 2. `npm run test:e2e`.
 3. `npm run validate:questions`.
-4. Confirm `dist/` contains four HTML files.
-5. Open the production preview and test all three chapters, chapter switching, deep links, assessment submission and reset, and mobile layout.
+4. Confirm `dist/` contains eight HTML files.
+5. Open the production preview and test all seven chapters, chapter switching, deep links, assessment submission and reset, and mobile layout.
 6. Check the browser console for errors and failed requests.
 7. Check desktop and mobile layouts.
 8. Test keyboard-only operation of navigation, quick checks and at least one lab per chapter.

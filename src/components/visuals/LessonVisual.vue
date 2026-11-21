@@ -1,5 +1,6 @@
 <script setup>
 defineProps({
+  id: { type: String, default: '' },
   title: { type: String, required: true },
   caption: { type: String, required: true },
   description: { type: String, required: true },
@@ -8,7 +9,7 @@ defineProps({
 </script>
 
 <template>
-  <figure class="lesson-visual">
+  <figure :id="id || undefined" class="lesson-visual">
     <div class="lesson-visual__canvas">
       <slot />
     </div>

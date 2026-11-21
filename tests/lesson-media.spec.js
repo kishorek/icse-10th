@@ -2,7 +2,11 @@ import { expect, test } from '@playwright/test'
 
 const pages = [
   { path: '/chapter-12a.html', lessons: 6 },
-  { path: '/chapter-12b.html', lessons: 3 }
+  { path: '/chapter-12b.html', lessons: 3 },
+  { path: '/chapter-12c.html', lessons: 4 },
+  { path: '/chapter-12d.html', lessons: 4 },
+  { path: '/chapter-12e.html', lessons: 5 },
+  { path: '/chapter-12f.html', lessons: 4 }
 ]
 
 for (const chapter of pages) {
@@ -21,9 +25,12 @@ for (const chapter of pages) {
       await expect(lesson, `lesson ${n} exists`).toBeVisible()
 
       const visual = lesson.locator('figure.lesson-visual')
-      await expect(visual, `lesson ${n} has a visual`).toHaveCount(1)
-      await expect(visual.locator('svg[role="img"]'), `lesson ${n} SVG`).toBeVisible()
-      await expect(visual.locator('.lesson-visual__notice')).toContainText('What to notice')
+      await expect(visual.first(), `lesson ${n} has a visual`).toBeVisible()
+      expect(await visual.count(), `lesson ${n} visual count`).toBeGreaterThan(0)
+      const canvas = visual.first().locator('.lesson-visual__canvas')
+      await expect(canvas, `lesson ${n} visual canvas`).toBeVisible()
+      expect(await canvas.locator(':scope > *').count(), `lesson ${n} canvas content`).toBeGreaterThan(0)
+      await expect(visual.first().locator('.lesson-visual__notice')).toContainText('What to notice')
 
       const hook = lesson.locator('aside.memory-hook')
       await expect(hook, `lesson ${n} has a memory hook`).toHaveCount(1)

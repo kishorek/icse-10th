@@ -1,0 +1,788 @@
+[
+  {
+    "id": "FQ1",
+    "subject": "Chemistry",
+    "topic": "Carboxyl group",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Carboxylic acid family, carboxyl group and nomenclature",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which group is present in every carboxylic acid?",
+    "explanation": "The carboxyl group –COOH contains a carbonyl group and a hydroxyl group on the same carbon. It defines the carboxylic acid family.",
+    "common_mistake": "Confusing the carboxyl group with a simple hydroxyl or aldehyde group.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F1",
+      "Carboxyl group"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "–OH only"
+      },
+      {
+        "id": "B",
+        "text": "–CHO"
+      },
+      {
+        "id": "C",
+        "text": "–COOH"
+      },
+      {
+        "id": "D",
+        "text": "–O–"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "FQ2",
+    "subject": "Chemistry",
+    "topic": "General formula of carboxylic acids",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Carboxylic acid family, carboxyl group and nomenclature",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which general formula represents the aliphatic monocarboxylic acids?",
+    "explanation": "A monocarboxylic acid has one –COOH group, so its general formula is CₙH₂ₙ₊₁COOH, also written RCOOH.",
+    "common_mistake": "Using the alcohol formula CₙH₂ₙ₊₁OH for a carboxylic acid.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F1",
+      "General formula of carboxylic acids"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "CₙH₂ₙ₊₁COOH"
+      },
+      {
+        "id": "B",
+        "text": "CₙH₂ₙ₊₁OH"
+      },
+      {
+        "id": "C",
+        "text": "CₙH₂ₙ"
+      },
+      {
+        "id": "D",
+        "text": "CₙH₂ₙ₋₂"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "FQ3",
+    "subject": "Chemistry",
+    "topic": "IUPAC naming",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Carboxylic acid family, carboxyl group and nomenclature",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What is the IUPAC name of CH₃COOH?",
+    "explanation": "CH₃COOH has two carbon atoms, so the root is eth- and the acid suffix is -oic acid: ethanoic acid. Acetic acid is the common name.",
+    "common_mistake": "Counting only the carboxyl carbon and calling it methanoic acid.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F1",
+      "IUPAC naming"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Methanoic acid"
+      },
+      {
+        "id": "B",
+        "text": "Ethanoic acid"
+      },
+      {
+        "id": "C",
+        "text": "Propanoic acid"
+      },
+      {
+        "id": "D",
+        "text": "Ethanal"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "FQ4",
+    "subject": "Chemistry",
+    "topic": "Acid names and formulae",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Carboxylic acid family, carboxyl group and nomenclature",
+    "type": "matching",
+    "difficulty": "challenging",
+    "marks": 3,
+    "estimated_time_seconds": 180,
+    "prompt": "Match each carboxylic acid to its formula.",
+    "explanation": "The acid formulae follow CₙH₂ₙ₊₁COOH: one, two and three carbon atoms respectively.",
+    "common_mistake": "Matching the acids to the corresponding alcohols.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F1",
+      "Acid names and formulae"
+    ],
+    "stimulus": "1. Methanoic acid\n2. Ethanoic acid\n3. Propanoic acid",
+    "options": [
+      {
+        "id": "A",
+        "text": "HCOOH"
+      },
+      {
+        "id": "B",
+        "text": "CH₃COOH"
+      },
+      {
+        "id": "C",
+        "text": "C₂H₅COOH"
+      },
+      {
+        "id": "D",
+        "text": "CH₃OH"
+      },
+      {
+        "id": "E",
+        "text": "C₂H₅OH"
+      }
+    ],
+    "answer": {
+      "Methanoic acid": "A",
+      "Ethanoic acid": "B",
+      "Propanoic acid": "C"
+    }
+  },
+  {
+    "id": "FQ5",
+    "subject": "Chemistry",
+    "topic": "Acidic hydrogen",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acetic acid structure, vinegar, glacial acid and physical properties",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which hydrogen atom in acetic acid is acidic?",
+    "explanation": "The acidic hydrogen is the one on the –OH of the carboxyl group. The methyl hydrogens are not acidic.",
+    "common_mistake": "Treating every hydrogen in the molecule as acidic.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F2",
+      "Acidic hydrogen"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "One of the three methyl hydrogens"
+      },
+      {
+        "id": "B",
+        "text": "The hydrogen of the –OH group in –COOH"
+      },
+      {
+        "id": "C",
+        "text": "All four hydrogens equally"
+      },
+      {
+        "id": "D",
+        "text": "The hydrogen in water only"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "FQ6",
+    "subject": "Chemistry",
+    "topic": "Vinegar",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acetic acid structure, vinegar, glacial acid and physical properties",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What is vinegar?",
+    "explanation": "Vinegar is a dilute aqueous solution of acetic acid, about 4–5%, used for flavouring and preserving food.",
+    "common_mistake": "Confusing vinegar with glacial acetic acid.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F2",
+      "Vinegar"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Pure acetic acid"
+      },
+      {
+        "id": "B",
+        "text": "A 4–5% aqueous solution of acetic acid"
+      },
+      {
+        "id": "C",
+        "text": "Ethanol"
+      },
+      {
+        "id": "D",
+        "text": "A dicarboxylic acid"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "FQ7",
+    "subject": "Chemistry",
+    "topic": "Glacial acetic acid",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acetic acid structure, vinegar, glacial acid and physical properties",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Pure acetic acid is called glacial acetic acid because it freezes to ice-like crystals at about ______ °C.",
+    "explanation": "Pure acetic acid solidifies at about 17°C, forming ice-like crystals.",
+    "common_mistake": "Thinking that the name comes from glaciers.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F2",
+      "Glacial acetic acid"
+    ],
+    "answer": [
+      "17",
+      "17°C",
+      "17 °C"
+    ],
+    "accepted_answers": [
+      "17",
+      "17°C",
+      "17 °C"
+    ]
+  },
+  {
+    "id": "FQ8",
+    "subject": "Chemistry",
+    "topic": "Physical properties of acetic acid",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acetic acid structure, vinegar, glacial acid and physical properties",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which statement about pure acetic acid is correct?",
+    "explanation": "Pure acetic acid is miscible with water, alcohol and ether, and it is hygroscopic.",
+    "common_mistake": "Assuming that an organic acid must be insoluble in water.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F2",
+      "Physical properties of acetic acid"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "It is insoluble in water."
+      },
+      {
+        "id": "B",
+        "text": "It is miscible with water, alcohol and ether."
+      },
+      {
+        "id": "C",
+        "text": "It is a strong base."
+      },
+      {
+        "id": "D",
+        "text": "It is not hygroscopic."
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "FQ9",
+    "subject": "Chemistry",
+    "topic": "Litmus test",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acidic reactions and esterification",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What is observed when blue litmus is added to acetic acid?",
+    "explanation": "Acetic acid turns blue litmus red, showing that it is acidic.",
+    "common_mistake": "Thinking that a weak acid does not affect litmus.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F3",
+      "Litmus test"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "It turns red."
+      },
+      {
+        "id": "B",
+        "text": "It turns blue."
+      },
+      {
+        "id": "C",
+        "text": "It becomes colourless."
+      },
+      {
+        "id": "D",
+        "text": "No change."
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "FQ10",
+    "subject": "Chemistry",
+    "topic": "Neutralisation",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acidic reactions and esterification",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What is formed when acetic acid reacts with sodium hydroxide?",
+    "explanation": "Neutralisation gives sodium acetate and water: CH₃COOH + NaOH → CH₃COONa + H₂O.",
+    "common_mistake": "Confusing neutralisation with esterification.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F3",
+      "Neutralisation"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Sodium acetate and water"
+      },
+      {
+        "id": "B",
+        "text": "Ethyl acetate and water"
+      },
+      {
+        "id": "C",
+        "text": "Ethanol and carbon dioxide"
+      },
+      {
+        "id": "D",
+        "text": "Sodium chloride and hydrogen"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "FQ11",
+    "subject": "Chemistry",
+    "topic": "Carbonate reaction",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acidic reactions and esterification",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which gas is evolved when acetic acid reacts with sodium carbonate?",
+    "explanation": "Acids liberate carbon dioxide from carbonates: 2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂↑.",
+    "common_mistake": "Confusing the carbonate test with the metal–acid test for hydrogen.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F3",
+      "Carbonate reaction"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Hydrogen"
+      },
+      {
+        "id": "B",
+        "text": "Oxygen"
+      },
+      {
+        "id": "C",
+        "text": "Carbon dioxide"
+      },
+      {
+        "id": "D",
+        "text": "Chlorine"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "FQ12",
+    "subject": "Chemistry",
+    "topic": "Esterification",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acidic reactions and esterification",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "What is formed when acetic acid reacts with ethanol in the presence of concentrated sulphuric acid?",
+    "explanation": "Esterification gives ethyl acetate and water: CH₃COOH + C₂H₅OH → CH₃COOC₂H₅ + H₂O.",
+    "common_mistake": "Forgetting that water is also a product.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F3",
+      "Esterification"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Ethene and water"
+      },
+      {
+        "id": "B",
+        "text": "Ethyl acetate and water"
+      },
+      {
+        "id": "C",
+        "text": "Sodium acetate and hydrogen"
+      },
+      {
+        "id": "D",
+        "text": "Ethanal and oxygen"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "FQ13",
+    "subject": "Chemistry",
+    "topic": "Ester product",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acidic reactions and esterification",
+    "type": "fill_blank",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "The ester formed from acetic acid and ethanol is ______.",
+    "explanation": "The ester is ethyl acetate, also called ethyl ethanoate, CH₃COOC₂H₅.",
+    "common_mistake": "Writing ethyl ethanoate as an ether or as ethanol.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F3",
+      "Ester product"
+    ],
+    "answer": [
+      "ethyl acetate",
+      "ethyl ethanoate",
+      "CH₃COOC₂H₅",
+      "CH3COOC2H5"
+    ],
+    "accepted_answers": [
+      "ethyl acetate",
+      "ethyl ethanoate",
+      "CH₃COOC₂H₅",
+      "CH3COOC2H5"
+    ]
+  },
+  {
+    "id": "FQ14",
+    "subject": "Chemistry",
+    "topic": "Weak acid versus dilute acid",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acidic reactions and esterification",
+    "type": "true_false_justify",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "A weak acid is the same as a dilute acid.",
+    "explanation": "Weakness is about the extent of ionisation; dilution is about concentration. Acetic acid is a weak acid whether it is dilute or concentrated.",
+    "common_mistake": "Using “weak” and “dilute” as synonyms.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F3",
+      "Weak acid versus dilute acid"
+    ],
+    "answer": "False",
+    "marking_points": [
+      {
+        "point": "States that weak refers to partial ionisation.",
+        "marks": 1
+      },
+      {
+        "point": "Distinguishes weak from dilute or concentration.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "FQ15",
+    "subject": "Chemistry",
+    "topic": "Required acid reactions",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acidic reactions and esterification",
+    "type": "multiple_select",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Which reactions are specifically required for acetic acid in the 2027 syllabus? Select all that apply.",
+    "explanation": "The required chemical properties are action with litmus, alkalis and alcohols. Reactions with PCl₅ and LiAlH₄ are enrichment.",
+    "common_mistake": "Including enrichment reactions as required syllabus content.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F3",
+      "Required acid reactions"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Action with litmus"
+      },
+      {
+        "id": "B",
+        "text": "Action with alkalis"
+      },
+      {
+        "id": "C",
+        "text": "Action with alcohols (esterification)"
+      },
+      {
+        "id": "D",
+        "text": "Action with PCl₅"
+      },
+      {
+        "id": "E",
+        "text": "Reduction with LiAlH₄"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "FQ16",
+    "subject": "Chemistry",
+    "topic": "Uses of acetic acid",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Preparation context, tests and uses",
+    "type": "matching",
+    "difficulty": "challenging",
+    "marks": 3,
+    "estimated_time_seconds": 180,
+    "prompt": "Match each use of acetic acid to the property that explains it.",
+    "explanation": "Vinegar uses the acidic nature, the solvent use depends on miscibility, and perfumes use esters.",
+    "common_mistake": "Linking acetic acid uses to strong oxidising behaviour or ionic bonding.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F4",
+      "Uses of acetic acid"
+    ],
+    "stimulus": "1. Vinegar\n2. Solvent\n3. Perfumes",
+    "options": [
+      {
+        "id": "A",
+        "text": "Dilute acid for flavouring and preserving food"
+      },
+      {
+        "id": "B",
+        "text": "Miscible with organic substances"
+      },
+      {
+        "id": "C",
+        "text": "Ester formation"
+      },
+      {
+        "id": "D",
+        "text": "Strong oxidising agent"
+      },
+      {
+        "id": "E",
+        "text": "Ionic bonding"
+      }
+    ],
+    "answer": {
+      "Vinegar": "A",
+      "Solvent": "B",
+      "Perfumes": "C"
+    }
+  },
+  {
+    "id": "FQ17",
+    "subject": "Chemistry",
+    "topic": "Preparation from ethyne",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Preparation context, tests and uses",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "In the industrial preparation of acetic acid from ethyne, what is the intermediate formed first?",
+    "explanation": "Ethyne is hydrated to ethanal, which is then oxidised to acetic acid. This preparation is enrichment for 2027.",
+    "common_mistake": "Thinking that ethyne is converted directly to acetic acid without an intermediate.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F4",
+      "Preparation from ethyne"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Ethanol"
+      },
+      {
+        "id": "B",
+        "text": "Ethanal"
+      },
+      {
+        "id": "C",
+        "text": "Ethene"
+      },
+      {
+        "id": "D",
+        "text": "Ethyl acetate"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "FQ18",
+    "subject": "Chemistry",
+    "topic": "Vinegar versus glacial acid",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acetic acid structure, vinegar, glacial acid and physical properties",
+    "type": "short_answer",
+    "difficulty": "challenging",
+    "marks": 3,
+    "estimated_time_seconds": 180,
+    "prompt": "Distinguish vinegar from glacial acetic acid. Include composition, one physical property and one use.",
+    "explanation": "Both contain acetic acid; the difference is concentration and purity.",
+    "common_mistake": "Saying that vinegar and glacial acetic acid are different acids.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F2",
+      "Vinegar versus glacial acid"
+    ],
+    "answer": "Vinegar is a 4–5% aqueous solution of acetic acid used for flavouring and preserving food. Glacial acetic acid is pure acetic acid; it is hygroscopic and freezes to ice-like crystals at about 17°C. It is used as a solvent and chemical feedstock rather than as a food-grade dilute acid.",
+    "marking_points": [
+      {
+        "point": "States that vinegar is a 4–5% solution.",
+        "marks": 1
+      },
+      {
+        "point": "States that glacial acetic acid is pure and freezes at about 17°C or is hygroscopic.",
+        "marks": 1
+      },
+      {
+        "point": "Gives a correct use for one of them.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "FQ19",
+    "subject": "Chemistry",
+    "topic": "Structure and properties of acetic acid",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acetic acid structure, vinegar, glacial acid and physical properties",
+    "type": "long_answer",
+    "difficulty": "challenging",
+    "marks": 5,
+    "estimated_time_seconds": 300,
+    "prompt": "Describe the structure of acetic acid and its physical properties. Include the acidic hydrogen, vinegar, glacial acetic acid, odour and solubility.",
+    "explanation": "A complete answer connects structure to the acidic hydrogen and to the physical properties.",
+    "common_mistake": "Treating all hydrogens as acidic or confusing vinegar with pure acid.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F2",
+      "Structure and properties of acetic acid"
+    ],
+    "answer": "Acetic acid is CH₃COOH. It contains a methyl group attached to a carboxyl group; the carboxyl carbon is double-bonded to oxygen and single-bonded to –OH. The acidic hydrogen is the one on the –OH of the carboxyl group. Vinegar is a 4–5% aqueous solution. Pure acetic acid is a colourless liquid with a pungent smell, boiling at 118°C. It is hygroscopic and freezes to ice-like crystals at about 17°C, so it is called glacial acetic acid. It is miscible with water, alcohol and ether.",
+    "marking_points": [
+      {
+        "point": "Gives the structure CH₃COOH and identifies the carboxyl group.",
+        "marks": 1
+      },
+      {
+        "point": "Identifies the acidic hydrogen.",
+        "marks": 1
+      },
+      {
+        "point": "Distinguishes vinegar from glacial acetic acid.",
+        "marks": 1
+      },
+      {
+        "point": "States the pungent odour and one other physical property.",
+        "marks": 1
+      },
+      {
+        "point": "States miscibility with water or the freezing point.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "FQ20",
+    "subject": "Chemistry",
+    "topic": "Acid reactions and esterification",
+    "syllabus_reference": "CISCE ICSE Chemistry 2027, Unit 9(vii), carboxylic acids",
+    "learning_outcome": "Acidic reactions and esterification",
+    "type": "long_answer",
+    "difficulty": "challenging",
+    "marks": 5,
+    "estimated_time_seconds": 300,
+    "prompt": "Describe the reactions of acetic acid with litmus, sodium hydroxide and ethanol. Give equations and observations, and name the ester formed.",
+    "explanation": "The three reactions show the acidic nature of the carboxyl group and its ability to form esters.",
+    "common_mistake": "Omitting water from the esterification equation or confusing the ester with an ether.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "F3",
+      "Acid reactions and esterification"
+    ],
+    "answer": "Acetic acid turns blue litmus red. With sodium hydroxide it is neutralised: CH₃COOH + NaOH → CH₃COONa + H₂O, forming sodium acetate and water. With ethanol and concentrated sulphuric acid it undergoes esterification: CH₃COOH + C₂H₅OH → CH₃COOC₂H₅ + H₂O. The ester is ethyl acetate, which has a fruity smell.",
+    "marking_points": [
+      {
+        "point": "States that blue litmus turns red.",
+        "marks": 1
+      },
+      {
+        "point": "Writes the neutralisation equation with sodium hydroxide.",
+        "marks": 1
+      },
+      {
+        "point": "Names sodium acetate and water.",
+        "marks": 1
+      },
+      {
+        "point": "Writes the esterification equation with ethanol.",
+        "marks": 1
+      },
+      {
+        "point": "Names ethyl acetate and states the fruity smell or the role of concentrated H₂SO₄.",
+        "marks": 1
+      }
+    ]
+  }
+]

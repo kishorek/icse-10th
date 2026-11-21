@@ -1,0 +1,357 @@
+[
+  {
+    "id": "EQ1",
+    "outcome": "E1",
+    "topic": "General formula of alcohols",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which general formula represents the monohydric alcohols?",
+    "options": [
+      { "value": "A", "text": "CₙH₂ₙ₊₂" },
+      { "value": "B", "text": "CₙH₂ₙ" },
+      { "value": "C", "text": "CₙH₂ₙ₊₁OH" },
+      { "value": "D", "text": "CₙH₂ₙ₋₂" }
+    ],
+    "answer": "C",
+    "explanation": "A monohydric alcohol has one –OH group in place of one hydrogen of an alkane, so its general formula is CₙH₂ₙ₊₁OH.",
+    "misconception": "Using a hydrocarbon formula without the –OH group.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ2",
+    "outcome": "E1",
+    "topic": "Trihydric alcohols",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which alcohol is trihydric?",
+    "options": [
+      { "value": "A", "text": "Methanol" },
+      { "value": "B", "text": "Ethanol" },
+      { "value": "C", "text": "Ethylene glycol" },
+      { "value": "D", "text": "Glycerol" }
+    ],
+    "answer": "D",
+    "explanation": "Glycerol, C₃H₅(OH)₃, has three hydroxyl groups and is trihydric.",
+    "misconception": "Classifying glycerol as monohydric because it is one molecule.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ3",
+    "outcome": "E1",
+    "topic": "Alcohol names and formulae",
+    "type": "match",
+    "marks": 3,
+    "prompt": "Match each alcohol to its molecular formula.",
+    "pairs": [
+      { "left": "Methanol", "answer": "CH₄O" },
+      { "left": "Ethanol", "answer": "C₂H₆O" },
+      { "left": "Propanol", "answer": "C₃H₈O" }
+    ],
+    "options": ["CH₄O", "C₂H₆O", "C₃H₈O", "C₂H₄O₂", "C₃H₆O"],
+    "explanation": "The molecular formulae follow CₙH₂ₙ₊₂O for these saturated monohydric alcohols.",
+    "misconception": "Mixing the alcohol formula with the carboxylic acid formula.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ4",
+    "outcome": "E2",
+    "topic": "Hydrolysis of an alkyl halide",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which reagent converts bromoethane to ethanol?",
+    "options": [
+      { "value": "A", "text": "Hot concentrated alcoholic KOH" },
+      { "value": "B", "text": "Hot dilute aqueous KOH" },
+      { "value": "C", "text": "Concentrated sulphuric acid at 170°C" },
+      { "value": "D", "text": "Bromine water" }
+    ],
+    "answer": "B",
+    "explanation": "Hot dilute aqueous KOH hydrolyses bromoethane: C₂H₅Br + KOH(aq) → C₂H₅OH + KBr.",
+    "misconception": "Using alcoholic KOH, which would eliminate HBr and give ethene.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ5",
+    "outcome": "E2",
+    "topic": "Aqueous versus alcoholic KOH",
+    "type": "truefalse",
+    "marks": 2,
+    "prompt": "Hot alcoholic KOH converts bromoethane mainly to ethanol by substitution.",
+    "answer": "False",
+    "justify": true,
+    "autoMarks": 1,
+    "modelAnswer": "Hot alcoholic KOH favours elimination, giving ethene. Hot dilute aqueous KOH favours substitution, giving ethanol.",
+    "markingPoints": [
+      "States that alcoholic KOH gives ethene by elimination.",
+      "States that aqueous KOH gives ethanol by substitution."
+    ],
+    "explanation": "The solvent and concentration change the outcome. Alcoholic KOH is used for dehydrohalogenation; aqueous KOH is used for hydrolysis.",
+    "misconception": "Treating aqueous and alcoholic KOH as interchangeable.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ6",
+    "outcome": "E2",
+    "topic": "Fermentation",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which process produces ethanol from glucose without air?",
+    "options": [
+      { "value": "A", "text": "Fermentation" },
+      { "value": "B", "text": "Dehydration" },
+      { "value": "C", "text": "Halogenation" },
+      { "value": "D", "text": "Combustion" }
+    ],
+    "answer": "A",
+    "explanation": "Fermentation uses yeast enzymes anaerobically: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂.",
+    "misconception": "Confusing fermentation with combustion.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ7",
+    "outcome": "E3",
+    "topic": "Solubility of ethanol",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Which statement about ethanol is correct?",
+    "options": [
+      { "value": "A", "text": "It is insoluble in water." },
+      { "value": "B", "text": "It is miscible with water in all proportions." },
+      { "value": "C", "text": "It is denser than water." },
+      { "value": "D", "text": "It is a solid at room temperature." }
+    ],
+    "answer": "B",
+    "explanation": "Ethanol is miscible with water because the –OH group forms hydrogen bonds with water molecules.",
+    "misconception": "Assuming that an organic compound must be insoluble in water.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ8",
+    "outcome": "E3",
+    "topic": "Boiling-point trend",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Why does the boiling point increase from methanol to ethanol?",
+    "options": [
+      { "value": "A", "text": "The O–H covalent bond becomes stronger." },
+      { "value": "B", "text": "The longer chain gives stronger intermolecular forces." },
+      { "value": "C", "text": "Ethanol has fewer hydrogen atoms." },
+      { "value": "D", "text": "Ethanol is ionic." }
+    ],
+    "answer": "B",
+    "explanation": "A longer carbon chain gives stronger intermolecular forces, so more energy is needed to separate the molecules during boiling.",
+    "misconception": "Saying that boiling breaks the O–H covalent bond.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ9",
+    "outcome": "E3",
+    "topic": "Combustion of ethanol",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "Complete the equation: C₂H₅OH + 3O₂ → 2CO₂ + ______.",
+    "answer": ["3H₂O", "3H2O", "three water", "3 water"],
+    "explanation": "Complete combustion of ethanol gives carbon dioxide and water: C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O.",
+    "misconception": "Balancing the water as H₂O only, which leaves the equation unbalanced.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ10",
+    "outcome": "E3",
+    "topic": "Boiling and intermolecular forces",
+    "type": "truefalse",
+    "marks": 2,
+    "prompt": "Boiling ethanol breaks the covalent O–H bond.",
+    "answer": "False",
+    "justify": true,
+    "autoMarks": 1,
+    "modelAnswer": "Boiling breaks intermolecular forces between ethanol molecules, not the covalent O–H bond. The covalent bonds remain intact in the vapour.",
+    "markingPoints": [
+      "States that boiling breaks intermolecular forces.",
+      "States that the covalent O–H bond is not broken."
+    ],
+    "explanation": "Boiling is a physical change. Intermolecular forces are overcome; covalent bonds are not broken.",
+    "misconception": "Confusing intermolecular forces with covalent bonds.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ11",
+    "outcome": "E4",
+    "topic": "Reaction with sodium",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What is formed when ethanol reacts with sodium?",
+    "options": [
+      { "value": "A", "text": "Ethene and water" },
+      { "value": "B", "text": "Sodium ethoxide and hydrogen" },
+      { "value": "C", "text": "Ethyl acetate and water" },
+      { "value": "D", "text": "Ethanoic acid and hydrogen" }
+    ],
+    "answer": "B",
+    "explanation": "Sodium displaces the O–H hydrogen: 2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂↑.",
+    "misconception": "Writing ethene as the product of the sodium reaction.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ12",
+    "outcome": "E4",
+    "topic": "Esterification",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What is formed when ethanol is warmed with acetic acid and concentrated sulphuric acid?",
+    "options": [
+      { "value": "A", "text": "Ethene" },
+      { "value": "B", "text": "Ethyl acetate" },
+      { "value": "C", "text": "Sodium ethoxide" },
+      { "value": "D", "text": "Ethanal" }
+    ],
+    "answer": "B",
+    "explanation": "Esterification gives ethyl acetate and water: C₂H₅OH + CH₃COOH → CH₃COOC₂H₅ + H₂O.",
+    "misconception": "Writing ethene, which is the dehydration product, not the esterification product.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ13",
+    "outcome": "E4",
+    "topic": "Dehydration at 170°C",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What is the product when ethanol is heated with concentrated sulphuric acid at about 170°C?",
+    "options": [
+      { "value": "A", "text": "Ethane" },
+      { "value": "B", "text": "Ethene" },
+      { "value": "C", "text": "Ethanoic acid" },
+      { "value": "D", "text": "Diethyl ether" }
+    ],
+    "answer": "B",
+    "explanation": "At about 170°C, concentrated sulphuric acid dehydrates ethanol to ethene: C₂H₅OH → C₂H₄ + H₂O.",
+    "misconception": "Writing ethane or diethyl ether; the temperature determines the product.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ14",
+    "outcome": "E4",
+    "topic": "Reactions of ethanol",
+    "type": "multiple",
+    "marks": 2,
+    "prompt": "Which of these are required reactions of ethanol? Select all that apply.",
+    "options": [
+      { "value": "A", "text": "Combustion in oxygen" },
+      { "value": "B", "text": "Action with sodium" },
+      { "value": "C", "text": "Ester formation with acetic acid" },
+      { "value": "D", "text": "Dehydration with concentrated sulphuric acid" },
+      { "value": "E", "text": "Reaction with calcium carbide" }
+    ],
+    "answer": ["A", "B", "C", "D"],
+    "explanation": "The required chemical properties are combustion, action with sodium, ester formation with acetic acid, and dehydration with concentrated sulphuric acid.",
+    "misconception": "Including a reaction that belongs to ethyne preparation rather than ethanol chemistry.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ15",
+    "outcome": "E4",
+    "topic": "Sodium ethoxide",
+    "type": "fill",
+    "marks": 1,
+    "prompt": "Ethanol reacts with sodium to form sodium ______ and hydrogen.",
+    "answer": ["ethoxide", "ethoxide."],
+    "explanation": "The salt is sodium ethoxide, C₂H₅ONa.",
+    "misconception": "Writing sodium ethanoate, which is the salt of acetic acid.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ16",
+    "outcome": "E5",
+    "topic": "Denatured alcohol",
+    "type": "single",
+    "marks": 1,
+    "prompt": "What is denatured alcohol?",
+    "options": [
+      { "value": "A", "text": "Pure ethanol" },
+      { "value": "B", "text": "Ethanol made undrinkable by adding substances such as methanol and pyridine" },
+      { "value": "C", "text": "A different alcohol from ethanol" },
+      { "value": "D", "text": "Ethanol mixed with water only" }
+    ],
+    "answer": "B",
+    "explanation": "Denatured alcohol is ethanol with additives that make it unfit to drink. It is still ethanol chemically.",
+    "misconception": "Thinking that denatured alcohol is a different chemical compound.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ17",
+    "outcome": "E5",
+    "topic": "Spurious alcohol",
+    "type": "single",
+    "marks": 1,
+    "prompt": "Why is spurious alcohol dangerous?",
+    "options": [
+      { "value": "A", "text": "It contains no ethanol." },
+      { "value": "B", "text": "It may contain a dangerous amount of methanol." },
+      { "value": "C", "text": "It is always more expensive." },
+      { "value": "D", "text": "It contains too much water." }
+    ],
+    "answer": "B",
+    "explanation": "Spurious alcohol is illicit liquor that may contain methanol, which can cause blindness or death.",
+    "misconception": "Assuming that all alcohols are safe to drink.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ18",
+    "outcome": "E5",
+    "topic": "Uses of ethanol",
+    "type": "match",
+    "marks": 3,
+    "prompt": "Match each use of ethanol to the property that explains it.",
+    "pairs": [
+      { "left": "Solvent for gums", "answer": "Dissolves many organic substances" },
+      { "left": "Thermometer liquid", "answer": "Low freezing point" },
+      { "left": "Power alcohol", "answer": "Burns as a fuel" }
+    ],
+    "options": [
+      "Dissolves many organic substances",
+      "Low freezing point",
+      "Burns as a fuel",
+      "Is a strong acid",
+      "Is an ionic compound"
+    ],
+    "explanation": "Ethanol dissolves many organic substances, has a low freezing point, and burns as a fuel.",
+    "misconception": "Linking ethanol uses to acidity or ionic behaviour, which do not apply.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ19",
+    "outcome": "E5",
+    "topic": "Denatured versus spurious alcohol",
+    "type": "short",
+    "marks": 3,
+    "prompt": "Distinguish denatured alcohol from spurious alcohol. Include the composition and one risk of each.",
+    "modelAnswer": "Denatured alcohol is ethanol deliberately made undrinkable by adding methanol, pyridine, copper sulphate and a dye; it is used industrially. Spurious alcohol is illicit liquor made by improper distillation and may contain a dangerous, uncontrolled amount of methanol, which can cause blindness or death.",
+    "markingPoints": [
+      "States that denatured alcohol is ethanol with controlled additives.",
+      "States that spurious alcohol is illicit or uncontrolled liquor.",
+      "Identifies methanol as the main danger in spurious alcohol and gives a consequence."
+    ],
+    "explanation": "Both may contain methanol, but the control and purpose are different. Spurious liquor is dangerous because the methanol content is uncontrolled.",
+    "misconception": "Treating denatured and spurious alcohol as the same thing.",
+    "source": "Original practice question"
+  },
+  {
+    "id": "EQ20",
+    "outcome": "E4",
+    "topic": "Preparation and reactions of ethanol",
+    "type": "long",
+    "marks": 5,
+    "prompt": "Describe the laboratory preparation of ethanol from bromoethane and two reactions of ethanol. Include equations and conditions.",
+    "modelAnswer": "Heat bromoethane with hot dilute aqueous KOH: C₂H₅Br + KOH(aq) → C₂H₅OH + KBr. Ethanol reacts with sodium to give sodium ethoxide and hydrogen: 2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂. With acetic acid and concentrated sulphuric acid it forms ethyl acetate and water: C₂H₅OH + CH₃COOH → CH₃COOC₂H₅ + H₂O. With concentrated sulphuric acid at 170°C it dehydrates to ethene: C₂H₅OH → C₂H₄ + H₂O.",
+    "markingPoints": [
+      "Names hot dilute aqueous KOH for hydrolysis.",
+      "Writes the hydrolysis equation.",
+      "Gives one correct reaction equation with its condition.",
+      "Gives a second correct reaction equation with its condition.",
+      "Names the products correctly."
+    ],
+    "explanation": "Aqueous KOH gives substitution to ethanol. The reactions with sodium, acetic acid and concentrated sulphuric acid are the required chemical properties.",
+    "misconception": "Using alcoholic KOH for hydrolysis or omitting the condition for dehydration.",
+    "source": "Original practice question"
+  }
+]

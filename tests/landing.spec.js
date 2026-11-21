@@ -14,6 +14,22 @@ test('root lists the available chapter and links to it', async ({ page }) => {
     'href',
     './chapter-12b.html'
   )
+  await expect(page.getByRole('link', { name: /^Chapter 12C\b/ })).toHaveAttribute(
+    'href',
+    './chapter-12c.html'
+  )
+  await expect(page.getByRole('link', { name: /^Chapter 12D\b/ })).toHaveAttribute(
+    'href',
+    './chapter-12d.html'
+  )
+  await expect(page.getByRole('link', { name: /^Chapter 12E\b/ })).toHaveAttribute(
+    'href',
+    './chapter-12e.html'
+  )
+  await expect(page.getByRole('link', { name: /^Chapter 12F\b/ })).toHaveAttribute(
+    'href',
+    './chapter-12f.html'
+  )
   await link.click()
   await expect(page).toHaveURL(/chapter-1\.html$/)
   await expect(page.locator('#chapter-title')).toHaveText('Organic Chemistry')

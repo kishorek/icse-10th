@@ -1,8 +1,8 @@
-# Organic Chemistry — Chapter 1: Introduction to Organic Compounds
+# Organic Chemistry — Chapter 1 and Chapters 12C–12F Teaching Notes
 
 **Subject:** ICSE Class 10 Chemistry
 **Syllabus:** CISCE ICSE Chemistry (Science Paper 2), examination year 2027
-**Unit:** 9.1 Organic Chemistry — Organic Compounds (introduction)
+**Units:** 9.1 Organic Chemistry — Organic Compounds (introduction); 9(v)–(vii) later organic families
 **Delivery:** Vue 3 + Vite application, built to static `dist/`
 
 ---
@@ -461,7 +461,7 @@ Water is polar; petrol is a non-polar organic solvent. The organic compound is n
 
 **Total:** 39 marks. Objective items are auto-scored; written items use marking-point self-assessment.
 
-The full Chapter 1 question bank with answers, explanations, marking points and misconceptions is in `src/data/questions/chapter-1.json`. The Chapter 12A and 12B banks live in `src/data/questions/chapter-12a.json` and `src/data/questions/chapter-12b.json`. `npm run export:questions` writes all three banks to `exports/chapter-1-questions.json`, `exports/chapter-12a-questions.json` and `exports/chapter-12b-questions.json`. `npm run validate:questions` checks those exports against the chapter question schema, and the exports use the schema's field names.
+The full Chapter 1 question bank with answers, explanations, marking points and misconceptions is in `src/data/questions/chapter-1.json`. The Chapter 12A–12F banks live in `src/data/questions/`. `npm run export:questions` writes all seven exports, and `npm run validate:questions` checks them against the chapter question schema.
 
 ---
 
@@ -473,3 +473,171 @@ The full Chapter 1 question bank with answers, explanations, marking points and 
 - No past-paper question is reproduced or claimed.
 - The chapter is an introduction, not a complete treatment of the Organic Chemistry unit.
 - Progress is stored locally in the browser only.
+
+---
+
+# Chapters 12C–12F — Alkenes, Alkynes, Alcohols and Carboxylic Acids
+
+**Scope:** CISCE ICSE Chemistry 2027, Unit 9(v)–(vii).
+**Source:** supplied scanned pages 213–228, filed at `content/chemistry/chapter-12c-12f/source/12C.pdf`.
+**Production record:** gate approvals, terminology decisions and the approved visual plan are recorded in `content/chemistry/chapter-12c-12f/chapter-content.md`.
+
+## 15. Chapter 12C — Hydrocarbons: Alkenes
+
+### Scope
+
+Alkenes are unsaturated aliphatic hydrocarbons containing one C=C bond; general formula CₙH₂ₙ. Required content: ethene as the example, preparation by dehydration and dehydrohalogenation, addition with H₂/Cl₂/Br₂/I₂, and uses. Ozonolysis, polymerisation and KMnO₄ oxidation are enrichment.
+
+### Lessons and key content
+
+1. **The alkene family.** Definition, CₙH₂ₙ, ethene/propene/butene, unsaturation, cracking as a source, but-1-ene and but-2-ene as position isomers, 2-methylpropene as a chain isomer.
+2. **Ethene: structure and preparation.** Planar structure, 120° angles, dehydration with concentrated H₂SO₄ at 170°C or Al₂O₃ at 300°C, dehydrohalogenation with hot alcoholic KOH, collection over water, purification with NaOH.
+3. **Addition reactions.** Hydrogenation over Ni/Pt/Pd; addition of Cl₂, Br₂ and I₂ to give saturated dihalogeno compounds; bromine-in-CCl₄ test; water and HCl addition as enrichment.
+4. **Combustion, uses and testing.** Complete combustion to CO₂ and H₂O, sooty flame in limited air, polythene/ethanol/ripening/epoxyethane/oxy-ethylene uses, bromine-water test.
+
+### Definitions and equations
+
+- Alkene: unsaturated aliphatic hydrocarbon with one C=C bond; CₙH₂ₙ.
+- Addition: atoms add across a multiple bond, giving one product.
+- Dehydration: C₂H₅OH → C₂H₄ + H₂O (conc. H₂SO₄, 170°C).
+- Dehydrohalogenation: C₂H₅Br + KOH → C₂H₄ + KBr + H₂O (alcoholic KOH).
+- Hydrogenation: C₂H₄ + H₂ → C₂H₆ (Ni, 200°C or Pt/Pd).
+- Bromination: C₂H₄ + Br₂ → C₂H₄Br₂.
+- Complete combustion: C₂H₄ + 3O₂ → 2CO₂ + 2H₂O.
+
+### Memory aids
+
+- Acrostic: “Every pupil brings” → Ethene, Propene, Butene.
+- Pattern: “Add the pair, lose the double bond.”
+- Contrast: “Ethene clears bromine; ethane does not.”
+
+### Assessment
+
+20 original practice questions, 37 marks. Outcomes C1–C4. Includes single choice, multiple select, fill, matching, true/false with justification, short answer and long answer.
+
+## 16. Chapter 12D — Hydrocarbons: Alkynes
+
+### Scope
+
+Alkynes are unsaturated aliphatic hydrocarbons containing one C≡C bond; general formula CₙH₂ₙ₋₂. Required content: ethyne as the example, preparation from calcium carbide and 1,2-dibromoethane, addition with H₂/Cl₂/Br₂/I₂, combustion, uses and distinguishing tests. HCl and ozone reactions are enrichment; cuprous chloride and silver nitrate are extension tests.
+
+### Lessons and key content
+
+1. **The alkyne family.** Definition, CₙH₂ₙ₋₂, ethyne/propyne/butyne, sources, but-1-yne and but-2-yne position isomers.
+2. **Ethyne: structure and preparation.** Linear H–C≡C–H, calcium carbide + water, purification, 1,2-dibromoethane + alcoholic KOH, safety with air.
+3. **Addition reactions.** Stepwise hydrogenation to ethene then ethane; stepwise bromination to C₂H₂Br₂ then C₂H₂Br₄; HCl and ozone enrichment.
+4. **Combustion, uses and tests.** Sooty/brilliant flame, oxy-acetylene welding, ripening, polymers, bromine/KMnO₄ tests, red copper acetylide and white silver acetylide tests.
+
+### Definitions and equations
+
+- Alkyne: unsaturated aliphatic hydrocarbon with one C≡C bond; CₙH₂ₙ₋₂.
+- Preparation: CaC₂ + 2H₂O → Ca(OH)₂ + C₂H₂↑.
+- Preparation: C₂H₄Br₂ + 2KOH → C₂H₂ + 2KBr + 2H₂O (alcoholic KOH).
+- Hydrogenation: C₂H₂ + H₂ → C₂H₄; C₂H₄ + H₂ → C₂H₆.
+- Bromination: C₂H₂ + Br₂ → C₂H₂Br₂; C₂H₂Br₂ + Br₂ → C₂H₂Br₄.
+- Complete combustion: 2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O.
+- Copper acetylide: red precipitate with ammoniacal cuprous chloride.
+- Silver acetylide: white precipitate with ammoniacal silver nitrate.
+
+### Memory aids
+
+- Acrostic: “Every pupil brings” → Ethyne, Propyne, Butyne.
+- Staircase: “Triple, double, single.”
+- Precipitates: “Red copper, white silver.”
+
+### Assessment
+
+20 original practice questions, 37 marks. Outcomes D1–D4.
+
+## 17. Chapter 12E — Alcohols
+
+### Scope
+
+Ethanol: preparation by hydrolysis of an alkyl halide; physical properties (nature, solubility, density, boiling points); chemical properties (combustion, sodium, ester formation with acetic acid, dehydration with concentrated sulphuric acid); denatured/methylated/spurious alcohol; uses. Fermentation and industrial hydration are enrichment.
+
+### Lessons and key content
+
+1. **The alcohol family.** Hydroxyl group, CₙH₂ₙ₊₁OH, methanol/ethanol/propanol/butanol, mono/di/trihydric classification.
+2. **Ethanol: occurrence and preparation.** Fermentation as enrichment, hydrolysis of an alkyl halide with hot dilute aqueous KOH, industrial hydration as enrichment.
+3. **Physical properties and combustion.** Colourless volatile liquid, miscible with water, density 0.79 g/cm³, boiling point 78.3°C, boiling-point trend, complete combustion.
+4. **Reactions of ethanol.** Sodium → sodium ethoxide + H₂; acetic acid → ethyl acetate + water; conc. H₂SO₄ at 170°C → ethene + water; oxidation as enrichment.
+5. **Denatured alcohol, spurious alcohol and uses.** Methylated spirit composition, methanol danger, solvent/fuel/preservative/manufacture uses.
+
+### Definitions and equations
+
+- Alcohol: organic compound with –OH attached to carbon.
+- Hydrolysis: C₂H₅Br + NaOH(aq) → C₂H₅OH + NaBr.
+- Fermentation: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ (yeast enzymes, 37°C, anaerobic).
+- Combustion: C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O.
+- Sodium: 2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂↑.
+- Esterification: C₂H₅OH + CH₃COOH → CH₃COOC₂H₅ + H₂O (conc. H₂SO₄).
+- Dehydration: C₂H₅OH → C₂H₄ + H₂O (conc. H₂SO₄, 170°C).
+
+### Memory aids
+
+- “Mono, di, tri: count the OH.”
+- “Aqueous substitutes; alcoholic eliminates.”
+- “Denatured is controlled; spurious is not.”
+
+### Assessment
+
+20 original practice questions, 33 marks. Outcomes E1–E5.
+
+## 18. Chapter 12F — Carboxylic Acids
+
+### Scope
+
+Acetic acid: structure; physical properties (odour/vinegar, glacial acetic acid); chemical properties (litmus, alkalis, alcohol/esterification); uses. Preparation routes and extra acid reactions are enrichment.
+
+### Lessons and key content
+
+1. **The carboxylic acid family.** Carboxyl group –COOH, CₙH₂ₙ₊₁COOH, methanoic/ethanoic/propanoic acids, mono/di classification, IUPAC naming.
+2. **Acetic acid: structure and physical properties.** CH₃COOH, acidic –OH hydrogen, vinegar as 4–5% solution, glacial acetic acid at 17°C, pungent smell, hygroscopic, miscible.
+3. **Acidic reactions and esterification.** Blue litmus red, neutralisation with NaOH, carbonate/bicarbonate CO₂ as enrichment, esterification with ethanol.
+4. **Preparation context, tests and uses.** Ethyne/ethanol routes as enrichment, FeCl₃ test as enrichment, vinegar/solvent/medicine/dyes/perfumes/cellulose acetate uses.
+
+### Definitions and equations
+
+- Carboxylic acid: organic acid containing –COOH.
+- Vinegar: 4–5% aqueous acetic acid.
+- Glacial acetic acid: pure acetic acid, freezes at about 17°C.
+- Litmus: CH₃COOH ⇌ CH₃COO⁻ + H⁺.
+- Neutralisation: CH₃COOH + NaOH → CH₃COONa + H₂O.
+- Carbonate: 2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂↑.
+- Esterification: CH₃COOH + C₂H₅OH → CH₃COOC₂H₅ + H₂O (conc. H₂SO₄).
+
+### Memory aids
+
+- “Alkane minus e, plus oic acid.”
+- “Glacial = ice-like, not icy source.”
+- “Acid plus alcohol, ester plus water.”
+
+### Assessment
+
+20 original practice questions, 36 marks. Outcomes F1–F4.
+
+## 19. Cross-chapter syllabus coverage
+
+| Unit | Chapter | Lessons | Assessment |
+|---|---|---|---|
+| 9(v) alkenes | 12C | 4 | 20 questions / 37 marks |
+| 9(v) alkynes | 12D | 4 | 20 questions / 37 marks |
+| 9(vi) alcohols | 12E | 5 | 20 questions / 33 marks |
+| 9(vii) carboxylic acids | 12F | 4 | 20 questions / 36 marks |
+
+Supporting outcomes 9(ii)–(iv) are reinforced through structural formulae, chain/position isomerism, homologous-series patterns and IUPAC names in every chapter.
+
+## 20. Implementation notes
+
+- The four chapters use a data-driven `LessonRenderer` with shared generic visuals and labs.
+- Every lesson has at least one purpose-built visual and one memory hook with an explicit cue-to-content mapping.
+- Anime.js v4 timelines are used for preparation flows, addition mechanisms, reaction maps and esterification. They support play, pause and restart, render the final state under `prefers-reduced-motion`, and are reverted on unmount.
+- All questions are original practice questions. No board past-paper question is reproduced or claimed.
+- No textbook page mapping is claimed in student-facing prose. The supplied scans are disclosed in `chapter-sources.md`.
+
+## 21. Source and limitations for Chapters 12C–12F
+
+- Supplied scans cover pages 213–228 of an unidentified textbook edition. Publisher and edition were not supplied.
+- CISCE ICSE Chemistry 2027 Unit 9(v)–(vii) was used as the scope authority. The official CISCE PDF returned HTTP 403 to automated retrieval; the scope was cross-checked against current 2026-27 syllabus summaries.
+- The mixed exercise and year-labelled pages in the PDF were not used as past-paper sources.
+- Chemistry accuracy was checked by reading the rendered chapters and comparing equations, names and conditions with the supplied pages. It was not checked by an independent subject expert.
