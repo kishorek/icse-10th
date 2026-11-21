@@ -341,3 +341,15 @@ The built `dist/` was served with `npm run preview` on port 4174 and checked wit
 ## A11. Physics delivery status
 
 Physics Chapter 1 is implemented to the approved plan: five lessons, twelve purpose-built visuals (five interactive labs, five animations, one comparison toggle and one static diagram), fifteen quick checks, a memory workshop, a revision centre, flashcards and a 24-question/50-mark original practice assessment. It builds, validates and passes the automated browser suite. The limitations in section A9 are disclosed rather than claimed as verified.
+
+## A12. Deployment
+
+- Commit `d80dcda` (`feat: add physics chapter 1 force`) pushed to `main`.
+- GitHub Actions workflow `Deploy to GitHub Pages` run `44876029838` completed successfully: build, Pages configuration, artifact upload and deploy all passed.
+- Live checks at https://kishorek.github.io/icse-10th/:
+  - Home page and `chapter-physics-1.html` both return HTTP 200 with the expected titles.
+  - Home page shows 8 chapter cards; the Physics 1 card links to `./chapter-physics-1.html`.
+  - The physics page shows the H1 “Force” and all 5 lesson sections.
+  - The torque bench changes the moment when its direction control is used.
+  - Reduced motion renders the final line-of-action state.
+  - No page-level overflow at 1280 px and no console, page or request errors.
