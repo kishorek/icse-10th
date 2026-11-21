@@ -539,3 +539,15 @@ Text minutes use the 150 words per minute rule on lesson prose, definitions, tab
 ## B10. Delivery status
 
 Physics Chapter 2 is implemented to the approved plan: seven lessons, 22 purpose-built visuals, 21 lesson quick checks, seven memory hooks, a memory workshop with 22 flashcards, a revision centre and a 24-question/53-mark original practice assessment. It builds, exports and validates with the full project, passes all 81 browser tests, and passes the production-preview checks recorded above. The limitations in section B9 are disclosed rather than claimed as verified.
+
+## B11. Deployment
+
+- Commit `5d1425c` (`feat: add physics chapter 2 work energy and power`) pushed to `main`.
+- GitHub Actions workflow `Deploy to GitHub Pages` run `44898979453` completed successfully: build, pages configuration, artifact upload and deploy all passed.
+- Live checks at https://kishorek.github.io/icse-10th/:
+  - Home page and `chapter-physics-2.html` both return HTTP 200.
+  - The home page shows one Physics 2 card linking to `./chapter-physics-2.html`.
+  - Clicking the card opens the chapter with the H1 “Work, Energy and Power”.
+  - The live page renders all 22 lesson visuals.
+  - Page-level overflow is 0 at 1280 px and 360 px.
+  - No console, page or failed-request errors were recorded during the live check.
