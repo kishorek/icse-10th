@@ -1,4 +1,4 @@
-# QA Report — Organic Chemistry Chapters 1 and 12A–12F
+# QA Report — ICSE Class 10 Science: Physics 1 Force and Chemistry 1, 12A–12F
 
 **Date:** 21 November 2026
 **Chapters:** ICSE Class 10 Chemistry — Introduction to Organic Compounds, Organic Compounds (12A), Hydrocarbons: Alkanes (12B), Hydrocarbons: Alkenes (12C), Hydrocarbons: Alkynes (12D), Alcohols (12E), Carboxylic Acids (12F)
@@ -209,3 +209,135 @@ Assessment, revision centre and memory workshop are excluded from the per-lesson
 ## 11. Delivery status
 
 The seven-chapter application builds successfully, produces eight HTML entries, passes all 57 automated browser tests, validates all 154 exported questions, passed production-preview checks for navigation, deep links, progress isolation, assessment reset, responsive overflow, labs and lesson media, and is deployed at https://kishorek.github.io/icse-10th/. The limitations above are disclosed rather than claimed as verified.
+
+
+---
+
+# Addendum — Physics Chapter 1 Force (21 November 2026)
+
+This addendum records the work and verification for the new Physics Chapter 1. It supersedes the earlier seven-chapter totals where the two differ.
+
+## A1. Gates and approvals
+
+| Gate | Result | Date |
+|---|---|---|
+| GATE 1 — lesson list | Approved | 21 November 2026 |
+| GATE 2 — complex-term analysis | Approved | 21 November 2026 |
+| GATE 3 — visual and animation plan | Approved | 21 November 2026 |
+| Skipped gates | None | — |
+
+The approved versions are recorded in `content/physics/chapter-1-force/chapter-content.md`. No lesson, term or visual outside the approved lists was added.
+
+## A2. Source intake
+
+- Uploaded file: `selina-class-10-physics-chapter-1-force.pdf`, 18 scanned pages, no text layer.
+- Filed unmodified at `content/physics/chapter-1-force/source/`.
+- Read page by page from 110 dpi page images.
+- Scope cross-checked against the chapter's printed syllabus box and current 2026-27 CISCE Physics syllabus summaries.
+- Edition and publisher are not stated in the scan, so no page mapping is claimed.
+
+## A3. Build and production output
+
+**Commands:** `npm run build`, `npm run export:questions`, `npm run validate:questions`.
+
+**Results:** passed.
+
+- `dist/` contains nine HTML entries: `index.html`, `chapter-physics-1.html`, `chapter-1.html`, `chapter-12a.html`, `chapter-12b.html`, `chapter-12c.html`, `chapter-12d.html`, `chapter-12e.html`, `chapter-12f.html`.
+- `npm run export:questions` exported 178 questions across 8 chapters, including 24 for Physics.
+- `npm run validate:questions` validated all 8 exports, including `exports/chapter-physics-1-questions.json` (24 questions, 50 marks).
+
+## A4. Automated browser tests
+
+**Command:** `npx playwright test` against the Vite development server with Chromium.
+
+**Result:** 65 passed, 0 failed (2.4 minutes).
+
+Physics-specific coverage (8 tests, all passed):
+
+1. Chapter loads with all five approved lessons and key content.
+2. Moment bench recalculates M = F × d, changes with angle, and switches direction.
+3. Couple and equilibrium simulations respond to all tested controls.
+4. Metre-rule lab balances and unbalances; see-saw steps through the calculation.
+5. Centre-of-gravity selector and plumb-line animation work.
+6. Tangent velocity, removal of centripetal force and the two observer frames work.
+7. Reduced motion renders the final state for the line-of-action animation.
+8. Memory, revision, assessment submission, persistence and progress milestones work.
+
+The rest of the suite covers the seven chemistry chapters, landing page, chapter isolation, deep links, chapter navigation and no page-level overflow at 360, 768 and 1280 px. The physics page is included in the overflow test.
+
+## A5. Keyboard and reduced-motion checks
+
+- Keyboard: focused the force range input on the torque bench and pressed ArrowRight twice. The value moved from 20 N to 30 N and the moment changed from 12.0 to 18.0 N m. Focused the equilibrium “Couple” button and pressed Enter; the verdict changed to “spins about its centre”. Native range inputs, buttons and selects provide the keyboard path.
+- Reduced motion: Playwright `emulateMedia({ reducedMotion: 'reduce' })` reloaded the page; the line-of-action visual rendered its final state and reported reduced motion. All other animations share the same pattern (render final state, do not loop) and were code-reviewed for it.
+
+## A6. Visual review
+
+Desktop captures at 1280 px and mobile captures at 360 px were taken of all twelve physics visuals and inspected. Issues found and fixed:
+
+- Couple summary text and the couple-arm label overlapped the wheel; the summary moved below the diagram and the arm label moved outside the wheel.
+- Equilibrium force labels sat on the body; they moved above and below the body.
+- See-saw child boxes overlapped; the horizontal scale and box width were adjusted.
+- Circular-motion arrowheads were oversized after using stroked markers; markers were switched to `userSpaceOnUse` with corrected sizes.
+- The velocity arrow collided with the heading; the circle moved down and the arrow shortened.
+- The centripetal escape path left the viewBox; the release angle and escape length were changed so the straight path stays visible.
+- On 360 px, grid min-content sizing made lab controls extend past the viewport; `grid-template-columns: minmax(0, 1fr)` on the visual roots keeps controls wrapped while the diagram itself scrolls inside its container.
+
+Final checked states: mobile controls are fully visible, the diagrams scroll inside their own containers, and page-level overflow remains 0 at 360, 768 and 1280 px.
+
+## A7. Text/visual learning-time budget
+
+| Lesson | Text-led minutes | Visual-led minutes | Visual share | Within 35-45%? |
+|---|---:|---:|---:|---|
+| 1 | 12 | 8 | 40.0% | Yes |
+| 2 | 12 | 7.5 | 38.5% | Yes |
+| 3 | 14 | 10 | 41.7% | Yes |
+| 4 | 12 | 8 | 40.0% | Yes |
+| 5 | 13 | 9 | 40.9% | Yes |
+| **Total** | **63** | **42.5** | **40.3%** | Yes |
+
+Memory workshop, revision centre and assessment are excluded, as the skill specifies. Each lesson includes guided “Try this” tasks so the interactive time is instructional, not passive watching.
+
+## A8. Coverage map summary
+
+| Syllabus point | Lesson | Assessment questions |
+|---|---|---|
+| Translational and rotational motion | 1 | PQ1, PQ4 |
+| Moment of force, units, perpendicular distance, direction | 1 | PQ1–PQ5 |
+| Couple, couple arm, moment of couple | 2 | PQ6–PQ7 |
+| Equilibrium, static and dynamic, two conditions | 2 | PQ8–PQ9 |
+| Principle of moments and verification | 3 | PQ10, PQ13–PQ14 |
+| Numerical problems on moments | 3 | PQ3, PQ11–PQ12 |
+| Centre of gravity, regular bodies, plumb line | 4 | PQ15–PQ18 |
+| Uniform circular motion, speed vs velocity | 5 | PQ19–PQ20 |
+| Centripetal and centrifugal force | 5 | PQ21–PQ24 |
+
+## A9. Physics limitations and unverified items
+
+1. The official CISCE Physics PDF could not be fetched by the build environment (HTTP 403); scope was checked against the supplied chapter's syllabus box and current syllabus summaries.
+2. The scanned textbook states no edition or publication year, so no page mapping is claimed.
+3. Written responses are self-marked against marking points; there is no teacher or backend marking.
+4. Progress is localStorage only and is not synchronised across devices.
+5. Chromium only; Firefox and Safari were not tested.
+6. No physical phone or tablet testing; mobile checks used a 360 px emulated viewport.
+7. No NVDA/JAWS/VoiceOver or automated axe pass.
+8. Reduced motion was explicitly tested on the line-of-action animation; the other animations were checked in code and share the same pattern.
+9. The animated diagrams are teaching schematics, not scale-accurate engineering drawings.
+10. Print styles were not printed or PDF-tested.
+
+## A10. Production preview verification
+
+The built `dist/` was served with `npm run preview` on port 4174 and checked with Playwright.
+
+| Check | Result |
+|---|---|
+| All nine pages return HTTP 200 | Passed (`index`, physics 1, chemistry 1, 12A–12F) |
+| Titles match the intended pages | Passed |
+| Deep link `chapter-physics-1.html#lesson-5` shows lesson 5 | Passed |
+| Torque bench updates the moment when the distance slider changes | Passed (`24.0 N m` at 1.2 m with 20 N) |
+| Reduced motion renders the line-of-action final state | Passed |
+| Page-level overflow at 360, 768 and 1280 px | `0` in every case |
+| Console errors, page errors and failed requests | None |
+
+## A11. Physics delivery status
+
+Physics Chapter 1 is implemented to the approved plan: five lessons, twelve purpose-built visuals (five interactive labs, five animations, one comparison toggle and one static diagram), fifteen quick checks, a memory workshop, a revision centre, flashcards and a 24-question/50-mark original practice assessment. It builds, validates and passes the automated browser suite. The limitations in section A9 are disclosed rather than claimed as verified.

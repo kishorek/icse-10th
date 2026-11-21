@@ -2,6 +2,19 @@ import fs from 'node:fs'
 
 const chapters = [
   {
+    id: 'chapter-physics-1',
+    subject: 'Physics',
+    source: 'src/data/questions/chapter-physics-1.json',
+    syllabus: 'CISCE ICSE Physics 2027, Unit 1, Force',
+    outcomes: {
+      P1: 'Moment of a force and the factors that change it',
+      P2: 'Couples, equilibrium and the conditions for equilibrium',
+      P3: 'Principle of moments, its verification and numerical problems',
+      P4: 'Centre of gravity, regular bodies and the plumb-line method',
+      P5: 'Uniform circular motion, centripetal force and centrifugal force'
+    }
+  },
+  {
     id: 'chapter-1',
     source: 'src/data/questions/chapter-1.json',
     syllabus: 'CISCE ICSE Chemistry 2027, Unit 9.1',
@@ -122,7 +135,7 @@ function optionObjects(question) {
 function transform(question, chapter) {
   const base = {
     id: question.id,
-    subject: 'Chemistry',
+    subject: chapter.subject || 'Chemistry',
     topic: question.topic,
     syllabus_reference: chapter.syllabus,
     learning_outcome: chapter.outcomes[question.outcome],

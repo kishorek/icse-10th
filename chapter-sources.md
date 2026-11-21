@@ -1,6 +1,6 @@
 # Chapter Sources and Verification Notes
 
-**Chapters:** ICSE Class 10 Chemistry — Organic Chemistry, Chapters 1 and 12A–12F
+**Chapters:** ICSE Class 10 Science — Physics Chapter 1 Force, and Chemistry Chapters 1 and 12A–12F
 **Examination year:** 2027
 **Access date:** 21 November 2026
 
@@ -151,3 +151,37 @@ The exports in `exports/` are generated from the internal banks in `src/data/que
 - The mixed and year-labelled exercise pages in the supplied PDF were not used as past-paper sources; all questions are original practice questions.
 - No past-paper source was used.
 - Chemistry accuracy was checked by reading the rendered chapters and comparing equations, names and conditions with the supplied pages; it was not checked by an independent subject expert.
+
+
+---
+
+## 9. Physics Chapter 1 — Force
+
+**Official scope:** CISCE ICSE Physics 2027, Unit 1 Force, Work, Power and Energy, the Force section only.
+
+- Turning forces concept; moment of a force, also called torque; SI and CGS units.
+- Common examples: door, steering wheel, bicycle pedal, spanner.
+- Clockwise and anticlockwise moments.
+- Couple, couple arm and moment of couple.
+- Equilibrium of bodies, static and dynamic; the two conditions for equilibrium.
+- Principle of moments and its verification with a metre rule, support, spring balances and slotted weights.
+- Centre of gravity: definition, qualitative location for regular bodies, and the plumb-line method for an irregular lamina.
+- Uniform circular motion; speed versus velocity; centripetal and centrifugal force.
+
+**Supplied source:** `content/physics/chapter-1-force/source/selina-class-10-physics-chapter-1-force.pdf` — 18 scanned pages of Selina ICSE Class 10 Physics Chapter 1 Force. The PDF has no text layer, so every page was read from a rendered page image. The scan states no edition or publication year, and no page mapping is claimed.
+
+**Verification notes:**
+
+- The syllabus box printed in the supplied chapter matches the 2027 Unit 1 Force scope for the topics used here.
+- The official CISCE site returned HTTP 403 to automated retrieval. The scope was cross-checked against the supplied chapter's syllabus box and current 2026-27 syllabus summaries.
+- The supplied chapter also restates Class IX prerequisites (force as the rate of change of momentum, the newton and kgf). These are used only as prerequisite context, not as new teaching content.
+- Centre of gravity is treated qualitatively, as required by the syllabus. The chapter does not derive centroid formulae beyond the standard positions listed.
+- All 24 assessment questions and 15 quick checks are original practice questions. No textbook exercise or past-paper question was copied.
+
+**Assessment bank:**
+
+| Chapter | Questions | Marks |
+|---|---:|---:|
+| Physics 1 | 24 | 50 |
+
+**Physics source limitation:** the official CISCE Physics PDF could not be downloaded directly, and the textbook edition is unknown. The limitation is recorded again in `QA-REPORT.md`.

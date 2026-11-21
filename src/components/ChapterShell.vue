@@ -91,7 +91,7 @@ onBeforeUnmount(() => {
 
   <header class="site-header">
     <div class="site-header__inner">
-      <span class="brand">ICSE Class 10 · Chemistry</span>
+      <span class="brand">ICSE Class 10 · {{ chapter.subjectLabel || 'Chemistry' }}</span>
       <span class="header-meta">{{ chapter.title }} · {{ chapter.label }}</span>
       <nav class="chapter-switcher" aria-label="Chapter switcher">
         <a href="./">All chapters</a>
@@ -151,7 +151,7 @@ onBeforeUnmount(() => {
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>ICSE Class 10 Chemistry · {{ chapter.title }} {{ chapter.label }}</span>
+      <span>ICSE Class 10 {{ chapter.subjectLabel || 'Chemistry' }} · {{ chapter.title }} {{ chapter.label }}</span>
       <span>Original practice questions. Not a board past paper.</span>
     </div>
   </footer>

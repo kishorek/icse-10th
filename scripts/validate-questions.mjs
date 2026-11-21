@@ -8,6 +8,7 @@ const schema = JSON.parse(
   )
 )
 const files = [
+  'exports/chapter-physics-1-questions.json',
   'exports/chapter-1-questions.json',
   'exports/chapter-12a-questions.json',
   'exports/chapter-12b-questions.json',

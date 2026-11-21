@@ -1,9 +1,13 @@
 import { expect, test } from '@playwright/test'
 
-test('root lists the available chapter and links to it', async ({ page }) => {
+test('root lists the available chapters and links to them', async ({ page }) => {
   await page.goto('/')
-  await expect(page).toHaveTitle(/Organic Chemistry \| ICSE Class 10/)
-  await expect(page.getByRole('heading', { level: 1, name: 'Organic Chemistry' })).toBeVisible()
+  await expect(page).toHaveTitle(/Interactive Science \| ICSE Class 10/)
+  await expect(page.getByRole('heading', { level: 1, name: 'Interactive Science' })).toBeVisible()
+  await expect(page.getByRole('link', { name: /^Physics 1\b/ })).toHaveAttribute(
+    'href',
+    './chapter-physics-1.html'
+  )
   const link = page.getByRole('link', { name: /^Chapter 1\b/ })
   await expect(link).toHaveAttribute('href', './chapter-1.html')
   await expect(page.getByRole('link', { name: /^Chapter 12A\b/ })).toHaveAttribute(

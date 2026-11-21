@@ -14,6 +14,19 @@ import UsesExplorer from '../visuals/generic/UsesExplorer.vue'
 import PropertyTrendVisual from '../visuals/generic/PropertyTrendVisual.vue'
 import ReactionMapVisual from '../visuals/generic/ReactionMapVisual.vue'
 
+import MomentBench from '../visuals/physics/MomentBench.vue'
+import MomentArmVisual from '../visuals/physics/MomentArmVisual.vue'
+import CoupleVisual from '../visuals/physics/CoupleVisual.vue'
+import EquilibriumSim from '../visuals/physics/EquilibriumSim.vue'
+import MetreRuleLab from '../visuals/physics/MetreRuleLab.vue'
+import SeesawVisual from '../visuals/physics/SeesawVisual.vue'
+import SpringRuleVisual from '../visuals/physics/SpringRuleVisual.vue'
+import CentreOfGravityLab from '../visuals/physics/CentreOfGravityLab.vue'
+import PlumbLineVisual from '../visuals/physics/PlumbLineVisual.vue'
+import CircularVelocityVisual from '../visuals/physics/CircularVelocityVisual.vue'
+import CentripetalLab from '../visuals/physics/CentripetalLab.vue'
+import RotatingFramesVisual from '../visuals/physics/RotatingFramesVisual.vue'
+
 import IsomerLab from '../labs/IsomerLab.vue'
 import PreparationLab from '../labs/PreparationLab.vue'
 import TestBenchLab from '../labs/TestBenchLab.vue'
@@ -33,7 +46,19 @@ const visualMap = {
   TestBenchVisual,
   UsesExplorer,
   PropertyTrendVisual,
-  ReactionMapVisual
+  ReactionMapVisual,
+  MomentBench,
+  MomentArmVisual,
+  CoupleVisual,
+  EquilibriumSim,
+  MetreRuleLab,
+  SeesawVisual,
+  SpringRuleVisual,
+  CentreOfGravityLab,
+  PlumbLineVisual,
+  CircularVelocityVisual,
+  CentripetalLab,
+  RotatingFramesVisual
 }
 
 const labMap = {

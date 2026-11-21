@@ -1780,6 +1780,25 @@ main {
   font-size: clamp(2rem, 5vw, 3.4rem);
 }
 
+.chapter-group + .chapter-group {
+  margin-top: 2.25rem;
+}
+
+.subject-heading {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 1.15rem + 0.9vw, 1.85rem);
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+
+.group-note {
+  max-width: 70ch;
+  margin: 0.3rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
 .chapter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

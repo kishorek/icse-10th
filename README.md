@@ -1,26 +1,34 @@
-# ICSE Class 10 Chemistry — Organic Chemistry
+# ICSE Class 10 Science — Physics and Organic Chemistry
 
-Seven interactive Vue 3 chapters for the CISCE ICSE Chemistry syllabus, examination year 2027. The set moves from the introduction to organic compounds, through structure and naming, to alkanes, alkenes, alkynes, alcohols and carboxylic acids.
+Eight interactive Vue 3 chapters for the CISCE ICSE examination year 2027: one Physics chapter on Force, plus seven organic chemistry chapters from the introduction through alkanes, alkenes, alkynes, alcohols and carboxylic acids.
 
 **Live site:** https://kishorek.github.io/icse-10th/
 
 ## Chapters and URLs
 
-| Chapter | Title | URL | Scope |
-|---|---|---|---|
-| Chapter 1 | Introduction to Organic Compounds | `chapter-1.html` | Unit 9(i): organic compounds, carbon's tetravalency and catenation, organic vs inorganic, examples and importance |
-| Chapter 12A | Organic Compounds | `chapter-12a.html` | Unit 9(ii)–(iv): sources, carbon's bonding, hydrocarbon families, functional groups, homologous series, IUPAC naming and isomerism |
-| Chapter 12B | Hydrocarbons: Alkanes | `chapter-12b.html` | Unit 9(v), alkanes only: the alkane family, methane and ethane, preparation, properties, combustion, substitution and uses |
-| Chapter 12C | Hydrocarbons: Alkenes | `chapter-12c.html` | Unit 9(v), alkenes: the alkene family, ethene structure and preparation, addition, combustion, uses and tests |
-| Chapter 12D | Hydrocarbons: Alkynes | `chapter-12d.html` | Unit 9(v), alkynes: the alkyne family, ethyne structure and preparation, stepwise addition, combustion, uses and tests |
-| Chapter 12E | Alcohols | `chapter-12e.html` | Unit 9(vi): the alcohol family, ethanol preparation, properties, reactions, denatured/spurious alcohol and uses |
-| Chapter 12F | Carboxylic Acids | `chapter-12f.html` | Unit 9(vii): the carboxyl family, acetic acid structure and properties, acid reactions, esterification and uses |
+| Chapter | Subject | Title | URL | Scope |
+|---|---|---|---|---|---|
+| Physics 1 | Physics | Force | `chapter-physics-1.html` | Unit 1 Force: moment of force, couple, equilibrium, principle of moments, centre of gravity and uniform circular motion |
+| Chapter 1 | Chemistry | Introduction to Organic Compounds | `chapter-1.html` | Unit 9(i): organic compounds, carbon's tetravalency and catenation, organic vs inorganic, examples and importance |
+| Chapter 12A | Chemistry | Organic Compounds | `chapter-12a.html` | Unit 9(ii)–(iv): sources, carbon's bonding, hydrocarbon families, functional groups, homologous series, IUPAC naming and isomerism |
+| Chapter 12B | Chemistry | Hydrocarbons: Alkanes | `chapter-12b.html` | Unit 9(v), alkanes only: the alkane family, methane and ethane, preparation, properties, combustion, substitution and uses |
+| Chapter 12C | Chemistry | Hydrocarbons: Alkenes | `chapter-12c.html` | Unit 9(v), alkenes: the alkene family, ethene structure and preparation, addition, combustion, uses and tests |
+| Chapter 12D | Chemistry | Hydrocarbons: Alkynes | `chapter-12d.html` | Unit 9(v), alkynes: the alkyne family, ethyne structure and preparation, stepwise addition, combustion, uses and tests |
+| Chapter 12E | Chemistry | Alcohols | `chapter-12e.html` | Unit 9(vi): the alcohol family, ethanol preparation, properties, reactions, denatured/spurious alcohol and uses |
+| Chapter 12F | Chemistry | Carboxylic Acids | `chapter-12f.html` | Unit 9(vii): the carboxyl family, acetic acid structure and properties, acid reactions, esterification and uses |
 
 The root page (`index.html`) is a chapter list with local-progress summaries. The chapters are separate HTML pages built by Vite.
 
 ## What is included
 
-**Chapter 1**
+**Physics 1 — Force**
+
+- Five lessons: moment of force, couples and equilibrium, the principle of moments, centre of gravity, and uniform circular motion.
+- Twelve purpose-built visuals: five interactive labs, five teaching animations, one comparison toggle and one static diagram — a door torque bench, line-of-action animation, couple demonstration, equilibrium classifier, metre-rule balance, see-saw calculation, spring-balance diagram, centre-of-gravity explorer, plumb-line method, tangent-velocity orbit, centripetal-force escape and a two-observer rotating-frame comparison.
+- Every animation has Play, Pause and Restart controls, respects reduced motion and cleans up its anime.js instance.
+- Memory workshop, flashcards, revision centre and a 24-question assessment (50 marks).
+
+**Chapter 1 (Chemistry)**
 
 - Five lessons and two carbon labs.
 - An organic/inorganic sorter and an everyday-objects explorer.

@@ -1,0 +1,908 @@
+[
+  {
+    "id": "PQ1",
+    "subject": "Physics",
+    "topic": "Definition of moment",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Moment of a force and the factors that change it",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "The moment of a force about a pivot is equal to:",
+    "explanation": "Moment = F × d, where d is the perpendicular distance from the pivot to the line of action of the force.",
+    "common_mistake": "Using the distance along the body instead of the perpendicular distance, or dividing force by distance.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P1",
+      "Definition of moment"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "force ÷ perpendicular distance"
+      },
+      {
+        "id": "B",
+        "text": "force × perpendicular distance from the pivot to the line of action"
+      },
+      {
+        "id": "C",
+        "text": "force × distance moved by the body"
+      },
+      {
+        "id": "D",
+        "text": "weight × height"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PQ2",
+    "subject": "Physics",
+    "topic": "Unit of moment",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Moment of a force and the factors that change it",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which is the correct SI unit of the moment of a force?",
+    "explanation": "Moment is force multiplied by perpendicular distance, so its SI unit is the newton metre (N m).",
+    "common_mistake": "Writing the joule, which is the unit of work and energy, not of a turning effect.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P1",
+      "Unit of moment"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "N"
+      },
+      {
+        "id": "B",
+        "text": "N m"
+      },
+      {
+        "id": "C",
+        "text": "J"
+      },
+      {
+        "id": "D",
+        "text": "N/m"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PQ3",
+    "subject": "Physics",
+    "topic": "Calculating a moment",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Moment of a force and the factors that change it",
+    "type": "fill_blank",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "A force of 10 N acts at 90° to a door, 0.30 m from the hinge. Calculate the moment of the force about the hinge. Give the value in N m.",
+    "explanation": "The force is perpendicular to the door, so the perpendicular distance is 0.30 m. M = 10 × 0.30 = 3 N m.",
+    "common_mistake": "Using 30 instead of 0.30, which mixes centimetres with metres.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P1",
+      "Calculating a moment"
+    ],
+    "answer": [
+      "3",
+      "3 n m",
+      "3 nm",
+      "3.0",
+      "3.0 n m",
+      "3.0 nm"
+    ],
+    "accepted_answers": [
+      "3",
+      "3 n m",
+      "3 nm",
+      "3.0",
+      "3.0 n m",
+      "3.0 nm"
+    ]
+  },
+  {
+    "id": "PQ4",
+    "subject": "Physics",
+    "topic": "Factors affecting moment",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Moment of a force and the factors that change it",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "A force acts at 90° to a spanner. If its perpendicular distance from the pivot is doubled while the force is unchanged, the moment:",
+    "explanation": "Moment is directly proportional to the perpendicular distance. Doubling d doubles M when F is unchanged.",
+    "common_mistake": "Thinking the moment depends only on the force.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P1",
+      "Factors affecting moment"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "is halved"
+      },
+      {
+        "id": "B",
+        "text": "stays the same"
+      },
+      {
+        "id": "C",
+        "text": "is doubled"
+      },
+      {
+        "id": "D",
+        "text": "becomes zero"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "PQ5",
+    "subject": "Physics",
+    "topic": "Scalar or vector",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Moment of a force and the factors that change it",
+    "type": "true_false_justify",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "The moment of a force is a scalar quantity because it is measured in N m.",
+    "explanation": "A vector needs magnitude and direction. A moment has both: its size is F × d and its direction is along the axis of rotation.",
+    "common_mistake": "Assuming that a quantity is a scalar whenever it is measured in newton metres.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P1",
+      "Scalar or vector"
+    ],
+    "answer": "False",
+    "marking_points": [
+      {
+        "point": "States that moment is a vector and identifies its direction along the axis of rotation.",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "PQ6",
+    "subject": "Physics",
+    "topic": "Definition of a couple",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Couples, equilibrium and the conditions for equilibrium",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Which description defines a couple?",
+    "explanation": "A couple requires equal magnitude, opposite directions, parallel lines, and separate lines of action.",
+    "common_mistake": "Accepting two equal and opposite forces on the same line, which simply balance.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P2",
+      "Definition of a couple"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "Two equal forces acting in the same direction"
+      },
+      {
+        "id": "B",
+        "text": "Two equal, opposite, parallel forces whose lines of action do not coincide"
+      },
+      {
+        "id": "C",
+        "text": "Any two forces acting at the same point"
+      },
+      {
+        "id": "D",
+        "text": "Three forces whose resultant is zero"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PQ7",
+    "subject": "Physics",
+    "topic": "Moment of a couple",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Couples, equilibrium and the conditions for equilibrium",
+    "type": "fill_blank",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Two equal forces of 5 N act in opposite directions with a perpendicular separation of 0.40 m. Calculate the moment of the couple in N m.",
+    "explanation": "Moment of a couple = either force × couple arm = 5 × 0.40 = 2 N m.",
+    "common_mistake": "Adding the two forces instead of using the couple arm, or multiplying the two forces together.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P2",
+      "Moment of a couple"
+    ],
+    "answer": [
+      "2",
+      "2 n m",
+      "2 nm",
+      "2.0",
+      "2.0 n m",
+      "2.0 nm"
+    ],
+    "accepted_answers": [
+      "2",
+      "2 n m",
+      "2 nm",
+      "2.0",
+      "2.0 n m",
+      "2.0 nm"
+    ]
+  },
+  {
+    "id": "PQ8",
+    "subject": "Physics",
+    "topic": "Recognising equilibrium",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Couples, equilibrium and the conditions for equilibrium",
+    "type": "multiple_select",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Which of these bodies are in equilibrium? Select all that apply.",
+    "explanation": "A, B and C have both zero resultant force and zero resultant moment. D spins, and E spins, so neither is in equilibrium.",
+    "common_mistake": "Treating zero resultant force as sufficient for equilibrium, even when a moment remains.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P2",
+      "Recognising equilibrium"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A book at rest on a table"
+      },
+      {
+        "id": "B",
+        "text": "A raindrop falling at a constant terminal velocity"
+      },
+      {
+        "id": "C",
+        "text": "A horizontal beam balance with equal clockwise and anticlockwise moments"
+      },
+      {
+        "id": "D",
+        "text": "A body acted on by a couple only"
+      },
+      {
+        "id": "E",
+        "text": "A body with zero resultant force but a non-zero resultant moment"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "PQ9",
+    "subject": "Physics",
+    "topic": "Static equilibrium",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Couples, equilibrium and the conditions for equilibrium",
+    "type": "short_answer",
+    "difficulty": "challenging",
+    "marks": 3,
+    "estimated_time_seconds": 180,
+    "prompt": "A book lies at rest on a table. Explain why it is in static equilibrium, referring to both conditions for equilibrium.",
+    "explanation": "Static equilibrium requires both zero resultant force and zero resultant moment. The book satisfies both.",
+    "common_mistake": "Mentioning only that the forces are equal and opposite, without checking the moment condition.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P2",
+      "Static equilibrium"
+    ],
+    "answer": "The book is at rest, so its state is not changing. Its weight acts vertically downwards and is balanced by the equal and opposite normal reaction from the table, so the resultant force is zero. The weight and the reaction act along the same vertical line through the book, so their moments about any point cancel and the resultant moment is also zero.",
+    "marking_points": [
+      {
+        "point": "States that the book is at rest and identifies the weight and the normal reaction as equal and opposite.",
+        "marks": 1
+      },
+      {
+        "point": "States that the resultant force is zero.",
+        "marks": 1
+      },
+      {
+        "point": "States that the moments cancel, or that the forces act along the same line, so the resultant moment is zero.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "PQ10",
+    "subject": "Physics",
+    "topic": "Principle of moments",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Principle of moments, its verification and numerical problems",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "For a body in equilibrium about a pivot, the principle of moments states that:",
+    "explanation": "The principle of moments equates the two opposite moment sums about the same pivot.",
+    "common_mistake": "Confusing equal moments with equal forces.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P3",
+      "Principle of moments"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "the largest force produces the largest moment"
+      },
+      {
+        "id": "B",
+        "text": "the sum of anticlockwise moments equals the sum of clockwise moments"
+      },
+      {
+        "id": "C",
+        "text": "all the forces are equal in magnitude"
+      },
+      {
+        "id": "D",
+        "text": "the moment of every force is zero"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PQ11",
+    "subject": "Physics",
+    "topic": "See-saw problem",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Principle of moments, its verification and numerical problems",
+    "type": "fill_blank",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "On a see-saw, a 25 kg child sits 2.0 m from the pivot and a 40 kg child sits 1.5 m from the pivot on the same side. How far from the pivot, in metres, must a 55 kg adult sit on the other side to balance them?",
+    "explanation": "Anticlockwise moment = 25 × 2.0 + 40 × 1.5 = 50 + 60 = 110 kgf m. Then 55 × x = 110, so x = 2.0 m.",
+    "common_mistake": "Using the masses instead of the moments, or placing the adult on the same side.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P3",
+      "See-saw problem"
+    ],
+    "answer": [
+      "2",
+      "2.0",
+      "2 m",
+      "2.0 m"
+    ],
+    "accepted_answers": [
+      "2",
+      "2.0",
+      "2 m",
+      "2.0 m"
+    ]
+  },
+  {
+    "id": "PQ12",
+    "subject": "Physics",
+    "topic": "Metre rule problem",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Principle of moments, its verification and numerical problems",
+    "type": "fill_blank",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "A uniform metre rule balances horizontally on a knife edge at the 40 cm mark when a 20 g mass hangs from the zero end. Find the mass of the rule in grams.",
+    "explanation": "The rule’s weight acts at 50 cm, which is 10 cm from the pivot. The 20 g mass is 40 cm from the pivot. So M × 10 = 20 × 40, giving M = 80 g.",
+    "common_mistake": "Placing the rule’s weight at the 40 cm pivot instead of at its midpoint, 50 cm.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P3",
+      "Metre rule problem"
+    ],
+    "answer": [
+      "80",
+      "80 g",
+      "80g",
+      "80 grams"
+    ],
+    "accepted_answers": [
+      "80",
+      "80 g",
+      "80g",
+      "80 grams"
+    ]
+  },
+  {
+    "id": "PQ13",
+    "subject": "Physics",
+    "topic": "Verifying the principle of moments",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Principle of moments, its verification and numerical problems",
+    "type": "short_answer",
+    "difficulty": "challenging",
+    "marks": 4,
+    "estimated_time_seconds": 240,
+    "prompt": "Describe an experiment to verify the principle of moments using a metre rule, a support, two spring balances and slotted weights. State the measurements and the result.",
+    "explanation": "The horizontal rule is in equilibrium about O, so the two opposite moment sums must be equal.",
+    "common_mistake": "Measuring the distances from the ends of the rule rather than from the suspension point O.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P3",
+      "Verifying the principle of moments"
+    ],
+    "answer": "Suspend the metre rule horizontally from a fixed support by a thread at a point O. Hang a spring balance on each side of O and suspend slotted weights W₁ and W₂ from them. Adjust the weights or their positions until the rule is horizontal. Measure OA = l₁ and OB = l₂ from O. Then W₁l₁ and W₂l₂ are the clockwise and anticlockwise moments. Within experimental error W₁l₁ = W₂l₂, which verifies the principle of moments.",
+    "marking_points": [
+      {
+        "point": "Describes suspending the rule at O and hanging weights or spring balances on both sides.",
+        "marks": 1
+      },
+      {
+        "point": "States that the positions or weights are adjusted until the rule is horizontal.",
+        "marks": 1
+      },
+      {
+        "point": "Identifies the distances l₁ and l₂ from the pivot and the two moments W₁l₁ and W₂l₂.",
+        "marks": 1
+      },
+      {
+        "point": "States the result W₁l₁ = W₂l₂ or clockwise moment = anticlockwise moment.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "PQ14",
+    "subject": "Physics",
+    "topic": "Choosing a pivot",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Principle of moments, its verification and numerical problems",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Why is it useful to take moments about a support or hinge when solving a problem?",
+    "explanation": "A force acting through the chosen pivot has zero perpendicular distance, so its moment is zero and it drops out of the moment equation.",
+    "common_mistake": "Thinking the force itself vanishes rather than only its moment about that point.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P3",
+      "Choosing a pivot"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "The support force has zero moment about that point, so it disappears from the equation"
+      },
+      {
+        "id": "B",
+        "text": "The weight of the body becomes zero there"
+      },
+      {
+        "id": "C",
+        "text": "All distances become equal"
+      },
+      {
+        "id": "D",
+        "text": "The principle of moments stops applying"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "PQ15",
+    "subject": "Physics",
+    "topic": "Centre of gravity of a ring",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Centre of gravity, regular bodies and the plumb-line method",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "Where is the centre of gravity of a thin uniform circular ring?",
+    "explanation": "The material is symmetrical about the centre, so the moments of all particle weights cancel there. G lies at the centre even though there is no material there.",
+    "common_mistake": "Assuming the centre of gravity must lie inside the material.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P4",
+      "Centre of gravity of a ring"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "On the rim"
+      },
+      {
+        "id": "B",
+        "text": "At the centre of the ring, in the empty space"
+      },
+      {
+        "id": "C",
+        "text": "At the lowest point of the ring"
+      },
+      {
+        "id": "D",
+        "text": "At a point outside the ring altogether"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PQ16",
+    "subject": "Physics",
+    "topic": "Centre of gravity of regular bodies",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Centre of gravity, regular bodies and the plumb-line method",
+    "type": "matching",
+    "difficulty": "challenging",
+    "marks": 4,
+    "estimated_time_seconds": 240,
+    "prompt": "Match each object to the position of its centre of gravity.",
+    "explanation": "A uniform rod balances at its midpoint, a triangular lamina at the intersection of its medians, a ring at its empty centre, and a solid cone at h/4 above its base on the axis.",
+    "common_mistake": "Using the intersection of the diagonals for every flat shape.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P4",
+      "Centre of gravity of regular bodies"
+    ],
+    "stimulus": "1. Uniform rod\n2. Triangular lamina\n3. Circular ring\n4. Solid cone",
+    "options": [
+      {
+        "id": "A",
+        "text": "Midpoint of the rod"
+      },
+      {
+        "id": "B",
+        "text": "Intersection of the medians"
+      },
+      {
+        "id": "C",
+        "text": "Centre of the ring, in the empty space"
+      },
+      {
+        "id": "D",
+        "text": "On the axis, h/4 above the base"
+      },
+      {
+        "id": "E",
+        "text": "Intersection of the diagonals"
+      },
+      {
+        "id": "F",
+        "text": "At the vertex"
+      }
+    ],
+    "answer": {
+      "Uniform rod": "A",
+      "Triangular lamina": "B",
+      "Circular ring": "C",
+      "Solid cone": "D"
+    }
+  },
+  {
+    "id": "PQ17",
+    "subject": "Physics",
+    "topic": "Location of the centre of gravity",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Centre of gravity, regular bodies and the plumb-line method",
+    "type": "true_false_justify",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "The centre of gravity of a body must always lie inside the material of the body.",
+    "explanation": "G depends on the distribution of weight, not on whether the point is occupied by material.",
+    "common_mistake": "Confusing the geometric outline with the distribution of mass.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P4",
+      "Location of the centre of gravity"
+    ],
+    "answer": "False",
+    "marking_points": [
+      {
+        "point": "Gives a correct counter-example such as a ring or hollow sphere and explains that G lies in the empty space.",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "PQ18",
+    "subject": "Physics",
+    "topic": "Plumb-line method",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Centre of gravity, regular bodies and the plumb-line method",
+    "type": "short_answer",
+    "difficulty": "challenging",
+    "marks": 4,
+    "estimated_time_seconds": 240,
+    "prompt": "Describe how the centre of gravity of an irregular lamina is found by the plumb-line method.",
+    "explanation": "A freely suspended body rests with its centre of gravity vertically below the point of suspension. The plumb line therefore passes through G every time.",
+    "common_mistake": "Drawing the line from the centre of the lamina rather than from the suspension hole, or using only one suspension.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P4",
+      "Plumb-line method"
+    ],
+    "answer": "Make three small holes a, b and c near the edge of the lamina. Suspend the lamina freely from hole a on a pin, and when it comes to rest hold a plumb line against it and draw the line ad along the thread. Repeat from holes b and c, drawing be and cf. The three lines intersect at a common point G, which is the centre of gravity.",
+    "marking_points": [
+      {
+        "point": "States that the lamina is suspended freely from a hole so that it can swing.",
+        "marks": 1
+      },
+      {
+        "point": "States that when it is at rest a plumb line is used to draw a vertical line on the lamina.",
+        "marks": 1
+      },
+      {
+        "point": "Repeats the procedure from at least three different holes.",
+        "marks": 1
+      },
+      {
+        "point": "States that the lines intersect at G, the centre of gravity.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "PQ19",
+    "subject": "Physics",
+    "topic": "Velocity in uniform circular motion",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Uniform circular motion, centripetal force and centrifugal force",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "In uniform circular motion, the velocity of the particle is:",
+    "explanation": "The speed is constant, but the direction of motion changes continuously along the tangent, so the velocity changes.",
+    "common_mistake": "Equating constant speed with constant velocity.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P5",
+      "Velocity in uniform circular motion"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "constant in both magnitude and direction"
+      },
+      {
+        "id": "B",
+        "text": "constant in magnitude but changing in direction"
+      },
+      {
+        "id": "C",
+        "text": "zero at every point"
+      },
+      {
+        "id": "D",
+        "text": "directed towards the centre"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PQ20",
+    "subject": "Physics",
+    "topic": "Properties of uniform circular motion",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Uniform circular motion, centripetal force and centrifugal force",
+    "type": "multiple_select",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "Which statements about uniform circular motion are correct? Select all that apply.",
+    "explanation": "Speed is constant, but velocity changes direction, so the motion is accelerated. The acceleration is not zero.",
+    "common_mistake": "Believing that constant speed means constant velocity and zero acceleration.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P5",
+      "Properties of uniform circular motion"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "The speed is constant."
+      },
+      {
+        "id": "B",
+        "text": "The velocity is constant."
+      },
+      {
+        "id": "C",
+        "text": "The acceleration is zero."
+      },
+      {
+        "id": "D",
+        "text": "The direction of velocity changes continuously."
+      },
+      {
+        "id": "E",
+        "text": "The motion is accelerated."
+      }
+    ],
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ]
+  },
+  {
+    "id": "PQ21",
+    "subject": "Physics",
+    "topic": "Direction of centripetal force",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Uniform circular motion, centripetal force and centrifugal force",
+    "type": "single_choice",
+    "difficulty": "foundation",
+    "marks": 1,
+    "estimated_time_seconds": 60,
+    "prompt": "The centripetal force on a body moving in a circle is always directed:",
+    "explanation": "Centripetal means centre-seeking. The force is at right angles to the velocity and points to the centre.",
+    "common_mistake": "Confusing centripetal force with centrifugal force, which is directed away from the centre.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P5",
+      "Direction of centripetal force"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "along the tangent to the circle"
+      },
+      {
+        "id": "B",
+        "text": "away from the centre"
+      },
+      {
+        "id": "C",
+        "text": "towards the centre"
+      },
+      {
+        "id": "D",
+        "text": "vertically downwards"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "PQ22",
+    "subject": "Physics",
+    "topic": "Nature of centrifugal force",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Uniform circular motion, centripetal force and centrifugal force",
+    "type": "true_false_justify",
+    "difficulty": "standard",
+    "marks": 2,
+    "estimated_time_seconds": 120,
+    "prompt": "The centrifugal force is the reaction force to the centripetal force.",
+    "explanation": "The centripetal force is real and points inward. The centrifugal force is an invented outward force in the rotating frame.",
+    "common_mistake": "Applying Newton’s third law to two forces that are both descriptions of the same body.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P5",
+      "Nature of centrifugal force"
+    ],
+    "answer": "False",
+    "marking_points": [
+      {
+        "point": "States that centrifugal force is fictitious and is used in a rotating frame, not as the reaction to centripetal force.",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "PQ23",
+    "subject": "Physics",
+    "topic": "Centripetal and centrifugal force",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Uniform circular motion, centripetal force and centrifugal force",
+    "type": "short_answer",
+    "difficulty": "challenging",
+    "marks": 3,
+    "estimated_time_seconds": 180,
+    "prompt": "State three differences between centripetal force and centrifugal force.",
+    "explanation": "The pair differ in reality, direction and the frame of reference in which each is used.",
+    "common_mistake": "Treating the two as an action–reaction pair.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P5",
+      "Centripetal and centrifugal force"
+    ],
+    "answer": "Centripetal force is a real force directed towards the centre; centrifugal force is fictitious and directed away from the centre. Centripetal force is needed in the ground frame to keep the body on its circular path; centrifugal force is assumed only by an observer in the rotating frame. Centrifugal force is not the reaction to centripetal force, although the two have equal magnitude.",
+    "marking_points": [
+      {
+        "point": "Contrasts real (centripetal) with fictitious (centrifugal).",
+        "marks": 1
+      },
+      {
+        "point": "Contrasts direction towards the centre with direction away from the centre.",
+        "marks": 1
+      },
+      {
+        "point": "States that centrifugal force is used in the rotating frame and is not the reaction to centripetal force.",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "PQ24",
+    "subject": "Physics",
+    "topic": "Two observers on a merry-go-round",
+    "syllabus_reference": "CISCE ICSE Physics 2027, Unit 1, Force",
+    "learning_outcome": "Uniform circular motion, centripetal force and centrifugal force",
+    "type": "long_answer",
+    "difficulty": "challenging",
+    "marks": 5,
+    "estimated_time_seconds": 300,
+    "prompt": "A ball is tied to a point on a rotating merry-go-round. Explain what an observer standing on the ground and an observer standing on the platform each see. Include the forces each observer uses, and explain why the centrifugal force is described as fictitious.",
+    "explanation": "Both observers describe the same ball but use different frames. The ground frame needs one real force; the rotating frame invents a second force to explain apparent rest.",
+    "common_mistake": "Claiming that both observers are using real forces, or that the ball is genuinely at rest in the ground frame.",
+    "source_classification": "original_practice",
+    "source_reference": null,
+    "tags": [
+      "P5",
+      "Two observers on a merry-go-round"
+    ],
+    "answer": "The ground observer sees the ball moving in a circle. The tension in the string provides the centripetal force towards the centre, so only one real force is needed. The platform observer rotates with the ball and sees the ball stationary in front of them. To explain the taut string, that observer assumes an outward centrifugal force equal in magnitude to the tension, so the two appear to balance. The centrifugal force is fictitious because it has no real agent: it is introduced only because the observer’s frame is rotating. In the ground frame the ball is not in equilibrium; it is accelerating towards the centre.",
+    "marking_points": [
+      {
+        "point": "Describes the ground observer seeing circular motion with tension as the centripetal force.",
+        "marks": 1
+      },
+      {
+        "point": "Describes the platform observer seeing the ball stationary in front of them.",
+        "marks": 1
+      },
+      {
+        "point": "Explains that the platform observer assumes an outward centrifugal force balancing the tension.",
+        "marks": 1
+      },
+      {
+        "point": "States that centrifugal force is fictitious or has no real agent and is needed only in the rotating frame.",
+        "marks": 1
+      },
+      {
+        "point": "Contrasts the ground-frame conclusion that the ball is accelerating towards the centre.",
+        "marks": 1
+      }
+    ]
+  }
+]
